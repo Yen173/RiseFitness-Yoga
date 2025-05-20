@@ -1,0 +1,121 @@
+/* Style cho nội dung điều khoản và điều kiện */
+.policy-content {
+    max-width: 1000px;
+    margin: 150px auto 60px auto; /* Đảm bảo không bị header che */
+    padding: 20px;
+    font-family: 'Verdana', sans-serif;
+    line-height: 1.8;
+    color: #fff; /* Chữ trắng */
+    background: #1a1a1a; /* Đen nhạt */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Tiêu đề chính */
+.policy-content h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #f0f0f0; /* Trắng nhạt */
+    font-weight: 700;
+}
+
+/* Tiêu đề phụ */
+.policy-content h2 {
+    font-size: 22px;
+    margin: 30px 0 15px;
+    color: #f0f0f0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.policy-content h3 {
+    font-size: 18px;
+    margin: 20px 0 12px;
+    color: #f0f0f0;
+    font-weight: 600;
+}
+
+/* Đoạn văn và danh sách */
+.policy-content p,
+.policy-content ul {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Danh sách */
+.policy-content ul {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+.policy-content ul li {
+    margin-bottom: 12px;
+}
+
+/* Liên kết */
+.policy-content a {
+    color: #4da8ff; /* Xanh nhạt */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.policy-content a:hover {
+    color: #80c0ff; /* Sáng hơn khi hover */
+}
+
+/* Đảm bảo body không bị header che */
+body {
+    padding-top: 110px; /* Bù cho header 100px + buffer */
+    background: #1a1a1a; /* Đen nhạt */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px;
+    }
+
+    .policy-content {
+        margin: 140px auto 40px auto;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .policy-content h1 {
+        font-size: 26px;
+    }
+
+    .policy-content h2 {
+        font-size: 20px;
+    }
+
+    .policy-content h3 {
+        font-size: 16px;
+    }
+
+    .policy-content p,
+    .policy-content ul {
+        font-size: 14px;
+    }
+
+    .policy-content ul {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .policy-content {
+        margin: 130px auto 30px auto;
+    }
+
+    .policy-content h1 {
+        font-size: 22px;
+    }
+
+    .policy-content h2 {
+        font-size: 18px;
+    }
+}
