@@ -1,21 +1,30 @@
-// Chèn header
-fetch('include/header.html')
-    .then(response => {
-        if (!response.ok) throw new Error('Không tải được header.html');
-        return response.text();
-    })
-    .then(data => document.getElementById('header').innerHTML = data)
-    .catch(error => console.error('Lỗi khi tải header:', error));
 
-// Chèn footer
-fetch('include/footer.html')
-    .then(response => {
-        if (!response.ok) throw new Error('Không tải được footer.html');
-        return response.text();
-    })
-    .then(data => document.getElementById('footer').innerHTML = data)
-    .catch(error => console.error('Lỗi khi tải footer:', error));
+document.addEventListener("DOMContentLoaded", () => {
+    // Kiểm tra nếu đang ở trong thư mục /pages/
+    const isInPagesFolder = window.location.pathname.includes("/pages/");
 
+    // Đường dẫn tương ứng
+    const headerPath = isInPagesFolder ? "../include/header.html" : "include/header.html";
+    const footerPath = isInPagesFolder ? "../include/footer.html" : "include/footer.html";
+
+    // Chèn header
+    fetch(headerPath)
+        .then(response => {
+            if (!response.ok) throw new Error('Không tải được header.html');
+            return response.text();
+        })
+        .then(data => document.getElementById('header').innerHTML = data)
+        .catch(error => console.error('Lỗi khi tải header:', error));
+
+    // Chèn footer
+    fetch(footerPath)
+        .then(response => {
+            if (!response.ok) throw new Error('Không tải được footer.html');
+            return response.text();
+        })
+        .then(data => document.getElementById('footer').innerHTML = data)
+        .catch(error => console.error('Lỗi khi tải footer:', error));
+});
 // Xử lý form đăng ký tập thử với Formspree
 document.getElementById('trial-form').addEventListener('submit', (e) => {
     e.preventDefault();
