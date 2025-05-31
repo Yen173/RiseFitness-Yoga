@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const isInPagesFolder = window.location.pathname.includes("/pages/");
 
     // Đường dẫn tương ứng
-    const headerPath = isInPagesFolder ? "../include/header.html" : "include/header.html";
-    const footerPath = isInPagesFolder ? "../include/footer.html" : "include/footer.html";
+    const headerPath = isInPagesFolder ? "include/header.html" : "header.html";
+    const footerPath = isInPagesFolder ? "include/footer.html" : "footer.html";
 
     // Chèn header
     fetch(headerPath)
