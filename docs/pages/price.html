@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Giá Phòng Gym</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="price.css">
+</head>
+<body class="bg-gray-100 font-sans">
+   <!-- Banner Ưu Đãi -->
+<section id="banner" class="relative bg-gradient-to-r from-teal-500 to-teal-700 text-white py-16">
+    <div class="container mx-auto text-center">
+        <div id="slideshow" class="relative">
+            <div class="slide active">
+                <img src="images/price1.jpg" alt="Ưu Đãi Tháng 5" class="w-full h-96 object-cover rounded-lg">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-50">
+                    <h2 class="text-4xl font-bold mb-4">Ưu Đãi Đặc Biệt Tháng 5!</h2>
+                    <p class="text-xl mb-4">Giảm 30% cho gói tập 12 tháng!</p>
+                    <p class="text-lg mb-4">Hết hạn trong: <span id="countdown" class="font-bold"></span></p>
+                    <button class="bg-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition">Đăng Ký Ngay</button>
+                </div>
+            </div>
+            <div class="slide hidden">
+                <img src="images/prics2.jpg" alt="Tập Thử Miễn Phí" class="w-full h-96 object-cover rounded-lg">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-50">
+                    <h2 class="text-4xl font-bold mb-4">Ưu Đãi Tập Thử Miễn Phí!</h2>
+                    <p class="text-xl mb-4">Đăng ký ngay để trải nghiệm 3 buổi tập miễn phí!</p>
+                    <button class="bg-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition">Đăng Ký Ngay</button>
+                </div>
+            </div>
+            <div class="slide hidden">
+                <img src="images/price3.jpg" alt="Gói 6 Tháng" class="w-full h-96 object-cover rounded-lg">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-50">
+                    <h2 class="text-4xl font-bold mb-4">Ưu Đãi Gói 6 Tháng!</h2>
+                    <p class="text-xl mb-4">Giảm 20% khi đăng ký gói 6 tháng!</p>
+                    <button class="bg-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition">Đăng Ký Ngay</button>
+                </div>
+            </div>
+            <div class="slide hidden">
+                <img src="images/price4.jpg" alt="Thành Viên Mới" class="w-full h-96 object-cover rounded-lg">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-50">
+                    <h2 class="text-4xl font-bold mb-4">Ưu Đãi Thành Viên Mới!</h2>
+                    <p class="text-xl mb-4">Tặng 2 buổi PT miễn phí cho thành viên mới!</p>
+                    <button class="bg-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition">Đăng Ký Ngay</button>
+                </div>
+            </div>
+            <div class="slide hidden">
+                <img src="images/price5.jpg" alt="Mùa Hè" class="w-full h-96 object-cover rounded-lg">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-50">
+                    <h2 class="text-4xl font-bold mb-4">Ưu Đãi Mùa Hè!</h2>
+                    <p class="text-xl mb-4">Miễn phí 1 tháng khi đăng ký gói 12 tháng!</p>
+                    <button class="bg-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition">Đăng Ký Ngay</button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-4 flex justify-center space-x-2">
+            <span class="dot w-3 h-3 bg-white rounded-full cursor-pointer"></span>
+            <span class="dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer"></span>
+            <span class="dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer"></span>
+            <span class="dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer"></span>
+            <span class="dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer"></span>
+        </div>
+    </div>
+</section>
+
+    <!-- Các Gói Tập -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Các Gói Tập Luyện</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 cursor-pointer" onclick="openModal('basic')">
+                    <img src="https://i.pinimg.com/736x/d9/fe/38/d9fe38aa847d361f2f3b5fd1b7bf068d.jpg" alt="Thẻ Basic" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold text-center text-gray-900">Gói Basic</h3>
+                    <p class="text-3xl font-bold text-center text-teal-600">500,000 VNĐ</p>
+                    <p class="text-center text-gray-600">/ Tháng</p>
+                    <ul class="my-4 space-y-2 text-gray-700">
+                        <li>✔️ Truy cập phòng gym</li>
+                        <li>✔️ Phòng tắm nóng lạnh</li>
+                        <li>✔️ Wifi miễn phí</li>
+                    </ul>
+                    <button class="w-full bg-teal-600 text-black py-2 rounded-full hover:bg-teal-700 transition">Đăng Ký Ngay</button>
+                </div>
+                <div class="card bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 cursor-pointer" onclick="openModal('premium')">
+                    <img src="https://i.pinimg.com/736x/fb/c5/12/fbc512d3c2b0306737fc2ba5b7075cf9.jpg" alt="Thẻ Premium" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold text-center text-gray-900">Gói Premium</h3>
+                    <p class="text-3xl font-bold text-center text-teal-600">1,200,000 VNĐ</p>
+                    <p class="text-center text-gray-600">/ 3 Tháng</p>
+                    <ul class="my-4 space-y-2 text-gray-700">
+                        <li>✔️ Truy cập phòng gym</li>
+                        <li>✔️ 5 buổi PT miễn phí</li>
+                        <li>✔️ Tham gia lớp Yoga</li>
+                        <li>✔️ Dịch vụ khăn tập</li>
+                    </ul>
+                    <button class="w-full bg-teal-600 text-black py-2 rounded-full hover:bg-teal-700 transition">Đăng Ký Ngay</button>
+                </div>
+                <div class="card bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 cursor-pointer" onclick="openModal('vip')">
+                    <img src="https://i.pinimg.com/736x/0b/73/ca/0b73ca7790f1dcc0846a74c82a6b015b.jpg" alt="Thẻ VIP" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold text-center text-gray-900">Gói VIP</h3>
+                    <p class="text-3xl font-bold text-center text-teal-600">4,000,000 VNĐ</p>
+                    <p class="text-center text-gray-600">/ 12 Tháng</p>
+                    <ul class="my-4 space-y-2 text-gray-700">
+                        <li>✔️ Truy cập phòng gym</li>
+                        <li>✔️ 10 buổi PT miễn phí</li>
+                        <li>✔️ Tham gia tất cả lớp học</li>
+                        <li>✔️ Dịch vụ cao cấp</li>
+                    </ul>
+                    <button class="w-full bg-teal-600 text-black py-2 rounded-full hover:bg-teal-700 transition">Đăng Ký Ngay</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg max-w-lg w-full transform scale-0 transition-transform duration-300">
+            <h3 id="modal-title" class="text-2xl font-bold mb-4 text-gray-900"></h3>
+            <img id="modal-image" src="" alt="Thẻ tập" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p id="modal-price" class="text-xl font-bold mb-2 text-teal-600"></p>
+            <p id="modal-duration" class="text-gray-600 mb-4"></p>
+            <ul id="modal-benefits" class="mb-4 space-y-2 text-gray-700"></ul>
+            <p id="modal-terms" class="text-sm text-gray-500 mb-4"></p>
+            <button class="w-full bg-teal-600 text-black py-2 rounded-full hover:bg-teal-700 transition">Đăng Ký Ngay</button>
+            <button onclick="closeModal()" class="mt-2 w-full bg-gray-300 text-gray-900 py-2 rounded-full hover:bg-gray-400 transition">Đóng</button>
+        </div>
+    </div>
+
+    <!-- Bảng So Sánh Gói Tập -->
+    <section id="comparison" class="py-16 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">So Sánh Các Gói Tập</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-teal-600 text-black">
+                            <th class="p-4">Tính năng</th>
+                            <th class="p-4">Basic</th>
+                            <th class="p-4">Premium</th>
+                            <th class="p-4 bg-gray-900 text-white">VIP (Khuyến nghị)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-4 border-b text-gray-900">Thời gian tập luyện</td>
+                            <td class="p-4 border-b text-gray-700">Không giới hạn</td>
+                            <td class="p-4 border-b text-gray-700">Không giới hạn</td>
+                            <td class="p-4 border-b text-gray-700">Không giới hạn</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b text-gray-900">Buổi PT miễn phí</td>
+                            <td class="p-4 border-b text-gray-700">✗</td>
+                            <td class="p-4 border-b text-gray-700">5 buổi</td>
+                            <td class="p-4 border-b text-gray-700">10 buổi</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b text-gray-900">Quyền sử dụng thiết bị đặc biệt</td>
+                            <td class="p-4 border-b text-gray-700">✗</td>
+                            <td class="p-4 border-b text-gray-700">✔️</td>
+                            <td class="p-4 border-b text-gray-700">✔️</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b text-gray-900">Tham gia các lớp học</td>
+                            <td class="p-4 border-b text-gray-700">✗</td>
+                            <td class="p-4 border-b text-gray-700">Yoga</td>
+                            <td class="p-4 border-b text-gray-700">Tất cả lớp học</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b text-gray-900">Dịch vụ cao cấp</td>
+                            <td class="p-4 border-b text-gray-700">✗</td>
+                            <td class="p-4 border-b text-gray-700">✔️</td>
+                            <td class="p-4 border-b text-gray-700">✔️</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quyền Lợi Chung -->
+    <section id="benefits" class="py-16 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Quyền Lợi Chung</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="benefit-card relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <img src="https://i.pinimg.com/736x/8a/6a/91/8a6a9188d574590a0ee8598b97d0e896.jpg" alt="Phòng tập hiện đại" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold text-center">Phòng tập hiện đại với đầy đủ thiết bị</p>
+                    </div>
+                </div>
+                <div class="benefit-card relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <img src="https://i.pinimg.com/736x/c4/40/bb/c440bb1aa635174853749299343a421d.jpg" alt="Phòng tắm & Wifi" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold text-center">Phòng tắm nóng lạnh & Wifi miễn phí</p>
+                    </div>
+                </div>
+                <div class="benefit-card relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <img src="https://i.pinimg.com/736x/aa/07/b4/aa07b42ae43819b6007e82b52afbd0fe.jpg" alt="Để xe & Khăn tập" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold text-center">Khu vực để xe an toàn & Khăn tập</p>
+                    </div>
+                </div>
+                <div class="benefit-card relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <img src="https://i.pinimg.com/736x/6b/2a/55/6b2a55747159ea67955fe23095f79905.jpg" alt="Nước uống miễn phí" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold text-center">Nước uống miễn phí</p>
+                    </div>
+                </div>
+            </div>
+            <img src="images/28469385_7333004.jpg" alt="Phòng gym" class="w-full h-64 object-cover rounded-lg mt-8">
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 bg-gray-100">
+        <div class="container mx-auto border-4 border-teal-400 rounded-lg p-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Câu Hỏi Thường Gặp</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- FAQ List -->
+                <div id="faq-list">
+                    <div class="faq-item border-b py-4">
+                        <button class="w-full text-left text-lg font-semibold flex justify-between items-center text-gray-900">
+                            Thủ tục đăng ký tập thử miễn phí?
+                            <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer hidden mt-2 text-gray-600">Bạn chỉ cần đến quầy lễ tân, cung cấp thông tin cá nhân và nhận lịch tập thử trong 3 ngày.</div>
+                    </div>
+                    <div class="faq-item border-b py-4">
+                        <button class="w-full text-left text-lg font-semibold flex justify-between items-center text-gray-900">
+                            Cách thanh toán và các phương thức thanh toán?
+                            <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer hidden mt-2 text-gray-600">Chúng tôi chấp nhận thanh toán bằng tiền mặt, thẻ ngân hàng, và chuyển khoản.</div>
+                    </div>
+                    <div class="faq-item border-b py-4">
+                        <button class="w-full text-left text-lg font-semibold flex justify-between items-center text-gray-900">
+                            Chính sách tạm ngưng thẻ?
+                            <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer hidden mt-2 text-gray-600">Thẻ có thể tạm ngưng tối đa 30 ngày trong năm với thông báo trước 7 ngày.</div>
+                    </div>
+                    <div class="faq-item border-b py-4">
+                        <button class="w-full text-left text-lg font-semibold flex justify-between items-center text-gray-900">
+                            Thời gian hoạt động của phòng gym?
+                            <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer hidden mt-2 text-gray-600">Phòng gym mở cửa từ 6:00 sáng đến 10:00 tối, tất cả các ngày trong tuần.</div>
+                    </div>
+                </div>
+                <!-- Image Slideshow -->
+                <div class="relative">
+                    <div id="faq-slideshow">
+                        <img class="faq-slide w-full h-96 object-cover rounded-lg active" src="https://i.pinimg.com/736x/40/b4/b3/40b4b3cb5660f780898b17b245a43f44.jpg" alt="Hình 1">
+                        <img class="faq-slide w-full h-96 object-cover rounded-lg hidden" src="https://i.pinimg.com/736x/7a/ca/a0/7acaa090e3c79d45c5ac2540614c17ca.jpg" alt="Hình 2">
+                        <img class="faq-slide w-full h-96 object-cover rounded-lg hidden" src="https://i.pinimg.com/736x/fa/ba/5a/faba5a185aea275ae60110a4928cf350.jpg" alt="Hình 3">
+                        <img class="faq-slide w-full h-96 object-cover rounded-lg hidden" src="https://i.pinimg.com/736x/71/18/af/7118afd9c39eb1c1ccb05c529d360adf.jpg" alt="Hình 4">
+                        <img class="faq-slide w-full h-96 object-cover rounded-lg hidden" src="https://i.pinimg.com/736x/ce/f7/88/cef788f3b3dd3621abcd4b9f6e4a75e4.jpg" alt="Hình 5">
+                    </div>
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        <span class="faq-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer"></span>
+                        <span class="faq-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer"></span>
+                        <span class="faq-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer"></span>
+                        <span class="faq-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer"></span>
+                        <span class="faq-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="price.js"></script>
+</body>
+</html>
