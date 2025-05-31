@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bảng Giá Phòng Gym</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="price.css">
+    <link rel="stylesheet" href="../css/price.css">
+    <script src="../js/main.js" defer></script>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body class="bg-gray-100 font-sans">
      <!-- Chèn header -->
-  <object data="header.html" type="text/html" style="width: 100%; border: none; overflow: hidden;"></object>
+      <div id="header"></div>
    <!-- Banner Ưu Đãi -->
 <section id="banner" class="relative bg-gradient-to-r from-teal-500 to-teal-700 text-white py-16">
     <div class="container mx-auto text-center">
         <div id="slideshow" class="relative">
             <div class="slide active">
-                <img src="images/price1.jpg" alt="Ưu Đãi Tháng 5" class="w-full h-96 object-cover rounded-lg">
+                <img src="../images/price1.jpg" alt="Ưu Đãi Tháng 5" class="w-full h-96 object-cover rounded-lg">
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-50">
                     <h2 class="text-4xl font-bold mb-4">Ưu Đãi Đặc Biệt Tháng 5!</h2>
                     <p class="text-xl mb-4">Giảm 30% cho gói tập 12 tháng!</p>
@@ -24,7 +27,7 @@
                 </div>
             </div>
             <div class="slide hidden">
-                <img src="images/price2.jpg" alt="Tập Thử Miễn Phí" class="w-full h-96 object-cover rounded-lg">
+                <img src="../images/price2.jpg" alt="Tập Thử Miễn Phí" class="w-full h-96 object-cover rounded-lg">
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-50">
                     <h2 class="text-4xl font-bold mb-4">Ưu Đãi Tập Thử Miễn Phí!</h2>
                     <p class="text-xl mb-4">Đăng ký ngay để trải nghiệm 3 buổi tập miễn phí!</p>
@@ -32,7 +35,7 @@
                 </div>
             </div>
             <div class="slide hidden">
-                <img src="images/price3.jpg" alt="Gói 6 Tháng" class="w-full h-96 object-cover rounded-lg">
+                <img src="../images/price3.jpg" alt="Gói 6 Tháng" class="w-full h-96 object-cover rounded-lg">
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-50">
                     <h2 class="text-4xl font-bold mb-4">Ưu Đãi Gói 6 Tháng!</h2>
                     <p class="text-xl mb-4">Giảm 20% khi đăng ký gói 6 tháng!</p>
@@ -40,7 +43,7 @@
                 </div>
             </div>
             <div class="slide hidden">
-                <img src="images/price4.jpg" alt="Thành Viên Mới" class="w-full h-96 object-cover rounded-lg">
+                <img src="../images/price4.jpg" alt="Thành Viên Mới" class="w-full h-96 object-cover rounded-lg">
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-50">
                     <h2 class="text-4xl font-bold mb-4">Ưu Đãi Thành Viên Mới!</h2>
                     <p class="text-xl mb-4">Tặng 2 buổi PT miễn phí cho thành viên mới!</p>
@@ -48,7 +51,7 @@
                 </div>
             </div>
             <div class="slide hidden">
-                <img src="images/price5.jpg" alt="Mùa Hè" class="w-full h-96 object-cover rounded-lg">
+                <img src="../images/price5.jpg" alt="Mùa Hè" class="w-full h-96 object-cover rounded-lg">
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-50">
                     <h2 class="text-4xl font-bold mb-4">Ưu Đãi Mùa Hè!</h2>
                     <p class="text-xl mb-4">Miễn phí 1 tháng khi đăng ký gói 12 tháng!</p>
@@ -208,7 +211,7 @@
                     </div>
                 </div>
             </div>
-            <img src="images/28469385_7333004.jpg" alt="Phòng gym" class="w-full h-64 object-cover rounded-lg mt-8">
+            <img src="../images/28469385_7333004.jpg" alt="Phòng gym" class="w-full h-64 object-cover rounded-lg mt-8">
         </div>
     </section>
 
@@ -269,7 +272,7 @@
         </div>
     </section>
   <!-- Chèn footer -->
-    <object data="footer.html" type="text/html" style="width: 100%; min-height: 250px;overflow: hidden"></object></body>
-<script src="price.js"></script>
+    <div id="footer"></div>
+<script src="../js/price.js"></script>
 </body>
 </html>
