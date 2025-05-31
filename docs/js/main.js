@@ -1,5 +1,5 @@
 // Chèn header
-fetch('header.html')
+fetch('include/header.html')
     .then(response => {
         if (!response.ok) throw new Error('Không tải được header.html');
         return response.text();
@@ -8,7 +8,7 @@ fetch('header.html')
     .catch(error => console.error('Lỗi khi tải header:', error));
 
 // Chèn footer
-fetch('footer.html')
+fetch('include/footer.html')
     .then(response => {
         if (!response.ok) throw new Error('Không tải được footer.html');
         return response.text();
