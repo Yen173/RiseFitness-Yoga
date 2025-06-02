@@ -1,0 +1,155 @@
+body, html {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #080707;
+    padding-top: 50px;
+    overflow-y: auto !important; /* Đảm bảo cuộn trang */
+    height: auto;
+}
+
+body.modal-open {
+    overflow-y: auto !important; /* Cho phép cuộn nền khi modal mở */
+}
+
+.header-carousel {
+    position: relative;
+}
+.header-carousel img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(70%); /* Darken image for text readability */
+}
+.carousel-caption {
+    text-align: center;
+    color: #fff;
+}
+.carousel-caption h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.carousel-caption p {
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.post-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.post-img.featured {
+    height: 350px;
+    width: 100%;
+}
+.post-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #212529;
+}
+.post-meta {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+.post-excerpt {
+    color: #495057;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    min-height: 4.5em; /* đảm bảo khoảng không đều nhau */
+}
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card-title {
+    font-weight: bold;
+    border-bottom: 1px solid #dee2e6; /* Viền dưới tiêu đề */
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-top: auto;
+    padding: 0.4rem 0.8rem;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.sidebar .card {
+    margin-bottom: 20px;
+}
+.sidebar .list-group-item {
+    border: none;
+    padding: 10px 0;
+    color: #007bff;
+}
+.sidebar .list-group-item:hover {
+    color: #0056b3;
+}
+.sidebar .list-group-item.active {
+    color: #0056b3;
+    font-weight: bold;
+    background-color: transparent;
+}
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+.pagination .page-link {
+    color: #007bff;
+    border-radius: 50%; /* Circular buttons */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+.pagination .page-link:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    font-size: 1.2rem;
+}
+.pagination .page-item:first-child .page-link::before {
+    content: "\2190"; /* Mũi tên trái */
+}
+.pagination .page-item:last-child .page-link::before {
+    content: "\2192"; /* Mũi tên phải */
+}
+.pagination .page-item:not(.active) .page-link::before {
+    content: attr(data-icon); /* Sử dụng thuộc tính data-icon cho biểu tượng */
+}
+.modal-content img {
+    max-height: 400px;
+    object-fit: cover;
+}
+#blog-posts {
+    min-height: 500px; /* Đảm bảo container bài viết có chiều cao tối thiểu */
+}
+
+/* Hiệu ứng hover cho bài viết */
+#blog-posts .card,
+#featured-post .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Chuyển đổi mượt mà */
+}
+#blog-posts .card:hover,
+#featured-post .card:hover {
+    transform: scale(1.03); /* Phóng to nhẹ */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bóng đổ mạnh hơn */
+}

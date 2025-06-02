@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    width: 100%; /* Cho phép di chuyển ngang toàn trang */
+    height: 100%; /* Cho phép di chuyển dọc toàn trang */
+    overflow: hidden; /* Đảm bảo icon di chuyển tự do */
+}
+
+.contact-container {
+    position: absolute;
+    width: 100%; /* Giữ 120px để chứa icon 60px */
+    height: 100%; /* Giữ 120px để chứa icon 60px */
+    z-index: 1001; /* Giữ z-index cao hơn header (1000) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: move;
+    top: 100px; /* Giới hạn tối thiểu là chiều cao header */
+}
+
+.contact-icon-stack {
+    position: relative;
+    width: 60px; /* Giữ kích thước icon */
+    height: 60px; /* Giữ kích thước icon */
+}
+
+.contact-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px; /* Giữ kích thước 60px */
+    height: 60px; /* Giữ kích thước 60px */
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 120, 215, 0.8), 0 0 40px rgba(0, 120, 215, 0.6), 0 2px 6px rgba(0, 0, 0, 0.2); /* Giữ bóng đổ cơ bản */
+    animation: glowPulse 0.8s ease-in-out infinite; /* Chỉ giữ glow, bỏ rung */
+    transition: opacity 0.5s ease; /* Giữ transition opacity */
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    border: 2px solid white; /* Giữ viền trắng */
+    object-fit: contain; /* Giữ tỷ lệ hình ảnh */
+    object-position: center; /* Căn giữa hình ảnh */
+}
+
+.contact-icon.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Keyframes cho hiệu ứng glow lan tỏa từng đợt */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 120, 215, 0.6), 0 0 40px rgba(0, 120, 215, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2); /* Trạng thái yếu */
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 120, 215, 1), 0 0 60px rgba(0, 120, 215, 0.9), 0 2px 6px rgba(0, 0, 0, 0.2); /* Từng đợt lan tỏa mạnh */
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 120, 215, 0.6), 0 0 40px rgba(0, 120, 215, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2); /* Trở về trạng thái yếu */
+    }
+}

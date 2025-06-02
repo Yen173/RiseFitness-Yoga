@@ -1,0 +1,85 @@
+/* Custom styles with teal, black, and white color scheme */
+body {
+    background-color: #F5F5F5;
+    color: #212121;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#banner {
+    margin-top: 80px; /* hoặc đúng chiều cao của header */
+}
+#modal.show {
+    display: flex;
+}
+
+#modal .scale-0 {
+    transform: scale(0);
+}
+
+#modal.show .scale-0 {
+    transform: scale(1);
+}
+
+.faq-item button svg {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active button svg {
+    transform: rotate(180deg);
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.dot.active {
+    background-color: #F5F5F5 !important;
+}
+
+/* Benefit Card Styles */
+.benefit-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card img {
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover img {
+    transform: scale(1.1);
+}
+
+.benefit-card .absolute {
+    transition: background-color 0.3s ease;
+}
+
+.benefit-card:hover .absolute {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* FAQ Slideshow Styles */
+#faq-slideshow {
+    position: relative;
+}
+
+.faq-slide {
+    transition: opacity 0.5s ease;
+}
+
+.faq-slide.active {
+    opacity: 1;
+}
+
+.faq-slide.hidden {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+}
+
+.faq-dot.active {
+    background-color: #4DB6AC !important;
+}

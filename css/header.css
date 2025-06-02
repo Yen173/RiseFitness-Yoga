@@ -1,0 +1,119 @@
+/* Đặt tất cả các phần tử về margin và padding là 0, box-sizing: border-box để bao gồm padding và border trong kích thước tổng */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style cho thanh header: 
+   - Sử dụng flexbox để sắp xếp nội dung theo hàng ngang
+   - Căn giữa theo chiều dọc và cách đều hai bên
+   - Màu nền đen, padding 50px trái/phải
+   - Định vị cố định ở đầu trang, độ rộng 100%, và ưu tiên hiển thị trên các phần tử khác (z-index) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* đen nhưng có độ trong suốt */
+    backdrop-filter: blur(8px); /* tạo hiệu ứng mờ nội dung phía sau */
+    padding: 0 50px;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    z-index: 2000;
+}
+
+
+/* Style cho phần logo bên trong header:
+   - Cho phép logo hiển thị như một khối inline-block
+   - Không cần thay đổi thêm vì ảnh logo được điều chỉnh qua thẻ img */
+.logo a {
+    display: inline-block;
+}
+
+/* Style cho ảnh logo:
+   - Đặt chiều cao cố định
+   - Áp dụng bộ lọc grayscale để chuyển sang tông đen trắng */
+.logo img {
+    height: 200px;
+    width: 200px; 
+    filter: invert(100%), grayscale(100%);
+}
+
+/* Style cho danh sách menu trong nav:
+   - Loại bỏ dấu chấm mặc định của danh sách
+   - Sử dụng flexbox để sắp xếp các mục ngang hàng
+   - Tạo khoảng cách 30px giữa các mục */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Style cho các liên kết (link) trong menu:
+   - Màu chữ trắng
+   - Loại bỏ gạch chân
+   - Sử dụng font Arial, cỡ chữ 16px, đậm
+   - Chuyển đổi thành chữ in hoa
+   - Thêm hiệu ứng chuyển màu khi hover */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Verdana', sans-serif; 
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Hiệu ứng khi di chuột qua liên kết:
+   - Thay đổi màu chữ thành xám nhạt (#ccc) */
+nav ul li a:hover {
+    color: #ccc;
+}
+
+/* Style cho mục menu có dropdown:
+   - Định vị tương đối để làm điểm neo cho submenu */
+.dropdown {
+    position: relative;
+}
+
+/* Style cho danh sách con (submenu) trong dropdown:
+   - Ẩn mặc định
+   - Định vị tuyệt đối, hiển thị ngay dưới mục cha (top: 100%)
+   - Màu nền đen, độ rộng tối thiểu 200px, padding 10px trên/dưới
+   - Ưu tiên hiển thị trên các phần tử khác (z-index) */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    min-width: 200px;
+    padding: 10px 0;
+    z-index: 2001;
+}
+
+/* Style cho các liên kết trong submenu:
+   - Cỡ chữ 14px, padding 10px trái/phải và 20px trên/dưới
+   - Hiển thị như một khối để chiếm toàn bộ chiều rộng */
+.submenu li a {
+    font-size: 14px;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Hiệu ứng khi di chuột qua liên kết trong submenu:
+   - Thay đổi màu nền thành xám đậm (#333) */
+.submenu li a:hover {
+    background-color: #333;
+}
+
+/* Hiển thị submenu khi hover vào mục dropdown:
+   - Thay đổi display thành block để hiện menu con */
+.dropdown:hover .submenu {
+    display: block;
+}

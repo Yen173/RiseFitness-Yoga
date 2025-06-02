@@ -1,0 +1,118 @@
+:where([class^="ri-"])::before { 
+  content: "\f3c2"; 
+  color: #34A4E0; /* Màu xanh ngọc cho icon */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #ffffff; /* Nền đen giống ảnh */
+  color: #FFFFFF; /* Chữ trắng giống ảnh */
+}
+
+a, h1, h2, h3, h4, h5, h6, .highlight {
+  color: #FFFFFF; /* Chữ trắng cho tiêu đề và link */
+}
+
+a:hover {
+  color: #34A4E0; /* Màu xanh ngọc khi hover link */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input, select, button {
+  background-color: #121212; /* Nền tối cho input và select */
+  color: #FFFFFF; /* Chữ trắng trong input và select */
+  border: 1px solid #34A4E0; /* Viền xanh ngọc */
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button {
+  background-color: #00c6c2; /* Nền xanh ngọc cho nút */
+  color: #FFFFFF; /* Chữ trắng trên nút */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #2A8BBF; /* Tông xanh đậm hơn khi hover nút */
+}
+
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 40px;
+  height: calc(100% - 20px);
+  width: 2px;
+  background-color: #00c6c2; /* Màu xanh ngọc cho timeline */
+}
+
+.counter-value {
+  transition: all 0.5s ease;
+}
+
+.custom-checkbox {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #121212;
+  border: 2px solid #00c6c2; /* Viền xanh ngọc */
+  border-radius: 4px;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #00c6c2; /* Nền xanh ngọc khi checked */
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid #000000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.gallery-item {
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px #00c6c2; /* Bóng xanh ngọc khi hover */
+}
