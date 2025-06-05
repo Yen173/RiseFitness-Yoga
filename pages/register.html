@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Đăng Ký Tập Thử - Rise Fitness & Yoga</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/register.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/footer.css">
@@ -25,6 +26,10 @@
           <div class="form-group">
             <input type="text" id="name" name="name" placeholder="Họ và Tên *" required />
             <div id="nameError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email *" required />
+            <div id="emailError" class="error-message"></div>
           </div>
           <div class="form-group">
             <input type="tel" id="phone" name="phone" placeholder="Số điện thoại *" required />
@@ -59,25 +64,45 @@
     </div>
   </section>
 
-  <section class="benefits">
-    <div class="left-benefits">
-      <h2>LỢI ÍCH CỦA THÀNH VIÊN RISE FITNESS & YOGA</h2>
-      <ul>
-        <li>Trải nghiệm bể bơi 4 mùa hiện đại, thoải mái tập luyện quanh năm</li>
-        <li>Lớp học đa dạng với gym, yoga, dance và kickboxing trong không gian chuyên nghiệp</li>
-        <li>Huấn luyện viên cá nhân tận tâm, hỗ trợ đạt mục tiêu sức khỏe nhanh chóng</li>
-        <li>Không gian thiết kế sang trọng, đầy đủ tiện nghi tại trung tâm thành phố</li>
-        <li>Tham gia cộng đồng năng động, kết nối với những người đam mê thể thao</li>
-      </ul>
+<section class="benefits">
+    <div class="container">
+      <div class="row">
+        <!-- Image Section -->
+        <div class="col-md-5">
+          <div class="image-container d-flex justify-content-between">
+            <img src="../images/registerbenefits1.jpg" alt="Person Stretching">
+            <img src="../images/registerbenefits2.jpg" alt="Person Lifting Weights">
+          </div>
+        </div>
+        <!-- Text and Stats Section -->
+        <div class="col-md-7 d-flex flex-column justify-content-center">
+          <h1 class="headline">LỢI ÍCH CỦA THÀNH VIÊN RISE FITNESS & YOGA</h1>
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-number">Kết nối</div>
+              <div class="stat-label">Tham gia cộng đồng năng động với những người đam mê thể thao</div>
+              <div class="stat-number">Đa dạng</div>
+              <div class="stat-label">Bể bơi 4 mùa, gym, yoga, dance và kickboxing</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">Tận tâm</div>
+              <div class="stat-label">Huấn luyện viên cá nhân hỗ trợ đạt mục tiêu sức khỏe nhanh chóng</div>
+              <div class="stat-number">Sang trọng</div>
+              <div class="stat-label">Thiết kế đầy đủ tiện nghi tại trung tâm thành phố</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="right-benefits"></div>
   </section>
 
-   <script src="../js/register.js"></script>
-
-</body>
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="../js/register.js"></script>
+</section>
 
 <!-- Chèn footer -->
     <div id="footer"></div>
-
+</body>
 </html>
