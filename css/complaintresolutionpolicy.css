@@ -3,18 +3,20 @@ body {
     margin: 0;
     color: #374151;
     line-height: 1.6;
-    font-size: 16px; /* Đặt kích thước chữ mặc định cho toàn trang */
+    font-size: 16px;
+    background-color: #f9fafb;
 }
 
 .hero-section {
-    background-image: linear-gradient(rgba(0, 30, 77, 0.85), rgba(0, 30, 77, 0.85)), url('https://readdy.ai/api/search-image?query=modern%20gym%20interior%20with%20blue%20lighting%2C%20professional%20fitness%20equipment%2C%20clean%20and%20spacious%20environment%2C%20high-quality%20fitness%20center%20with%20blue%20accent%20lighting%2C%20minimalist%20design&width=1920&height=600&seq=gym-hero&orientation=landscape');
+    background-image: linear-gradient(rgba(0, 30, 77, 0.9), rgba(0, 30, 77, 0.9)), url('https://readdy.ai/api/search-image?query=modern%20gym%20interior%20with%20blue%20lighting%2C%20professional%20fitness%20equipment%2C%20clean%20and%20spacious%20environment%2C%20high-quality%20fitness%20center%20with%20blue%20accent%20lighting%2C%20minimalist%20design&width=1920&height=600&seq=gym-hero&orientation=landscape');
     background-size: cover;
     background-position: center;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
     outline: none;
     border-color: #34A4E0;
+    box-shadow: 0 0 0 3px rgba(52, 164, 224, 0.2);
 }
 
 .container {
@@ -34,11 +36,12 @@ input:focus, textarea:focus {
 }
 
 .hero-section h1 {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 30px; /* Giữ kích thước tiêu đề lớn */
+    font-family: 'Verdana', sans-serif;
+    font-size: 30px;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 16px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -48,8 +51,8 @@ input:focus, textarea:focus {
 }
 
 .hero-section p {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
     color: #f3f4f6;
     max-width: 768px;
     margin: 0 auto;
@@ -76,17 +79,20 @@ input:focus, textarea:focus {
     background-color: #f9fafb;
     border-radius: 8px;
     padding: 24px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 96px;
+    height: 500px;
 }
 
 .sidebar-content h3 {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 18px; /* Giữ kích thước lớn hơn một chút cho tiêu đề */
+    font-family: 'Verdana', sans-serif;
+    font-size: 18px;
     font-weight: 600;
     color: #34A4E0;
     margin-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 8px;
 }
 
 .sidebar-content ul {
@@ -104,13 +110,16 @@ input:focus, textarea:focus {
     align-items: center;
     color: #374151;
     text-decoration: none;
-    transition: color 0.2s;
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    transition: color 0.2s, background-color 0.2s;
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    padding: 4px 0;
 }
 
 .sidebar-link:hover {
     color: #34A4E0;
+    background-color: #e5e7eb;
+    border-radius: 4px;
 }
 
 .icon-wrapper {
@@ -128,6 +137,7 @@ input:focus, textarea:focus {
     background-color: #eff6ff;
     border: 1px solid #bfdbfe;
     border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .support-content {
@@ -149,16 +159,16 @@ input:focus, textarea:focus {
 }
 
 .support-content h4 {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
     font-weight: 500;
     color: #111827;
     margin-bottom: 4px;
 }
 
 .support-content p {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
     color: #4b5563;
     margin-bottom: 8px;
 }
@@ -169,8 +179,12 @@ input:focus, textarea:focus {
     color: #34A4E0;
     font-weight: 500;
     text-decoration: none;
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+}
+
+.support-link:hover {
+    text-decoration: underline;
 }
 
 .main-column {
@@ -182,16 +196,18 @@ input:focus, textarea:focus {
 }
 
 .content-section h2 {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 24px; /* Giữ kích thước tiêu đề lớn */
+    font-family: 'Verdana', sans-serif;
+    font-size: 24px;
     font-weight: 700;
     color: #34A4E0;
     margin-bottom: 24px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 8px;
 }
 
 .content-section p {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
     color: #374151;
     margin-bottom: 16px;
 }
@@ -201,6 +217,7 @@ input:focus, textarea:focus {
     border-left: 4px solid #34A4E0;
     padding: 16px;
     margin: 24px 0;
+    border-radius: 4px;
 }
 
 .info-content {
@@ -218,8 +235,8 @@ input:focus, textarea:focus {
 }
 
 .info-title {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
     font-weight: 500;
     color: #111827;
 }
@@ -245,13 +262,13 @@ input:focus, textarea:focus {
     font-weight: 700;
     margin-right: 16px;
     flex-shrink: 0;
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
 }
 
 .process-step h3 {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 18px; /* Giữ kích thước lớn hơn một chút cho tiêu đề */
+    font-family: 'Verdana', sans-serif;
+    font-size: 18px;
     font-weight: 600;
     color: #111827;
     margin-bottom: 8px;
@@ -276,16 +293,16 @@ th {
     font-weight: 600;
     color: #111827;
     border-bottom: 1px solid #e5e7eb;
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
 }
 
 td {
     padding: 12px 16px;
     color: #374151;
     border-bottom: 1px solid #e5e7eb;
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
 }
 
 tbody tr:nth-child(even) {
@@ -315,10 +332,10 @@ tbody tr:nth-child(even) {
     margin-top: 2px;
 }
 
-.compensation-item span .font-semibold {
+.compensation-item span {
     font-weight: 500;
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
 }
 
 .complaint-form {
@@ -328,7 +345,7 @@ tbody tr:nth-child(even) {
 .form-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px; /* Giữ khoảng cách ngang và dọc giữa các nhóm */
+    gap: 24px;
 }
 
 @media (min-width: 768px) {
@@ -342,12 +359,12 @@ tbody tr:nth-child(even) {
     font-size: 14px;
     font-weight: 500;
     color: #374151;
-    margin-bottom: 4px; /* Giữ khoảng cách nhỏ giữa label và input */
+    margin-bottom: 4px;
     font-family: 'Verdana', sans-serif;
 }
 
 .complaint-form .form-grid > div {
-    margin-bottom: 16px; /* Thêm khoảng cách dọc giữa các nhóm ô */
+    margin-bottom: 16px;
 }
 
 .complaint-form input,
@@ -359,15 +376,11 @@ tbody tr:nth-child(even) {
     border-radius: 4px;
     font-size: 16px;
     font-family: 'Verdana', sans-serif;
-    margin-top: 4px; /* Thêm khoảng cách nhỏ giữa label và input */
+    margin-top: 4px;
 }
 
-.complaint-form input:focus,
-.complaint-form textarea:focus,
-.complaint-form select:focus {
-    outline: none;
-    border-color: #34A4E0;
-    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+.complaint-form input[type="file"] {
+    display: none;
 }
 
 .select-wrapper {
@@ -393,6 +406,7 @@ tbody tr:nth-child(even) {
     border-radius: 8px;
     padding: 24px;
     text-align: center;
+    transition: background-color 0.2s;
 }
 
 .upload-icon {
@@ -408,15 +422,15 @@ tbody tr:nth-child(even) {
 }
 
 .upload-box p {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
     color: #4b5563;
     margin-bottom: 8px;
 }
 
 .upload-info {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 12px; /* Giữ kích thước nhỏ hơn cho thông tin */
+    font-family: 'Verdana', sans-serif;
+    font-size: 12px;
     color: #6b7280;
     margin-top: 8px;
 }
@@ -430,8 +444,8 @@ tbody tr:nth-child(even) {
     border: none;
     cursor: pointer;
     transition: color 0.2s;
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
 }
 
 .upload-button:hover {
@@ -451,8 +465,8 @@ tbody tr:nth-child(even) {
 
 .checkbox-group label {
     margin-left: 8px;
-    font-size: 16px; /* Đồng nhất với body */
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px;
+    font-family: 'Verdana', sans-serif;
 }
 
 .checkbox-group .link {
@@ -474,8 +488,8 @@ tbody tr:nth-child(even) {
     cursor: pointer;
     transition: background-color 0.2s;
     white-space: nowrap;
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
 }
 
 .submit-button:hover {
@@ -488,8 +502,8 @@ tbody tr:nth-child(even) {
 }
 
 .faq-section h2 {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 30px; /* Giữ kích thước tiêu đề lớn */
+    font-family: 'Verdana', sans-serif;
+    font-size: 30px;
     font-weight: 700;
     color: #2563eb;
     margin-bottom: 48px;
@@ -518,8 +532,8 @@ tbody tr:nth-child(even) {
     text-align: left;
     cursor: pointer;
     transition: background-color 0.2s;
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
 }
 
 .faq-button:hover {
@@ -529,8 +543,8 @@ tbody tr:nth-child(even) {
 .faq-button span {
     font-weight: 500;
     color: #111827;
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
 }
 
 .faq-icon {
@@ -549,8 +563,8 @@ tbody tr:nth-child(even) {
 }
 
 .faq-content p {
-    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
-    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
     color: #374151;
 }
 
