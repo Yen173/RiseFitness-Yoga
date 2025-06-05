@@ -80,17 +80,8 @@ input:focus, textarea:focus {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 96px;
-    max-height: 65vh; /* Tăng chiều cao tối đa lên 80% viewport */
+    max-height: 65vh;
     overflow-y: auto;
-}
-
-.sidebar-content {
-    background-color: #f9fafb;
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 96px;
 }
 
 .sidebar-content h3 {
@@ -349,6 +340,10 @@ tbody tr:nth-child(even) {
     }
 }
 
+.form-grid-full {
+    grid-column: 1 / -1;
+}
+
 .complaint-form label {
     display: block;
     font-family: 'Verdana', sans-serif;
@@ -492,6 +487,26 @@ tbody tr:nth-child(even) {
 
 .submit-button:hover {
     background-color: #1e40af;
+}
+
+.form-message {
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.form-message.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+.form-message.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
 }
 
 .faq-section {
