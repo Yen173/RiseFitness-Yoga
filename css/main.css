@@ -1,3 +1,5 @@
+
+
 /* Reset và style cơ bản */
 * {
     margin: 0;
@@ -19,21 +21,24 @@ a {
 
 /* Đổi màu nền của tất cả các button */
 .cta-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #34A4E0;
-    color: #fff;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
     text-align: center;
-    position: relative;
-    z-index: 2;
+    min-width: 120px;
+    transition: background-color 0.3s ease;
+    background-color: #3b82f6;
+    color: white;
 }
 
 .cta-button:hover {
-    background: #58c2fc;
-    transform: scale(1.05);
+    background-color: #2563eb;
+}
+
+.cta-button.highlighted {
+    background-color: #1d4ed8;
 }
 
 .cta-button.animated {
@@ -316,93 +321,189 @@ a {
 /* Giới thiệu chung */
 #about {
     padding: 40px 20px;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
 }
 
-.about-container {
+#about .about-container {
     display: flex;
-    align-items: stretch;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
     gap: 20px;
 }
 
-.about-image {
-    flex: 1;
-    min-width: 0;
-    position: relative;
+#about .about-image {
+    flex: 0 0 40%;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 350px;
 }
 
-.parallax-image {
+#about .about-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease-out;
+    border-radius: 10px;
 }
 
-.about-image:hover .parallax-image {
-    transform: scale(1.1);
+/* Đảm bảo ảnh xếp chồng lên nhau và chuyển mượt */
+.about-image.slideshow {
+  position: relative;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about-content {
-    flex: 1;
-    min-width: 0;
-    padding: 20px;
-    background: #2d2d2d;
-    border-radius: 8px;
+.about-image.slideshow .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.about-image.slideshow .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+#about .about-content {
+    flex: 0 0 60%; /* Đặt cố định 60% để tránh chia nhỏ */
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /*gap: 10px; Tạo khoảng cách tự nhiên giữa các khối */
+    /*justify-content: space-between;*/
+    /*height: 350px;*/
 }
 
 #about h2 {
     font-size: 32px;
-    margin-bottom: 20px;
-    color: #f0f0f0;
-    text-align: center;
-}
-
-#about p, #about ul {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #d0d0d0;
-    line-height: 1.8;
-}
-
-#about ul {
-    list-style: none;
-    padding: 0;
-}
-
-#about ul li {
     margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
+    color: #000000;
+    font-weight: bold;
 }
 
-#about ul li::before {
-    content: "•";
-    color: #34A4E0;
-    position: absolute;
-    left: 0;
+#about p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000000;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+}
+
+#about .about-details {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+#about .schedule, #about .location /*{
+    background: #f1f5f9;
+    padding: 8px;
+    border-radius: 8px;
+    flex: 1;*/
+    #about .schedule, #about .location {
+    background: #f1f5f9;
+    padding: 16px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center; /* Căn giữa toàn bộ nội dung */
+    max-width: 350px; /* giới hạn chiều rộng */
+    margin: 0 auto; /* căn giữa khi cần */
+}
+
+#about .schedule .icon,
+#about .location .icon {
+    font-size: 28px;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+#about .schedule h3, #about .location h3 {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+#about .schedule p, #about .location p {
+    font-size: 14px;
+    color: #000000;
+    margin: 2px 0;
+}
+
+#about .about-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-self: center;
+
 }
 
 #about .cta-button {
-    margin-top: 20px;
-    display: inline-block;
-    text-align: center;
-    width: auto;
-    padding: 12px 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#about .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(59, 130, 246, 0.5);
 }
 
 @media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
+    #about {
+        padding: 20px;
     }
-    .about-image, .about-content {
-        flex: 100%;
+    #about .about-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    #about .about-image {
+        flex: 0 0 100%;
+        height: 250px;
+    }
+    #about .about-content {
+        flex: 0 0 100%;
+        height: auto;
+        text-align: center;
+    }
+    #about p {
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+    }
+    #about .about-details {
+        flex-direction: column;
     }
     #about h2 {
         font-size: 24px;
     }
-    #about p, #about ul {
+    #about p {
         font-size: 14px;
     }
 }
@@ -411,33 +512,70 @@ a {
 #products, #promotions {
     padding: 40px 20px;
     text-align: center;
+    background: #1a1a1a;
 }
 
 #products h2, #promotions h2 {
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #f0f0f0;
+}
+
+#products p, #promotions p {
+    font-size: 16px;
+    color: #d0d0d0;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slider-container {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
+    perspective: 1000px;
+    overflow: hidden; /* Đổi thành visible để viền không bị cắt */
+    padding: 0 60px;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: visible; /* Đổi thành visible để viền không bị cắt */
 }
 
 .product-slider, .promotion-slider {
     display: flex;
+    flex-wrap: nowrap;
     transition: transform 0.5s ease;
+    gap: 20px;
+    height: auto;
+    width: 100%;
 }
 
 .product-card, .promotion-card {
-    flex: 0 0 25%;
-    padding: 10px;
-    text-align: center;
+    position: relative; /* Thêm position relative để z-index hoạt động */
+    flex: 0 0 calc((100% / 3) - (20px * 2 / 3));
     background: #2d2d2d;
-    border-radius: 8px;
-    margin: 0 10px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: all 0.4s ease;
+    min-width: calc((100% / 3) - (20px * 2 / 3));
+    max-width: calc((100% / 3) - (20px * 2 / 3));
+    overflow: visible;
+    height: auto;
+}
+
+.product-card:hover, .promotion-card:hover {
+    transform: translateZ(40px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    z-index: 100; /* Tăng z-index cao hơn để đảm bảo không bị che */
 }
 
 .product-card img, .promotion-card img {
@@ -445,7 +583,7 @@ a {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .product-card h3, .promotion-card h3 {
@@ -455,36 +593,70 @@ a {
 }
 
 .product-card p, .promotion-card p {
-    font-size: 14px;
+    font-size: 16px;
+    color: #d0d0d0;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.product-card-content, .promotion-card-content {
+    padding: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promotion-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
+}
+
+.promotion-card-header .badge {
+    background: rgba(52, 164, 224, 0.2);
+    color: #34A4E0;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.promotion-card-header .time-left {
+    color: #d0d0d0;
+    font-size: 12px;
 }
 
 .product-button, .promo-button {
     display: inline-block;
     padding: 10px 20px;
-    background: #34A4E0;
-    color: #fff;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: background 0.3s ease;
-}
-
-.product-button:hover, .promo-button:hover {
-    background: #58c2fc;
+    font-size: 16px;
 }
 
 .slider-prev, .slider-next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* Đảm bảo căn giữa theo chiều dọc */
+    width: 40px;
+    height: 40px;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 0;
     cursor: pointer;
     font-size: 18px;
     border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background 0.3s ease;
+    z-index: 10;
+    opacity: 1;
 }
 
 .slider-prev {
@@ -496,108 +668,207 @@ a {
 }
 
 .slider-prev:hover, .slider-next:hover {
-    background: #58c2fc;
+    background: #34A4E0;
 }
 
-@media screen and (max-width: 1024px) {
-    .product-card, .promotion-card {
-        flex: 0 0 50%;
+.slider-prev:disabled, .slider-next:disabled {
+    background: #4a5568;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Style cho dòng văn bản mới */
+.section-footer-text {
+    margin-top: 40px;
+}
+
+
+/* Section BMI Calculator */
+#bmi {
+    /* Khoảng cách và nền */
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* Container chính */
+#bmi .bmi-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Grid layout cho 2 cột */
+#bmi .bmi-grid {
+    display: grid;
+    gap: 48px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    #bmi .bmi-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .product-card, .promotion-card {
-        flex: 0 0 100%;
-    }
-    #products h2, #promotions h2 {
-        font-size: 24px;
-    }
-    .product-card img, .promotion-card img {
-        height: 150px;
+
+/* Tiêu đề chính */
+#bmi .bmi-content h2 {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    #bmi .bmi-content h2 {
+        font-size: 36px;
+        line-height: 40px;
     }
 }
 
-/* Tính chỉ số BMI */
-#bmi-calculator {
-    padding: 40px 20px;
-    text-align: center;
+/* Đoạn mô tả */
+#bmi .bmi-content p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #4a5568;
+    margin-bottom: 32px;
 }
 
-.bmi-form {
-    max-width: 500px;
-    margin: 20px auto;
+
+#bmi .form-group {
+    margin-bottom: 24px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+/* Label */
+#bmi .form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+/* Input */
+#bmi .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #2d3748;
+}
+
+#bmi .form-group input:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #3b82f6; /* Viền phát sáng khi focus */
+}
+
+/* Nút "Tính BMI" */
+#bmi #bmi-form button {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+#bmi #bmi-form button:hover {
+    background-color: rgba(59, 130, 246, 0.9);
+}
+
+/* Kết quả BMI */
+#bmi .bmi-result {
+    margin-top: 32px;
+}
+
+#bmi .bmi-result.hidden {
+    display: none;
+}
+
+#bmi .result-box {
+    background-color: #f9fafb;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+/* Tiêu đề kết quả */
+#bmi .result-box h3 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 16px;
+}
+
+/* Hàng hiển thị chỉ số BMI */
+#bmi .result-row {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 16px;
 }
 
-.form-group label {
+#bmi .result-row span:first-child {
+    color: #4a5568;
     font-size: 16px;
-    color: #f0f0f0;
-    width: 120px;
-    text-align: right;
 }
 
-.form-group label span {
-    color: #58c2fc;
+#bmi #bmi-value {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #3b82f6;
 }
 
-.form-group input {
-    flex: 1;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #444;
-    border-radius: 4px;
-    background: #2d2d2d;
-    color: #fff;
-}
-
-.form-group input:focus {
-    border-color: #4da8ff;
-    outline: none;
-}
-
-.bmi-form button {
-    padding: 12px 24px;
-    background: #34A4E0;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+/* Thông điệp kết quả */
+#bmi #bmi-message {
+    color: #4a5568;
     font-size: 16px;
-    transition: background 0.3s ease;
 }
 
-.bmi-form button:hover {
-    background: #34A4E0;
+/* Phần hình ảnh bên phải */
+#bmi .bmi-image {
+    position: relative;
 }
 
-.bmi-result {
-    margin-top: 20px;
+#bmi .bmi-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Lớp phủ trên hình ảnh */
+#bmi .image-overlay {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 16px;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+}
+
+/* Tiêu đề lớp phủ */
+#bmi .image-overlay h3 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 8px;
+}
+
+/* Đoạn mô tả lớp phủ */
+#bmi .image-overlay p {
     font-size: 16px;
-    color: #f0f0f0;
-}
-
-@media screen and (max-width: 768px) {
-    .form-group {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-    .form-group label {
-        width: auto;
-        text-align: left;
-    }
-    .form-group input {
-        width: 100%;
-    }
-    .bmi-form button {
-        font-size: 14px;
-    }
+    color: #4a5568;
 }
 
 /* Form đăng ký tập thử */
