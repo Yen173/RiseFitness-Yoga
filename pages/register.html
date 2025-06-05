@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng Ký Tập Thử - Rise Fitness & Yoga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/register.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <!-- Chèn header -->
+    <div id="header"></div>
+
+    <!-- Form -->
+  <section class="form">
+    <div class="left-form">
+      <h1>TẬP THỬ KHÔNG MẤT PHÍ TẠI RISE FITNESS & YOGA</h1>
+      <p>Trải nghiệm mô hình tập luyện tại Rise Fitness & Yoga hoàn toàn miễn phí, chúng tôi sẽ liên hệ đặt lịch hẹn với bạn trong vòng 24h sau khi bạn gửi thông tin, đăng ký ngay!</p>
+    </div>
+    <div class="right-form">
+      <div id="form-container">
+        <form id="registration-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Họ và Tên *" required />
+            <div id="nameError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" placeholder="Số điện thoại *" required />
+            <div id="phoneError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="sport">Môn thể thao tập thử *</label>
+            <select id="sport" name="sport" required>
+              <option value="" disabled selected>Chọn môn thể thao</option>
+              <option value="Gym">Gym</option>
+              <option value="Kickboxing">Kickboxing</option>
+              <option value="Yoga">Yoga</option>
+              <option value="Dance">Dance</option>
+            </select>
+            <div id="sportError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="time">Khung giờ tập thử *</label>
+            <select id="time" name="time" required>
+              <option value="" disabled selected>Chọn khung giờ</option>
+              <option value="Sáng">Sáng</option>
+              <option value="Chiều">Chiều</option>
+              <option value="Tối">Tối</option>
+            </select>
+            <div id="timeError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <button type="button" id="submit-btn">ĐĂNG KÝ</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="left-benefits">
+      <h2>LỢI ÍCH CỦA THÀNH VIÊN RISE FITNESS & YOGA</h2>
+      <ul>
+        <li>Trải nghiệm bể bơi 4 mùa hiện đại, thoải mái tập luyện quanh năm</li>
+        <li>Lớp học đa dạng với gym, yoga, dance và kickboxing trong không gian chuyên nghiệp</li>
+        <li>Huấn luyện viên cá nhân tận tâm, hỗ trợ đạt mục tiêu sức khỏe nhanh chóng</li>
+        <li>Không gian thiết kế sang trọng, đầy đủ tiện nghi tại trung tâm thành phố</li>
+        <li>Tham gia cộng đồng năng động, kết nối với những người đam mê thể thao</li>
+      </ul>
+    </div>
+    <div class="right-benefits"></div>
+  </section>
+
+   <script src="../js/register.js"></script>
+
+</body>
+
+<!-- Chèn footer -->
+    <div id="footer"></div>
+
+</html>
