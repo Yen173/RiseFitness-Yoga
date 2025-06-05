@@ -1,121 +1,261 @@
-/* Style cho nội dung điều khoản và điều kiện */
-.policy-content {
-    max-width: 1000px;
-    margin: 150px auto 60px auto; /* Đảm bảo không bị header che */
-    padding: 20px;
-    font-family: 'Verdana', sans-serif;
-    line-height: 1.8;
-    color: #fff; /* Chữ trắng */
-    background: #1a1a1a; /* Đen nhạt */
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-/* Tiêu đề chính */
-.policy-content h1 {
-    font-size: 32px;
+.hero-section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 100px 20px;
+    background-image: linear-gradient(rgba(0, 30, 77, 0.85), rgba(0, 30, 77, 0.85)), url('https://readdy.ai/api/search-image?query=modern%20gym%20interior%20with%20blue%20lighting%2C%20professional%20fitness%20equipment%2C%20clean%20and%20spacious%20environment%2C%20high-quality%20fitness%20center%20with%20blue%20accent%20lighting%2C%20minimalist%20design&width=1920&height=600&seq=gym-hero&orientation=landscape');
+    background-size: cover;
+    color: white;
     text-align: center;
-    margin-bottom: 10px;
+    border-radius: 0 0 8px 8px;
+}
+
+.hero-section h1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: 700;
     text-transform: uppercase;
-    color: #f0f0f0; /* Trắng nhạt */
+    letter-spacing: 1px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin: 16px 0 0;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 32px;
+    margin: 32px 0;
+}
+
+.sidebar-content {
+    padding: 24px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.sidebar-content h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.sidebar-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-content ul li {
+    margin: 12px 0;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-link:hover {
+    color: #2ecc71;
+    transform: translateX(5px);
+}
+
+.icon-wrapper {
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.support-box {
+    margin-top: 24px;
+    padding: 16px;
+    background: #e6f0ff;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.support-content {
+    display: flex;
+    align-items: center;
+}
+
+.support-icon {
+    font-size: 24px;
+    color: #3498db;
+    margin-right: 12px;
+}
+
+.support-content h4 {
+    font-size: 18px;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.support-content p {
+    font-size: 14px;
+    margin: 4px 0 0;
+    color: #4a4a4a;
+}
+
+.support-link {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 16px;
     font-weight: 700;
 }
 
-/* Tiêu đề phụ */
-.policy-content h2 {
-    font-size: 22px;
-    margin: 30px 0 15px;
-    color: #f0f0f0;
-    text-align: center;
-    font-weight: 600;
+.support-link:hover {
+    color: #2ecc71;
+    text-decoration: underline;
 }
 
-.policy-content h3 {
-    font-size: 18px;
-    margin: 20px 0 12px;
-    color: #f0f0f0;
-    font-weight: 600;
+.main-column {
+    padding: 24px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Đoạn văn và danh sách */
-.policy-content p,
-.policy-content ul {
+.content-section {
+    margin-bottom: 40px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.content-section h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #3498db;
+}
+
+.content-section p {
     font-size: 16px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-/* Danh sách */
-.policy-content ul {
-    list-style: disc;
-    margin-left: 30px;
-}
-
-.policy-content ul li {
+    color: #4a4a4a;
     margin-bottom: 12px;
 }
 
-/* Liên kết */
-.policy-content a {
-    color: #4da8ff; /* Xanh nhạt */
+.content-section ul {
+    padding-left: 25px;
+}
+
+.content-section ul li {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+.content-section ul li a {
+    color: #3498db;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.policy-content a:hover {
-    color: #80c0ff; /* Sáng hơn khi hover */
+.content-section ul li a:hover {
+    color: #2ecc71;
+    text-decoration: underline;
 }
 
-/* Đảm bảo body không bị header che */
-body {
-    padding-top: 110px; /* Bù cho header 100px + buffer */
-    background: #1a1a1a; /* Đen nhạt */
+.update-date {
+    font-style: italic;
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+    margin: 48px 0;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
-    body {
-        padding-top: 120px;
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-    .policy-content {
-        margin: 140px auto 40px auto;
-        padding: 15px;
-        box-shadow: none;
+    .sidebar-content {
+        position: static;
+        margin-bottom: 16px;
     }
 
-    .policy-content h1 {
-        font-size: 26px;
+    .hero-section,
+    .main-column,
+    .update-date {
+        padding: 16px;
     }
 
-    .policy-content h2 {
-        font-size: 20px;
+    .hero-section h1 {
+        font-size: 24px;
     }
 
-    .policy-content h3 {
+    .hero-section p {
         font-size: 16px;
     }
 
-    .policy-content p,
-    .policy-content ul {
-        font-size: 14px;
+    .sidebar-content h3 {
+        font-size: 18px;
     }
 
-    .policy-content ul {
-        margin-left: 20px;
+    .content-section h2 {
+        font-size: 20px;
+    }
+
+    .content-section p,
+    .content-section ul li {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    .policy-content {
-        margin: 130px auto 30px auto;
+    .hero-section {
+        padding: 24px 16px;
     }
 
-    .policy-content h1 {
-        font-size: 22px;
+    .hero-section h1 {
+        font-size: 20px;
     }
 
-    .policy-content h2 {
-        font-size: 18px;
+    .sidebar-content {
+        padding: 16px;
+    }
+
+    .main-column {
+        padding: 16px;
     }
 }
