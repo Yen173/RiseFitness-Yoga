@@ -1,121 +1,559 @@
-/* Style cho nội dung chính sách */
-.policy-content {
-    max-width: 1000px; /* Gọn hơn */
-    margin: 150px auto 60px auto; /* Đảm bảo không bị header che */
-    padding: 20px; /* Thêm padding bên trong */
+body {
     font-family: 'Verdana', sans-serif;
-    line-height: 1.8; /* Dễ đọc */
-    color: #fff; /* Chữ trắng */
-    background: #1a1a1a; /* Đen nhạt */
-    border-radius: 8px; /* Bo góc */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Bóng nhẹ */
+    margin: 0;
+    color: #374151;
+    line-height: 1.6;
+    font-size: 16px; /* Đặt kích thước chữ mặc định cho toàn trang */
 }
 
-/* Tiêu đề chính */
-.policy-content h1 {
-    font-size: 32px;
+.hero-section {
+    background-image: linear-gradient(rgba(0, 30, 77, 0.85), rgba(0, 30, 77, 0.85)), url('https://readdy.ai/api/search-image?query=modern%20gym%20interior%20with%20blue%20lighting%2C%20professional%20fitness%20equipment%2C%20clean%20and%20spacious%20environment%2C%20high-quality%20fitness%20center%20with%20blue%20accent%20lighting%2C%20minimalist%20design&width=1920&height=600&seq=gym-hero&orientation=landscape');
+    background-size: cover;
+    background-position: center;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #34A4E0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.text-center {
     text-align: center;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: #f0f0f0; /* Trắng nhạt cho nổi bật */
+}
+
+.hero-section {
+    padding: 100px 0;
+    background-color: #34A4E0;
+}
+
+.hero-section h1 {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 30px; /* Giữ kích thước tiêu đề lớn */
     font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
 }
 
-/* Tiêu đề phụ */
-.policy-content h2 {
-    font-size: 22px;
-    margin: 30px 0 15px;
-    color: #f0f0f0;
-    text-align: center;
+@media (min-width: 768px) {
+    .hero-section h1 {
+        font-size: 48px;
+    }
+}
+
+.hero-section p {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+    color: #f3f4f6;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.main-content {
+    padding: 64px 0;
+    background-color: #ffffff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+.sidebar-content {
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 96px;
+}
+
+.sidebar-content h3 {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 18px; /* Giữ kích thước lớn hơn một chút cho tiêu đề */
     font-weight: 600;
+    color: #34A4E0;
+    margin-bottom: 16px;
 }
 
-.policy-content h3 {
-    font-size: 18px;
-    margin: 20px 0 12px;
-    color: #f0f0f0;
-    font-weight: 600;
+.sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Đoạn văn và danh sách */
-.policy-content p,
-.policy-content ul {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #fff; /* Chữ trắng */
-}
-
-/* Danh sách */
-.policy-content ul {
-    list-style: disc;
-    margin-left: 30px;
-}
-
-.policy-content ul li {
+.sidebar-content ul li {
     margin-bottom: 12px;
 }
 
-/* Liên kết */
-.policy-content a {
-    color: #4da8ff; /* Xanh nhạt cho liên kết */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    color: #374151;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s;
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
 }
 
-.policy-content a:hover {
-    color: #80c0ff; /* Sáng hơn khi hover */
+.sidebar-link:hover {
+    color: #34A4E0;
 }
 
-/* Đảm bảo body không bị header che */
-body {
-    padding-top: 110px; /* Bù cho header 100px + buffer */
-    background: #1a1a1a; /* Đen nhạt cho toàn trang */
+.icon-wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    body {
-        padding-top: 120px; /* Tăng padding cho mobile */
-    }
+.support-box {
+    margin-top: 32px;
+    padding: 16px;
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+}
 
-    .policy-content {
-        margin: 140px auto 40px auto;
-        padding: 15px;
-        box-shadow: none; /* Bỏ bóng trên mobile */
-    }
+.support-content {
+    display: flex;
+    align-items: flex-start;
+}
 
-    .policy-content h1 {
-        font-size: 26px;
-    }
+.support-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: #34A4E0;
+    color: #ffffff;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
 
-    .policy-content h2 {
-        font-size: 20px;
-    }
+.support-content h4 {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 4px;
+}
 
-    .policy-content h3 {
-        font-size: 16px;
-    }
+.support-content p {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+    color: #4b5563;
+    margin-bottom: 8px;
+}
 
-    .policy-content p,
-    .policy-content ul {
-        font-size: 14px;
-    }
+.support-link {
+    display: flex;
+    align-items: center;
+    color: #34A4E0;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+}
 
-    .policy-content ul {
-        margin-left: 20px;
+.main-column {
+    padding: 0;
+}
+
+.content-section {
+    margin-bottom: 48px;
+}
+
+.content-section h2 {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 24px; /* Giữ kích thước tiêu đề lớn */
+    font-weight: 700;
+    color: #34A4E0;
+    margin-bottom: 24px;
+}
+
+.content-section p {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+    color: #374151;
+    margin-bottom: 16px;
+}
+
+.info-box {
+    background-color: #eff6ff;
+    border-left: 4px solid #34A4E0;
+    padding: 16px;
+    margin: 24px 0;
+}
+
+.info-content {
+    display: flex;
+}
+
+.info-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #34A4E0;
+    margin-right: 8px;
+}
+
+.info-title {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+    font-weight: 500;
+    color: #111827;
+}
+
+.process-steps {
+    margin-top: 24px;
+}
+
+.process-step {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background-color: #34A4E0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-right: 16px;
+    flex-shrink: 0;
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+}
+
+.process-step h3 {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 18px; /* Giữ kích thước lớn hơn một chút cho tiêu đề */
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead tr {
+    background-color: #f9fafb;
+}
+
+th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #111827;
+    border-bottom: 1px solid #e5e7eb;
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+}
+
+td {
+    padding: 12px 16px;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.compensation-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.compensation-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #34A4E0;
+    margin-right: 8px;
+    margin-top: 2px;
+}
+
+.compensation-item span .font-semibold {
+    font-weight: 500;
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+}
+
+.complaint-form {
+    margin-top: 24px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px; /* Giữ khoảng cách ngang và dọc giữa các nhóm */
+}
+
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 480px) {
-    .policy-content {
-        margin: 130px auto 30px auto;
-    }
+.complaint-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px; /* Giữ khoảng cách nhỏ giữa label và input */
+    font-family: 'Verdana', sans-serif;
+}
 
-    .policy-content h1 {
-        font-size: 22px;
-    }
+.complaint-form .form-grid > div {
+    margin-bottom: 16px; /* Thêm khoảng cách dọc giữa các nhóm ô */
+}
 
-    .policy-content h2 {
-        font-size: 18px;
-    }
+.complaint-form input,
+.complaint-form textarea,
+.complaint-form select {
+    width: 100%;
+    padding: 8px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Verdana', sans-serif;
+    margin-top: 4px; /* Thêm khoảng cách nhỏ giữa label và input */
+}
+
+.complaint-form input:focus,
+.complaint-form textarea:focus,
+.complaint-form select:focus {
+    outline: none;
+    border-color: #34A4E0;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    padding-right: 32px;
+}
+
+.select-icon {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    color: #6b7280;
+    pointer-events: none;
+}
+
+.upload-box {
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+}
+
+.upload-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: #eff6ff;
+    color: #34A4E0;
+}
+
+.upload-box p {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+
+.upload-info {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 12px; /* Giữ kích thước nhỏ hơn cho thông tin */
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+.upload-button {
+    color: #34A4E0;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+}
+
+.upload-button:hover {
+    color: #1e40af;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkbox-group input {
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+}
+
+.checkbox-group label {
+    margin-left: 8px;
+    font-size: 16px; /* Đồng nhất với body */
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+}
+
+.checkbox-group .link {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.checkbox-group .link:hover {
+    text-decoration: underline;
+}
+
+.submit-button {
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 8px 24px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+}
+
+.submit-button:hover {
+    background-color: #1e40af;
+}
+
+.faq-section {
+    padding: 64px 0;
+    background-color: #f9fafb;
+}
+
+.faq-section h2 {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 30px; /* Giữ kích thước tiêu đề lớn */
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.faq-list {
+    margin-top: 16px;
+}
+
+.faq-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.faq-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 24px;
+    background-color: #ffffff;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+}
+
+.faq-button:hover {
+    background-color: #f9fafb;
+}
+
+.faq-button span {
+    font-weight: 500;
+    color: #111827;
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+}
+
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6894f3;
+}
+
+.faq-content {
+    padding: 16px 24px;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+}
+
+.faq-content p {
+    font-family: 'Verdana', sans-serif; /* Đảm bảo font Verdana */
+    font-size: 16px; /* Đồng nhất với body */
+    color: #374151;
+}
+
+.hidden {
+    display: none;
 }
