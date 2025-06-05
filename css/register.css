@@ -10,7 +10,7 @@ body {
   width: 100%;
   max-width: none;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 70px;
   background: url('../../images/registerbanner.jpg') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
@@ -44,6 +44,8 @@ body {
   font-size: 3em;
   color: #fff;
   padding-bottom: 20px;
+  font-family: 'Montserrat', sans-serif ;
+  font-weight: 700;
 }
 .left-form p {
   font-size: 1em;
@@ -54,30 +56,30 @@ body {
   width: 46%;
   height: 80%;
   background-color: #fff;
-  margin-right: 3%;
+  margin-right: 4%;
   margin-top: 3%;
   margin-bottom: auto;
   position: relative;
   z-index: 2;
-  padding: 40px;
+  padding: 25px;
   min-width: 300px;
 }
 .form-group {
-  margin-bottom: 32px;
+  margin-bottom: 18px;
   position: relative;
   box-sizing: border-box;
 }
 .form-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   color: #000;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 .form-group input,
 .form-group select {
   width: 100%;
-  padding: 10px 0;
-  height: 40px;
+  padding: 8px 0;
+  height: 36px;
   border: none;
   border-bottom: 1px solid #ccc;
   background: #fff;
@@ -85,6 +87,7 @@ body {
   font-size: 1em;
   color: #000;
   box-sizing: border-box;
+  font-size: 0.9em;
 }
 .form-group select:invalid {
   color: #999;
@@ -118,7 +121,6 @@ body {
   border-radius: 0px;
   cursor: pointer;
   font-size: 1.3em;
-  margin-top: 10px;
   width: 35%;
   transition: background-color 0.3s ease, transform 0.2s ease;
   animation: pulse 2.5s infinite;
@@ -129,9 +131,9 @@ body {
 }
 .error-message {
   color: red;
-  font-size: 0.9em;
-  height: 18px;
-  margin-top: 4px;
+  font-size: 0.8em;
+  height: 16px;
+  margin-top: 2px;
   display: block;
 }
 input,
@@ -164,42 +166,63 @@ button {
   margin: 0;
 }
 .benefits {
+  background-color: #000;
+  color: #fff;
+  position: relative; /* Đảm bảo kiểm soát layout */
+  overflow: hidden; /* Xử lý tràn nếu có */
+}
+
+.benefits .container {
+  padding: 50px 0; /* Đảm bảo padding nhất quán */
+  max-width: 1200px; /* Giới hạn chiều rộng để cân đối */
+  margin: 0 auto; /* Căn giữa container */
+}
+
+.benefits .headline {
+  font-size: 2.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: #fff; /* Đảm bảo màu chữ không bị ghi đè */
+  margin-left: 85px;
+}
+
+.benefits .stats {
   display: flex;
-  width: 100%;
-  margin: 0 auto;
-  padding: 60px;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px; /* Khoảng cách đẹp giữa stat-item */
+  margin-top: 20px; /* Giảm margin-top để gần headline hơn nếu cần */
 }
-.right-benefits {
+
+.benefits .stat-item {
+  text-align: left;
+}
+
+.benefits .stat-number {
+  font-size: 2.5rem;
+  color: #34A4E0;
+  font-weight: bold;
+}
+
+.benefits .stat-label {
+  font-size: 1rem;
+  width: 200px;
+  padding-bottom: 20px; /* Giảm padding-bottom để gọn gàng hơn */
+}
+
+.benefits .image-container {
+  position: relative;
+  height: 100%;
+}
+
+.benefits .image-container img {
+  border-radius: 20px;
   width: 48%;
-  aspect-ratio: 4 / 3;
-  background-image: url('../../images/registerbenefits.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-width: 300px;
-  margin-left: -32px;
+  height: 500px;
+  object-fit: cover;
+  margin-right: 4%;
 }
-.left-benefits {
-  flex: 1;
-  margin-right: 7px;
-  max-width: 57%;
-  box-sizing: border-box;
-  margin-left: -20px;
-}
-.left-benefits h2 {
-  font-size: 3em;
-  color: #000;
-  margin-bottom: 20px;
-}
-.left-benefits ul {
-  list-style: disc;
-  padding-left: 20px;
-  max-width: 480px;
-  line-height: 1.7;
-  font-size: 1em;
-  color: #000;
-}
-.left-benefits ul li {
-  margin-bottom: 12px;
+
+.benefits .image-container img:last-child {
+  margin-right: 0;
 }
