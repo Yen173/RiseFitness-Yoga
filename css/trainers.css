@@ -8,15 +8,18 @@
          
         .banner {
             height: 600px;
-            background: url('https://tofit.like-themes.com/wp-content/uploads/2024/07/grid-1-1.jpg') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            position: relative;
-            text-align: left;
-            color: #fff;
-            margin-top: 85px; /* Điều chỉnh để header chạm vào top của banner, tùy chỉnh theo chiều cao header */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    text-align: left;
+    color: #F5F5F5;
+    margin-top: 70px;
+    transition: background-image 1s ease-in-out;
         }
+
         .banner-content {
             padding: 20px;
             max-width: 700px;
@@ -25,37 +28,79 @@
         }
         .banner-content .subtext {
             font-size: 1.6rem;
-            color: #000; 
+            color: #F5F5F5; 
             margin-bottom: 30px;
             text-transform: uppercase; 
             letter-spacing: 11px;
         }
         .banner-content .main-title {
-            font-size: 3.4rem;
+            font-size: 4rem;
             font-weight: bold;
-            color: #000; /* Màu đen giống Intensive Body Evolution */
+            color: #F5F5F5; 
             margin: 0;
             line-height: 1.2;
             letter-spacing: 3px;
+            font-family: Microgramma Extended, sans-serif;
         }
         .banner-content .description {
             font-size: 1.2rem;
-            color: #ddd;
+            color: #F5F5F5;
             margin: 20px 0;
             max-width: 400px;
             display: none; /* Ẩn description vì ảnh không có phần mô tả */
+            font-family: Microgramma Extended, sans-serif;
         }
         .banner-content .btn-get-now {
-            background-color: #34A4E0;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            text-transform: uppercase; /* Chữ in hoa giống GET NOW */
-            margin-top: 45px;
-          }
+    background-color: #34A4E0;
+    color: #F5F5F5;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 45px;
+    position: relative;
+    overflow: hidden;
+    animation: zoomLoop 2.5s ease-in-out infinite;
+    box-shadow: 0 6px 20px rgba(52, 164, 224, 0.4); /* đổ bóng màu nền xanh dương nhẹ */
+    transition: transform 0.3s ease;
+    font-family: Microgramma Extended, sans-serif;
+}
+
+/* Hiệu ứng bóng trắng chạy ngang */
+.banner-content .btn-get-now::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), transparent);
+    transform: skewX(-20deg);
+    animation: shine 2s infinite;
+}
+
+/* Zoom in liên tục */
+@keyframes zoomLoop {
+    0%, 100% {
+        transform: scale(5);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Bóng trắng chạy ngang */
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+    100% {
+        left: 125%;
+    }
+}
+
 .benefits {
   background-color: #1a1a1a;
   padding: 40px 0;
@@ -123,99 +168,136 @@
 
 /* Bước tham gia */
 .three-steps {
-  background-color: #fff;
-  color: #000;
-  padding: 80px 20px;
-  font-family: 'Montserrat', sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Giữ chiều cao 100vh */
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/trainersstep.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.8);
+            z-index: -1;
+        }
+.intro-text {
+    font-size: 1em;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+        .three-steps h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: zoomLoop 2s ease-in-out infinite;
+        }
+@keyframes zoomLoop {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 8px rgba(51, 156, 255, 0.4);
+    }
+    50% {
+        transform: scale(1.05); /* Zoom lên 5% */
+         text-shadow: 0 0 18px rgba(51, 156, 255, 0.7);
+    }
 }
 
-.steps-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
-}
-
-.steps-left {
-  flex: 1 1 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-}
-
-.steps-left h2 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.3;
-  text-transform: uppercase;
-  color: #000;
-  
-}
-
-.steps-right {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-}
-
-.step-item {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  max-width: 480px;
-}
-
-.circle {
-  width: 120px;
-  height: 120px;
-  border: 1px solid #000;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 18px;
-  color: #000;
-  position: relative;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.circle:hover {
-  border-color: #34A4E0;
-  box-shadow: 0 0 12px 2px #34A4E0;
-}
-
-.step-label {
-  font-size: 36px;
-  font-weight: bold;
-  display: block;
-}
-
-.step-item p {
-  font-size: 18px;
-  color: #000;
-  line-height: 1.6;
-  margin: 0;
-}
-
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .circle {
+            width: 60px;
+            height: 60px;
+            border: 1.3px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .step p {
+            font-size: 1em;
+            margin: 0;
+            max-width: 200px;
+        }
+        .three-steps .btn {
+            background-color: #34A4E0;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .three-steps .btn:hover {
+            background-color: #1C88C6 ;
+            transform: translateY(-10px); /* nảy nhẹ lên */
+            
+        }
+        @media (max-width: 768px) {
+            .three-steps h1 {
+                font-size: 2.5rem;
+            }
+            .steps-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .step p {
+                font-size: 1rem;
+            }
+            .three-steps .btn {
+                padding: 10px 30px;
+                font-size: 1rem;
+            }
+            .circle {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+/* HLV*/
         .trainer-section {
             text-align: center;
             padding: 50px 20px;
-            background: #000;
-            color: #fff;
+            background: #121212;
+            color: #F5F5F5;
             margin: 0 auto;
         }
 
         .trainer-section h2 {
-            font-size: 2em;
+            font-size: 1.8em;
             margin-bottom: 30px;
-            color: #fff;
+            color: #F5F5F5;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
         }
 
         .category-buttons {
@@ -224,10 +306,15 @@
             gap: 30px;
             margin-bottom: 30px;
             background: #1a1a1a;
-            padding: 10px 0;
+            padding: 4px 0;
             border-top: 2px solid #34A4E0;
             border-bottom: 2px solid #34A4E0;
         }
+        .category-btn.active {
+            color: #fff;
+    
+}
+
 
         .category-btn {
             background: none;
@@ -260,11 +347,11 @@
             display: none;
         }
 .trainer-item {
-    background: #0B1F35;
+    background: #1a1a1a;
     padding: 0;
-    width: 250px;
+    width: 270px;
     cursor: pointer;
-    color: #fff;
+    color: #F5F5F5;
     text-align: left;
     flex: 0 0 auto;
     border-radius: 10px;
@@ -273,8 +360,13 @@
     display: flex;                 /* ✅ quan trọng */
     flex-direction: column;       /* ✅ giúp xếp chồng ảnh, tiêu đề, mô tả, nút */
     justify-content: flex-start;  /* ✅ để nội dung căn đầu */
+    font-family: 'Montserrat', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.trainer-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(52, 164, 224, 0.2); /* bóng xanh dịu */
+}
 .arrow-buttons-container {
     display: flex;
     justify-content: center; /* Căn giữa các nút */
@@ -284,17 +376,20 @@
 }
 
 .arrow-btn {
-    background: #34A4E0;
+    background: #1C88C6;
     color: #fff;
     border: none;
-    padding: 10px;
     cursor: pointer;
-    font-size: 1em;
-    display: none;
+    font-size: 1.1em;
     border-radius: 6px;
     width: 40px;                    
     height: 40px;
-    font-weight : bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow-btn:hover {
+    background-color: #34A4E0; /* xanh dương đậm hơn */
 }
 
         .trainer-item img {
@@ -313,7 +408,7 @@
         }
 
 .trainer-item p {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #ccc;
     margin: 0 15px 15px;
     overflow: hidden;
@@ -359,8 +454,8 @@
 
 .popup-content {
     background: #000;
-    padding: 20px;
-    width: 80%;
+    margin-top: 90px;
+    width: 100%;
     max-width: 1000px;
     height: 80vh;
     display: flex;
@@ -387,8 +482,10 @@
     text-align: left; /* Căn trái nội dung */
     font-family:'Microgramma Extended', sans-serif;
     font-size: 0.9em; /* Đảm bảo kích thước font không quá lớn */
-    max-height: 80vh; /* Đảm bảo nội dung không vượt quá chiều cao của popup */
+    max-height: 100vh; /* Đảm bảo nội dung không vượt quá chiều cao của popup */
     overflow-y: auto; /* Thêm cuộn dọc nếu nội dung vượt quá chiều cao */
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 30px;
 }
 
 .popup-content img {
@@ -401,7 +498,7 @@
 .popup-content .right-popup-content h3 {
     font-size: 1.5em; /* Điều chỉnh cho h3 */
     margin: 0 0 10px;
-    color: #fff;
+    color: #5AC1F0;
     font-weight: bold;
 }
 
@@ -428,6 +525,21 @@
     font-size: 0.9em;
     line-height: 1.5;
 }
+.highlight-blue {
+    color: #5AC1F0;
+    font-weight: bold;
+    animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+/* Keyframes tạo hiệu ứng sáng nhấp nháy nhẹ */
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 4px rgba(90, 193, 240, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 12px rgba(90, 193, 240, 0.7);
+    }
+}
 
         .close-btn {
             position: absolute;
@@ -445,13 +557,25 @@
     transition: background 0.3s;
 }
 
-.section-divider:hover {
-    background: #34A4E0;
-}
-.section-divider:not(:hover) {
-    transition: background 0.1s 2s; /* Giữ màu lâu hơn 0.5s sau khi di chuột ra */
+.section-divider {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(120deg, #12688C  0%, #888 40%, #888 60%, #1C88C6 100%);
+  background-size: 200% 100%;
+  animation: moveBackground 8s linear infinite;
 }
 
+/* Keyframe chạy nền */
+@keyframes moveBackground {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/*form*/
         .register {
             display: flex;
             justify-content: space-between;
@@ -460,12 +584,13 @@
             margin: 0 auto;
             background: #000;
             align-items: stretch;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .register-left {
             flex: 1;
-            text-align: center;
-            background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://totalfusion.com.au/wp-content/uploads/elementor/thumbs/2023_02_08_SF_GymFloor-860-1024x683-1-qep3pa1r6s1f1ajydt3vni5ytgt0pju0tyjufoufzk.jpg'); 
+            text-align: left;
+            background-image: url('../images/trainersform.jpg'); 
             background-size: cover;
             background-position: right center;
             position: relative;
@@ -478,22 +603,20 @@
         }
 
         .register-left h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: bold;
-            line-height: 1;
+            line-height: 1.1;
             margin: 0;
-            color: #fff;
+            color: #E0E0E0;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            
-            
+            letter-spacing: 3.5px;  
             display: inline-block; /* Đảm bảo nền chỉ ôm sát chữ */
             
         }
 
         .register-left p {
-            font-size: 1em;
-            color: #fff;
+            font-size: 0.8em;
+            color: #E0E0E0 ;
             margin-top: 10px;
             
             
@@ -510,7 +633,7 @@
         .register-right label {
             display: block;
             margin-bottom: 5px;
-            font-size: 0.9em;
+            font-size: 0.85em;
             color: #ccc;
         }
 
@@ -519,9 +642,10 @@
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #333;
-            color: #fff;
+            color: #F5F5F5;
             border-radius: 5px;
             background: #000;
+            font-size: 0.85em;
         }
 
         .register-right input::placeholder {
@@ -534,8 +658,9 @@
             margin-bottom: 15px;
             border: 1px solid #333;
             background: #000;
-            color: #fff;
+            color: #F5F5F5;
             border-radius: 5px;
+            font-size: 0.85em;
         }
 
         .register-right .submit-btn {
@@ -556,7 +681,7 @@
 
         .error-message {
             color: #ff4444;
-            font-size: 0.9em;
+            font-size: 0.85em;
             margin-bottom: 10px;
             display: none;
         }
