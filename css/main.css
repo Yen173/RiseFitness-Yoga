@@ -702,6 +702,122 @@ a {
     position: relative;
 }
 
+/* Media query cho màn hình nhỏ hơn 768px (tablet) */
+@media (max-width: 768px) {
+    #products, #promotions {
+        padding: 30px 15px; /* Giảm padding */
+    }
+
+    #products h2, #promotions h2 {
+        font-size: 28px; /* Giảm kích thước tiêu đề */
+    }
+
+    #products p, #promotions p {
+        font-size: 14px; /* Giảm kích thước chữ */
+        max-width: 90%; /* Đảm bảo văn bản không bị tràn */
+    }
+
+    .slider-container {
+        padding: 0 40px; /* Giảm padding hai bên */
+    }
+
+    .product-card, .promotion-card {
+        flex: 0 0 calc((100% / 2) - (15px * 2 / 2)); /* 2 card trên mỗi hàng */
+        min-width: calc((100% / 2) - (15px * 2 / 2));
+        max-width: calc((100% / 2) - (15px * 2 / 2));
+        padding: 15px; /* Giảm padding trong card */
+    }
+
+    .product-slider, .promotion-slider {
+        gap: 15px; /* Giảm khoảng cách giữa các card */
+    }
+
+    .product-card img, .promotion-card img {
+        height: 150px; /* Giảm chiều cao hình ảnh */
+    }
+
+    .product-card h3, .promotion-card h3 {
+        font-size: 18px; /* Giảm kích thước tiêu đề card */
+    }
+
+    .product-card p, .promotion-card p {
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
+    .product-button, .promo-button {
+        padding: 8px 16px; /* Giảm kích thước nút */
+        font-size: 14px;
+    }
+
+    .slider-prev, .slider-next {
+        width: 32px; /* Giảm kích thước nút điều hướng */
+        height: 32px;
+        font-size: 16px;
+    }
+}
+
+/* Media query cho màn hình nhỏ hơn 480px (điện thoại) */
+@media (max-width: 480px) {
+    #products, #promotions {
+        padding: 20px 10px;
+    }
+
+    #products h2, #promotions h2 {
+        font-size: 24px;
+    }
+
+    #products p, #promotions p {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .slider-container {
+        padding: 0 30px;
+    }
+
+    .product-card, .promotion-card {
+        flex: 0 0 calc(100% - 10px); /* 1 card trên mỗi hàng */
+        min-width: calc(100% - 10px);
+        max-width: calc(100% - 10px);
+        padding: 10px;
+    }
+
+    .product-slider, .promotion-slider {
+        gap: 10px;
+    }
+
+    .product-card img, .promotion-card img {
+        height: 120px; /* Giảm chiều cao hình ảnh */
+    }
+
+    .product-card h3, .promotion-card h3 {
+        font-size: 16px;
+    }
+
+    .product-card p, .promotion-card p {
+        font-size: 12px;
+    }
+
+    .product-button, .promo-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .slider-prev, .slider-next {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .slider-prev {
+        left: 5px;
+    }
+
+    .slider-next {
+        right: 5px;
+    }
+}
+
 /* Style cho dòng văn bản mới */
 .section-footer-text {
     margin-top: 40px;
