@@ -1,9 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tên trang của bạn</title>
+  <link rel="stylesheet" href="/RiseFitness-Yoga-main/css/header.css">
+</head>
+<body>
 <header>
     <div class="logo">
         <a href="/RiseFitness-Yoga-main/index.html">
     <img src="/RiseFitness-Yoga-main/images/logo.png" alt="Logo">
          </a>
     </div>
+    <div class="menu-toggle" id="menu-toggle">
+    ☰
+</div>
     <nav>
         <ul>
              <li><a href="/RiseFitness-Yoga-main/pages/about.html">Giới thiệu</a></li>
@@ -20,10 +32,8 @@
             </li>
 
             <li><a href="/RiseFitness-Yoga-main/pages/trainers.html">Huấn luyện viên</a></li>
-
-    <li><a href="/RiseFitness-Yoga-main/pages/price.html">Bảng giá</a></li>
-    <li><a href="/RiseFitness-Yoga-main/pages/blog.html">Tin tức</a></li>
-            
+            <li><a href="/RiseFitness-Yoga-main/pages/price.html">Bảng giá</a></li>
+            <li><a href="/RiseFitness-Yoga-main/pages/blog.html">Tin tức</a></li>
             <li><a href="/RiseFitness-Yoga-main/pages/register.html">Đăng ký tập thử</a></li>
         </ul>
     </nav>
@@ -31,6 +41,7 @@
         <link rel="stylesheet" href="css/header.css">
 </header>
 <!-- Thêm đoạn script để kiểm tra submenu khi truy cập trực tiếp -->
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const dropdowns = document.querySelectorAll('.dropdown');
@@ -40,5 +51,27 @@
                 console.log('Submenu items:', submenu.querySelectorAll('li').length);
             }
         });
+
+        // Dropdown click toggle
+        document.querySelectorAll('.dropdown > a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const dropdown = this.parentElement;
+                dropdown.classList.toggle('open');
+            });
+        });
+
+        // Toggle menu cho mobile
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        } else {
+            console.error("Không tìm thấy #menu-toggle hoặc <nav>");
+        }
     });
 </script>
+</body>
+</html>
