@@ -1,419 +1,1212 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RiseFitness&Yoga - YOGA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dịch vụ Yoga chuyên nghiệp tại RiseFitness&Yoga với các lớp học đa dạng và huấn luyện viên tận tâm. Đăng ký tư vấn ngay hôm nay!" />
+    <meta name="keywords" content="Yoga, RiseFitness&Yoga, thiền, sức khỏe, tập luyện, huấn luyện viên" />
+    <meta name="author" content="RiseFitness&Yoga" />
+    <meta name="robots" content="index, follow" />
+    <base href="/RiseFitness-Yoga-main/" />
+    <title>Dịch Vụ Yoga - RiseFitness&Yoga</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/gym.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/gym.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "YogaStudio",
+        "name": "RiseFitness&Yoga",
+        "description": "Dịch vụ Yoga chuyên nghiệp với các lớp học đa dạng và huấn luyện viên tận tâm.",
+        "url": "https://risefitnessyoga.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Đường Fitness, Quận 1",
+          "addressLocality": "TP. Hồ Chí Minh",
+          "addressCountry": "VN"
+        },
+        "telephone": "+84 123 456 789"
+      }
+    </script>
+  </head>
+  <body>
     <!-- Header -->
     <div id="header"></div>
 
-    <!-- Hero Banner -->
-    <section class="video-container">
-        <div style="background-image: url('https://readdy.ai/api/search-image?query=Serene%2520yoga%2520studio%2520with%2520natural%2520light%2520streaming%2520through%2520large%2520windows%252C%2520wooden%2520floors%252C%2520peaceful%2520atmosphere%252C%2520meditation%2520cushions%252C%2520yoga%2520mats%2520neatly%2520arranged%252C%2520plants%2520adding%2520freshness%252C%2520minimalist%2520decor%2520with%2520calming%2520colors&width=1920&height=1080&seq=1&orientation=landscape');" class="video-bg"></div>
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1 class="title-animation hero-title">YOGA</h1>
-            <h2 class="title-animation hero-subtitle">RiseFitness&Yoga</h2>
-            <p class="subtitle-animation hero-text">Hành trình tìm về sự cân bằng giữa thể chất và tinh thần</p>
-            <a href="#register" class="cta-button cta-animation">Đăng ký ngay</a>
+    <!-- Hero Section -->
+     <section class="hero">
+    <div class="hero" role="banner">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Dịch Vụ Yoga Chuyên Nghiệp</h1>
+          <p class="hero-subtitle">
+            Tìm lại sự cân bằng thể chất và tinh thần với các lớp yoga đa dạng tại RiseFitness&Yoga, được hướng dẫn bởi đội ngũ huấn luyện viên tận tâm.
+          </p>
+          <div class="hero-buttons">
+            <a href="#dang-ky" class="btn-primary">Đăng ký tư vấn</a>
+            <a href="#dich-vu" class="btn-secondary">Xem dịch vụ</a>
+          </div>
         </div>
+      </div>
+    </div>
     </section>
 
-    <!-- Features -->
-    <section id="features" class="section-features">
-        <div class="container">
-            <h2 class="section-title">Lợi Ích Khi Tham Gia</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-mental-health-line"></i>
-                    </div>
-                    <h3 class="feature-title">Giảm stress và lo âu</h3>
-                    <p class="feature-text">Yoga giúp thư giãn tâm trí, giảm căng thẳng và cải thiện sức khỏe tinh thần.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-heart-pulse-line"></i>
-                    </div>
-                    <h3 class="feature-title">Tăng cường sức khỏe tim mạch</h3>
-                    <p class="feature-text">Cải thiện tuần hoàn máu, giảm huyết áp và tăng cường sức khỏe tim mạch.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-body-scan-line"></i>
-                    </div>
-                    <h3 class="feature-title">Tăng cường sự dẻo dai</h3>
-                    <p class="feature-text">Cải thiện độ linh hoạt của cơ thể, tăng khả năng vận động và phòng ngừa chấn thương.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-focus-3-line"></i>
-                    </div>
-                    <h3 class="feature-title">Cải thiện tập trung</h3>
-                    <p class="feature-text">Tăng cường khả năng tập trung, cải thiện trí nhớ và sự tỉnh táo trong cuộc sống.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-sleep-line"></i>
-                    </div>
-                    <h3 class="feature-title">Cải thiện chất lượng giấc ngủ</h3>
-                    <p class="feature-text">Giúp dễ dàng đi vào giấc ngủ, ngủ sâu hơn và cải thiện chất lượng giấc ngủ.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-scales-3-line"></i>
-                    </div>
-                    <h3 class="feature-title">Kiểm soát cân nặng</h3>
-                    <p class="feature-text">Hỗ trợ quá trình đốt cháy calo, tăng cường trao đổi chất và kiểm soát cân nặng.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-empathize-line"></i>
-                    </div>
-                    <h3 class="feature-title">Tăng cường năng lượng</h3>
-                    <p class="feature-text">Nâng cao mức năng lượng, giảm mệt mỏi và tăng cường sức sống hàng ngày.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-building-line"></i>
-                    </div>
-                    <h3 class="feature-title">Không gian tập luyện chuyên nghiệp</h3>
-                    <p class="feature-text">Phòng tập yên tĩnh, thoáng mát với thiết bị chuyên dụng và không gian thiền định.</p>
-                </div>
-            </div>
+    <!-- About Section -->
+    <section class="section about" id="gioi-thieu">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Giới Thiệu Về Dịch Vụ Yoga</h2>
+          <p class="section-description">
+            RiseFitness&Yoga mang đến các lớp yoga chuyên nghiệp với không gian yên tĩnh, thoáng mát và thiết bị hỗ trợ hiện đại. Chúng tôi cung cấp các loại hình yoga đa dạng, từ Hatha, Vinyasa đến Yin Yoga, phù hợp cho mọi cấp độ, từ người mới bắt đầu đến những người đã có kinh nghiệm. Đội ngũ huấn luyện viên tận tâm sẽ đồng hành cùng bạn trên hành trình cải thiện sức khỏe và tinh thần.
+          </p>
         </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="https://i.pinimg.com/736x/fc/2a/f4/fc2af4497c7c4b24ff830e423b10cc4f.jpg"
+              alt="Huấn luyện viên yoga chuyên nghiệp"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-text">
+            <h3 class="about-title">Tại Sao Chọn Dịch Vụ Yoga Của Chúng Tôi?</h3>
+            <ul class="about-list">
+              <li class="about-item">
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Không gian thiền định yên tĩnh, thoáng mát
+              </li>
+              <li class="about-item">
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Huấn luyện viên có chứng chỉ quốc tế (Yoga Alliance, RYT)
+              </li>
+              <li class="about-item">
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Các loại hình yoga đa dạng, phù hợp mọi cấp độ
+              </li>
+              <li class="about-item">
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Lịch học linh hoạt, hỗ trợ cá nhân hóa lộ trình
+              </li>
+              <li class="about-item">
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Dụng cụ yoga chuyên dụng, miễn phí sử dụng
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Classes -->
-    <section id="classes" class="section-classes">
-        <div class="container">
-            <h2 class="section-title">Các Loại Hình Yoga</h2>
-            <div class="class-grid">
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Hatha%2520yoga%2520class%2520with%2520diverse%2520group%2520of%2520students%2520practicing%2520basic%2520poses%252C%2520instructor%2520demonstrating%2520proper%2520alignment%252C%2520peaceful%2520studio%2520environment%2520with%2520natural%2520light%252C%2520yoga%2520mats%2520neatly%2520arranged&width=600&height=400&seq=2&orientation=landscape" alt="Hatha Yoga">
-                    </div>
-                    <div class="class-content">
-                        <h3 class="class-title">Hatha Yoga</h3>
-                        <div class="class-details">
-                            <span>60 phút</span>
-                            <span>300 calories</span>
-                        </div>
-                        <div class="class-level">
-                            <span class="level-badge">Người mới</span>
-                        </div>
-                        <div class="class-buttons">
-                            <a href="#" class="button-secondary">Xem video</a>
-                            <a href="https://readdy.ai/home/820dfc6e-a09d-4d14-84dd-07e172b0cc0e/7e9b0405-5102-484c-b7cb-139f68cf2359" data-readdy="true" class="button-primary">Xem chi tiết</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Vinyasa%2520yoga%2520class%2520with%2520students%2520flowing%2520through%2520dynamic%2520sequences%252C%2520instructor%2520guiding%2520movement%2520with%2520breath%252C%2520energetic%2520atmosphere%2520in%2520a%2520modern%2520studio%2520with%2520soft%2520lighting&width=600&height=400&seq=3&orientation=landscape" alt="Vinyasa Yoga">
-                    </div>
-                    <div class="class-content">
-                        <h3 class="class-title">Vinyasa Yoga</h3>
-                        <div class="class-details">
-                            <span>75 phút</span>
-                            <span>450 calories</span>
-                        </div>
-                        <div class="class-level">
-                            <span class="level-badge">Trung cấp</span>
-                        </div>
-                        <div class="class-buttons">
-                            <a href="#" class="button-secondary">Xem video</a>
-                            <a href="https://readdy.ai/home/820dfc6e-a09d-4d14-84dd-07e172b0cc0e/7e9b0405-5102-484c-b7cb-139f68cf2359" data-readdy="true" class="button-primary">Xem chi tiết</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Yin%2520yoga%2520class%2520with%2520students%2520holding%2520deep%2520stretches%252C%2520calm%2520and%2520serene%2520studio%2520with%2520dim%2520lighting%252C%2520meditative%2520atmosphere%252C%2520yoga%2520props%2520like%2520bolsters%2520and%2520blankets&width=600&height=400&seq=4&orientation=landscape" alt="Yin Yoga">
-                    </div>
-                    <div class="class-content">
-                        <h3 class="class-title">Yin Yoga</h3>
-                        <div class="class-details">
-                            <span>60 phút</span>
-                            <span>200 calories</span>
-                        </div>
-                        <div class="class-level">
-                            <span class="level-badge">Người mới</span>
-                        </div>
-                        <div class="class-buttons">
-                            <a href="#" class="button-secondary">Xem video</a>
-                            <a href="https://readdy.ai/home/820dfc6e-a09d-4d14-84dd-07e172b0cc0e/7e9b0405-5102-484c-b7cb-139f68cf2359" data-readdy="true" class="button-primary">Xem chi tiết</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Ashtanga%2520yoga%2520class%2520with%2520students%2520performing%2520structured%2520sequences%252C%2520focused%2520and%2520disciplined%2520atmosphere%252C%2520instructor%2520guiding%2520advanced%2520poses%252C%2520bright%2520and%2520open%2520studio&width=600&height=400&seq=5&orientation=landscape" alt="Ashtanga Yoga">
-                    </div>
-                    <div class="class-content">
-                        <h3 class="class-title">Ashtanga Yoga</h3>
-                        <div class="class-details">
-                            <span>90 phút</span>
-                            <span>600 calories</span>
-                        </div>
-                        <div class="class-level">
-                            <span class="level-badge">Nâng cao</span>
-                        </div>
-                        <div class="class-buttons">
-                            <a href="#" class="button-secondary">Xem video</a>
-                            <a href="https://readdy.ai/home/820dfc6e-a09d-4d14-84dd-07e172b0cc0e/7e9b0405-5102-484c-b7cb-139f68cf2359" data-readdy="true" class="button-primary">Xem chi tiết</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Benefits Section -->
+    <section class="section benefits" id="loi-ich">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Lợi Ích Của Việc Tập Yoga</h2>
+          <p class="section-description">
+            Tập yoga không chỉ cải thiện sức khỏe thể chất mà còn mang lại sự cân bằng tinh thần và nâng cao chất lượng cuộc sống.
+          </p>
         </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-spa"></i>
+            </div>
+            <h3 class="benefit-title">Giảm Stress và Lo Âu</h3>
+            <p class="benefit-description">
+              Yoga giúp thư giãn tâm trí, giảm căng thẳng và cải thiện sức khỏe tinh thần thông qua thiền và hơi thở.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3 class="benefit-title">Cải Thiện Sức Khỏe Tim Mạch</h3>
+            <p class="benefit-description">
+              Các bài tập yoga giúp cải thiện tuần hoàn máu, giảm huyết áp và tăng cường sức khỏe tim mạch.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-child-reaching"></i>
+            </div>
+            <h3 class="benefit-title">Tăng Cường Sự Dẻo Dai</h3>
+            <p class="benefit-description">
+              Yoga cải thiện độ linh hoạt, tăng khả năng vận động và giảm nguy cơ chấn thương.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3 class="benefit-title">Tăng Cường Tập Trung</h3>
+            <p class="benefit-description">
+              Các bài tập thiền và chánh niệm giúp cải thiện khả năng tập trung và trí nhớ.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-bed"></i>
+            </div>
+            <h3 class="benefit-title">Cải Thiện Giấc Ngủ</h3>
+            <p class="benefit-description">
+              Yoga giúp thư giãn cơ thể và tâm trí, cải thiện chất lượng giấc ngủ và giảm mất ngủ.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-weight-scale"></i>
+            </div>
+            <h3 class="benefit-title">Kiểm Soát Cân Nặng</h3>
+            <p class="benefit-description">
+              Kết hợp yoga với chế độ ăn uống lành mạnh giúp kiểm soát cân nặng và duy trì vóc dáng.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Schedule -->
-    <section id="schedule" class="section-schedule">
-        <div class="container">
-            <h2 class="section-title">Lịch Học</h2>
-            <div class="schedule-tabs">
-                <button class="day-tab active-tab">Thứ 2</button>
-                <button class="day-tab">Thứ 3</button>
-                <button class="day-tab">Thứ 4</button>
-                <button class="day-tab">Thứ 5</button>
-                <button class="day-tab">Thứ 6</button>
-                <button class="day-tab">Thứ 7</button>
-                <button class="day-tab">Chủ nhật</button>
-            </div>
-            <div class="schedule-content">
-                <div class="schedule-item">
-                    <span class="schedule-time">6:00 - 7:00</span>
-                    <span class="schedule-class">Hatha Yoga</span>
-                    <span class="schedule-instructor">Anna</span>
-                </div>
-                <div class="schedule-item">
-                    <span class="schedule-time">8:00 - 9:15</span>
-                    <span class="schedule-class">Vinyasa Yoga</span>
-                    <span class="schedule-instructor">John</span>
-                </div>
-                <div class="schedule-item">
-                    <span class="schedule-time">17:30 - 18:30</span>
-                    <span class="schedule-class">Yin Yoga</span>
-                    <span class="schedule-instructor">Lisa</span>
-                </div>
-                <div class="schedule-item">
-                    <span class="schedule-time">19:00 - 20:30</span>
-                    <span class="schedule-class">Ashtanga Yoga</span>
-                    <span class="schedule-instructor">Mark</span>
-                </div>
-            </div>
+    <!-- Schedule Section -->
+    <section class="section schedule" id="lich-hoc">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Lịch Học Yoga</h2>
+          <p class="section-description">
+            Lịch học yoga hàng tuần tại RiseFitness&Yoga, phù hợp với mọi cấp độ và lịch trình.
+          </p>
         </div>
+        <table class="schedule-table" role="grid">
+          <thead>
+            <tr>
+              <th>Thời gian</th>
+              <th>Thứ Hai</th>
+              <th>Thứ Ba</th>
+              <th>Thứ Tư</th>
+              <th>Thứ Năm</th>
+              <th>Thứ Sáu</th>
+              <th>Thứ Bảy</th>
+              <th>Chủ Nhật</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>06:00 - 07:00</td>
+              <td>Hatha Yoga (Tâm)</td>
+              <td>-</td>
+              <td>Yoga Bà Bầu (Hương)</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>07:30 - 08:30</td>
+              <td>-</td>
+              <td>Vinyasa Flow (Minh)</td>
+              <td>-</td>
+              <td>Hatha Yoga (Tâm)</td>
+              <td>-</td>
+              <td>Yin Yoga (Hương)</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>17:00 - 18:00</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Vinyasa Flow (Minh)</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Thiền (Tâm)</td>
+            </tr>
+            <tr>
+              <td>18:30 - 19:30</td>
+              <td>Yin Yoga (Hương)</td>
+              <td>-</td>
+              <td>Hatha Yoga (Tâm)</td>
+              <td>-</td>
+              <td>Vinyasa Flow (Minh)</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>20:00 - 21:00</td>
+              <td>-</td>
+              <td>Thiền (Tâm)</td>
+              <td>-</td>
+              <td>Yoga Bà Bầu (Hương)</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <!-- Trainers -->
-    <section id="trainers" class="section-trainers">
-        <div class="container">
-            <h2 class="section-title">Huấn Luyện Viên</h2>
-            <div class="trainer-grid">
-                <div class="trainer-card">
-                    <div class="trainer-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520yoga%2520instructor%2520female%2520with%2520confident%2520smile%252C%2520standing%2520in%2520a%2520yoga%2520studio%252C%2520wearing%2520athletic%2520clothing%252C%2520natural%2520light%2520background&width=600&height=600&seq=6&orientation=square" alt="Anna">
-                    </div>
-                    <h3 class="trainer-name">Anna</h3>
-                    <p class="trainer-role">Chuyên gia Hatha & Yin Yoga</p>
-                    <p class="trainer-bio">Với hơn 10 năm kinh nghiệm, Anna mang đến những bài tập nhẹ nhàng, giúp học viên thư giãn và cân bằng.</p>
-                    <div class="trainer-social">
-                        <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
-                        <a href="#" class="social-icon"><i class="ri-instagram-fill"></i></a>
-                    </div>
-                </div>
-                <div class="trainer-card">
-                    <div class="trainer-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520yoga%2520instructor%2520male%2520with%2520calm%2520demeanor%252C%2520standing%2520in%2520a%2520yoga%2520studio%252C%2520wearing%2520athletic%2520clothing%252C%2520modern%2520studio%2520background&width=600&height=600&seq=7&orientation=square" alt="John">
-                    </div>
-                    <h3 class="trainer-name">John</h3>
-                    <p class="trainer-role">Chuyên gia Vinyasa Yoga</p>
-                    <p class="trainer-bio">John chuyên về các bài tập năng động, kết hợp nhịp nhàng giữa hơi thở và chuyển động.</p>
-                    <div class="trainer-social">
-                        <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
-                        <a href="#" class="social-icon"><i class="ri-instagram-fill"></i></a>
-                    </div>
-                </div>
-                <div class="trainer-card">
-                    <div class="trainer-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520yoga%2520instructor%2520female%2520with%2520welcoming%2520smile%252C%2520standing%2520in%2520a%2520yoga%2520studio%252C%2520wearing%2520athletic%2520clothing%252C%2520bright%2520and%2520airy%2520background&width=600&height=600&seq=8&orientation=square" alt="Lisa">
-                    </div>
-                    <h3 class="trainer-name">Lisa</h3>
-                    <p class="trainer-role">Chuyên gia Yin Yoga</p>
-                    <p class="trainer-bio">Lisa giúp học viên tìm lại sự tĩnh lặng và thư giãn sâu với các bài tập Yin Yoga.</p>
-                    <div class="trainer-social">
-                        <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
-                        <a href="#" class="social-icon"><i class="ri-instagram-fill"></i></a>
-                    </div>
-                </div>
-                <div class="trainer-card">
-                    <div class="trainer-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520yoga%2520instructor%2520male%2520with%2520focused%2520expression%252C%2520standing%2520in%2520a%2520yoga%2520studio%252C%2520wearing%2520athletic%2520clothing%252C%2520minimalist%2520studio%2520background&width=600&height=600&seq=9&orientation=square" alt="Mark">
-                    </div>
-                    <h3 class="trainer-name">Mark</h3>
-                    <p class="trainer-role">Chuyên gia Ashtanga Yoga</p>
-                    <p class="trainer-bio">Mark mang đến các bài tập Ashtanga đầy thử thách, giúp học viên vượt qua giới hạn bản thân.</p>
-                    <div class="trainer-social">
-                        <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
-                        <a href="#" class="social-icon"><i class="ri-instagram-fill"></i></a>
-                    </div>
-                </div>
+    <!-- Trainers Section -->
+    <section class="section trainers" id="huan-luyen-vien">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Đội Ngũ Huấn Luyện Viên Tiêu Biểu</h2>
+          <p class="section-description">
+            Gặp gỡ đội ngũ huấn luyện viên yoga chuyên nghiệp của chúng tôi, luôn sẵn sàng hỗ trợ bạn đạt được sự cân bằng.
+          </p>
+        </div>
+        <div class="trainers-grid">
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://i.pinimg.com/736x/2a/c5/02/2ac502f669b0b2fc0bb448f4874a3d6a.jpg"
+                alt="Nguyễn Thị Minh Tâm"
+                loading="lazy"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Nguyễn Thị Minh Tâm</h3>
+              <p class="trainer-description">Huấn luyện viên với 12 năm kinh nghiệm, chuyên về Hatha và Yin Yoga.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ RYT 500</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia Hatha, Yin Yoga</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ thiền và chánh niệm</li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <div derive_card class="trainer-image">
+              <img
+                src="https://i.pinimg.com/736x/63/22/15/6322156f31ecf1a36849a6ca1401c322.jpg"
+                alt="Trần Văn Minh"
+                loading="lazy-img"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Trần Văn Minh</h3>
+              <p class="trainer-description">Chuyên gia Vinyasa với chứng chỉ Yoga Alliance, giúp cải thiện sự linh hoạt và năng lượng.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ RYT 300</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia Vinyasa, Ashtanga</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ tăng cường sức khỏe</li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://i.pinimg.com/736x/d2/8b/b5/d28bb5e3e109b1414c564f8765d5d91d.jpg"
+                alt="Lê Thị Hương"
+                loading="lazy-img"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Lê Thị Hương</h3>
+              <p class="trainer-description">Chuyên gia Yoga bà bầu với chứng chỉ RPYT, hỗ trợ sức khỏe cho mẹ và bé.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ RPYT</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia Yoga bà bầu</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ yoga trị liệu</li>
+              </ul>
             </div>
         </div>
+      </div>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="section-pricing">
-        <div class="container">
-            <h2 class="section-title">Gói Thành Viên</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3 class="pricing-title">Gói Cơ Bản</h3>
-                    <p class="pricing-price">500,000 VNĐ<span>/tháng</span></p>
-                    <ul class="pricing-features">
-                        <li>Tham gia 2 buổi/tuần</li>
-                        <li>Truy cập phòng tập yoga</li>
-                        <li>Hỗ trợ từ huấn luyện viên</li>
-                    </ul>
-                    <a href="#register" class="button-primary">Đăng ký ngay</a>
-                </div>
-                <div class="pricing-card">
-                    <h3 class="pricing-title">Gói Nâng Cao</h3>
-                    <p class="pricing-price">800,000 VNĐ<span>/tháng</span></p>
-                    <ul class="pricing-features">
-                        <li>Tham gia không giới hạn</li>
-                        <li>Truy cập tất cả lớp học</li>
-                        <li>Hỗ trợ từ huấn luyện viên</li>
-                        <li>1 buổi tư vấn dinh dưỡng</li>
-                    </ul>
-                    <a href="#register" class="button-primary">Đăng ký ngay</a>
-                </div>
-                <div class="pricing-card">
-                    <h3 class="pricing-title">Gói VIP</h3>
-                    <p class="pricing-price">1,500,000 VNĐ<span>/tháng</span></p>
-                    <ul class="pricing-features">
-                        <li>Tham gia không giới hạn</li>
-                        <li>Truy cập tất cả lớp học</li>
-                        <li>Huấn luyện viên cá nhân</li>
-                        <li>2 buổi tư vấn dinh dưỡng</li>
-                        <li>Ưu tiên đặt lịch</li>
-                    </ul>
-                    <a href="#register" class="button-primary">Đăng ký ngay</a>
-                </div>
-            </div>
+   <!-- Services Section -->
+<section id="dich-vu" class="section services carousel infinite-carousel">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Các Gói Dịch Vụ Yoga</h2>
+      <p class="section-description">
+        Chúng tôi cung cấp nhiều gói dịch vụ yoga khác nhau để đáp ứng nhu cầu và mục tiêu tập luyện của bạn.
+      </p>
+    </div>
+    <div class="carousel-inner services-grid">
+      <!-- Dịch vụ 1: Hatha Yoga -->
+      <div class="carousel-item service-card" data-modal="modal-hatha">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/57/29/aa/5729aa03c2cecad33df9d41b248e3116.jpg"
+            alt="Hatha Yoga"
+            loading="lazy"
+          />
         </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="section-testimonials">
-        <div class="container">
-            <h2 class="section-title">Cảm Nhận Học Viên</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Yoga tại RiseFitness&Yoga đã thay đổi cuộc sống của tôi. Tôi cảm thấy khỏe mạnh và cân bằng hơn!"</p>
-                    <p class="testimonial-author">Nguyễn Minh Anh</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Các huấn luyện viên rất tận tâm, không gian tập luyện thì tuyệt vời. Rất đáng để thử!"</p>
-                    <p class="testimonial-author">Trần Văn Hùng</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Tôi đã cải thiện được giấc ngủ và giảm căng thẳng nhờ các lớp Yin Yoga."</p>
-                    <p class="testimonial-author">Lê Thị Mai</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Ashtanga Yoga là thử thách nhưng rất đáng giá. Tôi cảm thấy mạnh mẽ hơn mỗi ngày!"</p>
-                    <p class="testimonial-author">Phạm Quốc Bảo</p>
-                </div>
-            </div>
-            <button class="testimonial-prev"><i class="ri-arrow-left-s-line"></i></button>
-            <button class="testimonial-next"><i class="ri-arrow-right-s-line"></i></button>
+        <div class="service-content">
+          <h3 class="service-title">Hatha Yoga</h3>
+          <p class="service-description">
+            Lớp học tập trung vào các tư thế cơ bản, phù hợp cho người mới bắt đầu.
+          </p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> 60 phút/buổi</li>
+            <li><i class="fa-solid fa-check"></i> Hướng dẫn tư thế cơ bản</li>
+            <li><i class="fa-solid fa-check"></i> Dụng cụ yoga miễn phí</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký tư vấn</a>
         </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section-faq">
-        <div class="container">
-            <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
-            <div class="faq-item">
-                <div class="faq-toggle">
-                    <h3 class="faq-question">Tôi có cần kinh nghiệm trước khi tham gia không?</h3>
-                    <i class="ri-add-circle-line"></i>
-                </div>
-                <p class="faq-answer hidden">Không cần! Các lớp của chúng tôi phù hợp cho cả người mới bắt đầu và người có kinh nghiệm.</p>
-            </div>
-            <div class="faq-item">
-                <div class="faq-toggle">
-                    <h3 class="faq-question">Tôi cần mang gì đến lớp?</h3>
-                    <i class="ri-add-circle-line"></i>
-                </div>
-                <p class="faq-answer hidden">Chỉ cần mang quần áo thoải mái và thảm yoga (nếu có). Chúng tôi cung cấp thảm và đạo cụ tại phòng tập.</p>
-            </div>
-            <div class="faq-item">
-                <div class="faq-toggle">
-                    <h3 class="faq-question">Làm thế nào để đăng ký?</h3>
-                    <i class="ri-add-circle-line"></i>
-                </div>
-                <p class="faq-answer hidden">Bạn có thể đăng ký trực tiếp qua website hoặc tại trung tâm của chúng tôi.</p>
-            </div>
-            <div class="faq-item">
-                <div class="faq-toggle">
-                    <h3 class="faq-question">Có lớp thử miễn phí không?</h3>
-                    <i class="ri-add-circle-line"></i>
-                </div>
-                <p class="faq-answer hidden">Có, chúng tôi cung cấp một buổi thử miễn phí cho tất cả học viên mới!</p>
-            </div>
+      </div>
+      <!-- Dịch vụ 2: Vinyasa Yoga -->
+      <div class="carousel-item service-card" data-modal="modal-vinyasa">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/26/be/41/26be41058b91e451d24a976232821b20.jpg"
+            alt="Vinyasa Yoga"
+            loading="lazy"
+          />
         </div>
+        <div class="service-content">
+          <h3 class="service-title">Vinyasa Yoga</h3>
+          <p class="service-description">
+            Lớp học năng động với các chuỗi chuyển động liên kết với hơi thở.
+          </p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> 75 phút/buổi</li>
+            <li><i class="fa-solid fa-check"></i> Tăng cường sức mạnh và linh hoạt</li>
+            <li><i class="fa-solid fa-check"></i> Hướng dẫn viên chuyên nghiệp</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Dịch vụ 3: Yin Yoga -->
+      <div class="carousel-item service-card popular" data-modal="modal-yin">
+        <span class="popular-badge">Phổ biến</span>
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/df/5d/2d/df5d2da05098506b3e8fe5daa2075a8e.jpg"
+                alt="Yin Yoga"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Yin Yoga</h3>
+          <p class="service-description">
+            Lớp học thư giãn với các tư thế giữ lâu, tập trung vào giãn cơ sâu.
+          </p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> 75 phút/buổi</li>
+            <li><i class="fa-solid fa-check"></i> Giảm căng thẳng, thư giãn</li>
+            <li><i class="fa-solid fa-check"></i> Phù hợp mọi cấp độ</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Dịch vụ 4: Yoga Bà Bầu -->
+      <div class="carousel-item service-card" data-modal="modal-prenatal">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/1c/5a/f0/1c5af02f128011481b9d2e067f4cf2ef.jpg"
+                alt="Yoga Bà Bầu"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Yoga Bà Bầu</h3>
+          <p class="service-description">
+            Lớp học chuyên biệt cho bà bầu, hỗ trợ sức khỏe mẹ và bé.
+          </p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> 60 phút/buổi</li>
+            <li><i class="fa-solid fa-check"></i> Tư thế an toàn cho bà bầu</li>
+            <li><i class="fa-solid fa-check"></i> Hỗ trợ giảm đau lưng</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Dịch vụ 5: Thiền & Chánh Niệm -->
+      <div class="carousel-item service-card" data-modal="modal-meditation">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/53/fa/89/53fa892b94f0ecdd0614194d9b93c26f.jpg"
+                alt="Thiền & Chánh Niệm"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Thiền & Chánh Niệm</h3>
+          <p class="service-description">
+            Lớp thiền giúp thư giãn tâm trí và tăng cường tập trung.
+          </p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> 45 phút/buổi</li>
+            <li><i class="fa-solid fa-check"></i> Hướng dẫn thiền cơ bản</li>
+            <li><i class="fa-solid fa-check"></i> Phù hợp mọi cấp độ</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Dịch vụ 6: Ashtanga Yoga -->
+      <div class="carousel-item service-card" data-modal="modal-ashtanga">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/a2/d8/2b/a2d82b05f365f807cd1916390d472125.jpg"
+                alt="Ashtanga Yoga"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Ashtanga Yoga</h3>
+          <p class="service-description">
+            Lớp học mạnh mẽ với chuỗi tư thế cố định, tăng cường sức mạnh và độ bền.
+          </p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> 90 phút/buổi</li>
+            <li><i class="fa-solid fa-check"></i> Tăng cường sức mạnh và độ bền</li>
+            <li><i class="fa-solid fa-check"></i> Dành cho người có kinh nghiệm</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Dịch vụ 7: Restorative -->
+      <div class="carousel-item service-card" data-modal="modal-restorative">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/18/29/a0/1829a0f85dfc80f46d6fb2f50ab6bee2.jpg"
+            alt="Gói Restorative Yoga"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Restorative Yoga</h3>
+          <p class="service-description">
+            Lớp học thư giãn sâu với các tư thế hỗ trợ, giúp phục hồi cơ thể.
+          </p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> 60 phút/buổi</li>
+            <li><i class="fa-solid fa-check"></i> Phục hồi và thư giãn sâu</li>
+            <li><i class="fa-solid fa-check"></i> Phù hợp mọi cấp độ</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Dịch vụ 8: Yoga Trị Liệu -->
+      <div class="carousel-item service-card popular" data-modal="modal-therapeutic">
+        <span class="popular-badge">Phổ biến</span>
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/c1/9c/91/c19c913c2762bce13acba52d5f81b99a.jpg"
+            alt="Gói Yoga Trị Liệu"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Yoga Trị Liệu</h3>
+          <p class="service-description">
+            Lớp học tập trung vào cải thiện tư thế và giảm đau mạn tính.
+          </p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> 60 phút/buổi</li>
+            <li><i class="fa-solid fa-check"></i> Hỗ trợ giảm đau lưng, cổ</li>
+            <li><i class="fa-solid fa-check"></i> Hướng dẫn viên chuyên biệt</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn prev" aria-label="Dịch vụ trước đó"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="carousel-btn next" aria-label="Dịch vụ tiếp theo"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section testimonials carousel infinite-carousel" id="danh-gia">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Đánh Giá Từ Khách Hàng</h2>
+      <p class="section-description">
+        Hãy xem những gì khách hàng nói về trải nghiệm tập yoga tại RiseFitness&Yoga.
+      </p>
+    </div>
+    <div class="carousel-inner testimonials-grid">
+      <!-- Đánh giá 1 -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://i.pinimg.com/736x/0b/93/da/0b93da0970adb65aad90affde72a5dbb.jpg"
+            alt="Trần Thị Lan"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Trần Thị Lan</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Lớp Yin Yoga giúp tôi thư giãn hoàn toàn sau ngày làm việc. Không gian yên tĩnh và huấn luyện viên rất tận tâm!"
+        </p>
+      </div>
+      <!-- Đánh giá 2 -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://i.pinimg.com/736x/6a/c6/8e/6ac68eb04b0319b0cb96bf3a15d1042e.jpg"
+            alt="Nguyễn Văn Hùng"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Nguyễn Văn Hùng</h4>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Vinyasa Yoga rất năng động, giúp tôi cải thiện sức mạnh và sự linh hoạt. HLV Minh hướng dẫn rất nhiệt tình."
+        </p>
+      </div>
+      <!-- Đánh giá 3 -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://i.pinimg.com/736x/e3/9c/36/e39c364e2345f9ee0b8b442639028e00.jpg"
+            alt="Lê Thị Mai"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Lê Thị Mai</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Lớp Yoga Bà Bầu giúp tôi giảm đau lưng và thoải mái hơn trong thai kỳ. Cảm ơn HLV Hương!"
+        </p>
+      </div>
+      <!-- Đánh giá 4 -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://i.pinimg.com/736x/df/34/33/df343328104fae241d62ac6335ecfc4e.jpg"
+            alt="Phạm Văn Nam"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Phạm Văn Nam</h4>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Lớp thiền giúp tôi tập trung tốt hơn và giảm căng thẳng. Không gian studio rất dễ chịu."
+        </p>
+      </div>
+      <!-- Đánh giá 5 -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://i.pinimg.com/736x/b4/a4/d9/b4a4d98e0ef68ad9859eceb102aa6189.jpg"
+            alt="Đỗ Thị Phương Anh"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Đỗ Thị Phương Anh</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Tôi đã tham gia lớp Yoga tại FITLIFE CENTER được 6 tháng và thấy sức khỏe cải thiện rõ rệt. Đau lưng do ngồi nhiều đã giảm hẳn, tinh thần thoải mái và tập trung hơn trong công việc."
+        </p>
+      </div>
+      <!-- Đánh giá 6 -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://i.pinimg.com/736x/09/16/df/0916df9b043cb57e35de08d904df0a28.jpg"
+            alt="Nguyễn Thị Hồng Ngọc"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Nguyễn Thị Hồng Ngọc</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Lớp Restorative Yoga thật sự giúp tôi phục hồi sau những ngày làm việc mệt mỏi. Không gian studio rất ấm cúng, và HLV luôn hỗ trợ tận tình!"
+        </p>
+      </div>
+      <!-- Đánh giá 7 -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://i.pinimg.com/736x/83/53/2a/83532aa752ea061dde18a60b97f3295b.jpg"
+            alt="Trần Văn Long"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Trần Văn Long</h4>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Ashtanga Yoga là một thử thách tuyệt vời! Tôi cảm thấy cơ thể khỏe mạnh hơn và tinh thần sảng khoái sau mỗi buổi tập."
+        </p>
+      </div>
+      <!-- Đánh giá 8 -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://i.pinimg.com/736x/04/ca/6c/04ca6cc9ac620785f6e82a2262aa62e3.jpg"
+            alt="Phạm Thị Thu Hà"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Phạm Thị Thu Hà</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Lớp Yoga Trị Liệu đã giúp tôi cải thiện tư thế và giảm đau vai gáy đáng kể. Principe rất chuyên nghiệp và luôn chú ý đến từng học viên."
+        </p>
+      </div>
+      <!-- Đánh giá 9 -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://i.pinimg.com/736x/56/f3/ae/56f3aeee549ac1b07c361352878c821e.jpg"
+            alt="Lê Văn Quang"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Lê Văn Quang</h4>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Tôi rất thích lớp Hatha Yoga. Các tư thế cơ bản được hướng dẫn rõ ràng, rất phù hợp cho người mới bắt đầu như tôi."
+        </p>
+      </div>
+      <!-- Đánh giá 10 -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://i.pinimg.com/736x/08/3a/7a/083a7a0eac6da4ca12f6cf1d079f861c.jpg"
+            alt="Vũ Thị Minh Thư"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Vũ Thị Minh Thư</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Lớp Thiền & Chánh Niệm giúp tôi tìm lại sự bình yên trong tâm hồn. Không gian và cách hướng dẫn của HLV thật sự tuyệt vời!"
+        </p>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn prev" aria-label="Đánh giá trước đó"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="carousel-btn next" aria-label="Đánh giá tiếp theo"><i class="fa-solid fa-arrow-right"></i></button>
+ </div>
+  </div>
+</section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="cau-hoi-thuong-gap">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+          <p class="section-description">
+            Tìm hiểu thêm về các lớp yoga và dịch vụ tại RiseFitness&Yoga qua các câu hỏi phổ biến dưới đây.
+          </p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Tôi có thể tham gia lớp yoga thử không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Có, chúng tôi cung cấp buổi yoga thử với giá 100.000đ/buổi. Số tiền này sẽ được trừ vào gói tập nếu bạn đăng ký gói tháng hoặc dài hạn.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Tôi cần chuẩn bị gì cho lớp yoga?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Bạn nên mặc quần áo thoải mái, mang theo chai nước. Thảm yoga và dụng cụ hỗ trợ được cung cấp miễn phí tại studio.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Lớp yoga có phù hợp cho người mới bắt đầu không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Chắc chắn rồi! Các lớp Hatha và Yin Yoga được thiết kế phù hợp cho người mới, với sự hướng dẫn chi tiết từ huấn luyện viên.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Lớp Yoga Bà Bầu có gì đặc biệt?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Lớp Yoga Bà Bầu tập trung vào các tư thế an toàn, giúp giảm đau lưng, cải thiện sức khỏe và hỗ trợ mẹ bầu thư giãn trong thai kỳ.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Register -->
-    <section id="register" class="section-register">
-        <div class="container">
-            <h2 class="section-title">Đăng Ký Ngay</h2>
-            <form id="registration-form" class="register-form">
-                <div class="form-group">
-                    <label for="name" class="form-label">Họ và tên</label>
-                    <input type="text" id="name" class="form-input" required>
+    <!-- CTA Banner Section -->
+    <section class="section cta-banner" id="khuyen-mai">
+      <div class="container">
+        <h2 class="cta-title">Ưu Đãi Đặc Biệt Hôm Nay!</h2>
+        <p class="cta-description">Đăng ký bất kỳ gói yoga nào ngay hôm nay để nhận giảm giá 20% cho tháng đầu tiên!</p>
+        <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+      </div>
+    </section>
+
+    <!-- Register Section -->
+    <section class="section register" id="dang-ky">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Đăng Ký Tư Vấn</h2>
+          <p class="section-description">
+            Điền thông tin dưới đây để được tư vấn miễn phí về lộ trình tập yoga phù hợp với bạn.
+          </p>
+        </div>
+        <div class="register-box">
+          <div class="register-form">
+            <form class="form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Họ và Tên *</label>
+                <input type="text" id="name" class="form-input" required placeholder="Nhập họ và tên" />
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Số Điện Thoại *</label>
+                <input type="tel" id="phone" class="form-input" required placeholder="Nhập số điện thoại" />
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" placeholder="Nhập email (tùy chọn)" />
+              </div>
+              <div class="form-group">
+                <label for="package" class="form-label">Gói Dịch Vụ Quan Tâm *</label>
+                <div class="select-wrapper">
+                  <select id="package" class="form-input" required>
+                    <option value="">Chọn gói dịch vụ</option>
+                    <option value="hatha">Hatha Yoga</option>
+                    <option value="vinyasa">Vinyasa Yoga</option>
+                    <option value="yin">Yin Yoga</option>
+                    <option value="prenatal">Yoga Bà Bầu</option>
+                    <option value="meditation">Thiền & Chánh Niệm</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down select-icon"></i>
                 </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone" class="form-label">Số điện thoại</label>
-                    <input type="tel" id="phone" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="package" class="form-label">Chọn gói</label>
-                    <select id="package" class="form-input" required>
-                        <option value="">Chọn gói</option>
-                        <option value="basic">Gói Cơ Bản</option>
-                        <option value="premium">Gói Nâng Cao</option>
-                        <option value="vip">Gói VIP</option>
-                    </select>
-                </div>
-                <button type="submit" class="button-primary">Gửi đăng ký</button>
+              </div>
+              <button type="submit" class="btn-primary">Gửi Đăng Ký</button>
             </form>
-            <div id="success-modal" class="modal hidden">
-                <div class="modal-content">
-                    <h3 class="modal-title">Đăng ký thành công!</h3>
-                    <p class="modal-text">Chúng tôi sẽ liên hệ với bạn sớm nhất có thể.</p>
-                    <button id="close-modal" class="button-primary">Đóng</button>
-                </div>
-            </div>
+          </div>
+          <div class="register-image" style="background-image: url('https://readdy.ai/api/search-image?query=Meditation%2520class%2520with%2520students%2520sitting%2520in%2520comfortable%2520positions%252C%2520peaceful%2520expressions%252C%2520minimalist%2520studio%2520with%2520soft%2520lighting%252C%2520incense%2520or%2520candles%2520creating%2520serene%2520atmosphere&width=600&height=400&seq=9&orientation=landscape');"></div>
         </div>
+      </div>
     </section>
-<div id="footer"></div>
-<script src="../js/yoga.js"></script>
-</body>
+
+       <!-- Related Services Section -->
+<section id="dich-vu-lien-quan" class="section services carousel infinite-carousel">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Dịch Vụ Liên Quan</h2>
+      <p class="section-description">Khám phá các dịch vụ khác tại RiseFitness&Yoga để nâng cao hành trình sức khỏe và thể chất của bạn.</p>
+    </div>
+    <div class="carousel-inner services-grid">
+      <!-- Gym Service -->
+      <div class="carousel-item service-card" data-modal="modal-gym">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/fa/9a/01/fa9a01c0b0fb49c93395b4b6f071ea30.jpg"
+            alt="Gym"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Gym</h3>
+          <p class="service-description">Rèn luyện sức mạnh và thể lực với trang thiết bị hiện đại và huấn luyện viên cá nhân hóa.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Thiết bị gym tiên tiến</li>
+            <li><i class="fa-solid fa-check"></i> Lộ trình tập luyện cá nhân</li>
+            <li><i class="fa-solid fa-check"></i> Hỗ trợ dinh dưỡng</li>
+          </ul>
+          <a href="pages/gym.html" class="btn-primary">Khám phá Gym</a>
+        </div>
+      </div>
+      <!-- Dance Service -->
+      <div class="carousel-item service-card" data-modal="modal-dance">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/92/d4/1d/92d41d8466f4e80252f4370dd5e8c6a4.jpg"
+            alt="Dance"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Dance</h3>
+          <p class="service-description">Thỏa sức vận động với các lớp nhảy đa dạng như Zumba, Hip-hop, và Dance Fitness.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Năng động và vui nhộn</li>
+            <li><i class="fa-solid fa-check"></i> Phù hợp mọi lứa tuổi</li>
+            <li><i class="fa-solid fa-check"></i> Đốt cháy calo hiệu quả</li>
+          </ul>
+          <a href="pages/dance.html" class="btn-primary">Khám phá Dance</a>
+        </div>
+      </div>
+      <!-- Swimming Service -->
+      <div class="carousel-item service-card" data-modal="modal-swimming">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/e0/37/ec/e037ec889868c28e513c5ebab1c3ce90.jpg"
+            alt="Swimming"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Swimming</h3>
+          <p class="service-description">Học bơi và rèn luyện thể chất với các lớp bơi lội chuyên nghiệp trong hồ bơi hiện đại.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Hồ bơi tiêu chuẩn</li>
+            <li><i class="fa-solid fa-check"></i> Huấn luyện viên tận tâm</li>
+            <li><i class="fa-solid fa-check"></i> Phù hợp cho mọi cấp độ</li>
+          </ul>
+          <a href="pages/swimming.html" class="btn-primary">Khám phá Swimming</a>
+        </div>
+      </div>
+      <!-- Kickboxing Service -->
+      <div class="carousel-item service-card" data-modal="modal-kickboxing">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/45/93/85/4593851813d328874a15101ff3f4aed8.jpg"
+            alt="Kickboxing"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Kickboxing</h3>
+          <p class="service-description">Tăng cường sức mạnh và sự tự tin với các lớp kickboxing năng động và chuyên nghiệp.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Tập luyện toàn thân</li>
+            <li><i class="fa-solid fa-check"></i> Huấn luyện viên chuyên môn cao</li>
+            <li><i class="fa-solid fa-check"></i> Cải thiện kỹ năng tự vệ</li>
+          </ul>
+          <a href="pages/kickboxing.html" class="btn-primary">Khám phá Kickboxing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Contact Button -->
+    <div class="contact-button" id="contactBtn" role="button" aria-label="Mở cửa sổ liên hệ">
+      <button class="contact-btn">
+        <i class="fa-solid fa-headset"></i>
+      </button>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Liên Hệ Với Chúng Tôi</h3>
+          <button class="modal-close" id="closeModal" aria-label="Đóng cửa sổ liên hệ">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <a href="https://facebook.com/risefitnessyoga" class="contact-item">
+            <span class="contact-icon facebook"><i class="fa-brands fa-facebook-f"></i></span>
+            <div>
+              <h4>Facebook</h4>
+              <p>RiseFitness&Yoga</p>
+            </div>
+          </a>
+          <a href="https://instagram.com/risefitnessyoga" class="contact-item">
+            <span class="contact-icon instagram"><i class="fa-brands fa-instagram"></i></span>
+            <div>
+              <h4>Instagram</h4>
+              <p>@risefitnessyoga</p>
+            </div>
+          </a>
+          <a href="tel:+84123456789" class="contact-item">
+            <span class="contact-icon phone"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h4>Hotline</h4>
+              <p>+84 123 456 789</p>
+            </div>
+          </a>
+          <a href="/cdn-cgi/l/email-protection#6f060109002f1d061c0a0906110b0016161c0a0204410c0002" class="contact-item">
+            <span class="contact-icon email"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h4>Email</h4>
+              <p><span class="__cf_email__" data-cfemail="f09a9d9895b08299839d9e918c969d8b8b81979f99d4989d">[email protected]</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Modals -->
+    <div id="modal-hatha" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Hatha Yoga</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói Hatha Yoga">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/62/8e/79/628e79f1d7f46d3ab05f655eb3fd79e5.jpg"
+              alt="Lớp Hatha Yoga"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/2c/53/2d/2c532db46e531d008599ff485c483c94.jpg"
+              alt="Hướng dẫn Hatha Yoga"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 600.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Lớp Hatha Yoga tập trung vào các tư thế cơ bản và kỹ thuật thở, phù hợp cho người mới bắt đầu.</p>
+            <p><strong>Thời gian:</strong> 60 phút/buổi, không giới hạn số buổi trong tháng.</p>
+            <p><strong>Hỗ trợ:</strong> Dụng cụ yoga miễn phí, hướng dẫn chi tiết từ HLV.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Lớp Hatha rất phù hợp cho người mới như tôi. HLV hướng dẫn rất kiên nhẫn!" - Trần Thị Mai</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Tôi cảm thấy cơ thể linh hoạt hơn sau 1 tháng tập Hatha!" - Nguyễn Văn Hùng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-vinyasa" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Vinyasa Yoga</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói Vinyasa Yoga">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/1d/d0/6c/1dd06cc41bfa569bb4acb1e7f65a6f75.jpg"
+              alt="Lớp Vinyasa Yoga"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/7e/4b/22/7e4b22c3b563b24176239515b2be9617.jpg"
+              alt="Hướng dẫn Vinyasa Yoga"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 800.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Lớp Vinyasa Yoga với các chuỗi chuyển động năng động, kết hợp hơi thở, phù hợp cho người trung cấp.</p>
+            <p><strong>Thời gian:</strong> 75 phút/buổi, không giới hạn số buổi trong tháng.</p>
+            <p><strong>Hỗ trợ:</strong> Hướng dẫn kỹ thuật chi tiết, dụng cụ miễn phí.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Vinyasa rất thú vị, giúp tôi tăng cường sức mạnh và sự linh hoạt!" - Lê Thị Hồng</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Lớp học năng động và HLV rất nhiệt tình!" - Phạm Văn Long</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-yin" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Yin Yoga</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói Yin Yoga">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/bd/db/3d/bddb3d2193950f9a09313c4312856e9b.jpg"
+              alt="Lớp Yin Yoga"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/23/41/5f/23415fda180915a716bc90748abc60d3.jpg"
+              alt="Hướng dẫn Yin Yoga"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 700.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Lớp Yin Yoga tập trung vào giãn cơ sâu và thư giãn, phù hợp cho mọi cấp độ.</p>
+            <p><strong>Thời gian:</strong> 75 phút/buổi, không giới hạn số buổi trong tháng.</p>
+            <p><strong>Hỗ trợ:</strong> Hướng dẫn thư giãn, dụng cụ miễn phí.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Yin Yoga giúp tôi thư giãn hoàn toàn, rất tuyệt vời!" - Nguyễn Thị Ngọc</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Lớp học rất nhẹ nhàng, phù hợp để giảm căng thẳng!" - Trần Văn Nam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-prenatal" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Yoga Bà Bầu</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói Yoga Bà Bầu">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/19/37/32/1937329f101d2ef36148f901de54fd35.jpg"
+              alt="Lớp Yoga Bà Bầu"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/b0/68/af/b068af5a906bd88ed5239760f6261705.jpg"
+              alt="Hướng dẫn Yoga Bà Bầu"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 900.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Lớp Yoga Bà Bầu với các tư thế an toàn, hỗ trợ sức khỏe mẹ và bé trong thai kỳ.</p>
+            <p><strong>Thời gian:</strong> 60 phút/buổi, không giới hạn số buổi trong tháng.</p>
+            <p><strong>Hỗ trợ:</strong> Hướng dẫn chuyên biệt, dụng cụ miễn phí.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Lớp Yoga Bà Bầu giúp tôi giảm đau lưng và thoải mái hơn!" - Lê Thị Hương</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"HLV rất chu đáo, hướng dẫn nhẹ nhàng và dễ hiểu!" - Phạm Thị Lan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-meditation" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Thiền & Chánh Niệm</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói Thiền & Chánh Niệm">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/2f/93/db/2f93db59ad3b01be4918c6d680ac9419.jpg"
+              alt="Lớp Thiền"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/f0/83/bb/f083bb40977df867ef29c3f90c3c8db3.jpg"
+              alt="Hướng dẫn Thiền"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 500.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Lớp thiền giúp thư giãn tâm trí, tăng cường tập trung và giảm căng thẳng.</p>
+            <p><strong>Thời gian:</strong> 45 phút/buổi, không giới hạn số buổi trong tháng.</p>
+            <p><strong>Hỗ trợ:</strong> Hướng dẫn thiền cơ bản, không gian yên tĩnh.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Lớp thiền giúp tôi thư giãn và tập trung tốt hơn!" - Nguyễn Văn Khánh</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Không gian rất yên tĩnh, HLV hướng dẫn thiền rất nhẹ nhàng!" - Trần Thị Ngọc</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+      (function(){
+        function c(){
+          var b=a.contentDocument||a.contentWindow.document;
+          if(b){
+            var d=b.createElement('script');
+            d.innerHTML="window.__CF$cv$params={r:'94b3a72a497f62ae',t:'MTc0OTE2ODI3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName('head')[0].appendChild(d)
+          }
+        }
+        if(document.body){
+          var a=document.createElement('iframe');
+          a.height=1;
+          a.width=1;
+          a.style.position='absolute';
+          a.style.top=0;
+          a.style.left=0;
+          a.style.border='none';
+          a.style.visibility='hidden';
+          document.body.appendChild(a);
+          if('loading'!==document.readyState)c();
+          else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);
+          else{
+            var e=document.onreadystatechange||function(){};
+            document.onreadystatechange=function(b){
+              e(b);
+              'loading'!==document.readyState&&(document.onreadystatechange=e,c())
+            }
+          }
+        }
+      })();
+    </script>
+  </body>
 </html>
