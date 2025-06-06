@@ -1,1173 +1,1490 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/RiseFitness-Yoga-main/">
-    <title>Swimming - Rise Fitness & Yoga</title>
-    <link rel="stylesheet" href="css/swimming.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-</head>
-<body class="bg-white font-montserrat">
-    <!-- Header -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dịch vụ bơi lội chuyên nghiệp tại RiseFitness&Yoga với hồ bơi tiêu chuẩn Olympic và huấn luyện viên chuyên nghiệp. Đăng ký ngay hôm nay!" />
+    <meta name="keywords" content="Bơi lội, RiseFitness&Yoga, hồ bơi, huấn luyện viên, sức khỏe, khóa học bơi" />
+    <meta name="author" content="RiseFitness&Yoga" />
+    <meta name="robots" content="index, follow" />
+    <base href="/RiseFitness-Yoga-main/" />
+    <title>Dịch Vụ Bơi Lội - RiseFitness&Yoga</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/gym.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/gym.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "RiseFitness&Yoga",
+        "description": "Dịch vụ bơi lội chuyên nghiệp với hồ bơi tiêu chuẩn Olympic và huấn luyện viên chuyên nghiệp.",
+        "url": "https://risefitnessyoga.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Đường Nguyễn Huệ, Quận 1",
+          "addressLocality": "TP. Hồ Chí Minh",
+          "addressCountry": "VN"
+        },
+        "telephone": "+84 28 1234 5678"
+      }
+    </script>
+  </head>
+  <body>
     <div id="header"></div>
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div id="hero-video-container" class="hero-video">
-            <div class="hero-video-overlay"></div>
-            <div style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20swimming%20pool%20with%20clear%20blue%20water%2C%20swimmers%20practicing%20different%20strokes%2C%20modern%20facility%20with%20lane%20dividers%2C%20underwater%20lighting%2C%20high%20ceiling%20with%20natural%20light%2C%20Olympic%20standard%20swimming%20pool&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;" class="hero-background"></div>
+    <div class="hero" role="banner">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Nâng Cao Sức Khỏe Với Bơi Lội Chuyên Nghiệp</h1>
+          <p class="hero-subtitle">
+            Tham gia các khóa học bơi lội tại RiseFitness&Yoga với hồ bơi tiêu chuẩn Olympic và đội ngũ huấn luyện viên chuyên nghiệp.
+          </p>
+          <div class="hero-buttons">
+            <a href="#dang-ky" class="btn-primary">Đăng Ký Ngay</a>
+            <a href="#khoa-hoc" class="btn-secondary">Xem Khóa Học</a>
+          </div>
         </div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h3 id="logo-text" class="hero-logo">risefitness&yoga</h3>
-                <div class="overflow-hidden">
-                    <h1 id="title-text" class="hero-title">Swimming</h1>
-                </div>
-                <p id="tagline-text" class="hero-tagline">Nâng cao sức khỏe với bơi lội chuyên nghiệp</p>
-                <div id="cta-button" class="hero-cta">
-                    <a href="#register" class="btn-primary">Đăng Ký Ngay</a>
-                </div>
-                <div id="social-icons" class="hero-social">
-                    <a href="#" class="social-icon">
-                        <i class="ri-facebook-fill"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="ri-youtube-fill"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="ri-tiktok-fill"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div id="scroll-indicator" class="scroll-indicator">
-            <div class="flex flex-col items-center">
-                <span class="scroll-text">Cuộn xuống</span>
-                <div class="scroll-icon bounce">
-                    <i class="ri-arrow-down-line ri-lg"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Features Section -->
-    <section id="features" class="section-features">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="title">Điểm Nổi Bật</h2>
-                <p class="subtitle">Chúng tôi tự hào mang đến những trải nghiệm bơi lội tốt nhất với các tiêu chuẩn chất lượng hàng đầu</p>
-            </div>
-            <div class="features-grid">
-                <!-- Feature 1 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-user-star-line ri-2x text-primary"></i>
-                    </div>
-                    <h3 class="feature-title">Huấn luyện viên chuyên nghiệp</h3>
-                    <p class="feature-description">Đội ngũ HLV được đào tạo bài bản, có chứng chỉ quốc tế và nhiều năm kinh nghiệm giảng dạy</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-water-flash-line ri-2x text-primary"></i>
-                    </div>
-                    <h3 class="feature-title">Hồ bơi tiêu chuẩn Olympic</h3>
-                    <p class="feature-description">Hồ bơi đạt chuẩn Olympic với 8 làn bơi, hệ thống lọc nước hiện đại và kiểm soát nhiệt độ</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-time-line ri-2x text-primary"></i>
-                    </div>
-                    <h3 class="feature-title">Lịch học linh hoạt</h3>
-                    <p class="feature-description">Đa dạng khung giờ học từ sáng sớm đến tối muộn, phù hợp với mọi lịch trình bận rộn</p>
-                </div>
-                <!-- Feature 4 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-book-open-line ri-2x text-primary"></i>
-                    </div>
-                    <h3 class="feature-title">Phương pháp dạy khoa học</h3>
-                    <p class="feature-description">Áp dụng phương pháp giảng dạy tiên tiến, cá nhân hóa theo từng học viên và cấp độ</p>
-                </div>
-                <!-- Feature 5 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-tools-line ri-2x text-primary"></i>
-                    </div>
-                    <h3 class="feature-title">Trang thiết bị hiện đại</h3>
-                    <p class="feature-description">Đầy đủ dụng cụ hỗ trợ bơi chất lượng cao, camera dưới nước phân tích kỹ thuật</p>
-                </div>
-                <!-- Feature 6 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-award-line ri-2x text-primary"></i>
-                    </div>
-                    <h3 class="feature-title">Chứng chỉ quốc tế</h3>
-                    <p class="feature-description">Cấp chứng chỉ bơi được công nhận quốc tế sau khi hoàn thành khóa học</p>
-                </div>
-                <!-- Feature 7 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-shield-check-line ri-2x text-primary"></i>
-                    </div>
-                    <h3 class="feature-title">Bảo hiểm an toàn</h3>
-                    <p class="feature-description">Mỗi học viên đều được bảo hiểm trong suốt quá trình học tập tại trung tâm</p>
-                </div>
-                <!-- Feature 8 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-check-double-line ri-2x text-primary"></i>
-                    </div>
-                    <h3 class="feature-title">Cam kết biết bơi</h3>
-                    <p class="feature-description">Chúng tôi cam kết học viên sẽ biết bơi sau khóa học hoặc được học lại miễn phí</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Courses Section -->
-    <section id="courses" class="section-courses">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="title">Khóa Học Swimming</h2>
-                <p class="subtitle">Đa dạng các khóa học bơi lội phù hợp với mọi lứa tuổi và trình độ, từ người mới bắt đầu đến nâng cao</p>
-            </div>
-            <div class="courses-grid">
-                <!-- Course 1 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://readdy.ai/api/search-image?query=Beginner%20swimming%20class%20with%20instructor%20teaching%20basic%20swimming%20techniques%20to%20adults%20in%20a%20clear%20blue%20pool%2C%20supportive%20environment%2C%20shallow%20water%2C%20flotation%20devices%20nearby%2C%20patient%20instruction&width=600&height=400&seq=2&orientation=landscape" alt="Khóa học cơ bản">
-                        <div class="course-overlay">
-                            <div class="course-label">Phổ biến</div>
-                        </div>
-                    </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Khóa học cơ bản cho người mới</h3>
-                        <p class="course-description">Dành cho người chưa biết bơi, làm quen với môi trường nước và học các kỹ thuật cơ bản</p>
-                        <div class="course-footer">
-                            <span class="course-duration">12 buổi</span>
-                            <a href="#register" class="course-link">Chi tiết <i class="ri-arrow-right-line ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course 2 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://readdy.ai/api/search-image?query=Advanced%20swimming%20technique%20training%2C%20coach%20analyzing%20swimmers%20form%2C%20professional%20swimmer%20practicing%20in%20Olympic%20pool%2C%20technical%20drills%2C%20underwater%20camera%20monitoring%2C%20performance%20analysis&width=600&height=400&seq=3&orientation=landscape" alt="Khóa nâng cao">
-                    </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Khóa nâng cao kỹ thuật</h3>
-                        <p class="course-description">Hoàn thiện kỹ thuật bơi, cải thiện sức bền và tốc độ cho người đã biết bơi</p>
-                        <div class="course-footer">
-                            <span class="course-duration">16 buổi</span>
-                            <a href="#register" class="course-link">Chi tiết <i class="ri-arrow-right-line ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course 3 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://readdy.ai/api/search-image?query=Childrens%20swimming%20class%20with%20colorful%20pool%20toys%2C%20young%20kids%20learning%20to%20swim%20with%20instructor%2C%20shallow%20pool%20area%2C%20safety%20floats%2C%20fun%20and%20educational%20atmosphere%2C%20small%20group%20lesson&width=600&height=400&seq=4&orientation=landscape" alt="Lớp bơi trẻ em">
-                        <div class="course-overlay">
-                            <div class="course-label">Yêu thích</div>
-                        </div>
-                    </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Lớp bơi trẻ em</h3>
-                        <p class="course-description">Dạy bơi an toàn và vui nhộn cho trẻ từ 4-12 tuổi với phương pháp phù hợp lứa tuổi</p>
-                        <div class="course-footer">
-                            <span class="course-duration">10 buổi</span>
-                            <a href="#register" class="course-link">Chi tiết <i class="ri-arrow-right-line ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course 4 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://readdy.ai/api/search-image?query=Adult%20swimming%20class%20with%20diverse%20group%20of%20people%2C%20middle-aged%20and%20senior%20swimmers%2C%20instructor%20demonstrating%20techniques%2C%20comfortable%20learning%20environment%2C%20shallow%20to%20medium%20depth%20water&width=600&height=400&seq=5&orientation=landscape" alt="Lớp bơi người lớn">
-                    </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Lớp bơi người lớn</h3>
-                        <p class="course-description">Khóa học dành riêng cho người trưởng thành với lộ trình phù hợp và HLV kinh nghiệm</p>
-                        <div class="course-footer">
-                            <span class="course-duration">12 buổi</span>
-                            <a href="#register" class="course-link">Chi tiết <i class="ri-arrow-right-line ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course 5 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://readdy.ai/api/search-image?query=Breaststroke%20technique%20training%2C%20swimmer%20demonstrating%20proper%20breaststroke%20form%20in%20clear%20blue%20water%2C%20coach%20observing%20from%20poolside%2C%20technical%20swimming%20drill%2C%20professional%20training%20environment&width=600&height=400&seq=6&orientation=landscape" alt="Khóa học bơi ếch">
-                    </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Khóa học bơi ếch</h3>
-                        <p class="course-description">Chuyên sâu về kỹ thuật bơi ếch, kiểu bơi phổ biến và dễ tiếp cận nhất</p>
-                        <div class="course-footer">
-                            <span class="course-duration">8 buổi</span>
-                            <a href="#register" class="course-link">Chi tiết <i class="ri-arrow-right-line ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course 6 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://readdy.ai/api/search-image?query=Butterfly%20stroke%20training%2C%20professional%20swimmer%20demonstrating%20butterfly%20technique%2C%20powerful%20arm%20movements%2C%20coach%20providing%20feedback%2C%20Olympic%20standard%20pool%2C%20advanced%20swimming%20training&width=600&height=400&seq=7&orientation=landscape" alt="Khóa học bơi bướm">
-                    </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Khóa học bơi bướm</h3>
-                        <p class="course-description">Học kỹ thuật bơi bướm đòi hỏi sức mạnh và sự phối hợp cao, dành cho người đã biết bơi</p>
-                        <div class="course-footer">
-                            <span class="course-duration">10 buổi</span>
-                            <a href="#register" class="course-link">Chi tiết <i class="ri-arrow-right-line ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course 7 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://readdy.ai/api/search-image?query=Freestyle%20swimming%20lesson%2C%20swimmer%20practicing%20front%20crawl%20technique%20in%20lap%20pool%2C%20instructor%20demonstrating%20arm%20stroke%2C%20breathing%20technique%2C%20efficient%20swimming%20form%2C%20professional%20training&width=600&height=400&seq=8&orientation=landscape" alt="Khóa học bơi sải">
-                    </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Khóa học bơi sải</h3>
-                        <p class="course-description">Tập trung vào kỹ thuật bơi tự do (bơi sải), kiểu bơi nhanh và hiệu quả nhất</p>
-                        <div class="course-footer">
-                            <span class="course-duration">8 buổi</span>
-                            <a href="#register" class="course-link">Chi tiết <i class="ri-arrow-right-line ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Course 8 -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://readdy.ai/api/search-image?query=Backstroke%20swimming%20class%2C%20swimmer%20on%20back%20demonstrating%20proper%20backstroke%20technique%2C%20coach%20providing%20guidance%2C%20clear%20blue%20pool%20water%2C%20lane%20lines%2C%20technical%20swimming%20training&width=600&height=400&seq=9&orientation=landscape" alt="Khóa học bơi ngửa">
-                    </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Khóa học bơi ngửa</h3>
-                        <p class="course-description">Hướng dẫn kỹ thuật bơi ngửa an toàn và đúng cách, phù hợp cho mọi trình độ</p>
-                        <div class="course-footer">
-                            <span class="course-duration">8 buổi</span>
-                            <a href="#register" class="course-link">Chi tiết <i class="ri-arrow-right-line ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Schedule Section -->
-    <section id="schedule" class="section-schedule">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="title">Lịch Học</h2>
-                <p class="subtitle">Lựa chọn thời gian phù hợp với lịch trình của bạn, chúng tôi cung cấp nhiều khung giờ linh hoạt</p>
-            </div>
-            <div class="schedule-controls">
-                <div class="week-nav">
-                    <button id="prev-week" class="week-btn">
-                        <i class="ri-arrow-left-s-line"></i>
-                    </button>
-                    <h3 id="current-week" class="week-title">05/06 - 11/06/2025</h3>
-                    <button id="next-week" class="week-btn">
-                        <i class="ri-arrow-right-s-line"></i>
-                    </button>
-                </div>
-                <div class="instructor-filter">
-                    <select id="instructor-filter" class="select-input">
-                        <option value="all">Tất cả huấn luyện viên</option>
-                        <option value="nguyen-van-a">Nguyễn Văn An</option>
-                        <option value="tran-thi-b">Trần Thị Bình</option>
-                        <option value="le-van-c">Lê Văn Cường</option>
-                        <option value="pham-thi-d">Phạm Thị Dung</option>
-                    </select>
-                    <div class="select-icon">
-                        <i class="ri-arrow-down-s-line"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="days-grid">
-                <div class="day-label">T2 (05/06)</div>
-                <div class="day-label">T3 (06/06)</div>
-                <div class="day-label">T4 (07/06)</div>
-                <div class="day-label">T5 (08/06)</div>
-                <div class="day-label">T6 (09/06)</div>
-                <div class="day-label">T7 (10/06)</div>
-                <div class="day-label">CN (11/06)</div>
-            </div>
-            <div class="schedule-grid">
-                <!-- Monday -->
-                <div class="day-slots">
-                    <div class="time-slot available">
-                        <p class="slot-time">06:00 - 07:30</p>
-                        <p class="slot-course">Bơi cơ bản</p>
-                        <p class="slot-instructor">HLV: Nguyễn Văn An</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot booked">
-                        <p class="slot-time">08:00 - 09:30</p>
-                        <p class="slot-course">Bơi ếch</p>
-                        <p class="slot-instructor">HLV: Trần Thị Bình</p>
-                        <span class="slot-status">Đã đặt</span>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">17:00 - 18:30</p>
-                        <p class="slot-course">Bơi trẻ em</p>
-                        <p class="slot-instructor">HLV: Phạm Thị Dung</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                </div>
-                <!-- Tuesday -->
-                <div class="day-slots">
-                    <div class="time-slot booked">
-                        <p class="slot-time">06:00 - 07:30</p>
-                        <p class="slot-course">Bơi sải</p>
-                        <p class="slot-instructor">HLV: Lê Văn Cường</p>
-                        <span class="slot-status">Đã đặt</span>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">09:00 - 10:30</p>
-                        <p class="slot-course">Bơi người lớn</p>
-                        <p class="slot-instructor">HLV: Nguyễn Văn An</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">18:00 - 19:30</p>
-                        <p class="slot-course">Bơi nâng cao</p>
-                        <p class="slot-instructor">HLV: Trần Thị Bình</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                </div>
-                <!-- Wednesday -->
-                <div class="day-slots">
-                    <div class="time-slot booked">
-                        <p class="slot-time">07:30 - 09:00</p>
-                        <p class="slot-course">Bơi sải nâng cao</p>
-                        <p class="slot-instructor">HLV: Lê Văn Cường</p>
-                        <span class="slot-status">Đã đặt</span>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">09:30 - 11:00</p>
-                        <p class="slot-course">Bơi bướm</p>
-                        <p class="slot-instructor">HLV: Nguyễn Văn An</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">15:00 - 16:30</p>
-                        <p class="slot-course">Bơi ếch cơ bản</p>
-                        <p class="slot-instructor">HLV: Trần Thị Bình</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot booked">
-                        <p class="slot-time">18:30 - 20:00</p>
-                        <p class="slot-course">Bơi trẻ em</p>
-                        <p class="slot-instructor">HLV: Phạm Thị Dung</p>
-                        <span class="slot-status">Đã đặt</span>
-                    </div>
-                </div>
-                <!-- Thursday -->
-                <div class="day-slots">
-                    <div class="time-slot available">
-                        <p class="slot-time">06:30 - 08:00</p>
-                        <p class="slot-course">Bơi ngửa nâng cao</p>
-                        <p class="slot-instructor">HLV: Nguyễn Văn An</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot booked">
-                        <p class="slot-time">10:30 - 12:00</p>
-                        <p class="slot-course">Bơi tự do</p>
-                        <p class="slot-instructor">HLV: Trần Thị Bình</p>
-                        <span class="slot-status">Đã đặt</span>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">14:30 - 16:00</p>
-                        <p class="slot-course">Bơi bướm cơ bản</p>
-                        <p class="slot-instructor">HLV: Lê Văn Cường</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot booked">
-                        <p class="slot-time">19:00 - 20:30</p>
-                        <p class="slot-course">Bơi người lớn</p>
-                        <p class="slot-instructor">HLV: Phạm Thị Dung</p>
-                        <span class="slot-status">Đã đặt</span>
-                    </div>
-                </div>
-                <!-- Friday -->
-                <div class="day-slots">
-                    <div class="time-slot available">
-                        <p class="slot-time">06:00 - 07:30</p>
-                        <p class="slot-course">Bơi sải</p>
-                        <p class="slot-instructor">HLV: Nguyễn Văn An</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot booked">
-                        <p class="slot-time">09:00 - 10:30</p>
-                        <p class="slot-course">Bơi người lớn</p>
-                        <p class="slot-instructor">HLV: Trần Thị Bình</p>
-                        <span class="slot-status">Đã đặt</span>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">17:00 - 18:30</p>
-                        <p class="slot-course">Bơi trẻ em</p>
-                        <p class="slot-instructor">HLV: Phạm Thị Dung</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                </div>
-                <!-- Saturday -->
-                <div class="day-slots">
-                    <div class="time-slot available">
-                        <p class="slot-time">08:00 - 09:30</p>
-                        <p class="slot-course">Bơi cơ bản</p>
-                        <p class="slot-instructor">HLV: Lê Văn Cường</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">10:00 - 11:30</p>
-                        <p class="slot-course">Bơi ngửa</p>
-                        <p class="slot-instructor">HLV: Nguyễn Văn An</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot booked">
-                        <p class="slot-time">14:00 - 15:30</p>
-                        <p class="slot-course">Bơi trẻ em</p>
-                        <p class="slot-instructor">HLV: Trần Thị Bình</p>
-                        <span class="slot-status">Đã đặt</span>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">16:00 - 17:30</p>
-                        <p class="slot-course">Bơi bướm</p>
-                        <p class="slot-instructor">HLV: Phạm Thị Dung</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                </div>
-                <!-- Sunday -->
-                <div class="day-slots">
-                    <div class="time-slot available">
-                        <p class="slot-time">08:00 - 09:30</p>
-                        <p class="slot-course">Bơi ếch</p>
-                        <p class="slot-instructor">HLV: Phạm Thị Dung</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot booked">
-                        <p class="slot-time">10:00 - 11:30</p>
-                        <p class="slot-course">Bơi sải</p>
-                        <p class="slot-instructor">HLV: Lê Văn Cường</p>
-                        <span class="slot-status">Đã đặt</span>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">14:00 - 15:30</p>
-                        <p class="slot-course">Bơi người lớn</p>
-                        <p class="slot-instructor">HLV: Nguyễn Văn An</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                    <div class="time-slot available">
-                        <p class="slot-time">16:00 - 17:30</p>
-                        <p class="slot-course">Bơi nâng cao</p>
-                        <p class="slot-instructor">HLV: Trần Thị Bình</p>
-                        <button class="slot-button">Đặt lịch</button>
-                    </div>
-                </div>
-            </div>
-            <div class="schedule-legend">
-                <div class="legend-item">
-                    <div class="legend-icon available"></div>
-                    <span>Lịch trống</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-icon booked"></div>
-                    <span>Đã đặt</span>
-                </div>
-                <a href="#register" class="btn-primary">Đăng Ký Ngay</a>
-            </div>
-        </div>
-    </section>
-    <!-- Pricing Section -->
-    <section id="pricing" class="section-pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="title">Bảng Giá</h2>
-                <p class="subtitle">Chúng tôi cung cấp nhiều gói học phí linh hoạt để phù hợp với nhu cầu và ngân sách của bạn</p>
-            </div>
-            <div class="pricing-grid">
-                <!-- Pricing 1 -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Gói Trial</h3>
-                        <div class="pricing-price">
-                            <span class="price">200.000đ</span>
-                            <span class="duration">/1 buổi</span>
-                        </div>
-                        <p class="pricing-description">Dành cho người muốn trải nghiệm trước khi đăng ký khóa học</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul class="pricing-features">
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>1 buổi học thử</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Huấn luyện viên chuyên nghiệp</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Thiết bị bơi miễn phí</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Phòng thay đồ, tủ khóa</li>
-                        </ul>
-                        <div class="pricing-buttons">
-                            <a href="#register" class="btn-primary">Đăng Ký Ngay</a>
-                            <button class="btn-outline">Tư Vấn</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing 2 -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Gói Basic</h3>
-                        <div class="pricing-price">
-                            <span class="price">1.800.000đ</span>
-                            <span class="duration">/12 buổi</span>
-                        </div>
-                        <p class="pricing-description">Phù hợp cho người mới bắt đầu học bơi</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul class="pricing-features">
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>12 buổi học</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Huấn luyện viên chuyên nghiệp</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Thiết bị bơi miễn phí</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Phòng thay đồ, tủ khóa</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Bảo hiểm tai nạn</li>
-                        </ul>
-                        <div class="pricing-buttons">
-                            <a href="#register" class="btn-primary">Đăng Ký Ngay</a>
-                            <button class="btn-outline">Tư Vấn</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing 3 -->
-                <div class="pricing-card popular">
-                    <div class="pricing-label">Phổ biến nhất</div>
-                    <div class="pricing-header bg-primary-5">
-                        <h3 class="pricing-title">Gói Standard</h3>
-                        <div class="pricing-price">
-                            <span class="price">3.200.000đ</span>
-                            <span class="duration">/24 buổi</span>
-                        </div>
-                        <p class="pricing-description">Lựa chọn tốt nhất cho hầu hết học viên</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul class="pricing-features">
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>24 buổi học</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Huấn luyện viên chuyên nghiệp</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Thiết bị bơi miễn phí</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Phòng thay đồ, tủ khóa</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Bảo hiểm tai nạn</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Phân tích kỹ thuật video</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Chứng chỉ hoàn thành</li>
-                        </ul>
-                        <div class="pricing-buttons">
-                            <a href="#register" class="btn-primary">Đăng Ký Ngay</a>
-                            <button class="btn-outline">Tư Vấn</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing 4 -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Gói Premium</h3>
-                        <div class="pricing-price">
-                            <span class="price">4.500.000đ</span>
-                            <span class="duration">/36 buổi</span>
-                        </div>
-                        <p class="pricing-description">Dành cho người muốn học bơi chuyên sâu</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul class="pricing-features">
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>36 buổi học</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Huấn luyện viên cấp cao</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Thiết bị bơi cao cấp</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Phòng thay đồ VIP</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Bảo hiểm tai nạn</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Phân tích kỹ thuật video</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Chứng chỉ hoàn thành</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Tư vấn dinh dưỡng</li>
-                        </ul>
-                        <div class="pricing-buttons">
-                            <a href="#register" class="btn-primary">Đăng Ký Ngay</a>
-                            <button class="btn-outline">Tư Vấn</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing 5 -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Gói VIP</h3>
-                        <div class="pricing-price">
-                            <span class="price">8.000.000đ</span>
-                            <span class="duration">/6 tháng</span>
-                        </div>
-                        <p class="pricing-description">Không giới hạn số buổi trong 6 tháng</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul class="pricing-features">
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Không giới hạn buổi học</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Huấn luyện viên cấp cao</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Tất cả các dịch vụ Premium</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Lịch học ưu tiên</li>
-                        </ul>
-                        <div class="pricing-buttons">
-                            <a href="#register" class="btn-primary">Đăng Ký Ngay</a>
-                            <button class="btn-outline">Tư Vấn</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing 6 -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Gói Gia đình</h3>
-                        <div class="pricing-price">
-                            <span class="price">5.500.000đ</span>
-                            <span class="duration">/24 buổi</span>
-                        </div>
-                        <p class="pricing-description">Cho 2-4 thành viên trong gia đình</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul class="pricing-features">
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>24 buổi học (chia sẻ)</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Huấn luyện viên chuyên nghiệp</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Thiết bị bơi miễn phí</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Giảm 15% khi gia hạn</li>
-                        </ul>
-                        <div class="pricing-buttons">
-                            <a href="#register" class="btn-primary">Đăng Ký Ngay</a>
-                            <button class="btn-outline">Tư Vấn</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing 7 -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Gói Doanh nghiệp</h3>
-                        <div class="pricing-price">
-                            <span class="price">Liên hệ</span>
-                        </div>
-                        <p class="pricing-description">Dành cho nhóm từ 5 người trở lên</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul class="pricing-features">
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Lịch học riêng</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Đội ngũ HLV chuyên nghiệp</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Báo cáo tiến độ định kỳ</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Giá ưu đãi theo số lượng</li>
-                        </ul>
-                        <div class="pricing-buttons">
-                            <button class="btn-primary">Liên Hệ Ngay</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing 8 -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Gói Học sinh/Sinh viên</h3>
-                        <div class="pricing-price">
-                            <span class="price">1.500.000đ</span>
-                            <span class="duration">/12 buổi</span>
-                        </div>
-                        <p class="pricing-description">Ưu đãi đặc biệt cho học sinh, sinh viên</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul class="pricing-features">
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>12 buổi học</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Huấn luyện viên chuyên nghiệp</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Thiết bị bơi miễn phí</li>
-                            <li class="pricing-feature"><i class="ri-check-line text-primary"></i>Yêu cầu thẻ học sinh/sinh viên</li>
-                        </ul>
-                        <div class="pricing-buttons">
-                            <a href="#register" class="btn-primary">Đăng Ký Ngay</a>
-                            <button class="btn-outline">Tư Vấn</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Gallery Section -->
-    <section id="gallery" class="section-gallery">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="title">Hình Ảnh</h2>
-                <p class="subtitle">Khám phá không gian học bơi chuyên nghiệp và những khoảnh khắc ấn tượng tại Rise Fitness & Yoga</p>
-            </div>
-            <div class="gallery-grid">
-                <!-- Gallery Item 1 -->
-                <div class="gallery-item" data-gallery-item="1">
-                    <div class="gallery-image">
-                        <img src="https://readdy.ai/api/search-image?query=Modern%20Olympic%20swimming%20pool%20with%20clear%20blue%20water%2C%20lane%20dividers%2C%20high%20ceiling%20with%20natural%20lighting%2C%20professional%20swimming%20facility%2C%20empty%20pool%20ready%20for%20training&width=600&height=400&seq=10&orientation=landscape" alt="Hồ bơi">
-                        <div class="gallery-overlay">
-                            <div class="gallery-zoom">
-                                <i class="ri-zoom-in-line ri-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-content">
-                        <h3 class="gallery-title">Hồ bơi tiêu chuẩn Olympic</h3>
-                    </div>
-                </div>
-                <!-- Gallery Item 2 -->
-                <div class="gallery-item" data-gallery-item="2">
-                    <div class="gallery-image">
-                        <img src="https://readdy.ai/api/search-image?query=Swimming%20instructor%20teaching%20a%20small%20group%20of%20students%20in%20a%20pool%2C%20demonstrating%20technique%2C%20students%20practicing%20in%20shallow%20water%2C%20professional%20training%20session&width=600&height=400&seq=11&orientation=landscape" alt="Học viên tập luyện">
-                        <div class="gallery-overlay">
-                            <div class="gallery-zoom">
-                                <i class="ri-zoom-in-line ri-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-content">
-                        <h3 class="gallery-title">Học viên tập luyện</h3>
-                    </div>
-                </div>
-                <!-- Gallery Item 3 -->
-                <div class="gallery-item" data-gallery-item="3">
-                    <div class="gallery-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%20swimming%20coaches%20standing%20by%20pool%20side%2C%20diverse%20team%20of%20instructors%20in%20matching%20uniforms%2C%20confident%20and%20experienced%20swimming%20trainers&width=600&height=400&seq=12&orientation=landscape" alt="Đội ngũ huấn luyện viên">
-                        <div class="gallery-overlay">
-                            <div class="gallery-zoom">
-                                <i class="ri-zoom-in-line ri-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-content">
-                        <h3 class="gallery-title">Đội ngũ huấn luyện viên</h3>
-                    </div>
-                </div>
-                <!-- Gallery Item 4 -->
-                <div class="gallery-item" data-gallery-item="4">
-                    <div class="gallery-image">
-                        <img src="https://readdy.ai/api/search-image?query=Modern%20swimming%20pool%20facilities%2C%20clean%20locker%20rooms%2C%20shower%20area%2C%20equipment%20storage%2C%20professional%20swimming%20gear%2C%20well-maintained%20amenities&width=600&height=400&seq=13&orientation=landscape" alt="Cơ sở vật chất">
-                        <div class="gallery-overlay">
-                            <div class="gallery-zoom">
-                                <i class="ri-zoom-in-line ri-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-content">
-                        <h3 class="gallery-title">Cơ sở vật chất</h3>
-                    </div>
-                </div>
-                <!-- Gallery Item 5 -->
-                <div class="gallery-item" data-gallery-item="5">
-                    <div class="gallery-image">
-                        <img src="https://readdy.ai/api/search-image?query=Swimming%20certificates%20and%20awards%20displayed%2C%20professional%20swimming%20achievements%2C%20medals%20and%20trophies%2C%20swimming%20competition%20recognition&width=600&height=400&seq=14&orientation=landscape" alt="Chứng chỉ và giải thưởng">
-                        <div class="gallery-overlay">
-                            <div class="gallery-zoom">
-                                <i class="ri-zoom-in-line ri-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-content">
-                        <h3 class="gallery-title">Chứng chỉ và giải thưởng</h3>
-                    </div>
-                </div>
-                <!-- Gallery Item 6 -->
-                <div class="gallery-item" data-gallery-item="6">
-                    <div class="gallery-image">
-                        <img src="https://readdy.ai/api/search-image?query=Swimming%20competition%20event%2C%20swimmers%20at%20starting%20blocks%2C%20audience%20watching%2C%20professional%20swimming%20race%2C%20competitive%20swimming%20atmosphere&width=600&height=400&seq=15&orientation=landscape" alt="Sự kiện và cuộc thi">
-                        <div class="gallery-overlay">
-                            <div class="gallery-zoom">
-                                <i class="ri-zoom-in-line ri-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-content">
-                        <h3 class="gallery-title">Sự kiện và cuộc thi</h3>
-                    </div>
-                </div>
-                <!-- Gallery Item 7 -->
-                <div class="gallery-item" data-gallery-item="7">
-                    <div class="gallery-image">
-                        <img src="https://readdy.ai/api/search-image?query=Children%20learning%20to%20swim%20with%20instructor%2C%20fun%20swimming%20lesson%20for%20kids%2C%20colorful%20pool%20toys%2C%20safe%20and%20enjoyable%20swimming%20environment&width=600&height=400&seq=16&orientation=landscape" alt="Lớp học trẻ em">
-                        <div class="gallery-overlay">
-                            <div class="gallery-zoom">
-                                <i class="ri-zoom-in-line ri-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-content">
-                        <h3 class="gallery-title">Lớp học trẻ em</h3>
-                    </div>
-                </div>
-                <!-- Gallery Item 8 -->
-                <div class="gallery-item" data-gallery-item="8">
-                    <div class="gallery-image">
-                        <img src="https://readdy.ai/api/search-image?query=Underwater%20view%20of%20swimmer%20with%20perfect%20form%2C%20professional%20swimming%20technique%2C%20clear%20blue%20water%2C%20dynamic%20underwater%20swimming%20shot&width=600&height=400&seq=17&orientation=landscape" alt="Khoảnh khắc ấn tượng">
-                        <div class="gallery-overlay">
-                            <div class="gallery-zoom">
-                                <i class="ri-zoom-in-line ri-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-content">
-                        <h3 class="gallery-title">Khoảnh khắc ấn tượng</h3>
-                    </div>
-                </div>
-                <!-- Gallery Item 9 -->
-                <div class="gallery-item" data-gallery-item="9">
-                    <div class="gallery-image">
-                        <img src="https://readdy.ai/api/search-image?query=Swimming%20equipment%20neatly%20arranged%2C%20goggles%2C%20swim%20caps%2C%20kickboards%2C%20pull%20buoys%2C%20fins%2C%20professional%20swimming%20gear&width=600&height=400&seq=18&orientation=landscape" alt="Trang thiết bị">
-                        <div class="gallery-overlay">
-                            <div class="gallery-zoom">
-                                <i class="ri-zoom-in-line ri-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-content">
-                        <h3 class="gallery-title">Trang thiết bị</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonials Section -->
-    <section class="section-testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="title">Học Viên Nói Gì</h2>
-                <p class="subtitle">Những phản hồi chân thực từ các học viên đã và đang học tại Rise Fitness & Yoga</p>
-            </div>
-            <div class="carousel">
-                <div class="carousel-inner">
-                    <!-- Testimonial 1 -->
-                    <div class="carousel-item">
-                        <div class="testimonial-card">
-                            <div class="testimonial-header">
-                                <div class="testimonial-image">
-                                    <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20woman%20in%20her%2030s%2C%20friendly%20smile%2C%20business%20casual%20attire%2C%20neutral%20background%2C%20high%20quality%20portrait&width=200&height=200&seq=19&orientation=squarish" alt="Nguyễn Thị Minh">
-                                </div>
-                                <div>
-                                    <h3 class="testimonial-name">Nguyễn Thị Minh</h3>
-                                    <p class="testimonial-role">Học viên khóa Bơi cơ bản</p>
-                                </div>
-                                <div class="testimonial-rating">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                            </div>
-                            <p class="testimonial-text">"Tôi đã 35 tuổi và luôn sợ nước, nhưng sau 12 buổi học tại Rise Fitness, tôi đã có thể bơi được 25m mà không cần hỗ trợ. Huấn luyện viên Nguyễn Văn An rất kiên nhẫn và có phương pháp giảng dạy dễ hiểu. Tôi rất biết ơn vì đã vượt qua nỗi sợ của mình!"</p>
-                        </div>
-                    </div>
-                    <!-- Testimonial 2 -->
-                    <div class="carousel-item">
-                        <div class="testimonial-card">
-                            <div class="testimonial-header">
-                                <div class="testimonial-image">
-                                    <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20man%20in%20his%2040s%2C%20confident%20smile%2C%20business%20casual%20attire%2C%20neutral%20background%2C%20high%20quality%20portrait&width=200&height=200&seq=20&orientation=squarish" alt="Trần Văn Hùng">
-                                </div>
-                                <div>
-                                    <h3 class="testimonial-name">Trần Văn Hùng</h3>
-                                    <p class="testimonial-role">Học viên khóa Bơi nâng cao</p>
-                                </div>
-                                <div class="testimonial-rating">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-half-fill"></i>
-                                </div>
-                            </div>
-                            <p class="testimonial-text">"Tôi đã biết bơi từ trước nhưng kỹ thuật không chuẩn và rất nhanh mệt. Sau khóa học nâng cao tại Rise, kỹ thuật bơi của tôi đã cải thiện đáng kể, bơi được lâu hơn và tiết kiệm sức hơn. Cơ sở vật chất hiện đại và đội ngũ huấn luyện viên chuyên nghiệp là điểm cộng lớn."</p>
-                        </div>
-                    </div>
-                    <!-- Testimonial 3 -->
-                    <div class="carousel-item">
-                        <div class="testimonial-card">
-                            <div class="testimonial-header">
-                                <div class="testimonial-image">
-                                    <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20woman%20in%20her%2020s%2C%20friendly%20smile%2C%20casual%20attire%2C%20neutral%20background%2C%20high%20quality%20portrait&width=200&height=200&seq=21&orientation=squarish" alt="Phạm Thị Hương">
-                                </div>
-                                <div>
-                                    <h3 class="testimonial-name">Phạm Thị Hương</h3>
-                                    <p class="testimonial-role">Phụ huynh học viên</p>
-                                </div>
-                                <div class="testimonial-rating">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                            </div>
-                            <p class="testimonial-text">"Con trai tôi 7 tuổi, rất sợ nước và khó khăn khi làm quen với môi trường bơi lội. Nhưng các HLV tại Rise đã rất kiên nhẫn và biết cách tạo động lực cho con. Sau 2 tháng, con đã bơi được và rất thích thú mỗi khi đến lớp. Tôi đánh giá cao sự an toàn và không gian học tập thân thiện tại đây."</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev">
-                    <i class="ri-arrow-left-s-line"></i>
-                </button>
-                <button class="carousel-control-next">
-                    <i class="ri-arrow-right-s-line"></i>
-                </button>
-                <div class="carousel-indicators">
-                    <button class="carousel-indicator active"></button>
-                    <button class="carousel-indicator"></button>
-                    <button class="carousel-indicator"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Register Section -->
-    <section id="register" class="section-register">
-        <div class="container">
-            <div class="register-container">
-                <div class="register-form">
-                    <h2 class="register-title">Đăng Ký Ngay</h2>
-                    <p class="register-description">Điền thông tin của bạn để đăng ký khóa học bơi hoặc nhận tư vấn chi tiết từ đội ngũ chuyên nghiệp của chúng tôi</p>
-                    <form id="registration-form" action="" method="POST">
-                        <div class="form-group">
-                            <label for="fullname" class="form-label">Họ và tên</label>
-                            <input type="text" id="fullname" name="fullname" class="form-input" required minlength="2" maxlength="50">
-                        </div>
-                        <div class="form-group">
-                            <label for="age" class="form-label">Tuổi</label>
-                            <input type="number" id="age" name="age" class="form-input" required>
-                        </div>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Số điện thoại</label>
-                                <input type="tel" id="phone" name="phone" class="form-input" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="course" class="form-label">Khóa học</label>
-                            <div class="select-wrapper">
-                                <select id="course" name="course" class="form-input" required>
-                                    <option value="">Chọn khóa học</option>
-                                    <option value="basic">Khóa học cơ bản cho người mới</option>
-                                    <option value="advanced">Khóa nâng cao kỹ thuật</option>
-                                    <option value="children">Lớp bơi trẻ em</option>
-                                    <option value="adult">Lớp bơi người lớn</option>
-                                    <option value="breaststroke">Khóa học bơi ếch</option>
-                                    <option value="butterfly">Khóa học bơi bướm</option>
-                                    <option value="freestyle">Khóa học bơi sải</option>
-                                    <option value="backstroke">Khóa học bơi ngửa</option>
-                                </select>
-                                <div class="select-icon">
-                                    <i class="ri-arrow-down-s-line"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="schedule" class="form-label">Lịch học mong muốn</label>
-                            <div class="select-wrapper">
-                                <select id="schedule" name="schedule" class="form-input" required>
-                                    <option value="">Chọn lịch học</option>
-                                    <option value="morning">Buổi sáng (6:00 - 10:00)</option>
-                                    <option value="afternoon">Buổi chiều (14:00 - 17:00)</option>
-                                    <option value="evening">Buổi tối (17:00 - 20:00)</option>
-                                    <option value="weekend">Cuối tuần</option>
-                                </select>
-                                <div class="select-icon">
-                                    <i class="ri-arrow-down-s-line"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="instructor" class="form-label">Huấn luyện viên</label>
-                            <div class="select-wrapper">
-                                <select id="instructor" name="instructor" class="form-input">
-                                    <option value="">Không có yêu cầu cụ thể</option>
-                                    <option value="nguyen-van-a">Nguyễn Văn An</option>
-                                    <option value="tran-thi-b">Trần Thị Bình</option>
-                                    <option value="le-van-c">Lê Văn Cường</option>
-                                    <option value="pham-thi-d">Phạm Thị Dung</option>
-                                </select>
-                                <div class="select-icon">
-                                    <i class="ri-arrow-down-s-line"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="note" class="form-label">Ghi chú thêm</label>
-                            <textarea id="note" name="note" rows="3" class="form-input"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label class="terms-label">
-                                <input type="checkbox" id="terms" name="terms" class="terms-checkbox" required>
-                                <span>Tôi đồng ý với <a href="#" class="terms-link">điều khoản và điều kiện</a> của Rise Fitness & Yoga</span>
-                            </label>
-                        </div>
-                        <button type="submit" id="submit-btn" class="btn-primary">Đăng Ký Ngay</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <h3 class="contact-title">Thông Tin Liên Hệ</h3>
-                    <div class="contact-items">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-map-pin-line text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="contact-subtitle">Địa chỉ</h4>
-                                <p class="contact-text">123 Đường Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-phone-line text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="contact-subtitle">Điện thoại</h4>
-                                <p class="contact-text">+84 28 1234 5678</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-mail-line text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="contact-subtitle">Email</h4>
-                                <p class="contact-text">info@risefitness.vn</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="ri-time-line text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="contact-subtitle">Giờ mở cửa</h4>
-                                <p class="contact-text">Thứ 2 - Thứ 6: 6:00 - 21:00</p>
-                                <p class="contact-text">Thứ 7 - Chủ nhật: 7:00 - 19:00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="contact-title">Kết nối với chúng tôi</h3>
-                        <div class="social-links">
-                            <a href="#" class="social-icon-contact">
-                                <i class="ri-facebook-fill text-primary"></i>
-                            </a>
-                            <a href="#" class="social-icon-contact">
-                                <i class="ri-instagram-fill text-primary"></i>
-                            </a>
-                            <a href="#" class="social-icon-contact">
-                                <i class="ri-youtube-fill text-primary"></i>
-                            </a>
-                            <a href="#" class="social-icon-contact">
-                                <i class="ri-tiktok-fill text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <a href="#" class="footer-logo">risefitness&yoga</a>
-                    <p class="footer-description">Nâng cao sức khỏe và tinh thần với các khóa học bơi lội chuyên nghiệp, được thiết kế phù hợp với mọi lứa tuổi và trình độ.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-icon-footer">
-                            <i class="ri-facebook-fill"></i>
-                        </a>
-                        <a href="#" class="social-icon-footer">
-                            <i class="ri-instagram-fill"></i>
-                        </a>
-                        <a href="#" class="social-icon-footer">
-                            <i class="ri-youtube-fill"></i>
-                        </a>
-                        <a href="#" class="social-icon-footer">
-                            <i class="ri-tiktok-fill"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="footer-title">Khóa học</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" class="footer-link">Khóa học cơ bản</a></li>
-                        <li><a href="#" class="footer-link">Khóa nâng cao</a></li>
-                        <li><a href="#" class="footer-link">Lớp bơi trẻ em</a></li>
-                        <li><a href="#" class="footer-link">Lớp bơi người lớn</a></li>
-                        <li><a href="#" class="footer-link">Khóa học bơi ếch</a></li>
-                        <li><a href="#" class="footer-link">Khóa học bơi bướm</a></li>
-                        <li><a href="#" class="footer-link">Khóa học bơi sải</a></li>
-                        <li><a href="#" class="footer-link">Khóa học bơi ngửa</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Liên kết nhanh</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" class="footer-link">Trang chủ</a></li>
-                        <li><a href="#features" class="footer-link">Điểm nổi bật</a></li>
-                        <li><a href="#courses" class="footer-link">Khóa học</a></li>
-                        <li><a href="#schedule" class="footer-link">Lịch học</a></li>
-                        <li><a href="#pricing" class="footer-link">Bảng giá</a></li>
-                        <li><a href="#gallery" class="footer-link">Hình ảnh</a></li>
-                        <li><a href="#register" class="footer-link">Đăng ký</a></li>
-                        <li><a href="#" class="footer-link">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer-title">Đăng ký nhận tin</h3>
-                    <p class="footer-description">Nhận thông tin mới nhất về khóa học và ưu đãi đặc biệt</p>
-                    <form class="footer-form">
-                        <div class="footer-form-group">
-                            <input type="email" placeholder="Email của bạn" class="footer-input">
-                            <button type="submit" class="btn-primary">Đăng ký</button>
-                        </div>
-                    </form>
-                    <h3 class="footer-title">Phương thức thanh toán</h3>
-                    <div class="payment-methods">
-                        <div class="payment-icon">
-                            <i class="ri-visa-fill ri-lg"></i>
-                        </div>
-                        <div class="payment-icon">
-                            <i class="ri-mastercard-fill ri-lg"></i>
-                        </div>
-                        <div class="payment-icon">
-                            <i class="ri-paypal-fill ri-lg"></i>
-                        </div>
-                        <div class="payment-icon">
-                            <i class="ri-bank-card-fill ri-lg"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 Rise Fitness & Yoga. Tất cả quyền được bảo lưu.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top">
-        <i class="ri-arrow-up-line ri-lg"></i>
-    </button>
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">
-        <div class="toast-content">
-            <div class="toast-icon">
-                <i class="ri-check-line ri-lg"></i>
-            </div>
-            <p>Đăng ký thành công! Chúng tôi sẽ liên hệ với bạn sớm.</p>
-        </div>
+      </div>
     </div>
-    <!-- Image Modal -->
-    <div id="image-modal" class="image-modal">
-        <div class="modal-content">
-            <div class="modal-image-container">
-                <img id="modal-image" src="" alt="Gallery image">
-                <button id="close-modal" class="modal-close">
-                    <i class="ri-close-line ri-lg"></i>
-                </button>
-            </div>
+    <section class="section about" id="gioi-thieu">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Điểm Nổi Bật</h2>
+          <p class="section-description">
+            Chúng tôi tự hào mang đến những trải nghiệm bơi lội tốt nhất với các tiêu chuẩn chất lượng hàng đầu.
+          </p>
         </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h3 class="benefit-title">Huấn Luyện Viên Chuyên Nghiệp</h3>
+            <p class="benefit-description">
+              Đội ngũ HLV được đào tạo bài bản, có chứng chỉ quốc tế và nhiều năm kinh nghiệm giảng dạy.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-water"></i>
+            </div>
+            <h3 class="benefit-title">Hồ Bơi Tiêu Chuẩn Olympic</h3>
+            <p class="benefit-description">
+              Hồ bơi đạt chuẩn Olympic với 8 làn bơi, hệ thống lọc nước hiện đại và kiểm soát nhiệt độ.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <h3 class="benefit-title">Lịch Học Linh Hoạt</h3>
+            <p class="benefit-description">
+              Đa dạng khung giờ học từ sáng sớm đến tối muộn, phù hợp với mọi lịch trình bận rộn.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-book"></i>
+            </div>
+            <h3 class="benefit-title">Phương Pháp Dạy Khoa Học</h3>
+            <p class="benefit-description">
+              Áp dụng phương pháp giảng dạy tiên tiến, cá nhân hóa theo từng học viên và cấp độ.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-camera"></i>
+            </div>
+            <h3 class="benefit-title">Trang Thiết Bị Hiện Đại</h3>
+            <p class="benefit-description">
+              Đầy đủ dụng cụ hỗ trợ bơi chất lượng cao, camera dưới nước phân tích kỹ thuật.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <h3 class="benefit-title">Chứng Chỉ Quốc Tế</h3>
+            <p class="benefit-description">
+              Cấp chứng chỉ bơi được công nhận quốc tế sau khi hoàn thành khóa học.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-shield-alt"></i>
+            </div>
+            <h3 class="benefit-title">Bảo Hiểm An Toàn</h3>
+            <p class="benefit-description">
+              Mỗi học viên đều được bảo hiểm trong suốt quá trình học tập tại trung tâm.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-swimmer"></i>
+            </div>
+            <h3 class="benefit-title">Cam Kết Biết Bơi</h3>
+            <p class="benefit-description">
+              Chúng tôi cam kết học viên sẽ biết bơi sau khóa học hoặc được học lại miễn phí.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="courses" class="section courses carousel infinite-carousel">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Khóa Học Bơi Lội</h2>
+      <p class="section-description">
+        Đa dạng các khóa học bơi lội phù hợp với mọi lứa tuổi và trình độ, từ người mới bắt đầu đến nâng cao.
+      </p>
     </div>
+    <div class="carousel-inner courses-grid">
+      <!-- Course 1: Khóa Học Cơ Bản Cho Người Mới -->
+      <div class="carousel-item course-card" data-modal="modal-course-basic">
+        <div class="course-image">
+          <img
+            src="https://i.pinimg.com/736x/e0/37/ec/e037ec889868c28e513c5ebab1c3ce90.jpg"
+            alt="Khóa Học Cơ Bản Cho Người Mới"
+            loading="lazy"
+          />
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">Khóa Học Cơ Bản Cho Người Mới</h3>
+          <p class="course-description">
+            Dành cho người chưa biết bơi, làm quen với môi trường nước và học các kỹ thuật cơ bản.
+          </p>
+          <ul class="course-list">
+            <li><i class="fa-solid fa-check"></i> 12 buổi</li>
+            <li><i class="fa-solid fa-check"></i> HLV chuyên nghiệp</li>
+            <li><i class="fa-solid fa-check"></i> Thiết bị hỗ trợ miễn phí</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Course 2: Khóa Nâng Cao Kỹ Thuật -->
+      <div class="carousel-item course-card" data-modal="modal-course-advanced">
+        <div class="course-image">
+          <img
+            src="https://i.pinimg.com/736x/bb/87/f1/bb87f16a5c2abe83e189ad3a48b5601d.jpg"
+            alt="Khóa Nâng Cao Kỹ Thuật"
+            loading="lazy"
+          />
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">Khóa Nâng Cao Kỹ Thuật</h3>
+          <p class="course-description">
+            Hoàn thiện kỹ thuật bơi, cải thiện sức bền và tốc độ cho người đã biết bơi.
+          </p>
+          <ul class="course-list">
+            <li><i class="fa-solid fa-check"></i> 16 buổi</li>
+            <li><i class="fa-solid fa-check"></i> Phân tích kỹ thuật video</li>
+            <li><i class="fa-solid fa-check"></i> HLV chuyên sâu</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Course 3: Lớp Bơi Trẻ Em -->
+      <div class="carousel-item course-card popular" data-modal="modal-course-kids">
+        <span class="popular-badge">Yêu Thích</span>
+        <div class="course-image">
+          <img
+            src="https://i.pinimg.com/736x/24/2f/d9/242fd913f241a095dee81582254f6725.jpg"
+            alt="Lớp Bơi Trẻ Em"
+            loading="lazy"
+          />
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">Lớp Bơi Trẻ Em</h3>
+          <p class="course-description">
+            Dạy bơi an toàn và vui nhộn cho trẻ từ 4-12 tuổi với phương pháp phù hợp lứa tuổi.
+          </p>
+          <ul class="course-list">
+            <li><i class="fa-solid fa-check"></i> 10 buổi</li>
+            <li><i class="fa-solid fa-check"></i> Phương pháp dạy vui nhộn</li>
+            <li><i class="fa-solid fa-check"></i> An toàn tuyệt đối</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Course 4: Lớp Bơi Người Lớn -->
+      <div class="carousel-item course-card" data-modal="modal-course-adults">
+        <div class="course-image">
+          <img
+            src="https://i.pinimg.com/736x/bb/93/4f/bb934fe06c9c2b21e20aa81ceea7f2f3.jpg"
+            alt="Lớp Bơi Người Lớn"
+            loading="lazy"
+          />
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">Lớp Bơi Người Lớn</h3>
+          <p class="course-description">
+            Khóa học dành riêng cho người trưởng thành với lộ trình phù hợp và HLV kinh nghiệm.
+          </p>
+          <ul class="course-list">
+            <li><i class="fa-solid fa-check"></i> 12 buổi</li>
+            <li><i class="fa-solid fa-check"></i> Lộ trình cá nhân hóa</li>
+            <li><i class="fa-solid fa-check"></i> HLV tận tâm</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Course 5: Khóa Học Bơi Ếch -->
+      <div class="carousel-item course-card" data-modal="modal-course-breaststroke">
+        <div class="course-image">
+          <img
+            src="https://i.pinimg.com/736x/30/9a/73/309a73737f8aefc2487ec64559b96776.jpg"
+            alt="Khóa Học Bơi Ếch"
+            loading="lazy"
+          />
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">Khóa Học Bơi Ếch</h3>
+          <p class="course-description">
+            Chuyên sâu về kỹ thuật bơi ếch, kiểu bơi phổ biến và dễ tiếp cận nhất.
+          </p>
+          <ul class="course-list">
+            <li><i class="fa-solid fa-check"></i> 8 buổi</li>
+            <li><i class="fa-solid fa-check"></i> Kỹ thuật chuyên sâu</li>
+            <li><i class="fa-solid fa-check"></i> HLV chuyên nghiệp</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Course 6: Khóa Học Bơi Bướm -->
+      <div class="carousel-item course-card" data-modal="modal-course-butterfly">
+        <div class="course-image">
+          <img
+            src="https://i.pinimg.com/736x/9a/72/23/9a7223d6362d0feceee423ae6248f13c.jpg"
+            alt="Khóa Học Bơi Bướm"
+            loading="lazy"
+          />
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">Khóa Học Bơi Bướm</h3>
+          <p class="course-description">
+            Học kỹ thuật bơi bướm đòi hỏi sức mạnh và sự phối hợp cao, dành cho người đã biết bơi.
+          </p>
+          <ul class="course-list">
+            <li><i class="fa-solid fa-check"></i> 10 buổi</li>
+            <li><i class="fa-solid fa-check"></i> Phân tích kỹ thuật</li>
+            <li><i class="fa-solid fa-check"></i> HLV chuyên sâu</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Course 7: Khóa Học Bơi Sải -->
+      <div class="carousel-item course-card" data-modal="modal-course-freestyle">
+        <div class="course-image">
+          <img
+            src="https://i.pinimg.com/736x/57/f4/d6/57f4d6a0fbcdb651c1436650283d41ff.jpg"
+            alt="Khóa Học、Bơi Sải"
+            loading="lazy"
+          />
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">Khóa Học Bơi Sải</h3>
+          <p class="course-description">
+            Tập trung vào kỹ thuật bơi tự do (bơi sải), kiểu bơi nhanh và hiệu quả nhất.
+          </p>
+          <ul class="course-list">
+            <li><i class="fa-solid fa-check"></i> 8 buổi</li>
+            <li><i class="fa-solid fa-check"></i> Kỹ thuật tối ưu</li>
+            <li><i class="fa-solid fa-check"></i> HLV chuyên nghiệp</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+      <!-- Course 8: Khóa Học Bơi Ngửa -->
+      <div class="carousel-item course-card" data-modal="modal-course-backstroke">
+        <div class="course-image">
+          <img
+            src="https://i.pinimg.com/736x/13/6c/f2/136cf24d3e4db596be2c7a1925b5ef48.jpg"
+            alt="Khóa Học Bơi Ngửa"
+            loading="lazy"
+          />
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">Khóa Học Bơi Ngửa</h3>
+          <p class="course-description">
+            Hướng dẫn kỹ thuật bơi ngửa an toàn và đúng cách, phù hợp cho mọi trình độ.
+          </p>
+          <ul class="course-list">
+            <li><i class="fa-solid fa-check"></i> 8 buổi</li>
+            <li><i class="fa-solid fa-check"></i> Kỹ thuật an toàn</li>
+            <li><i class="fa-solid fa-check"></i> HLV tận tâm</li>
+          </ul>
+          <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn prev" aria-label="Khóa học trước đó"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="carousel-btn next" aria-label="Khóa học tiếp theo"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+    <section class="section schedule" id="lich-hoc">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Lịch Học</h2>
+          <p class="section-description">
+            Lựa chọn thời gian phù hợp với lịch trình của bạn, chúng tôi cung cấp nhiều khung giờ linh hoạt.
+          </p>
+        </div>
+        <table class="schedule-table" role="grid">
+          <thead>
+            <tr>
+              <th>Thời gian</th>
+              <th>T2 (05/06)</th>
+              <th>T3 (06/06)</th>
+              <th>T4 (07/06)</th>
+              <th>T5 (08/06)</th>
+              <th>T6 (09/06)</th>
+              <th>T7 (10/06)</th>
+              <th>CN (11/06)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>06:00 - 07:30</td>
+              <td>
+                Bơi Cơ Bản<br />
+                HLV: Nguyễn Văn An<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>
+                Bơi Sải<br />
+                HLV: Lê Văn Cường<br />
+                <span>Đã đặt</span>
+              </td>
+              <td>-</td>
+              <td>
+                Bơi Ngửa Nâng Cao<br />
+                HLV: Nguyễn Văn An<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>
+                Bơi Sải<br />
+                HLV: Nguyễn Văn An<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>
+                Bơi Cơ Bản<br />
+                HLV: Lê Văn Cường<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>
+                Bơi Ếch<br />
+                HLV: Phạm Thị Dung<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+            </tr>
+            <tr>
+              <td>08:00 - 09:30</td>
+              <td>
+                Bơi Ếch<br />
+                HLV: Trần Thị Bình<br />
+                <span>Đã đặt</span>
+              </td>
+              <td>-</td>
+              <td>
+                Bơi Sải Nâng Cao<br />
+                HLV: Lê Văn Cường<br />
+                <span>Đã đặt</span>
+              </td>
+              <td>
+                Bơi Tự Do<br />
+                HLV: Trần Thị Bình<br />
+                <span>Đã đặt</span>
+              </td>
+              <td>-</td>
+              <td>
+                Bơi Ngửa<br />
+                HLV: Nguyễn Văn An<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>
+                Bơi Sải<br />
+                HLV: Lê Văn Cường<br />
+                <span>Đã đặt</span>
+              </td>
+            </tr>
+            <tr>
+              <td>09:00 - 10:30</td>
+              <td>-</td>
+              <td>
+                Bơi Người Lớn<br />
+                HLV: Nguyễn Văn An<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>
+                Bơi Bướm<br />
+                HLV: Nguyễn Văn An<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>-</td>
+              <td>
+                Bơi Người Lớn<br />
+                HLV: Trần Thị Bình<br />
+                <span>Đã đặt</span>
+              </td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>10:30 - 12:00</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>14:00 - 15:30</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>
+                Bơi Trẻ Em<br />
+                HLV: Trần Thị Bình<br />
+                <span>Đã đặt</span>
+              </td>
+              <td>
+                Bơi Người Lớn<br />
+                HLV: Nguyễn Văn An<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+            </tr>
+            <tr>
+              <td>15:00 - 16:30</td>
+              <td>-</td>
+              <td>-</td>
+              <td>
+                Bơi Ếch Cơ Bản<br />
+                HLV: Trần Thị Bình<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>16:00 - 17:30</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>
+                Bơi Bướm<br />
+                HLV: Phạm Thị Dung<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>
+                Bơi Nâng Cao<br />
+                HLV: Trần Thị Bình<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+            </tr>
+            <tr>
+              <td>17:00 - 18:30</td>
+              <td>
+                Bơi Trẻ Em<br />
+                HLV: Phạm Thị Dung<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>
+                Bơi Trẻ Em<br />
+                HLV: Phạm Thị Dung<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>18:30 - 20:00</td>
+              <td>-</td>
+              <td>
+                Bơi Nâng Cao<br />
+                HLV: Trần Thị Bình<br />
+                <a href="#dang-ky" class="btn-primary">Đặt lịch</a>
+              </td>
+              <td>
+                Bơi Trẻ Em<br />
+                HLV: Phạm Thị Dung<br />
+                <span>Đã đặt</span>
+              </td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>19:00 - 20:30</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>
+                Bơi Người Lớn<br />
+                HLV: Phạm Thị Dung<br />
+                <span>Đã đặt</span>
+              </td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="section trainers" id="huan-luyen-vien">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Đội Ngũ Huấn Luyện Viên</h2>
+          <p class="section-description">
+            Gặp gỡ đội ngũ huấn luyện viên bơi lội chuyên nghiệp của chúng tôi, luôn sẵn sàng hỗ trợ bạn đạt được mục tiêu.
+          </p>
+        </div>
+        <div class="trainers-grid">
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://i.pinimg.com/736x/fb/ec/f7/fbecf795f771b821b3c38ff56087b9d0.jpg"
+                alt="Nguyễn Văn An"
+                loading="lazy"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Nguyễn Văn An</h3>
+              <p class="trainer-description">Huấn luyện viên với 8 năm kinh nghiệm, chuyên về bơi cơ bản và bơi sải.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ quốc tế AUSTSWIM</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia bơi sải</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ người mới bắt đầu</li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://i.pinimg.com/736x/2e/fc/fb/2efcfb15ef0e23729cb8499b759ce546.jpg"
+                alt="Trần Thị Bình"
+                loading="lazy"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Trần Thị Bình</h3>
+              <p class="trainer-description">Chuyên gia bơi ếch và bơi nâng cao, tận tâm với từng học viên.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ Swim Australia</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia bơi ếch</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ kỹ thuật nâng cao</li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://i.pinimg.com/736x/7a/c2/9c/7ac29caf46cd2594262f3e7cbd311453.jpg"
+                alt="Phạm Thái"
+                loading="lazy"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Phạm Thái</h3>
+              <p class="trainer-description">Chuyên gia bơi trẻ em, tạo môi trường học tập vui nhộn và an toàn.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ AUSTSWIM</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia bơi trẻ em</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ an toàn</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section pricing" id="bang-gia">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Bảng Giá</h2>
+          <p class="section-description">
+            Chúng tôi cung cấp nhiều gói học phí linh hoạt để phù hợp với nhu cầu và ngân sách của bạn.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://i.pinimg.com/736x/7e/0b/8c/7e0b8ca4e978f0bee03f4d96e495ece5.jpg"
+                alt="Gói Trial"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Trial</h3>
+              <p class="service-description">200.000đ / 1 buổi</p>
+              <p>Dành cho người muốn trải nghiệm trước khi đăng ký khóa học.</p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> 1 buổi học thử</li>
+                <li><i class="fa-solid fa-check"></i> Huấn luyện viên chuyên nghiệp</li>
+                <li><i class="fa-solid fa-check"></i> Thiết bị bơi miễn phí</li>
+                <li><i class="fa-solid fa-check"></i> Phòng thay đồ, tủ khóa</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng Ký Ngay</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://i.pinimg.com/736x/96/40/9c/96409c3ce91c3ed0e5d57fe562e24f79.jpg"
+                alt="Gói Basic"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Basic</h3>
+              <p class="service-description">1.800.000đ / 12 buổi</p>
+              <p>Phù hợp cho người mới bắt đầu học bơi.</p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> 12 buổi học</li>
+                <li><i class="fa-solid fa-check"></i> Huấn luyện viên chuyên nghiệp</li>
+                <li><i class="fa-solid fa-check"></i> Thiết bị bơi miễn phí</li>
+                <li><i class="fa-solid fa-check"></i> Phòng thay đồ, tủ khóa</li>
+                <li><i class="fa-solid fa-check"></i> Bảo hiểm tai nạn</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng Ký Ngay</a>
+            </div>
+          </div>
+          <div class="service-card popular">
+            <span class="popular-badge">Phổ Biến Nhất</span>
+            <div class="service-image">
+              <img
+                src="https://i.pinimg.com/736x/db/30/8d/db308de479d6bf845f34765e00e32fb4.jpg"
+                alt="Gói Standard"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Standard</h3>
+              <p class="service-description">3.200.000đ / 24 buổi</p>
+              <p>Lựa chọn tốt nhất cho hầu hết học viên.</p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> 24 buổi học</li>
+                <li><i class="fa-solid fa-check"></i> Huấn luyện viên chuyên nghiệp</li>
+                <li><i class="fa-solid fa-check"></i> Thiết bị bơi miễn phí</li>
+                <li><i class="fa-solid fa-check"></i> Phòng thay đồ, tủ khóa</li>
+                <li><i class="fa-solid fa-check"></i> Bảo hiểm tai nạn</li>
+                <li><i class="fa-solid fa-check"></i> Phân tích kỹ thuật video</li>
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ hoàn thành</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng Ký Ngay</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://i.pinimg.com/736x/82/52/cd/8252cd78f651b5052c7904ba3af99b3c.jpg"
+                alt="Gói Premium"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Premium</h3>
+              <p class="service-description">4.500.000đ / 36 buổi</p>
+              <p>Dành cho người muốn học bơi chuyên sâu.</p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> 36 buổi học</li>
+                <li><i class="fa-solid fa-check"></i> Huấn luyện viên cấp cao</li>
+                <li><i class="fa-solid fa-check"></i> Thiết bị bơi cao cấp</li>
+                <li><i class="fa-solid fa-check"></i> Phòng thay đồ VIP</li>
+                <li><i class="fa-solid fa-check"></i> Bảo hiểm tai nạn</li>
+                <li><i class="fa-solid fa-check"></i> Phân tích kỹ thuật video</li>
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ hoàn thành</li>
+                <li><i class="fa-solid fa-check"></i> Tư vấn dinh dưỡng</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng Ký Ngay</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://i.pinimg.com/736x/ee/a4/3b/eea43baf487f66d6f6f009db44a6a3b5.jpg"
+                alt="Gói VIP"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói VIP</h3>
+              <p class="service-description">8.000.000đ / 6 tháng</p>
+              <p>Không giới hạn số buổi trong 6 tháng.</p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Không giới hạn buổi học</li>
+                <li><i class="fa-solid fa-check"></i> Huấn luyện viên cấp cao</li>
+                <li><i class="fa-solid fa-check"></i> Tất cả các dịch vụ Premium</li>
+                <li><i class="fa-solid fa-check"></i> Lịch học ưu tiên</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng Ký Ngay</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://i.pinimg.com/736x/ef/80/b7/ef80b7726d573aff0721330c9b625529.jpg"
+                alt="Gói Gia Đình"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Gia Đình</h3>
+              <p class="service-description">5.500.000đ / 24 buổi</p>
+              <p>Cho 2-4 thành viên trong gia đình.</p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> 24 buổi học (chia sẻ)</li>
+                <li><i class="fa-solid fa-check"></i> Huấn luyện viên chuyên nghiệp</li>
+                <li><i class="fa-solid fa-check"></i> Thiết bị bơi miễn phí</li>
+                <li><i class="fa-solid fa-check"></i> Giảm 15% khi gia hạn</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng Ký Ngay</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://i.pinimg.com/736x/8f/6d/0b/8f6d0b389ef21b7a1a6f503d024083eb.jpg"
+                alt="Gói Doanh Nghiệp"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Doanh Nghiệp</h3>
+              <p class="service-description">Liên hệ</p>
+              <p>Dành cho nhóm từ 5 người trở lên.</p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Lịch học riêng</li>
+                <li><i class="fa-solid fa-check"></i> Đội ngũ HLV chuyên nghiệp</li>
+                <li><i class="fa-solid fa-check"></i> Báo cáo tiến độ định kỳ</li>
+                <li><i class="fa-solid fa-check"></i> Giá ưu đãi theo số lượng</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng Ký Ngay</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://i.pinimg.com/736x/ce/60/fb/ce60fb808929a9cb4556a1489d79ddab.jpg"
+                alt="Gói Học Sinh/Sinh Viên"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Học Sinh/Sinh Viên</h3>
+              <p class="service-description">1.500.000đ / 12 buổi</p>
+              <p>Ưu đãi đặc biệt cho học sinh, sinh viên.</p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> 12 buổi học</li>
+                <li><i class="fa-solid fa-check"></i> Huấn luyện viên chuyên nghiệp</li>
+                <li><i class="fa-solid fa-check"></i> Thiết bị bơi miễn phí</li>
+                <li><i class="fa-solid fa-check"></i> Yêu cầu thẻ học sinh/sinh viên</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng Ký Ngay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials" class="section testimonials carousel infinite-carousel">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Học Viên Nói Gì</h2>
+      <p class="section-description">
+        Những phản hồi chân thực từ các học viên đã và đang học tại RiseFitness&Yoga.
+      </p>
+    </div>
+    <div class="carousel-inner testimonials-grid">
+      <!-- Testimonial 1: Nguyễn Thị Minh -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTd9-1Pe6h6YW31IeUQk9xkdbAdc2tfwfeNQ&s"
+            alt="Nguyễn Thị Minh"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Nguyễn Thị Minh</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Tôi đã 35 tuổi và luôn sợ nước, nhưng sau học tại Rise Fitness, tôi đã có thể bơi được 25m mà không cần hỗ trợ. Tôi rất biết ơn vì đã vượt qua nỗi sợ của mình!"
+        </p>
+      </div>
+      <!-- Testimonial 2: Trần Văn Hùng -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOMERB-5wApTzmB1E6EKtdHO5kZ9XxYN6eyw&s"
+            alt="Trần Văn Hùng"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Trần Văn Hùng</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Tôi đã biết bơi từ trước nhưng kỹ thuật không chuẩn và rất nhanh mệt. Sau khóa học nâng cao tại Rise, bơi được lâu hơn và tiết kiệm sức hơn. Cơ sở vật chất hiện đại và đội ngũ huấn luyện viên chuyên nghiệp là điểm cộng lớn."
+        </p>
+      </div>
+      <!-- Testimonial 3: Phạm Thị Hương -->
+      <div class="carousel-item testimonial-card">
+        <div class="testimonial-header">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBBFC1TmWkIsCHtIHJYayOYXE8jPZrftM-NA&s"
+            alt="Phạm Thị Hương"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="testimonial-name">Phạm Thị Hương</h4>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Con trai tôi 7 tuổi, rất sợ nước và khó khăn khi làm quen với môi trường bơi lội. Sau 2 tháng, con đã bơi được và rất thích thú mỗi khi đến lớp. Tôi đánh giá cao sự an toàn và không gian học tập thân thiện tại đây."
+        </p>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn prev" aria-label="Đánh giá trước đó"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="carousel-btn next" aria-label="Đánh giá tiếp theo"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+    <section class="section faq" id="cau-hoi-thuong-gap">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+          <p class="section-description">
+            Tìm hiểu thêm về các khóa học bơi lội tại RiseFitness&Yoga qua các câu hỏi phổ biến dưới đây.
+          </p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Tôi có thể học thử trước khi đăng ký khóa học không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Có, chúng tôi cung cấp gói Trial với giá 200.000đ/buổi để bạn trải nghiệm trước khi đăng ký khóa học dài hạn.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Tôi cần chuẩn bị gì khi tham gia khóa học bơi?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Bạn cần mang theo đồ bơi, khăn tắm, và kính bơi. Chúng tôi cung cấp các thiết bị hỗ trợ bơi miễn phí và phòng thay đồ tiện nghi.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Khóa học bơi trẻ em có an toàn không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Chắc chắn rồi! Các lớp bơi trẻ em được thiết kế với phương pháp vui nhộn, an toàn tuyệt đối, và có sự giám sát chặt chẽ từ các HLV chuyên nghiệp.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Gói VIP có gì đặc biệt?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Gói VIP cung cấp số buổi học không giới hạn trong 6 tháng, huấn luyện viên cấp cao, lịch học ưu tiên, và tất cả các dịch vụ của gói Premium như tư vấn dinh dưỡng và phân tích kỹ thuật video.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section cta-banner" id="khuyen-mai">
+      <div class="container">
+        <h2 class="cta-title">Ưu Đãi Đặc Biệt Hôm Nay!</h2>
+        <p class="cta-description">Đăng ký gói Standard hoặc Premium ngay hôm nay để nhận giảm giá 15% cho khóa học đầu tiên!</p>
+        <a href="#dang-ky" class="btn-primary">Đăng Ký Ngay</a>
+      </div>
+    </section>
+    <section class="section register" id="dang-ky">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Đăng Ký Tư Vấn</h2>
+          <p class="section-description">
+            Điền thông tin của bạn để đăng ký khóa học bơi hoặc nhận tư vấn chi tiết từ đội ngũ chuyên nghiệp của chúng tôi.
+          </p>
+        </div>
+        <div class="register-box">
+          <div class="register-form">
+            <form class="form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Họ và Tên *</label>
+                <input type="text" id="name" class="form-input" required placeholder="Nhập họ và tên" />
+              </div>
+              <div class="form-group">
+                <label for="age" class="form-label">Tuổi *</label>
+                <input type="number" id="age" class="form-input" required placeholder="Nhập tuổi" />
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email *</label>
+                <input type="email" id="email" class="form-input" required placeholder="Nhập email" />
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Số Điện Thoại *</label>
+                <input type="tel" id="phone" class="form-input" required placeholder="Nhập số điện thoại" />
+              </div>
+              <div class="form-group">
+                <label for="course" class="form-label">Khóa Học *</label>
+                <div class="select-wrapper">
+                  <select id="course" class="form-input" required>
+                    <option value="">Chọn khóa học</option>
+                    <option value="basic">Khóa học cơ bản cho người mới</option>
+                    <option value="advanced">Khóa nâng cao kỹ thuật</option>
+                    <option value="kids">Lớp bơi trẻ em</option>
+                    <option value="adult">Lớp bơi người lớn</option>
+                    <option value="breaststroke">Khóa học bơi ếch</option>
+                    <option value="butterfly">Khóa học bơi bướm</option>
+                    <option value="freestyle">Khóa học bơi sải</option>
+                    <option value="backstroke">Khóa học bơi ngửa</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down select-icon"></i>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="schedule" class="form-label">Lịch Học Mong Muốn *</label>
+                <div class="select-wrapper">
+                  <select id="schedule" class="form-input" required>
+                    <option value="">Chọn lịch học</option>
+                    <option value="morning">Buổi sáng (6:00 - 10:00)</option>
+                    <option value="afternoon">Buổi chiều (14:00 - 17:00)</option>
+                    <option value="evening">Buổi tối (17:00 - 20:00)</option>
+                    <option value="weekend">Cuối tuần</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down select-icon"></i>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="trainer" class="form-label">Huấn Luyện Viên</label>
+                <div class="select-wrapper">
+                  <select id="trainer" class="form-input">
+                    <option value="">Không có yêu cầu cụ thể</option>
+                    <option value="an">Nguyễn Văn An</option>
+                    <option value="binh">Trần Thị Bình</option>
+                    <option value="cuong">Lê Văn Cường</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down select-icon"></i>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="notes" class="form-label">Ghi Chú Thêm</label>
+                <textarea id="notes" class="form-input" placeholder="Ghi chú thêm (nếu có)"></textarea>
+              </div>
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" required />
+                  Tôi đồng ý với điều khoản và điều kiện của Rise Fitness & Yoga
+                </label>
+              </div>
+              <button type="submit" class="btn-primary">Đăng Ký Ngay</button>
+            </form>
+          </div>
+          <div class="register-image"></div>
+        </div>
+      </div>
+    </section>
+       <!-- Related Services Section -->
+<section id="dich-vu-lien-quan" class="section services carousel infinite-carousel">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Dịch Vụ Liên Quan</h2>
+      <p class="section-description">Khám phá các dịch vụ khác tại RiseFitness&Yoga để nâng cao hành trình sức khỏe và thể chất của bạn.</p>
+    </div>
+    <div class="carousel-inner services-grid">
+      <!-- Yoga Service -->
+      <div class="carousel-item service-card" data-modal="modal-yoga">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/7a/f1/72/7af172555ff49224b2dbdee26875d930.jpg"
+            alt="Yoga"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Yoga</h3>
+          <p class="service-description">Tìm lại sự cân bằng thể chất và tinh thần với các lớp yoga đa dạng như Hatha, Vinyasa, và Yin Yoga.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Phù hợp mọi cấp độ</li>
+            <li><i class="fa-solid fa-check"></i> Huấn luyện viên Yoga Alliance</li>
+            <li><i class="fa-solid fa-check"></i> Không gian thiền định yên tĩnh</li>
+          </ul>
+          <a href="pages/yoga.html" class="btn-primary">Khám phá Yoga</a>
+        </div>
+      </div>
+      <!-- Gym Service -->
+      <div class="carousel-item service-card" data-modal="modal-gym">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/fa/9a/01/fa9a01c0b0fb49c93395b4b6f071ea30.jpg"
+            alt="Gym"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Gym</h3>
+          <p class="service-description">Rèn luyện sức mạnh và thể lực với trang thiết bị hiện đại và huấn luyện viên cá nhân hóa.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Thiết bị gym tiên tiến</li>
+            <li><i class="fa-solid fa-check"></i> Lộ trình tập luyện cá nhân</li>
+            <li><i class="fa-solid fa-check"></i> Hỗ trợ dinh dưỡng</li>
+          </ul>
+          <a href="pages/gym.html" class="btn-primary">Khám phá Gym</a>
+        </div>
+      </div>
+      <!-- Dance Service -->
+      <div class="carousel-item service-card" data-modal="modal-dance">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/92/d4/1d/92d41d8466f4e80252f4370dd5e8c6a4.jpg"
+            alt="Dance"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Dance</h3>
+          <p class="service-description">Thỏa sức vận động với các lớp nhảy đa dạng như Zumba, Hip-hop, và Dance Fitness.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Năng động và vui nhộn</li>
+            <li><i class="fa-solid fa-check"></i> Phù hợp mọi lứa tuổi</li>
+            <li><i class="fa-solid fa-check"></i> Đốt cháy calo hiệu quả</li>
+          </ul>
+          <a href="pages/dance.html" class="btn-primary">Khám phá Dance</a>
+        </div>
+      </div>
+      <!-- Kickboxing Service -->
+      <div class="carousel-item service-card" data-modal="modal-kickboxing">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/45/93/85/4593851813d328874a15101ff3f4aed8.jpg"
+            alt="Kickboxing"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Kickboxing</h3>
+          <p class="service-description">Tăng cường sức mạnh và sự tự tin với các lớp kickboxing năng động và chuyên nghiệp.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Tập luyện toàn thân</li>
+            <li><i class="fa-solid fa-check"></i> Huấn luyện viên chuyên môn cao</li>
+            <li><i class="fa-solid fa-check"></i> Cải thiện kỹ năng tự vệ</li>
+          </ul>
+          <a href="pages/kickboxing.html" class="btn-primary">Khám phá Kickboxing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <div id="footer"></div>
-    <script src="js/swimming.js"></script>
-</body>
+    <div class="contact-button" id="contactBtn" role="button" aria-label="Mở cửa sổ liên hệ">
+      <button class="contact-btn">
+        <i class="fa-solid fa-headset"></i>
+      </button>
+    </div>
+    <div id="contactModal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Liên Hệ Với Chúng Tôi</h3>
+          <button class="modal-close" id="closeModal" aria-label="Đóng cửa sổ liên hệ">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <a href="https://facebook.com/risefitnessyoga" class="contact-item">
+            <span class="contact-icon facebook"><i class="fa-brands fa-facebook-f"></i></span>
+            <div>
+              <h4>Facebook</h4>
+              <p>RiseFitness&Yoga</p>
+            </div>
+          </a>
+          <a href="https://instagram.com/risefitnessyoga" class="contact-item">
+            <span class="contact-icon instagram"><i class="fa-brands fa-instagram"></i></span>
+            <div>
+              <h4>Instagram</h4>
+              <p>@risefitnessyoga</p>
+            </div>
+          </a>
+          <a href="tel:+842812345678" class="contact-item">
+            <span class="contact-icon phone"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h4>Hotline</h4>
+              <p>+84 28 1234 5678</p>
+            </div>
+          </a>
+          <a href="mailto:info@risefitnessyoga.com" class="contact-item">
+            <span class="contact-icon email"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h4>Email</h4>
+              <p>info@risefitnessyoga.com</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="modal-basic" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Khóa Học Cơ Bản Cho Người Mới</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết khóa cơ bản">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/ce/60/fb/ce60fb808929a9cb4556a1489d79ddab.jpg"
+              alt="Khóa học cơ bản"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/58/1b/5b/581b5b2405a4cf55c5a99f128e838f76.jpg"
+              alt="Thiết bị hỗ trợ bơi"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Khóa Học</h4>
+            <p><strong>Giá:</strong> 1.800.000đ / 12 buổi</p>
+            <p><strong>Mô tả:</strong> Khóa học dành cho người chưa biết bơi, giúp làm quen với nước và học các kỹ thuật cơ bản.</p>
+            <p><strong>Thời gian:</strong> 12 buổi, linh hoạt theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> HLV chuyên nghiệp, thiết bị hỗ trợ miễn phí, và bảo hiểm tai nạn.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Khóa học rất dễ hiểu, HLV tận tâm giúp tôi vượt qua nỗi sợ nước!" - Nguyễn Thị Minh</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Môi trường học tập thân thiện, thiết bị hỗ trợ rất tốt." - Trần Văn Long</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-advanced" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Khóa Nâng Cao Kỹ Thuật</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết khóa nâng cao">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/3b/4e/a8/3b4ea837ad611899bfa2d4e6d82a3408.jpg"
+              alt="Khóa nâng cao"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/ab/71/91/ab7191adddc5e4eee2d22a020729247d.jpg"
+              alt="Phân tích kỹ thuật video"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Khóa Học</h4>
+            <p><strong>Giá:</strong> 2.500.000đ / 16 buổi</p>
+            <p><strong>Mô tả:</strong> Hoàn thiện kỹ thuật bơi, cải thiện sức bền và tốc độ cho người đã biết bơi.</p>
+            <p><strong>Thời gian:</strong> 16 buổi, linh hoạt theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> Phân tích kỹ thuật video, HLV chuyên sâu, và bảo hiểm tai nạn.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Khóa nâng cao giúp tôi cải thiện kỹ thuật bơi đáng kể!" - Trần Văn Hùng</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Phân tích video rất hữu ích để điều chỉnh kỹ thuật." - Phạm Văn Nam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-kids" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Lớp Bơi Trẻ Em</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết lớp bơi trẻ em">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/a1/8d/fc/a18dfcd22e53586d6faa0d85b912a0de.jpg"
+              alt="Lớp bơi trẻ em"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/68/a3/6a/68a36a955dc6f63dbe8f5a2264753038.jpg"
+              alt="An toàn trẻ em"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Khóa Học</h4>
+            <p><strong>Giá:</strong> 1.600.000đ / 10 buổi</p>
+            <p><strong>Mô tả:</strong> Dạy bơi an toàn và vui nhộn cho trẻ từ 4-12 tuổi với phương pháp phù hợp lứa tuổi.</p>
+            <p><strong>Thời gian:</strong> 10 buổi, linh hoạt theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> Phương pháp dạy vui nhộn, an toàn tuyệt đối, và HLV tận tâm.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Con tôi rất thích lớp bơi, HLV rất kiên nhẫn và thân thiện." - Phạm Thị Hương</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Môi trường an toàn, con tôi đã bơi được sau 2 tháng!" - Nguyễn Văn Tâm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-adult" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Lớp Bơi Người Lớn</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết lớp bơi người lớn">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/c9/6f/e2/c96fe249c49bfe42abc8c9c15a927627.jpg"
+              alt="Lớp bơi người lớn"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/dd/b3/b3/ddb3b32d343c74e8ccfacdff3eceb589.jpg"
+              alt="Lộ trình cá nhân hóa"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Khóa Học</h4>
+            <p><strong>Giá:</strong> 1.800.000đ / 12 buổi</p>
+            <p><strong>Mô tả:</strong> Khóa học dành riêng cho người trưởng thành với lộ trình phù hợp và HLV kinh nghiệm.</p>
+            <p><strong>Thời gian:</strong> 12 buổi, linh hoạt theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> Lộ trình cá nhân hóa, HLV tận tâm, và bảo hiểm tai nạn.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Khóa học rất phù hợp với người lớn, HLV rất tận tình." - Lê Thị Hồng</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Lộ trình học giúp tôi tự tin hơn khi bơi." - Phạm Văn Long</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-breaststroke" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Khóa Học Bơi Ếch</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết khóa bơi ếch">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/00/c5/da/00c5da230c1c5c7916421a56a74b6a9e.jpg"
+              alt="Khóa bơi ếch"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/8b/c6/9f/8bc69f8f7b9c81455a7cf55919745a0a.jpg"
+              alt="Kỹ thuật bơi ếch"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Khóa Học</h4>
+            <p><strong>Giá:</strong> 1.200.000đ / 8 buổi</p>
+            <p><strong>Mô tả:</strong> Chuyên sâu về kỹ thuật bơi ếch, kiểu bơi phổ biến và dễ tiếp cận nhất.</p>
+            <p><strong>Thời gian:</strong> 8 buổi, linh hoạt theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> Kỹ thuật chuyên sâu, HLV chuyên nghiệp, và bảo hiểm tai nạn.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Khóa học rất phù hợp với người lớn, rất thú vị" - Trần Thị Hồng</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Lộ trình học giúp tôi tự tin hơn khi bơi nghệ thuật." - Phạm Văn Long</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Bơi Ngửa -->
+    <div id="modal-backstroke" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Lớp Bơi Ngửa</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết lớp bơi ngửa">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img src="https://i.pinimg.com/736x/40/24/11/4024113e09fc2f969ec5c0b247d384e4.jpg">
+            <img src="https://i.pinimg.com/736x/dd/92/6d/dd926dd289e0d1730f5fe19e69006870.jpg" loading="lazy">
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Khóa Học</h4>
+            <p><strong>Giá:</strong> 1.700.000đ / 10 buổi</p>
+            <p><strong>Mô tả:</strong> Khóa học bơi ngửa chuyên sâu, giúp học viên nắm vững kỹ thuật bơi ngửa với tư thế thoải mái và hiệu quả, phù hợp cho mọi lứa tuổi.</p>
+            <p><strong>Thời gian:</strong> 10 buổi, linh hoạt theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> HLV chuyên nghiệp, phương pháp dạy cá nhân hóa, đảm bảo an toàn và hiệu quả học tập.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"HLV hướng dẫn rất chi tiết, tôi đã tự tin bơi ngửa sau vài buổi!" - Trần Thị Mai</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Khóa học rất thú vị, giúp tôi cải thiện kỹ thuật rõ rệt." - Nguyễn Minh Tuấn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Bơi Sải -->
+    <div id="modal-freestyle" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Lớp Bơi Sải</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết lớp bơi sải">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img src="https://i.pinimg.com/736x/83/d3/b9/83d3b94e9845a9199af09a38cbd255e9.jpg" alt="Lớp bơi sải" loading="lazy">
+            <img src="https://i.pinimg.com/736x/37/fd/bf/37fdbf747622671f8f809b4d1dc89d2e.jpg" alt="Kỹ thuật bơi sải" loading="lazy">
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Khóa Học</h4>
+            <p><strong>Giá:</strong> 1.750.000đ / 10 buổi</p>
+            <p><strong>Mô tả:</strong> Khóa học bơi sải tập trung vào kỹ thuật và sức bền, giúp học viên bơi nhanh và hiệu quả, phù hợp cho cả người mới bắt đầu và nâng cao.</p>
+            <p><strong>Thời gian:</strong> 10 buổi, linh hoạt theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> HLV tận tâm, lộ trình học cá nhân hóa, và môi trường bơi an toàn.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Bơi sải giờ đây là sở thích của tôi nhờ khóa học này!" - Hoàng Văn Nam</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"HLV rất chuyên nghiệp, tôi đã cải thiện tốc độ bơi đáng kể." - Lê Thị Thanh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Bơi Bướm -->
+    <div id="modal-butterfly" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Lớp Bơi Bướm</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết lớp bơi bướm">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img src="https://i.pinimg.com/736x/6a/66/28/6a662808d4d3760c7fbb1870adfcf280.jpg" alt="Lớp bơi bướm" loading="lazy">
+            <img src="https://i.pinimg.com/736x/4a/b3/6a/4ab36a452c365fc755e1ca54f0347e10.jpg" alt="Kỹ thuật bơi bướm" loading="lazy">
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Khóa Học</h4>
+            <p><strong>Giá:</strong> 1.900.000đ / 12 buổi</p>
+            <p><strong>Mô tả:</strong> Khóa học bơi bướm chuyên biệt, tập trung vào kỹ thuật và sức mạnh, giúp học viên chinh phục kiểu bơi đầy thử thách này.</p>
+            <p><strong>Thời gian:</strong> 12 buổi, linh hoạt theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> HLV giàu kinh nghiệm, lộ trình cá nhân hóa, và đảm bảo an toàn tuyệt đối.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Bơi bướm khó nhưng nhờ HLV tận tình, tôi đã làm được!" - Vũ Thị Lan</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Khóa học giúp tôi cải thiện sức bền và kỹ thuật rất nhiều." - Đỗ Minh Hải</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   </body>
 </html>
