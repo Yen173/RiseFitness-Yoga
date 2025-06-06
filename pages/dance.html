@@ -1,810 +1,1165 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/RiseFitness-Yoga-main/">
-    <title>Dịch Vụ Dance - RiseFitness&Yoga</title>
-    <link rel="stylesheet" href="css/dance.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dịch vụ Gym chuyên nghiệp tại RiseFitness&Yoga với thiết bị hiện đại và huấn luyện viên chuyên nghiệp. Đăng ký tư vấn ngay hôm nay!" />
+    <meta name="keywords" content="Gym, RiseFitness&Yoga, tập luyện, huấn luyện viên, fitness, sức khỏe" />
+    <meta name="author" content="RiseFitness&Yoga" />
+    <meta name="robots" content="index, follow" />
+    <base href="/RiseFitness-Yoga-main/" />
+    <title>Dịch Vụ Gym - RiseFitness&Yoga</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/gym.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/gym.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Gym",
+        "name": "RiseFitness&Yoga",
+        "description": "Dịch vụ Gym chuyên nghiệp với thiết bị hiện đại và huấn luyện viên chuyên nghiệp.",
+        "url": "https://risefitnessyoga.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Đường Fitness, Quận 1",
+          "addressLocality": "TP. Hồ Chí Minh",
+          "addressCountry": "VN"
+        },
+        "telephone": "+84 123 456 789"
+      }
+    </script>
+  </head>
+  <body>
     <div id="header"></div>
-    <div class="hero">
-        <div class="hero-bg" style="background-image: url('https://readdy.ai/api/search-image?query=A%2520modern%2520dance%2520studio%2520with%2520professional%2520dancers%2520performing%2520contemporary%2520dance%2520moves%252C%2520large%2520mirrors%2520on%2520the%2520walls%252C%2520wooden%2520floors%252C%2520colorful%2520lighting%2520effects%252C%2520energetic%2520atmosphere%252C%2520people%2520of%2520different%2520ages%2520enjoying%2520dance%2520class%252C%2520high-quality%2520sound%2520system%2520visible%252C%2520spacious%2520environment&width=1600&height=800&seq=dance1&orientation=landscape');"></div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Dịch Vụ Dance</h1>
-                <p>Khám phá niềm vui vận động và thể hiện bản thân qua các lớp nhảy hiện đại tại RiseFitness&Yoga.</p>
-                <div class="hero-buttons">
-                    <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
-                    <a href="#lich-hoc" class="btn-secondary">Xem lịch học</a>
-                </div>
-            </div>
+    <div class="hero" role="banner">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Dịch Vụ Gym Chuyên Nghiệp</h1>
+          <p class="hero-subtitle">
+            Nâng cao sức khỏe và thể chất với các thiết bị hiện đại và đội ngũ huấn luyện viên chuyên nghiệp tại RiseFitness&Yoga.
+          </p>
+          <div class="hero-buttons">
+            <a href="#dang-ky" class="btn-primary">Đăng ký tư vấn</a>
+            <a href="#dich-vu" class="btn-secondary">Xem dịch vụ</a>
+          </div>
         </div>
+      </div>
     </div>
-    <section class="intro-section">
-        <div class="container">
-            <div class="intro-text">
-                <h2>Giới Thiệu Về Dịch Vụ Dance</h2>
-                <p>RiseFitness&Yoga mang đến các lớp học nhảy hiện đại với không gian rộng rãi, âm thanh chất lượng cao và đội ngũ giáo viên chuyên nghiệp. Chúng tôi cung cấp nhiều phong cách nhảy khác nhau từ Zumba, Hip Hop đến Contemporary, phù hợp với mọi lứa tuổi và trình độ. Tham gia các lớp học nhảy không chỉ giúp bạn rèn luyện sức khỏe mà còn là cơ hội để thể hiện bản thân và kết nối với những người có cùng đam mê.</p>
-            </div>
-            <div class="intro-grid">
-                <div class="intro-image">
-                    <img src="https://readdy.ai/api/search-image?query=Professional%2520dance%2520instructor%2520teaching%2520a%2520group%2520of%2520diverse%2520students%2520in%2520a%2520modern%2520dance%2520studio%252C%2520demonstrating%2520choreography%252C%2520mirrors%2520reflecting%2520the%2520class%252C%2520wooden%2520floor%252C%2520energetic%2520atmosphere%252C%2520students%2520following%2520along%2520with%2520enthusiasm&width=600&height=400&seq=dance2&orientation=landscape" alt="Lớp học nhảy chuyên nghiệp">
-                </div>
-                <div class="intro-benefits">
-                    <h3>Tại Sao Chọn Dịch Vụ Dance Của Chúng Tôi?</h3>
-                    <ul>
-                        <li><i class="ri-check-line"></i> Đa dạng phong cách nhảy từ Zumba, Hip Hop đến Contemporary</li>
-                        <li><i class="ri-check-line"></i> Đội ngũ giáo viên chuyên nghiệp với nhiều năm kinh nghiệm</li>
-                        <li><i class="ri-check-line"></i> Phòng tập rộng rãi với hệ thống âm thanh và ánh sáng hiện đại</li>
-                        <li><i class="ri-check-line"></i> Lịch học linh hoạt, phù hợp với mọi đối tượng và trình độ</li>
-                        <li><i class="ri-check-line"></i> Không khí năng động, vui vẻ và cộng đồng thân thiện</li>
-                    </ul>
-                </div>
-            </div>
+    <section class="section about" id="gioi-thieu">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Giới Thiệu Về Dịch Vụ Gym</h2>
+          <p class="section-description">
+            RiseFitness&Yoga cung cấp dịch vụ Gym chất lượng cao với không gian rộng rãi, thoáng mát và được trang bị đầy đủ các thiết bị hiện đại nhất. Chúng tôi cam kết mang đến trải nghiệm tập luyện tốt nhất cho mọi đối tượng, từ người mới bắt đầu đến những người đã có kinh nghiệm tập luyện lâu năm. Đội ngũ huấn luyện viên chuyên nghiệp, nhiệt tình sẽ luôn đồng hành cùng bạn trong suốt quá trình tập luyện.
+          </p>
         </div>
-    </section>
-    <section class="classes-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Các Lớp Học Dance</h2>
-                <p>Khám phá đa dạng các lớp học nhảy hiện đại tại RiseFitness&Yoga, phù hợp với mọi sở thích và trình độ.</p>
-            </div>
-            <div class="classes-carousel">
-                <div class="classes-container">
-                    <div class="class-card">
-                        <div class="class-image">
-                            <img src="https://readdy.ai/api/search-image?query=Zumba%2520fitness%2520class%2520with%2520energetic%2520instructor%2520and%2520diverse%2520participants%252C%2520colorful%2520workout%2520clothes%252C%2520dynamic%2520movements%252C%2520fun%2520atmosphere%252C%2520people%2520dancing%2520to%2520Latin%2520rhythms%252C%2520high%2520energy%2520group%2520exercise&width=400&height=300&seq=zumba&orientation=landscape" alt="Zumba">
-                        </div>
-                        <div class="class-content">
-                            <div class="class-header">
-                                <h3>Zumba</h3>
-                                <span class="difficulty easy">Dễ</span>
-                            </div>
-                            <p>Kết hợp các động tác nhảy Latin sôi động với bài tập cardio hiệu quả, giúp đốt cháy calo và nâng cao tâm trạng.</p>
-                            <div class="class-meta">
-                                <span><i class="ri-time-line"></i> 60 phút</span>
-                                <span><i class="ri-fire-line"></i> 500-800 calo</span>
-                            </div>
-                            <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                    </div>
-                    <div class="class-card">
-                        <div class="class-image">
-                            <img src="https://readdy.ai/api/search-image?query=Hip%2520hop%2520dance%2520class%2520with%2520young%2520dancers%2520in%2520urban%2520style%2520clothing%252C%2520instructor%2520demonstrating%2520street%2520dance%2520moves%252C%2520cool%2520atmosphere%252C%2520modern%2520studio%2520with%2520graffiti%2520elements%252C%2520dynamic%2520poses&width=400&height=300&seq=hiphop&orientation=landscape" alt="Hip Hop">
-                        </div>
-                        <div class="class-content">
-                            <div class="class-header">
-                                <h3>Hip Hop</h3>
-                                <span class="difficulty medium">Trung bình</span>
-                            </div>
-                            <p>Học các động tác nhảy đường phố đầy phong cách và sáng tạo, phát triển khả năng phối hợp và tự tin.</p>
-                            <div class="class-meta">
-                                <span><i class="ri-time-line"></i> 75 phút</span>
-                                <span><i class="ri-fire-line"></i> 400-700 calo</span>
-                            </div>
-                            <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                    </div>
-                    <div class="class-card">
-                        <div class="class-image">
-                            <img src="https://readdy.ai/api/search-image?query=Contemporary%2520dance%2520class%2520with%2520professional%2520dancers%2520performing%2520fluid%2520movements%252C%2520expressive%2520poses%252C%2520elegant%2520choreography%252C%2520modern%2520studio%2520with%2520soft%2520lighting%252C%2520artistic%2520atmosphere&width=400&height=300&seq=contemporary&orientation=landscape" alt="Contemporary">
-                        </div>
-                        <div class="class-content">
-                            <div class="class-header">
-                                <h3>Contemporary</h3>
-                                <span class="difficulty hard">Nâng cao</span>
-                            </div>
-                            <p>Kết hợp các kỹ thuật múa ballet cổ điển với các chuyển động hiện đại, tập trung vào sự biểu cảm và kể chuyện.</p>
-                            <div class="class-meta">
-                                <span><i class="ri-time-line"></i> 90 phút</span>
-                                <span><i class="ri-fire-line"></i> 300-600 calo</span>
-                            </div>
-                            <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                    </div>
-                    <div class="class-card">
-                        <div class="class-image">
-                            <img src="https://readdy.ai/api/search-image?query=K-pop%2520dance%2520class%2520with%2520young%2520enthusiastic%2520dancers%2520learning%2520Korean%2520pop%2520choreography%252C%2520colorful%2520outfits%252C%2520synchronized%2520movements%252C%2520bright%2520studio%252C%2520fun%2520atmosphere&width=400&height=300&seq=kpop&orientation=landscape" alt="K-Pop Dance">
-                        </div>
-                        <div class="class-content">
-                            <div class="class-header">
-                                <h3>K-Pop Dance</h3>
-                                <span class="difficulty medium">Trung bình</span>
-                            </div>
-                            <p>Học nhảy theo các bài hát K-Pop nổi tiếng, tập trung vào động tác đồng bộ, biểu cảm và phong cách Hàn Quốc.</p>
-                            <div class="class-meta">
-                                <span><i class="ri-time-line"></i> 75 phút</span>
-                                <span><i class="ri-fire-line"></i> 400-650 calo</span>
-                            </div>
-                            <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                    </div>
-                    <div class="class-card">
-                        <div class="class-image">
-                            <img src="https://readdy.ai/api/search-image?query=Salsa%2520dance%2520class%2520with%2520couples%2520dancing%2520together%252C%2520Latin%2520dance%2520moves%252C%2520passionate%2520atmosphere%252C%2520elegant%2520postures%252C%2520colorful%2520outfits%252C%2520professional%2520instructor%2520demonstrating%2520steps&width=400&height=300&seq=salsa&orientation=landscape" alt="Salsa">
-                        </div>
-                        <div class="class-content">
-                            <div class="class-header">
-                                <h3>Salsa</h3>
-                                <span class="difficulty medium">Trung bình</span>
-                            </div>
-                            <p>Khám phá điệu nhảy đôi Latin đầy đam mê và năng lượng, học các bước nhảy cơ bản và nâng cao.</p>
-                            <div class="class-meta">
-                                <span><i class="ri-time-line"></i> 60 phút</span>
-                                <span><i class="ri-fire-line"></i> 350-600 calo</span>
-                            </div>
-                            <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                    </div>
-                    <div class="class-card">
-                        <div class="class-image">
-                            <img src="https://readdy.ai/api/search-image?query=Break%2520dance%2520class%2520with%2520young%2520dancers%2520practicing%2520power%2520moves%252C%2520freezes%2520and%2520footwork%252C%2520urban%2520style%252C%2520casual%2520clothing%252C%2520instructor%2520demonstrating%2520techniques%252C%2520energetic%2520atmosphere&width=400&height=300&seq=breakdance&orientation=landscape" alt="Break Dance">
-                        </div>
-                        <div class="class-content">
-                            <div class="class-header">
-                                <h3>Break Dance</h3>
-                                <span class="difficulty hard">Nâng cao</span>
-                            </div>
-                            <p>Học các kỹ thuật nhảy đường phố đòi hỏi sức mạnh và sự linh hoạt cao, từ footwork đến power moves.</p>
-                            <div class="class-meta">
-                                <span><i class="ri-time-line"></i> 90 phút</span>
-                                <span><i class="ri-fire-line"></i> 500-900 calo</span>
-                            </div>
-                            <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-prev classes-prev"><i class="ri-arrow-left-s-line"></i></button>
-                <button class="carousel-next classes-next"><i class="ri-arrow-right-s-line"></i></button>
-                <div class="carousel-dots classes-dots"></div>
-            </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="https://i.pinimg.com/736x/2c/9e/13/2c9e13b974814c399091ebe71b273acc.jpg"
+              alt="Huấn luyện viên chuyên nghiệp"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-text">
+            <h3 class="about-title">Tại Sao Chọn Dịch Vụ Gym Của Chúng Tôi?</h3>
+            <ul class="about-list">
+              <li class="about-item">
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Thiết bị hiện đại, đa dạng và được bảo trì thường xuyên
+              </li>
+              <li class="about-item">
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Đội ngũ huấn luyện viên chuyên nghiệp, có chứng chỉ quốc tế
+              </li>
+              <li class="about-item">
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Không gian rộng rãi, thoáng mát với hệ thống âm thanh và ánh sáng hiện đại
+              </li>
+              <li class="about-item">
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Lịch tập linh hoạt, phù hợp với mọi đối tượng
+              </li>
+              <li class="about-item">
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Chương trình tập luyện được cá nhân hóa theo nhu cầu và mục tiêu
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
-    <section id="lich-hoc" class="schedule-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Lịch Học Hàng Tuần</h2>
-                <p>Lịch học đa dạng với nhiều khung giờ linh hoạt, phù hợp với lịch trình bận rộn của bạn.</p>
-            </div>
-            <div class="schedule-table">
-                <div class="schedule-tabs">
-                    <button class="tab-button active" data-tab="all">Tất cả</button>
-                    <button class="tab-button" data-tab="zumba">Zumba</button>
-                    <button class="tab-button" data-tab="hiphop">Hip Hop</button>
-                    <button class="tab-button" data-tab="kpop">K-Pop</button>
-                    <button class="tab-button" data-tab="other">Khác</button>
-                </div>
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Thời gian</th>
-                                <th>Thứ 2</th>
-                                <th>Thứ 3</th>
-                                <th>Thứ 4</th>
-                                <th>Thứ 5</th>
-                                <th>Thứ 6</th>
-                                <th>Thứ 7</th>
-                                <th>Chủ nhật</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>9:00 - 10:00</td>
-                                <td><div class="schedule-item zumba" data-type="zumba"><p>Zumba</p><p>Minh Tâm</p></div></td>
-                                <td><div class="schedule-item kpop" data-type="kpop"><p>K-Pop Dance</p><p>Hồng Nhung</p></div></td>
-                                <td><div class="schedule-item zumba" data-type="zumba"><p>Zumba</p><p>Minh Tâm</p></div></td>
-                                <td><div class="schedule-item salsa" data-type="other"><p>Salsa</p><p>Quang Huy</p></div></td>
-                                <td><div class="schedule-item zumba" data-type="zumba"><p>Zumba</p><p>Minh Tâm</p></div></td>
-                                <td><div class="schedule-item kpop" data-type="kpop"><p>K-Pop Dance</p><p>Hồng Nhung</p></div></td>
-                                <td><div class="schedule-item zumba" data-type="zumba"><p>Zumba</p><p>Minh Tâm</p></div></td>
-                            </tr>
-                            <tr>
-                                <td>10:30 - 11:45</td>
-                                <td><div class="schedule-item hiphop" data-type="hiphop"><p>Hip Hop</p><p>Tuấn Anh</p></div></td>
-                                <td></td>
-                                <td><div class="schedule-item contemporary" data-type="other"><p>Contemporary</p><p>Thu Hà</p></div></td>
-                                <td></td>
-                                <td><div class="schedule-item hiphop" data-type="hiphop"><p>Hip Hop</p><p>Tuấn Anh</p></div></td>
-                                <td><div class="schedule-item contemporary" data-type="other"><p>Contemporary</p><p>Thu Hà</p></div></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>17:00 - 18:15</td>
-                                <td><div class="schedule-item kpop" data-type="kpop"><p>K-Pop Dance</p><p>Hồng Nhung</p></div></td>
-                                <td><div class="schedule-item zumba" data-type="zumba"><p>Zumba</p><p>Minh Tâm</p></div></td>
-                                <td><div class="schedule-item kpop" data-type="kpop"><p>K-Pop Dance</p><p>Hồng Nhung</p></div></td>
-                                <td><div class="schedule-item zumba" data-type="zumba"><p>Zumba</p><p>Minh Tâm</p></div></td>
-                                <td><div class="schedule-item kpop" data-type="kpop"><p>K-Pop Dance</p><p>Hồng Nhung</p></div></td>
-                                <td><div class="schedule-item salsa" data-type="other"><p>Salsa</p><p>Quang Huy</p></div></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>18:30 - 20:00</td>
-                                <td><div class="schedule-item hiphop" data-type="hiphop"><p>Hip Hop</p><p>Tuấn Anh</p></div></td>
-                                <td><div class="schedule-item breakdance" data-type="other"><p>Break Dance</p><p>Minh Quân</p></div></td>
-                                <td><div class="schedule-item contemporary" data-type="other"><p>Contemporary</p><p>Thu Hà</p></div></td>
-                                <td><div class="schedule-item breakdance" data-type="other"><p>Break Dance</p><p>Minh Quân</p></div></td>
-                                <td><div class="schedule-item hiphop" data-type="hiphop"><p>Hip Hop</p><p>Tuấn Anh</p></div></td>
-                                <td><div class="schedule-item contemporary" data-type="other"><p>Contemporary</p><p>Thu Hà</p></div></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="schedule-footer">
-                    <p>* Lịch học có thể thay đổi theo từng thời điểm. Vui lòng kiểm tra lịch cập nhật tại quầy lễ tân hoặc trên ứng dụng RiseFitness&Yoga.</p>
-                    <a href="#dang-ky" class="btn-primary">Đăng ký tham gia</a>
-                </div>
-            </div>
+    <section class="section benefits" id="loi-ich">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Lợi Ích Của Việc Tập Gym</h2>
+          <p class="section-description">
+            Tập gym không chỉ giúp bạn có một cơ thể khỏe mạnh mà còn mang lại nhiều lợi ích khác cho sức khỏe thể chất và tinh thần.
+          </p>
         </div>
-    </section>
-    <section class="teachers-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Đội Ngũ Giáo Viên</h2>
-                <p>Gặp gỡ đội ngũ giáo viên tài năng và đầy đam mê của chúng tôi, những người sẽ đồng hành cùng bạn trong hành trình khám phá nghệ thuật nhảy múa.</p>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-heart-pulse"></i>
             </div>
-            <div class="teachers-grid">
-                <div class="teacher-card">
-                    <div class="teacher-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520Vietnamese%2520female%2520dance%2520instructor%2520in%2520her%252030s%252C%2520athletic%2520build%252C%2520confident%2520pose%252C%2520dance%2520studio%2520background%252C%2520wearing%2520stylish%2520fitness%2520attire%252C%2520friendly%2520expression&width=400&height=500&seq=teacher1&orientation=portrait" alt="Nguyễn Minh Tâm">
-                    </div>
-                    <div class="teacher-content">
-                        <h3>Nguyễn Minh Tâm</h3>
-                        <p class="teacher-role">Zumba Instructor</p>
-                        <p>Hơn 8 năm kinh nghiệm giảng dạy Zumba, với chứng chỉ ZIN™ (Zumba Instructor Network) và nhiều khóa đào tạo quốc tế.</p>
-                        <div class="teacher-socials">
-                            <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
-                            <a href="#" class="social-icon"><i class="ri-instagram-fill"></i></a>
-                            <a href="#" class="social-icon"><i class="ri-youtube-fill"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="teacher-card">
-                    <div class="teacher-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520Vietnamese%2520male%2520hip%2520hop%2520dance%2520instructor%2520in%2520his%252020s%252C%2520athletic%2520build%252C%2520urban%2520style%2520clothing%252C%2520confident%2520pose%252C%2520dance%2520studio%2520background%252C%2520street%2520style%2520fashion&width=400&height=500&seq=teacher2&orientation=portrait" alt="Lê Tuấn Anh">
-                    </div>
-                    <div class="teacher-content">
-                        <h3>Lê Tuấn Anh</h3>
-                        <p class="teacher-role">Hip Hop Instructor</p>
-                        <p>Vô địch Hip Hop Việt Nam 2019, có 6 năm kinh nghiệm biểu diễn và giảng dạy tại nhiều sân khấu lớn trong và ngoài nước.</p>
-                        <div class="teacher-socials">
-                            <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
-                            <a href="#" class="social-icon"><i class="ri-instagram-fill"></i></a>
-                            <a href="#" class="social-icon"><i class="ri-tiktok-fill"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="teacher-card">
-                    <div class="teacher-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520Vietnamese%2520female%2520contemporary%2520dance%2520instructor%2520in%2520her%252020s%252C%2520slim%2520build%252C%2520elegant%2520pose%252C%2520dance%2520studio%2520background%252C%2520wearing%2520simple%2520dance%2520attire%252C%2520graceful%2520appearance&width=400&height=500&seq=teacher3&orientation=portrait" alt="Phạm Thu Hà">
-                    </div>
-                    <div class="teacher-content">
-                        <h3>Phạm Thu Hà</h3>
-                        <p class="teacher-role">Contemporary Instructor</p>
-                        <p>Tốt nghiệp Học viện Múa Việt Nam, có hơn 10 năm kinh nghiệm biểu diễn và giảng dạy múa đương đại và ballet.</p>
-                        <div class="teacher-socials">
-                            <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
-                            <a href="#" class="social-icon"><i class="ri-instagram-fill"></i></a>
-                            <a href="#" class="social-icon"><i class="ri-linkedin-fill"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="teacher-card">
-                    <div class="teacher-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%2520Vietnamese%2520female%2520K-pop%2520dance%2520instructor%2520in%2520her%252020s%252C%2520stylish%2520Korean-inspired%2520outfit%252C%2520confident%2520pose%252C%2520dance%2520studio%2520background%252C%2520modern%2520look%252C%2520trendy%2520appearance&width=400&height=500&seq=teacher4&orientation=portrait" alt="Trần Hồng Nhung">
-                    </div>
-                    <div class="teacher-content">
-                        <h3>Trần Hồng Nhung</h3>
-                        <p class="teacher-role">K-Pop Instructor</p>
-                        <p>Đã học tập và biểu diễn tại Hàn Quốc, có 5 năm kinh nghiệm giảng dạy K-Pop dance cho mọi lứa tuổi và trình độ.</p>
-                        <div class="teacher-socials">
-                            <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
-                            <a href="#" class="social-icon"><i class="ri-instagram-fill"></i></a>
-                            <a href="#" class="social-icon"><i class="ri-youtube-fill"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="benefit-title">Cải Thiện Sức Khỏe Tim Mạch</h3>
+            <p class="benefit-description">
+              Tập gym thường xuyên giúp tăng cường sức khỏe tim mạch, giảm nguy cơ mắc các bệnh tim mạch và huyết áp cao.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-brain"></i>
             </div>
+            <h3 class="benefit-title">Giảm Stress và Lo Âu</h3>
+            <p class="benefit-description">
+              Tập luyện giúp giải phóng endorphin - hormone hạnh phúc, giúp giảm stress, lo âu và cải thiện tâm trạng.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <h3 class="benefit-title">Tăng Cường Sức Mạnh</h3>
+            <p class="benefit-description">
+              Tập gym giúp tăng cường sức mạnh cơ bắp, cải thiện sức bền và khả năng vận động trong cuộc sống hàng ngày.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-weight-scale"></i>
+            </div>
+            <h3 class="benefit-title">Kiểm Soát Cân Nặng</h3>
+            <p class="benefit-description">
+              Tập luyện kết hợp với chế độ ăn uống hợp lý giúp kiểm soát cân nặng, giảm mỡ thừa và duy trì vóc dáng.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-bed"></i>
+            </div>
+            <h3 class="benefit-title">Cải Thiện Chất Lượng Giấc Ngủ</h3>
+            <p class="benefit-description">
+              Tập gym thường xuyên giúp cải thiện chất lượng giấc ngủ, giúp bạn ngủ sâu và ngon giấc hơn.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="benefit-title">Tăng Cường Kết Nối Xã Hội</h3>
+            <p class="benefit-description">
+              Tham gia các lớp tập nhóm tại phòng gym giúp bạn kết nối với những người có cùng sở thích và mục tiêu.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
-    <section class="pricing-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Bảng Giá Dịch Vụ Dance</h2>
-                <p>Chúng tôi cung cấp nhiều gói dịch vụ khác nhau để đáp ứng nhu cầu và ngân sách của bạn.</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <div class="price-header">
-                        <h3>Gói Cơ Bản</h3>
-                        <div class="price-amount">
-                            <span>800.000</span>
-                            <span>đ/tháng</span>
-                        </div>
-                        <p>Phù hợp cho người mới bắt đầu</p>
-                    </div>
-                    <div class="price-content">
-                        <ul>
-                            <li><i class="ri-check-line"></i> 8 buổi học/tháng</li>
-                            <li><i class="ri-check-line"></i> Tham gia 1 phong cách nhảy</li>
-                            <li><i class="ri-check-line"></i> Lớp học tối đa 20 người</li>
-                            <li><i class="ri-check-line"></i> Hỗ trợ cơ bản từ giáo viên</li>
-                            <li class="unavailable"><i class="ri-close-line"></i> Tham gia sự kiện biểu diễn</li>
-                            <li class="unavailable"><i class="ri-close-line"></i> Video hướng dẫn tại nhà</li>
-                        </ul>
-                        <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
-                    </div>
-                </div>
-                <div class="price-card popular">
-                    <div class="popular-badge">Phổ biến</div>
-                    <div class="price-header highlight">
-                        <h3>Gói Tiêu Chuẩn</h3>
-                        <div class="price-amount">
-                            <span>1.500.000</span>
-                            <span>đ/tháng</span>
-                        </div>
-                        <p>Phù hợp cho người đam mê nhảy múa</p>
-                    </div>
-                    <div class="price-content">
-                        <ul>
-                            <li><i class="ri-check-line"></i> 12 buổi học/tháng</li>
-                            <li><i class="ri-check-line"></i> Tham gia 2 phong cách nhảy</li>
-                            <li><i class="ri-check-line"></i> Lớp học tối đa 15 người</li>
-                            <li><i class="ri-check-line"></i> Hỗ trợ cá nhân từ giáo viên</li>
-                            <li><i class="ri-check-line"></i> Tham gia sự kiện biểu diễn</li>
-                            <li class="unavailable"><i class="ri-close-line"></i> Video hướng dẫn tại nhà</li>
-                        </ul>
-                        <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
-                    </div>
-                </div>
-                <div class="price-card">
-                    <div class="price-header">
-                        <h3>Gói VIP</h3>
-                        <div class="price-amount">
-                            <span>2.500.000</span>
-                            <span>đ/tháng</span>
-                        </div>
-                        <p>Dành cho người muốn tiến bộ nhanh</p>
-                    </div>
-                    <div class="price-content">
-                        <ul>
-                            <li><i class="ri-check-line"></i> Không giới hạn số buổi học</li>
-                            <li><i class="ri-check-line"></i> Tham gia tất cả phong cách nhảy</li>
-                            <li><i class="ri-check-line"></i> 2 buổi học riêng với giáo viên</li>
-                            <li><i class="ri-check-line"></i> Hỗ trợ cá nhân ưu tiên</li>
-                            <li><i class="ri-check-line"></i> Tham gia sự kiện biểu diễn</li>
-                            <li><i class="ri-check-line"></i> Video hướng dẫn tại nhà</li>
-                        </ul>
-                        <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
-                    </div>
-                </div>
-            </div>
-            <div class="other-services">
-                <h3>Các gói dịch vụ khác</h3>
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Dịch vụ</th>
-                                <th>Mô tả</th>
-                                <th>Giá</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Học thử 1 buổi</td>
-                                <td>Tham gia 1 buổi học bất kỳ để trải nghiệm</td>
-                                <td>100.000đ</td>
-                                <td><a href="#dang-ky" class="btn-primary small">Đăng ký</a></td>
-                            </tr>
-                            <tr>
-                                <td>Học riêng 1-1</td>
-                                <td>Buổi học cá nhân với giáo viên (60 phút)</td>
-                                <td>500.000đ/buổi</td>
-                                <td><a href="#dang-ky" class="btn-primary small">Đăng ký</a></td>
-                            </tr>
-                            <tr>
-                                <td>Gói nhóm (5-10 người)</td>
-                                <td>Lớp học dành riêng cho nhóm bạn bè, gia đình</td>
-                                <td>Từ 3.000.000đ/tháng</td>
-                                <td><a href="#dang-ky" class="btn-primary small">Đăng ký</a></td>
-                            </tr>
-                            <tr>
-                                <td>Workshop đặc biệt</td>
-                                <td>Khóa học ngắn hạn với giáo viên khách mời</td>
-                                <td>Từ 800.000đ/workshop</td>
-                                <td><a href="#dang-ky" class="btn-primary small">Đăng ký</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    <section class="section schedule" id="lich-hoc">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Lịch Tập Luyện</h2>
+          <p class="section-description">
+            Lịch tập luyện hàng tuần tại RiseFitness&Yoga, phù hợp với mọi cấp độ và mục tiêu.
+          </p>
         </div>
+        <table class="schedule-table" role="grid">
+          <thead>
+            <tr>
+              <th>Thời gian</th>
+              <th>Thứ Hai</th>
+              <th>Thứ Ba</th>
+              <th>Thứ Tư</th>
+              <th>Thứ Năm</th>
+              <th>Thứ Sáu</th>
+              <th>Thứ Bảy</th>
+              <th>Chủ Nhật</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>06:00 - 07:00</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+              <td>Strength (Minh)</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+              <td>Group Fitness (Tùng)</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>07:30 - 08:30</td>
+              <td>-</td>
+              <td>Strength (Minh)</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+              <td>Group Fitness (Tùng)</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+            </tr>
+            <tr>
+              <td>17:00 - 18:00</td>
+              <td>Group Fitness (Tùng)</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+              <td>Strength (Minh)</td>
+              <td>Cardio (Hà)</td>
+              <td>-</td>
+              <td>Group Fitness (Tùng)</td>
+            </tr>
+            <tr>
+              <td>18:30 - 19:30</td>
+              <td>Yoga (Lan)</td>
+              <td>Group Fitness (Tùng)</td>
+              <td>Cardio (Hà)</td>
+              <td>-</td>
+              <td>Strength (Minh)</td>
+              <td>Yoga (Lan)</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>20:00 - 21:00</td>
+              <td>Strength (Minh)</td>
+              <td>-</td>
+              <td>Group Fitness (Tùng)</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
-    <section class="gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Hình Ảnh & Video</h2>
-                <p>Khám phá không khí sôi động và chuyên nghiệp trong các buổi học tại RiseFitness&Yoga Dance Studio.</p>
-            </div>
-            <div class="gallery-tabs">
-                <button class="gallery-filter-btn active" data-filter="all">Tất cả</button>
-                <button class="gallery-filter-btn" data-filter="zumba">Zumba</button>
-                <button class="gallery-filter-btn" data-filter="hiphop">Hip Hop</button>
-                <button class="gallery-filter-btn" data-filter="kpop">K-Pop</button>
-                <button class="gallery-filter-btn" data-filter="other">Khác</button>
-            </div>
-            <div class="gallery-carousel">
-                <div class="gallery-container">
-                    <div class="gallery-item" data-category="zumba">
-                        <img src="https://readdy.ai/api/search-image?query=Energetic%2520Zumba%2520class%2520in%2520progress%252C%2520large%2520group%2520of%2520diverse%2520participants%2520following%2520instructor%252C%2520colorful%2520workout%2520clothes%252C%2520joyful%2520atmosphere%252C%2520modern%2520dance%2520studio%2520with%2520mirrors&width=400&height=300&seq=gallery1&orientation=landscape" alt="Lớp Zumba sôi động">
-                    </div>
-                    <div class="gallery-item" data-category="hiphop">
-                        <img src="https://readdy.ai/api/search-image?query=Hip%2520hop%2520dance%2520class%2520with%2520students%2520practicing%2520choreography%252C%2520urban%2520style%2520clothing%252C%2520focused%2520expressions%252C%2520instructor%2520demonstrating%2520moves%252C%2520professional%2520dance%2520studio%2520setting&width=400&height=300&seq=gallery2&orientation=landscape" alt="Lớp Hip Hop">
-                    </div>
-                    <div class="gallery-item" data-category="kpop">
-                        <img src="https://readdy.ai/api/search-image?query=K-pop%2520dance%2520class%2520with%2520young%2520dancers%2520practicing%2520synchronized%2520choreography%252C%2520trendy%2520outfits%252C%2520bright%2520studio%2520with%2520mirrors%252C%2520focused%2520expressions%252C%2520Korean%2520pop%2520dance%2520style&width=400&height=300&seq=gallery3&orientation=landscape" alt="Lớp K-Pop Dance">
-                    </div>
-                    <div class="gallery-item" data-category="other">
-                        <img src="https://readdy.ai/api/search-image?query=Contemporary%2520dance%2520class%2520with%2520dancers%2520in%2520flowing%2520movements%252C%2520artistic%2520poses%252C%2520simple%2520dance%2520attire%252C%2520expressive%2520performance%252C%2520professional%2520studio%2520with%2520wooden%2520floor&width=400&height=300&seq=gallery4&orientation=landscape" alt="Lớp Contemporary">
-                    </div>
-                    <div class="gallery-item" data-category="other">
-                        <img src="https://readdy.ai/api/search-image?query=Salsa%2520dance%2520class%2520with%2520couples%2520practicing%2520partner%2520work%252C%2520Latin%2520dance%2520moves%252C%2520elegant%2520postures%252C%2520instructor%2520demonstrating%2520technique%252C%2520social%2520dance%2520atmosphere&width=400&height=300&seq=gallery5&orientation=landscape" alt="Lớp Salsa">
-                    </div>
-                    <div class="gallery-item" data-category="hiphop">
-                        <img src="https://readdy.ai/api/search-image?query=Break%2520dance%2520training%2520session%252C%2520dancers%2520practicing%2520power%2520moves%252C%2520freezes%2520and%2520footwork%252C%2520casual%2520street%2520style%2520clothing%252C%2520urban%2520dance%2520studio%2520setting&width=400&height=300&seq=gallery6&orientation=landscape" alt="Lớp Break Dance">
-                    </div>
-                    <div class="gallery-item" data-category="zumba">
-                        <img src="https://readdy.ai/api/search-image?query=Zumba%2520fitness%2520event%2520with%2520large%2520crowd%252C%2520multiple%2520instructors%2520on%2520stage%252C%2520colorful%2520lighting%252C%2520energetic%2520atmosphere%252C%2520participants%2520following%2520choreography%252C%2520celebration%2520mood&width=400&height=300&seq=gallery7&orientation=landscape" alt="Sự kiện Zumba">
-                    </div>
-                    <div class="gallery-item" data-category="kpop">
-                        <img src="https://readdy.ai/api/search-image?query=K-pop%2520dance%2520performance%2520on%2520stage%252C%2520group%2520of%2520dancers%2520in%2520coordinated%2520outfits%252C%2520synchronized%2520choreography%252C%2520professional%2520lighting%252C%2520audience%2520visible%252C%2520energetic%2520show&width=400&height=300&seq=gallery8&orientation=landscape" alt="Biểu diễn K-Pop">
-                    </div>
-                    <div class="gallery-item" data-category="other">
-                        <img src="https://readdy.ai/api/search-image?query=Dance%2520studio%2520interior%252C%2520modern%2520design%252C%2520large%2520mirrors%252C%2520wooden%2520floor%252C%2520professional%2520sound%2520system%252C%2520ambient%2520lighting%252C%2520spacious%2520environment%2520for%2520dance%2520classes&width=400&height=300&seq=gallery9&orientation=landscape" alt="Không gian phòng tập">
-                    </div>
-                </div>
-                <button class="carousel-prev gallery-prev"><i class="ri-arrow-left-s-line"></i></button>
-                <button class="carousel-next gallery-next"><i class="ri-arrow-right-s-line"></i></button>
-                <div class="carousel-dots gallery-dots"></div>
-            </div>
-            <div class="gallery-footer">
-                <a href="#" class="gallery-more"><span>Xem thêm hình ảnh</span><i class="ri-arrow-right-line"></i></a>
-            </div>
+    <section class="section trainers" id="huan-luyen-vien">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Đội Ngũ Huấn Luyện Viên</h2>
+          <p class="section-description">
+            Gặp gỡ đội ngũ huấn luyện viên chuyên nghiệp của chúng tôi, luôn sẵn sàng hỗ trợ bạn đạt được mục tiêu tập luyện.
+          </p>
         </div>
-    </section>
-    <section class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Đánh Giá Từ Học Viên</h2>
-                <p>Những chia sẻ từ các học viên đã và đang tham gia các lớp học nhảy tại RiseFitness&Yoga.</p>
+        <div class="trainers-grid">
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://i.pinimg.com/736x/fb/ec/f7/fbecf795f771b821b3c38ff56087b9d0.jpg"
+                alt="Nguyễn Minh"
+                loading="lazy"
+              />
             </div>
-            <div class="testimonials-carousel">
-                <div class="testimonials-container">
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                            <p>"Tôi đã tham gia lớp Zumba được 3 tháng và cảm thấy rất hài lòng. Cô Minh Tâm rất nhiệt tình và chuyên nghiệp. Không khí lớp học luôn sôi động và vui vẻ. Tôi đã giảm được 5kg và cảm thấy khỏe mạnh hơn rất nhiều."</p>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520Vietnamese%2520woman%2520in%2520her%252030s%252C%2520neutral%2520background%252C%2520business%2520casual%2520attire%252C%2520friendly%2520smile%252C%2520high%2520quality%2520portrait&width=100&height=100&seq=student1&orientation=squarish" alt="Nguyễn Thị Mai">
-                                </div>
-                                <div>
-                                    <h4>Nguyễn Thị Mai</h4>
-                                    <p>Học viên lớp Zumba</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-half-fill"></i>
-                            </div>
-                            <p>"Lớp Hip Hop của thầy Tuấn Anh thực sự tuyệt vời. Tôi là người mới bắt đầu nhưng thầy luôn kiên nhẫn hướng dẫn và động viên. Sau 2 tháng, tôi đã có thể thực hiện được những bước nhảy cơ bản và tự tin hơn rất nhiều. Không gian phòng tập rộng rãi và âm thanh chất lượng cao."</p>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520Vietnamese%2520man%2520in%2520his%252020s%252C%2520neutral%2520background%252C%2520casual%2520smart%2520attire%252C%2520friendly%2520expression%252C%2520high%2520quality%2520portrait&width=100&height=100&seq=student2&orientation=squarish" alt="Trần Văn Đức">
-                                </div>
-                                <div>
-                                    <h4>Trần Văn Đức</h4>
-                                    <p>Học viên lớp Hip Hop</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                            <p>"Tôi đã đăng ký gói VIP và thực sự đáng đồng tiền. Được tham gia tất cả các lớp học và có buổi học riêng với giáo viên đã giúp tôi tiến bộ nhanh chóng. Đặc biệt là lớp K-Pop của cô Hồng Nhung rất chất lượng. Tôi đã tham gia biểu diễn trong sự kiện gần đây và đó là trải nghiệm tuyệt vời."</p>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520Vietnamese%2520woman%2520in%2520her%252020s%252C%2520neutral%2520background%252C%2520casual%2520smart%2520attire%252C%2520cheerful%2520expression%252C%2520high%2520quality%2520portrait&width=100&height=100&seq=student3&orientation=squarish" alt="Phạm Thị Hương Giang">
-                                </div>
-                                <div>
-                                    <h4>Phạm Thị Hương Giang</h4>
-                                    <p>Học viên gói VIP</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-line"></i>
-                            </div>
-                            <p>"Lớp Contemporary của cô Thu Hà đã mở ra cho tôi một thế giới mới về nghệ thuật biểu đạt. Tuy đây là phong cách khá khó nhưng cô đã hướng dẫn rất tận tình và chi tiết. Không gian phòng tập rộng rãi và sạch sẽ. Chỉ tiếc là lịch học hơi ít, mong trung tâm sẽ mở thêm nhiều lớp hơn."</p>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520Vietnamese%2520woman%2520in%2520her%252030s%252C%2520neutral%2520background%252C%2520elegant%2520attire%252C%2520sophisticated%2520expression%252C%2520high%2520quality%2520portrait&width=100&height=100&seq=student4&orientation=squarish" alt="Lê Thị Thanh Thảo">
-                                </div>
-                                <div>
-                                    <h4>Lê Thị Thanh Thảo</h4>
-                                    <p>Học viên lớp Contemporary</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-prev testimonials-prev"><i class="ri-arrow-left-s-line"></i></button>
-                <button class="carousel-next testimonials-next"><i class="ri-arrow-right-s-line"></i></button>
-                <div class="carousel-dots testimonials-dots"></div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Nguyễn Minh</h3>
+              <p class="trainer-description">Huấn luyện viên với 10 năm kinh nghiệm, chuyên về tập sức mạnh và tăng cơ.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ ISSA</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia tập sức mạnh</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ giảm cân</li>
+              </ul>
             </div>
+          </div>
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://i.pinimg.com/736x/2e/fc/fb/2efcfb15ef0e23729cb8499b759ce546.jpg"
+                alt="Trần Lan"
+                loading="lazy"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Trần Lan</h3>
+              <p class="trainer-description">Chuyên gia yoga với chứng chỉ Yoga Alliance, giúp cải thiện sự linh hoạt và tinh thần.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ Yoga Alliance</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia thiền và yoga</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ giảm stress</li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://i.pinimg.com/736x/7a/c2/9c/7ac29caf46cd2594262f3e7cbd311453.jpg"
+                alt="Lê Tùng"
+                loading="lazy"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Lê Tùng</h3>
+              <p class="trainer-description">Chuyên gia tập nhóm với kinh nghiệm dẫn dắt các lớp năng động và sôi nổi.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ ACE</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia tập nhóm</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ tăng cường năng lượng</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Câu Hỏi Thường Gặp</h2>
-                <p>Những thắc mắc phổ biến về dịch vụ Dance tại RiseFitness&Yoga.</p>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Tôi chưa từng học nhảy trước đây, tôi có thể tham gia không?</h3>
-                        <div class="faq-icon"><i class="ri-arrow-down-s-line"></i></div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Hoàn toàn có thể! Chúng tôi có các lớp dành cho người mới bắt đầu với các bước hướng dẫn cơ bản. Các giáo viên của chúng tôi rất kiên nhẫn và sẽ giúp bạn từng bước một. Bạn có thể bắt đầu với các lớp có độ khó "Dễ" như Zumba hoặc đăng ký buổi học thử để tìm hiểu phong cách phù hợp với mình.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Tôi nên mặc gì khi đến lớp học nhảy?</h3>
-                        <div class="faq-icon"><i class="ri-arrow-down-s-line"></i></div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Bạn nên mặc trang phục thoải mái, dễ vận động như quần thể thao, áo thun, áo ba lỗ. Đối với giày, tùy thuộc vào phong cách nhảy: Zumba và Hip Hop nên mang giày thể thao, Contemporary có thể nhảy chân trần hoặc tất chuyên dụng, Salsa nên mang giày có đế mềm. Nên mang theo khăn và nước uống. Tránh đeo trang sức lớn để đảm bảo an toàn khi vận động.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Tôi có thể đăng ký học thử trước khi cam kết gói dài hạn không?</h3>
-                        <div class="faq-icon"><i class="ri-arrow-down-s-line"></i></div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Có, chúng tôi cung cấp dịch vụ học thử với giá 100.000đ/buổi. Bạn có thể tham gia bất kỳ lớp học nào để trải nghiệm trước khi quyết định đăng ký gói dài hạn. Nếu sau đó bạn quyết định đăng ký gói tháng, phí học thử sẽ được trừ vào học phí của gói bạn chọn.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Nếu tôi bỏ lỡ một buổi học, tôi có thể học bù không?</h3>
-                        <div class="faq-icon"><i class="ri-arrow-down-s-line"></i></div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Có, bạn có thể học bù trong vòng 30 ngày kể từ ngày bỏ lỡ, với điều kiện bạn thông báo trước ít nhất 24 giờ. Để học bù, bạn cần liên hệ với quầy lễ tân để đăng ký lịch học bù phù hợp. Lưu ý rằng việc học bù phụ thuộc vào tình trạng chỗ trống của lớp học thay thế.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Có giới hạn độ tuổi cho các lớp học nhảy không?</h3>
-                        <div class="faq-icon"><i class="ri-arrow-down-s-line"></i></div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Các lớp học nhảy tại RiseFitness&Yoga chủ yếu dành cho người từ 16 tuổi trở lên. Tuy nhiên, chúng tôi cũng có các lớp dành riêng cho trẻ em và thanh thiếu niên (8-15 tuổi) vào các buổi chiều cuối tuần. Nếu bạn muốn đăng ký cho con em mình, vui lòng liên hệ với chúng tôi để biết thêm chi tiết về các lớp phù hợp với độ tuổi.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>RiseFitness&Yoga có tổ chức sự kiện biểu diễn cho học viên không?</h3>
-                        <div class="faq-icon"><i class="ri-arrow-down-s-line"></i></div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Có, chúng tôi tổ chức các sự kiện biểu diễn định kỳ (thường là 3-4 lần/năm) để học viên có cơ hội thể hiện kỹ năng và chia sẻ niềm đam mê nhảy múa. Học viên đăng ký gói Tiêu Chuẩn và VIP sẽ được ưu tiên tham gia các sự kiện này. Ngoài ra, chúng tôi cũng thường xuyên tổ chức các workshop với giáo viên khách mời trong và ngoài nước.</p>
-                    </div>
-                </div>
-            </div>
+<section id="dich-vu" class="section services carousel infinite-carousel">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Các Gói Dịch Vụ Gym</h2>
+          <p class="section-description">
+            Chúng tôi cung cấp nhiều gói dịch vụ khác nhau để đáp ứng nhu cầu và mục tiêu tập luyện của bạn.
+          </p>
         </div>
-    </section>
-    <section id="dang-ky" class="register-section">
-        <div class="container">
-            <div class="register-container">
-                <div class="register-form">
-                    <h2>Đăng Ký Tham Gia</h2>
-                    <p>Điền thông tin của bạn để đăng ký tham gia các lớp học nhảy tại RiseFitness&Yoga. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
-                    <form class="register-form-content">
-                        <div class="form-group">
-                            <label for="name">Họ và tên</label>
-                            <input type="text" id="name" placeholder="Nhập họ và tên của bạn">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Số điện thoại</label>
-                            <input type="tel" id="phone" placeholder="Nhập số điện thoại của bạn">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Nhập địa chỉ email của bạn">
-                        </div>
-                        <div class="form-group">
-                            <label for="age">Độ tuổi</label>
-                            <div class="select-wrapper">
-                                <select id="age">
-                                    <option value="">Chọn độ tuổi</option>
-                                    <option value="16-20">16-20</option>
-                                    <option value="21-30">21-30</option>
-                                    <option value="31-40">31-40</option>
-                                    <option value="41-50">41-50</option>
-                                    <option value="50+">Trên 50</option>
-                                </select>
-                                <i class="ri-arrow-down-s-line"></i>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Phong cách nhảy quan tâm</label>
-                            <div class="checkbox-grid">
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="dance_style[]" value="zumba">
-                                    <span class="checkmark"></span>
-                                    <span>Zumba</span>
-                                </label>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="dance_style[]" value="hiphop">
-                                    <span class="checkmark"></span>
-                                    <span>Hip Hop</span>
-                                </label>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="dance_style[]" value="kpop">
-                                    <span class="checkmark"></span>
-                                    <span>K-Pop</span>
-                                </label>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="dance_style[]" value="contemporary">
-                                    <span class="checkmark"></span>
-                                    <span>Contemporary</span>
-                                </label>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="dance_style[]" value="salsa">
-                                    <span class="checkmark"></span>
-                                    <span>Salsa</span>
-                                </label>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" name="dance_style[]" value="breakdance">
-                                    <span class="checkmark"></span>
-                                    <span>Break Dance</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="package">Gói dịch vụ</label>
-                            <div class="select-wrapper">
-                                <select id="package">
-                                    <option value="">Chọn gói dịch vụ</option>
-                                    <option value="trial">Học thử 1 buổi</option>
-                                    <option value="basic">Gói Cơ Bản</option>
-                                    <option value="standard">Gói Tiêu Chuẩn</option>
-                                    <option value="vip">Gói VIP</option>
-                                    <option value="private">Học riêng 1-1</option>
-                                    <option value="group">Gói nhóm</option>
-                                </select>
-                                <i class="ri-arrow-down-s-line"></i>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="experience">Kinh nghiệm nhảy</label>
-                            <div class="select-wrapper">
-                                <select id="experience">
-                                    <option value="">Chọn trình độ</option>
-                                    <option value="beginner">Người mới bắt đầu</option>
-                                    <option value="intermediate">Trình độ trung bình</option>
-                                    <option value="advanced">Trình độ nâng cao</option>
-                                </select>
-                                <i class="ri-arrow-down-s-line"></i>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="note">Ghi chú</label>
-                            <textarea id="note" rows="3" placeholder="Nhập thông tin thêm về nhu cầu của bạn"></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Gửi đăng ký</button>
-                    </form>
-                </div>
-                <div class="register-image">
-                    <div style="background-image: url('https://readdy.ai/api/search-image?query=Dance%2520instructor%2520helping%2520student%2520with%2520proper%2520technique%252C%2520professional%2520dance%2520studio%2520with%2520mirrors%252C%2520wooden%2520floor%252C%2520one-on-one%2520instruction%252C%2520supportive%2520teaching%2520environment%252C%2520focused%2520learning%2520atmosphere&width=600&height=800&seq=register&orientation=portrait');"></div>
-                </div>
+        <div class="carousel-inner services-grid">
+          <div class="carousel-item service-card" data-modal="modal-basic">
+            <div class="service-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=Beginner%20gym%20program%2C%20basic%20fitness%20equipment%2C%20welcoming%20environment%20for%20newcomers%2C%20simple%20exercise%20machines%2C%20friendly%20atmosphere%2C%20clean%20modern%20gym&width=400&height=300&seq=gym3&orientation=landscape"
+                alt="Gói Cơ Bản"
+                loading="lazy"
+              />
             </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Cơ Bản</h3>
+              <p class="service-description">
+                Dành cho người mới bắt đầu, bao gồm hướng dẫn cơ bản và sử dụng thiết bị.
+              </p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Sử dụng tất cả thiết bị</li>
+                <li><i class="fa-solid fa-check"></i> 1 buổi định hướng</li>
+                <li><i class="fa-solid fa-check"></i> Tư vấn chương trình tập</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+          <div class="carousel-item service-card" data-modal="modal-standard">
+            <div class="service-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=Standard%20gym%20membership%2C%20diverse%20fitness%20equipment%2C%20moderate%20crowd%2C%20regular%20gym-goers%2C%20variety%20of%20machines%2C%20well-maintained%20facility%2C%20professional%20environment&width=400&height=300&seq=gym4&orientation=landscape"
+                alt="Gói Tiêu Chuẩn"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Tiêu Chuẩn</h3>
+              <p class="service-description">
+                Bao gồm các dịch vụ cơ bản và thêm các buổi tập với HLV cá nhân.
+              </p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Tất cả dịch vụ gói cơ bản</li>
+                <li><i class="fa-solid fa-check"></i> 4 buổi PT mỗi tháng</li>
+                <li><i class="fa-solid fa-check"></i> Đánh giá thể chất định kỳ</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+          <div class="carousel-item service-card popular" data-modal="modal-premium">
+            <span class="popular-badge">Phổ biến</span>
+            <div class="service-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=Premium%20gym%20service%2C%20exclusive%20equipment%2C%20personal%20training%20session%2C%20luxury%20fitness%20facility%2C%20one-on-one%20coaching%2C%20high-end%20gym%20environment%2C%20professional%20training&width=400&height=300&seq=gym5&orientation=landscape"
+                alt="Gói Premium"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Premium</h3>
+              <p class="service-description">
+                Dịch vụ cao cấp với HLV riêng và chương trình tập cá nhân hóa.
+              </p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Tất cả dịch vụ gói tiêu chuẩn</li>
+                <li><i class="fa-solid fa-check"></i> 12 buổi PT mỗi tháng</li>
+                <li><i class="fa-solid fa-check"></i> Tư vấn dinh dưỡng</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+          <div class="carousel-item service-card" data-modal="modal-vip">
+            <div class="service-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=VIP%20gym%20experience%2C%20exclusive%20training%20area%2C%20personalized%20coaching%2C%20luxury%20fitness%20equipment%2C%20private%20training%20session%2C%20high-end%20gym%20interior%2C%20premium%20service&width=400&height=300&seq=gym6&orientation=landscape"
+                alt="Gói VIP"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói VIP</h3>
+              <p class="service-description">
+                Trải nghiệm tập luyện đẳng cấp với đầy đủ dịch vụ cao cấp nhất.
+              </p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Tất cả dịch vụ gói Premium</li>
+                <li><i class="fa-solid fa-check"></i> PT không giới hạn</li>
+                <li><i class="fa-solid fa-check"></i> Dịch vụ spa và massage</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+          <div class="carousel-item service-card" data-modal="modal-group">
+            <div class="service-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=Group%20fitness%20class%2C%20energetic%20workout%20session%2C%20multiple%20participants%2C%20instructor%20leading%20class%2C%20team%20exercise%2C%20motivational%20group%20training%2C%20social%20fitness%20experience&width=400&height=300&seq=gym7&orientation=landscape"
+                alt="Gói Tập Nhóm"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Tập Nhóm</h3>
+              <p class="service-description">
+                Tham gia các lớp tập nhóm sôi động với nhiều bài tập đa dạng.
+              </p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Tham gia tất cả lớp tập nhóm</li>
+                <li><i class="fa-solid fa-check"></i> Lịch tập linh hoạt</li>
+                <li><i class="fa-solid fa-check"></i> Hướng dẫn bởi HLV chuyên nghiệp</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+          <div class="carousel-item service-card" data-modal="modal-assessment">
+            <div class="service-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=Fitness%20assessment%2C%20body%20measurements%2C%20professional%20evaluation%2C%20health%20metrics%20testing%2C%20fitness%20level%20check%2C%20performance%20testing%2C%20body%20composition%20analysis&width=400&height=300&seq=gym8&orientation=landscape"
+                alt="Gói Đánh Giá Thể Chất"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Đánh Giá Thể Chất</h3>
+              <p class="service-description">
+                Đánh giá toàn diện thể chất và xây dựng lộ trình tập luyện phù hợp.
+              </p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Đo chỉ số cơ thể</li>
+                <li><i class="fa-solid fa-check"></i> Đánh giá sức khỏe tim mạch</li>
+                <li><i class="fa-solid fa-check"></i> Tư vấn lộ trình tập luyện</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+          <div class="carousel-item service-card" data-modal="modal-nutrition">
+            <div class="service-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=Nutritional%20consultation%2C%20healthy%20meal%20planning%2C%20diet%20advice%2C%20professional%20nutrition%20guidance%2C%20food%20recommendations%2C%20dietary%20assessment%2C%20health-focused%20food%20planning&width=400&height=300&seq=gym9&orientation=landscape"
+                alt="Tư Vấn Dinh Dưỡng"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Tư Vấn Dinh Dưỡng</h3>
+              <p class="service-description">
+                Chế độ dinh dưỡng cá nhân hóa phù hợp với mục tiêu tập luyện của bạn.
+              </p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Đánh giá chế độ ăn hiện tại</li>
+                <li><i class="fa-solid fa-check"></i> Lập kế hoạch dinh dưỡng</li>
+                <li><i class="fa-solid fa-check"></i> Theo dõi và điều chỉnh</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+          <div class="carousel-item service-card" data-modal="modal-online">
+            <div class="service-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=Online%20fitness%20coaching%2C%20virtual%20personal%20training%2C%20remote%20workout%20guidance%2C%20digital%20fitness%20program%2C%20video%20training%20session%2C%20online%20exercise%20instruction%2C%20remote%20coaching&width=400&height=300&seq=gym10&orientation=landscape"
+                alt="Huấn Luyện Online"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Huấn Luyện Online</h3>
+              <p class="service-description">
+                Tập luyện tại nhà với sự hướng dẫn trực tuyến từ HLV chuyên nghiệp.
+              </p>
+              <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> Lịch tập cá nhân hóa</li>
+                <li><i class="fa-solid fa-check"></i> Video hướng dẫn chi tiết</li>
+                <li><i class="fa-solid fa-check"></i> Tư vấn trực tuyến 24/7</li>
+              </ul>
+              <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
         </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn prev" aria-label="Dịch vụ trước đó"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="carousel-btn next" aria-label="Dịch vụ tiếp theo"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
     </section>
-    <div class="contact-button">
-        <button id="contactBtn"><i class="ri-customer-service-2-line"></i></button>
+    <section class="section testimonials carousel infinite-carousel" id="danh-gia">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Đánh Giá Từ Khách Hàng</h2>
+          <p class="section-description">
+            Hãy xem những gì khách hàng nói về trải nghiệm tập luyện tại RiseFitness&Yoga Center.
+          </p>
+        </div>
+        <div class="carousel-inner testimonials-grid">
+          <div class="carousel-item testimonial-card">
+            <div class="testimonial-header">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20man%20in%20his%2030s%2C%20neutral%20background%2C%20business%20casual%20attire%2C%20friendly%20expression%2C%20high%20quality%20portrait&width=100&height=100&seq=person1&orientation=squarish"
+                alt="Nguyễn Văn Minh"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="testimonial-name">Nguyễn Văn Minh</h4>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Tôi đã tập luyện tại RiseFitness&Yoga được 6 tháng và đã đạt được kết quả ngoài mong đợi. Các huấn luyện viên rất chuyên nghiệp và luôn sẵn sàng hỗ trợ."
+            </p>
+          </div>
+          <div class="carousel-item testimonial-card">
+            <div class="testimonial-header">
+              <img
+                src="https://i.pinimg.com/736x/9a/14/1d/9a141d52d8ec278393e5a5f76f380e15.jpg"
+                alt="Trần Thị Hồng"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="testimonial-name">Trần Thị Hồng</h4>
+                <div class="stars">★★★★☆</div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Gói Premium thật sự đáng giá! Huấn luyện viên cá nhân rất tận tâm, giúp tôi cải thiện sức mạnh và vóc dáng đáng kể. Tôi rất hài lòng với dịch vụ tại đây."
+            </p>
+          </div>
+          <div class="carousel-item testimonial-card">
+            <div class="testimonial-header">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20man%20in%20his%2040s%2C%20neutral%20background%2C%20business%20casual%20attire%2C%20confident%20expression%2C%20high%20quality%20portrait&width=100&height=100&seq=person3&orientation=squarish"
+                alt="Lê Quang Vinh"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="testimonial-name">Lê Quang Vinh</h4>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Các lớp tập nhóm rất thú vị và năng động. Tôi đã kết bạn được với nhiều người bạn mới và cảm thấy tràn đầy năng lượng sau mỗi buổi tập."
+            </p>
+          </div>
+          <div class="carousel-item testimonial-card">
+            <div class="testimonial-header">
+              <img
+                src="https://i.pinimg.com/736x/8c/a7/e9/8ca7e992ef8dcfe97424f43cd8f850da.jpg"
+                alt="Phạm Thị Lan"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="testimonial-name">Phạm Thị Lan</h4>
+                <div class="stars">★★★★☆</div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Dịch vụ tư vấn dinh dưỡng đã giúp tôi xây dựng chế độ ăn uống khoa học, kết hợp với tập luyện để đạt được mục tiêu giảm cân của mình."
+            </p>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn prev" aria-label="Đánh giá trước đó"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="carousel-btn next" aria-label="Đánh giá tiếp theo"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+    <section class="section faq" id="cau-hoi-thuong-gap">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+          <p class="section-description">
+            Tìm hiểu thêm về các dịch vụ và chương trình tập luyện tại RiseFitness&Yoga qua các câu hỏi phổ biến dưới đây.
+          </p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Tôi có thể tập thử trước khi đăng ký không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Có, chúng tôi cung cấp buổi tập thử với giá 100.000đ/buổi. Số tiền này sẽ được trừ vào gói tập nếu bạn đăng ký gói tháng hoặc dài hạn.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Tôi cần chuẩn bị gì khi đến phòng gym?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Bạn nên mặc quần áo thể thao thoải mái, giày thể thao phù hợp, mang theo khăn và chai nước. Chúng tôi cung cấp tủ khóa để bạn cất giữ đồ dùng cá nhân.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Các lớp tập nhóm có phù hợp cho người mới bắt đầu không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Chắc chắn rồi! Các lớp tập nhóm của chúng tôi được thiết kế phù hợp cho mọi cấp độ, với sự hướng dẫn tận tình từ các huấn luyện viên chuyên nghiệp.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Gói VIP có gì khác biệt so với các gói khác?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Gói VIP bao gồm tất cả dịch vụ của gói Premium, cộng thêm các buổi tập cá nhân không giới hạn, dịch vụ spa, massage, và quyền ưu tiên tham gia các sự kiện đặc biệt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section cta-banner" id="khuyen-mai">
+      <div class="container">
+        <h2 class="cta-title">Ưu Đãi Đặc Biệt Hôm Nay!</h2>
+        <p class="cta-description">Đăng ký gói Premium hoặc VIP ngay hôm nay để nhận giảm giá 20% cho tháng đầu tiên!</p>
+        <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+      </div>
+    </section>
+    <section class="section register" id="dang-ky">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Đăng Ký Tư Vấn</h2>
+          <p class="section-description">
+            Điền thông tin dưới đây để được tư vấn miễn phí về lộ trình tập luyện phù hợp với bạn.
+          </p>
+        </div>
+        <div class="register-box">
+          <div class="register-form">
+            <form class="form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Họ và Tên *</label>
+                <input type="text" id="name" class="form-input" required placeholder="Nhập họ và tên" />
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Số Điện Thoại *</label>
+                <input type="tel" id="phone" class="form-input" required placeholder="Nhập số điện thoại" />
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" placeholder="Nhập email (tùy chọn)" />
+              </div>
+              <div class="form-group">
+                <label for="package" class="form-label">Gói Dịch Vụ Quan Tâm *</label>
+                <div class="select-wrapper">
+                  <select id="package" class="form-input" required>
+                    <option value="">Chọn gói dịch vụ</option>
+                    <option value="basic">Gói Cơ Bản</option>
+                    <option value="standard">Gói Tiêu Chuẩn</option>
+                    <option value="premium">Gói Premium</option>
+                    <option value="vip">Gói VIP</option>
+                    <option value="group">Gói Tập Nhóm</option>
+                    <option value="assessment">Đánh Giá Thể Chất</option>
+                    <option value="nutrition">Tư Vấn Dinh Dưỡng</option>
+                    <option value="online">Huấn Luyện Online</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down select-icon"></i>
+                </div>
+              </div>
+              <button type="submit" class="btn-primary">Gửi Đăng Ký</button>
+            </form>
+          </div>
+          <div class="register-image"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Related Services Section -->
+<section id="dich-vu-lien-quan" class="section services carousel infinite-carousel">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Dịch Vụ Liên Quan</h2>
+      <p class="section-description">Khám phá các dịch vụ khác tại RiseFitness&Yoga để nâng cao hành trình sức khỏe và thể chất của bạn.</p>
+    </div>
+    <div class="carousel-inner services-grid">
+      <!-- Yoga Service -->
+      <div class="carousel-item service-card" data-modal="modal-yoga">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/29/ee/05/29ee05e740a74126edde924699f7f570.jpg"
+            alt="Yoga"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Yoga</h3>
+          <p class="service-description">Tìm lại sự cân bằng thể chất và tinh thần với các lớp yoga đa dạng như Hatha, Vinyasa, và Yin Yoga.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Phù hợp mọi cấp độ</li>
+            <li><i class="fa-solid fa-check"></i> Huấn luyện viên Yoga Alliance</li>
+            <li><i class="fa-solid fa-check"></i> Không gian thiền định yên tĩnh</li>
+          </ul>
+          <a href="pages/yoga.html" class="btn-primary">Khám phá Yoga</a>
+        </div>
+      </div>
+      <!-- Dance Service -->
+      <div class="carousel-item service-card" data-modal="modal-dance">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/c6/fd/77/c6fd771925dccb88f93e6918c382aae8.jpg"
+            alt="Dance"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Dance</h3>
+          <p class="service-description">Thỏa sức vận động với các lớp nhảy đa dạng như Zumba, Hip-hop, và Dance Fitness.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Năng động và vui nhộn</li>
+            <li><i class="fa-solid fa-check"></i> Phù hợp mọi lứa tuổi</li>
+            <li><i class="fa-solid fa-check"></i> Đốt cháy calo hiệu quả</li>
+          </ul>
+          <a href="pages/dance.html" class="btn-primary">Khám phá Dance</a>
+        </div>
+      </div>
+      <!-- Swimming Service -->
+      <div class="carousel-item service-card" data-modal="modal-swimming">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/51/2b/0a/512b0ac1c5acc1f2f1e7a95851226de7.jpg"
+            alt="Swimming"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Swimming</h3>
+          <p class="service-description">Học bơi và rèn luyện thể chất với các lớp bơi lội chuyên nghiệp trong hồ bơi hiện đại.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Hồ bơi tiêu chuẩn</li>
+            <li><i class="faKristian fa-check"></i> Huấn luyện viên tận tâm</li>
+            <li><i class="fa-solid fa-check"></i> Phù hợp cho mọi cấp độ</li>
+          </ul>
+          <a href="pages/swimming.html" class="btn-primary">Khám phá Swimming</a>
+        </div>
+      </div>
+      <!-- Kickboxing Service -->
+      <div class="carousel-item service-card" data-modal="modal-kickboxing">
+        <div class="service-image">
+          <img
+            src="https://i.pinimg.com/736x/f1/40/d1/f140d1fc21f261f668ae895319cfc292.jpg"
+            alt="Kickboxing"
+            loading="lazy"
+          />
+        </div>
+        <div class="service-content">
+          <h3 class="service-title">Kickboxing</h3>
+          <p class="service-description">Tăng cường sức mạnh và sự tự tin với các lớp kickboxing năng động và chuyên nghiệp.</p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Tập luyện toàn thân</li>
+            <li><i class="fa-solid fa-check"></i> Huấn luyện viên chuyên môn cao</li>
+            <li><i class="fa-solid fa-check"></i> Cải thiện kỹ năng tự vệ</li>
+          </ul>
+          <a href="pages/kickboxing.html" class="btn-primary">Khám phá Kickboxing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <div id="footer"></div>
+    <div class="contact-button" id="contactBtn" role="button" aria-label="Mở cửa sổ liên hệ">
+      <button class="contact-btn">
+        <i class="fa-solid fa-headset"></i>
+      </button>
     </div>
     <div id="contactModal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Liên hệ với chúng tôi</h3>
-                <button id="closeModal"><i class="ri-close-line"></i></button>
-            </div>
-            <div class="modal-body">
-                <a href="https://www.facebook.com/" class="contact-item">
-                    <div class="contact-icon facebook"><i class="ri-facebook-fill"></i></div>
-                    <div>
-                        <h4>Facebook</h4>
-                        <p>RiseFitness&Yoga</p>
-                    </div>
-                </a>
-                <a href="https://www.instagram.com/" class="contact-item">
-                    <div class="contact-icon instagram"><i class="ri-instagram-fill"></i></div>
-                    <div>
-                        <h4>Instagram</h4>
-                        <p>@RiseFitness&Yoga.center</p>
-                    </div>
-                </a>
-                <a href="https://zalo.me/" class="contact-item">
-                    <div class="contact-icon zalo"><i class="ri-chat-1-fill"></i></div>
-                    <div>
-                        <h4>Zalo</h4>
-                        <p>0901234567</p>
-                    </div>
-                </a>
-                <a href="tel:+84901234567" class="contact-item">
-                    <div class="contact-icon phone"><i class="ri-phone-fill"></i></div>
-                    <div>
-                        <h4>Điện thoại</h4>
-                        <p>090 123 4567</p>
-                    </div>
-                </a>
-                <a href="mailto:info@RiseFitness&Yogacenter.com" class="contact-item">
-                    <div class="contact-icon email"><i class="ri-mail-fill"></i></div>
-                    <div>
-                        <h4>Email</h4>
-                        <p>info@RiseFitness&Yogacenter.com</p>
-                    </div>
-                </a>
-            </div>
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Liên Hệ Với Chúng Tôi</h3>
+          <button class="modal-close" id="closeModal" aria-label="Đóng cửa sổ liên hệ">
+            <i class="fa-solid fa-times"></i>
+          </button>
         </div>
+        <div class="modal-body">
+          <a href="https://facebook.com/risefitnessyoga" class="contact-item">
+            <span class="contact-icon facebook"><i class="fa-brands fa-facebook-f"></i></span>
+            <div>
+              <h4>Facebook</h4>
+              <p>RiseFitness&Yoga</p>
+            </div>
+          </a>
+          <a href="https://instagram.com/risefitnessyoga" class="contact-item">
+            <span class="contact-icon instagram"><i class="fa-brands fa-instagram"></i></span>
+            <div>
+              <h4>Instagram</h4>
+              <p>@risefitnessyoga</p>
+            </div>
+          </a>
+          <a href="tel:+84123456789" class="contact-item">
+            <span class="contact-icon phone"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h4>Hotline</h4>
+              <p>+84 123 456 789</p>
+            </div>
+          </a>
+          <a href="mailto:info@risefitnessyoga.com" class="contact-item">
+            <span class="contact-icon email"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h4>Email</h4>
+              <p>info@risefitnessyoga.com</p>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-    <div id="footer"></div>
-    <script src="js/dance.js"></script>
-</body>
+    <div id="modal-basic" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Gói Cơ Bản</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói cơ bản">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/80/9f/2b/809f2bdd1e4d6680116bb94fe1c3ce3f.jpg"
+              alt="Thiết bị tập luyện cơ bản"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/61/e5/35/61e5351ae008940ccbdd7c7d2e26e2f0.jpg"
+              alt="Buổi định hướng tập luyện"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 500.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Gói Cơ Bản là lựa chọn hoàn hảo cho người mới bắt đầu, cung cấp quyền truy cập đầy đủ vào tất cả các thiết bị tập luyện hiện đại và một buổi định hướng với huấn luyện viên để làm quen với phòng gym.</p>
+            <p><strong>Thời gian:</strong> Không giới hạn giờ tập trong giờ mở cửa (6:00 - 22:00).</p>
+            <p><strong>Hỗ trợ:</strong> Tư vấn chương trình tập luyện cơ bản phù hợp với mục tiêu cá nhân.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Gói Cơ Bản rất phù hợp cho người mới như tôi. Thiết bị dễ sử dụng và nhân viên rất thân thiện!" - Trần Thị Mai</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Buổi định hướng giúp tôi tự tin hơn khi sử dụng máy móc. Rất đáng đồng tiền!" - Nguyễn Văn Hùng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-standard" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Gói Tiêu Chuẩn</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói tiêu chuẩn">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/fa/0a/0e/fa0a0e1927fa948e4d9defa98ae39a15.jpg"
+              alt="Buổi tập cá nhân"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/fd/8d/7e/fd8d7ec4c721b96f67a9b1015886293f.jpg"
+              alt="Đánh giá thể chất"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 1.200.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Gói Tiêu Chuẩn bao gồm tất cả các lợi ích của gói Cơ Bản, cộng thêm 4 buổi tập cá nhân mỗi tháng và đánh giá thể chất định kỳ để theo dõi tiến độ.</p>
+            <p><strong>Thời gian:</strong> Không giới hạn giờ tập, cộng thêm các buổi PT theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> Huấn luyện viên cá nhân thiết kế chương trình tập luyện chuyên sâu.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Các buổi PT giúp tôi cải thiện kỹ thuật và đạt mục tiêu nhanh chóng!" - Lê Thị Hồng</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Đánh giá thể chất định kỳ rất hữu ích để điều chỉnh kế hoạch tập luyện." - Phạm Văn Long</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-premium" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Gói Premium</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói premium">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/9d/92/9c/9d929cddea06bbbcd11c145d5112b2bf.jpg"
+              alt="Tập luyện cao cấp"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/12/b2/17/12b217e18a7e3198e6fe71b71570a257.jpg"
+              alt="Tư vấn dinh dưỡng"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 3.000.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Gói Premium cung cấp 12 buổi tập cá nhân mỗi tháng, tư vấn dinh dưỡng chuyên sâu, và tất cả lợi ích của gói Tiêu Chuẩn.</p>
+            <p><strong>Thời gian:</strong> Không giới hạn giờ tập, lịch PT linh hoạt.</p>
+            <p><strong>Hỗ trợ:</strong> Kế hoạch tập luyện và dinh dưỡng được cá nhân hóa hoàn toàn.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Gói Premium đáng giá từng đồng. HLV và kế hoạch dinh dưỡng giúp tôi thay đổi hoàn toàn!" - Nguyễn Thị Ngọc</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Tư vấn dinh dưỡng rất chi tiết và dễ áp dụng. Kết quả vượt mong đợi!" - Trần Văn Nam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-vip" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Gói VIP</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói VIP">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/2d/11/6f/2d116f90c2261ddcb6926d618fff02b0.jpg"
+              alt="Khu vực tập luyện VIP"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/0c/c4/14/0cc414394a251cd4d5745c7595755100.jpg"
+              alt="Dịch vụ spa"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 5.000.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Gói VIP mang đến trải nghiệm tập luyện đỉnh cao với PT không giới hạn, dịch vụ spa, massage, và tất cả lợi ích của gói Premium.</p>
+            <p><strong>Thời gian:</strong> Không giới hạn giờ tập và PT, ưu tiên lịch đặt trước.</p>
+            <p><strong>Hỗ trợ:</strong> Hỗ trợ toàn diện từ tập luyện, dinh dưỡng đến thư giãn.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Gói VIP thực sự xa xỉ! Dịch vụ spa giúp tôi thư giãn sau mỗi buổi tập." - Lê Thị Hương</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"PT không giới hạn giúp tôi tiến bộ vượt bậc. Rất đáng đầu tư!" - Phạm Văn Dũng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-group" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Gói Tập Nhóm</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói tập nhóm">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/22/66/cb/2266cb94c6bd18e82e2969344eebef43.jpg"
+              alt="Lớp tập nhóm"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/d5/82/67/d5826738144a51bc812e67c9bc194883.jpg"
+              alt="HLV tập nhóm"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 800.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Tham gia các lớp tập nhóm sôi động với lịch tập linh hoạt và hướng dẫn từ HLV chuyên nghiệp.</p>
+            <p><strong>Thời gian:</strong> Tham gia không giới hạn các lớp nhóm theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> Tạo động lực và kết nối xã hội qua các buổi tập nhóm.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Lớp tập nhóm rất vui và năng động. Tôi đã tìm thấy nhiều bạn tập tuyệt vời!" - Nguyễn Thị An</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"HLV rất nhiệt tình, khiến mỗi buổi tập đều thú vị và tràn đầy năng lượng." - Trần Văn Hào</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-assessment" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Đánh Giá Thể Chất</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói đánh giá thể chất">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/b5/3f/65/b53f659ff4f80b1e8d9a3a4228aa5dd0.jpg"
+              alt="Đo lường cơ thể"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/cb/49/5a/cb495a725e73ddfe197d837f697b6cd4.jpg"
+              alt="Tư vấn lộ trình"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 300.000đ/lần</p>
+            <p><strong>Mô tả:</strong> Đánh giá toàn diện về thể chất, bao gồm đo lường cơ thể, sức khỏe tim mạch, và tư vấn lộ trình tập luyện.</p>
+            <p><strong>Thời gian:</strong> Buổi đánh giá kéo dài 60 phút.</p>
+            <p><strong>Hỗ trợ:</strong> Báo cáo chi tiết và lộ trình tập luyện cá nhân hóa.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Đánh giá thể chất giúp tôi hiểu rõ tình trạng cơ thể và có lộ trình phù hợp." - Lê Văn Tâm</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Rất chuyên nghiệp, báo cáo chi tiết và dễ hiểu!" - Phạm Thị Linh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-nutrition" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Tư Vấn Dinh Dưỡng</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói tư vấn dinh dưỡng">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/49/f1/53/49f1537b7c9a0bf3df54214448863488.jpg"
+              alt="Tư vấn dinh dưỡng"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/fd/c4/75/fdc4759dd80d2383de440f2bc6bafffc.jpg"
+              alt="Kế hoạch dinh dưỡng"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 1.000.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Tư vấn dinh dưỡng cá nhân hóa, đánh giá chế độ ăn hiện tại, lập kế hoạch dinh dưỡng và theo dõi điều chỉnh.</p>
+            <p><strong>Thời gian:</strong> 4 buổi tư vấn mỗi tháng, mỗi buổi 45 phút.</p>
+            <p><strong>Hỗ trợ:</strong> Hỗ trợ liên tục qua email hoặc hotline.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Kế hoạch dinh dưỡng giúp tôi ăn uống khoa học hơn và đạt mục tiêu nhanh chóng." - Nguyễn Văn Khánh</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Tư vấn rất chi tiết, dễ áp dụng vào cuộc sống hàng ngày." - Trần Thị Ngọc</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-online" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Huấn Luyện Online</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói huấn luyện online">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://i.pinimg.com/736x/12/c7/4a/12c74a73f3511e41d0c63695bfe056d5.jpg"
+              alt="Tập luyện online"
+              loading="lazy"
+            />
+            <img
+              src="https://i.pinimg.com/736x/c7/bb/78/c7bb78ed2c43f7bb5b929473dfb6f1c8.jpg"
+              alt="Hướng dẫn video"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 900.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Tập luyện tại nhà với lịch tập cá nhân hóa, video hướng dẫn chi tiết, và tư vấn trực tuyến 24/7.</p>
+            <p><strong>Thời gian:</strong> Không giới hạn truy cập video, 4 buổi tư vấn trực tuyến mỗi tháng.</p>
+            <p><strong>Hỗ trợ:</strong> Hỗ trợ qua video call, email, và ứng dụng di động.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Tập luyện tại nhà tiện lợi, video hướng dẫn rất rõ ràng và dễ theo dõi." - Lê Thị Mai</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Tư vấn trực tuyến rất hữu ích, giúp tôi duy trì thói quen tập luyện." - Phạm Văn Hùng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
