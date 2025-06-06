@@ -8,43 +8,254 @@
     <link rel="stylesheet" href="../css/blog.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <style>
+    /* Custom styles to override Bootstrap defaults */
+    .btn-primary {
+        background-color: #26A69A; /* Teal 500 */
+        border-color: #26A69A;
+        color: white;
+    }
+    .btn-primary:hover {
+        background-color: #00897B; /* Teal 700 for hover */
+        border-color: #00897B;
+        color: white;
+    }
+    .btn-primary:focus, .btn-primary:active {
+        background-color: #00897B; /* Teal 700 for focus/active */
+        border-color: #00897B;
+        box-shadow: 0 0 0 0.2rem rgba(38, 166, 154, 0.5);
+    }
+
+    /* Recruitment Widget Styling */
+    .card.sidebar {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    }
+    .card-title {
+        font-family: 'Arial', sans-serif;
+        font-weight: 700;
+        color: #2c3e50;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .sidebar-img {
+        border-radius: 8px;
+        transition: opacity 0.3s ease;
+        max-height: 200px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .sidebar-img:hover {
+        opacity: 0.85;
+    }
+    .apply-btn {
+        background: #26A69A; /* Teal 500 */
+        border: none;
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: block;
+        margin: 1rem auto 0;
+    }
+    .apply-btn:hover {
+        background: #00897B; /* Teal 700 for hover */
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .card-text {
+        font-family: 'Arial', sans-serif;
+        color: #34495e;
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .modal-content {
+        border-radius: 12px;
+        border: none;
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .modal-header {
+        background: #2c3e50;
+        color: white;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .modal-title {
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+    .form-label {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 0.95rem;
+    }
+    .form-control, .form-select {
+        border-radius: 8px;
+        border: 1px solid #dfe6e9;
+        padding: 10px;
+        font-size: 0.9rem;
+        transition: border-color 0.3s ease;
+    }
+    .form-control:focus, .form-select:focus {
+        border-color: #26A69A; /* Teal 500 */
+        box-shadow: 0 0 5px rgba(38, 166, 154, 0.3);
+        outline: none;
+    }
+    .submit-btn {
+        background: #26A69A; /* Teal 500 */
+        border: none;
+        padding: 12px;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    .submit-btn:hover {
+        background: #00897B; /* Teal 700 for hover */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    /* Pagination Styling */
+    .pagination .page-item.active .page-link {
+        background-color: #26A69A; /* Teal 500 */
+        border-color: #26A69A;
+        color: white;
+    }
+    .pagination .page-item .page-link {
+        color: #26A69A; /* Teal 500 */
+        transition: all 0.3s ease;
+    }
+    .pagination .page-item .page-link:hover {
+        background-color: #00897B; /* Teal 700 for hover */
+        border-color: #00897B;
+        color: white;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 576px) {
+        .card-title {
+            font-size: 1.2rem;
+        }
+        .apply-btn {
+            font-size: 1rem;
+            padding: 10px 20px;
+        }
+        .modal-dialog {
+            margin: 1rem;
+        }
+    }
+    /* Sticky Footer CSS */
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Đảm bảo body cao ít nhất bằng viewport */
+    }
+    .content-wrapper {
+        flex: 1 0 auto; /* Đảm bảo content-wrapper mở rộng để đẩy footer xuống */
+        display: flex; /* Sử dụng flex để quản lý các phần tử con */
+        flex-direction: column; /* Đảm bảo các phần tử con xếp theo cột */
+    }
+    .container.my-5 {
+        flex: 1; /* Đảm bảo container chính mở rộng để lấp đầy không gian */
+        display: flex; /* Sử dụng flex để quản lý hàng */
+    }
+    .row {
+        flex: 1; /* Đảm bảo hàng mở rộng để lấp đầy không gian */
+    }
+    .col-lg-8, .col-lg-4 {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%; /* Đảm bảo cả hai cột có chiều cao tối thiểu bằng container cha */
+    }
+    .col-lg-4 {
+        min-height: 500px; /* Đảm bảo cột sidebar đủ cao */
+    }
+    #blog-posts {
+        min-height: 400px; /* Đảm bảo khu vực bài đăng có chiều cao tối thiểu */
+    }
+    footer {
+        flex-shrink: 0; /* Không cho footer co lại */
+    }
+    @media (max-width: 768px) {
+  .card-title {
+    font-size: 1.3rem;
+  }
+  .apply-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .apply-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .modal-dialog {
+    margin: 1rem;
+  }
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+</style>
 </head>
 <body>
-    <!-- Header -->
-     <div id="header"></div>
+    <div class="content-wrapper">
+        <!-- Header -->
+        <div id="header"></div>
 
-        <div id="carouselHeader" class="carousel slide header-carousel" data-bs-ride="carousel" data-bs-interval="1000">
+        <div id="carouselHeader" class="carousel slide header-carousel" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://picsum.photos/1200/400?random=1" class="d-block w-100" alt="Slide 1">
+                    <img src="https://picsum.photos/1200/400?random=1" class="d-block w-100 img-fluid" style="object-fit: cover; height: 250px;" alt="Slide 1">
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                         <h1>Welcome to Blog Home!</h1>
                         <p>Your go-to source for gym tips, workouts, and fitness inspiration.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100" alt="Slide 2">
+                    <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100 img-fluid" style="object-fit: cover; height: 250px;" alt="Slide 2">
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                         <h1>Welcome to Blog Home!</h1>
                         <p>Your go-to source for gym tips, workouts, and fitness inspiration.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1200/400?random=3" class="d-block w-100" alt="Slide 3">
+                    <img src="https://picsum.photos/1200/400?random=3" class="d-block w-100 img-fluid" style="object-fit: cover; height: 250px;" alt="Slide 3">
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                         <h1>Welcome to Blog Home!</h1>
                         <p>Your go-to source for gym tips, workouts, and fitness inspiration.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1200/400?random=4" class="d-block w-100" alt="Slide 4">
+                    <img src="https://picsum.photos/1200/400?random=4" class="d-block w-100 img-fluid" style="object-fit: cover; height: 250px;" alt="Slide 4">
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                         <h1>Welcome to Blog Home!</h1>
                         <p>Your go-to source for gym tips, workouts, and fitness inspiration.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1200/400?random=5" class="d-block w-100" alt="Slide 5">
+                    <img src="https://picsum.photos/1200/400?random=5" class="d-block w-100 img-fluid" style="object-fit: cover; height: 250px;" alt="Slide 5">
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                         <h1>Welcome to Blog Home!</h1>
                         <p>Your go-to source for gym tips, workouts, and fitness inspiration.</p>
@@ -53,87 +264,162 @@
             </div>
         </div>
 
-    <!-- Main Content -->
-    <div class="container my-5">
-        <div class="row">
-            <!-- Main Column -->
-            <div class="col-lg-8">
-                <!-- Featured Post -->
-                <div id="featured-post"></div>
+        <!-- Main Content -->
+        <div class="container my-5">
+            <div class="row g-4">
+                <!-- Main Column -->
+                <div class="col-12 col-md-8 col-lg-8">
+                    <!-- Featured Post -->
+                    <div id="featured-post"></div>
 
-                <!-- Blog Posts Section -->
-                <div class="row" id="blog-posts"></div>
+                    <!-- Blog Posts Section -->
+                    <div class="row" id="blog-posts"></div>
 
-                <!-- Pagination -->
-                <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center" id="pagination"></ul>
-                </nav>
-            </div>
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center" id="pagination"></ul>
+                    </nav>
+                </div>
 
-            <!-- Sidebar -->
-            <div class="col-lg-4">
-                <!-- Search Widget -->
-                <div class="card sidebar mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Tìm kiếm</h5>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="search-input" placeholder="Search for...">
-                            <button class="btn btn-secondary" type="button" id="search-button">Go!</button>
+                <!-- Sidebar -->
+                <div class="col-12 col-md-4 col-lg-4">
+                    <!-- Search Widget -->
+                    <div class="card sidebar mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Tìm kiếm</h5>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="search-input" placeholder="Search for...">
+                                <button class="btn btn-secondary" type="button" id="search-button">Go!</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="card sidebar mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Thể loại</h5>
+                            <div class="list-group list-unstyled category-list">
+                                <a href="#" class="list-group-item" data-category="all">All</a>
+                                <a href="#" class="list-group-item" data-category="Gym">Gym</a>
+                                <a href="#" class="list-group-item" data-category="Fitness">Fitness</a>
+                                <a href="#" class="list-group-item" data-category="Yoga">Yoga</a>
+                                <a href="#" class="list-group-item" data-category="Dinh dưỡng">Dinh dưỡng</a>
+                                <a href="#" class="list-group-item" data-category="Dụng cụ gym">Dụng cụ gym</a>
+                                <a href="#" class="list-group-item" data-category="Sức khỏe">Sức khỏe</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Us Widget -->
+                    <div class="card sidebar mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Tuyển dụng</h5>
+                            <img src="https://i.pinimg.com/736x/96/6f/0a/966f0a09d370ab70bd6cc7408c7e836f.jpg" class="card-img-top sidebar-img" alt="Tuyển dụng">
+                            <p class="card-text">Gia nhập đội ngũ Gym Fitness & Yoga - nơi bạn được phát triển bản thân, truyền cảm hứng sống khỏe mỗi ngày!</p>
+                            <button type="button" class="btn btn-primary apply-btn" data-bs-toggle="modal" data-bs-target="#applyModal">
+                                Ứng tuyển ngay
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Application Form Modal -->
+                    <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="applyModalLabel">Đơn ứng tuyển</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="applicationForm">
+                                        <div class="mb-3">
+                                            <label for="fullName" class="form-label">Họ và tên</label>
+                                            <input type="text" class="form-control" id="fullName" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Số điện thoại</label>
+                                            <input type="tel" class="form-control" id="phone" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="position" class="form-label">Vị trí ứng tuyển</label>
+                                            <select class="form-select" id="position" required>
+                                                <option value="" disabled selected>Chọn vị trí</option>
+                                                <option value="trainer">Huấn luyện viên</option>
+                                                <option value="yoga_instructor">Giáo viên Yoga</option>
+                                                <option value="receptionist">Lễ tân</option>
+                                                <option value="marketing">Nhân viên Marketing</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cvFile" class="form-label">Tải lên CV</label>
+                                            <input type="file" class="form-control" id="cvFile" accept=".pdf,.doc,.docx" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100 submit-btn">Gửi đơn</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <!-- Categories Widget -->
-                <div class="card sidebar mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Thể loại</h5>
-                        <div class="list-group list-unstyled category-list">
-                            <a href="#" class="list-group-item" data-category="all">All</a>
-                            <a href="#" class="list-group-item" data-category="Gym">Gym</a>
-                            <a href="#" class="list-group-item" data-category="Fitness">Fitness</a>
-                            <a href="#" class="list-group-item" data-category="Yoga">Yoga</a>
-                            <a href="#" class="list-group-item" data-category="Dinh dưỡng">Dinh dưỡng</a>
-                            <a href="#" class="list-group-item" data-category="Dụng cụ gym">Dụng cụ gym</a>
-                            <a href="#" class="list-group-item" data-category="Sức khỏe">Sức khỏe</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- About Us Widget -->
-                <div class="card sidebar mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Tuyển dụng</h5>
-                        <img src="https://i.pinimg.com/736x/96/6f/0a/966f0a09d370ab70bd6cc7408c7e836f.jpg" class="card-img-top sidebar-img" alt="Tuyển dụng">
-                        <p class="card-text">Gia nhập đội ngũ Gym Fitness & Yoga - nơi bạn được phát triển bản thân, truyền cảm hứng sống khỏe mỗi ngày!</p>
-                    </div>
-                </div>
+        <!-- Modal for Post Details -->
+        <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true" style="z-index: 3000;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="postModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="postModalImage" class="img-fluid mb-3" alt="Post Image" style="display: none;">
+                <div id="postModalMeta" class="small text-muted mb-2"></div>
+                <div id="postModalAuthor" class="small text-muted mb-2"></div>
+                <p id="postModalContent"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal for Post Details -->
-    <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="postModalLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img id="postModalImage" class="img-fluid mb-3" alt="Post Image" style="display: none;">
-                    <div id="postModalMeta" class="small text-muted mb-2"></div>
-                    <div id="postModalAuthor" class="small text-muted mb-2"></div>
-                    <p id="postModalContent"></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col text-center py-3">
+                    <p>© 2025 Gym Fitness & Yoga. All rights reserved.</p>
                 </div>
             </div>
         </div>
-    </div>
-   <div id="footer"></div>
-   <script src="../js/blog.js"></script>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/blog.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+        // Form submission handling for application form
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                position: document.getElementById('position').value,
+                cvFile: document.getElementById('cvFile').files[0]
+            };
+            console.log('Form submitted:', formData);
+            const modal = bootstrap.Modal.getInstance(document.getElementById('applyModal'));
+            modal.hide();
+            this.reset();
+            alert('Đơn ứng tuyển của bạn đã được gửi thành công!');
+        });
+    </script>
 </body>
 </html>
