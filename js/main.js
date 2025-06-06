@@ -1,24 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
     // === Header & Footer Loading ===
-    const isInPagesFolder = window.location.pathname.includes("/pages/");
-    const headerPath = isInPagesFolder ? "/RiseFitness-Yoga-main/include/header.html" : "include/header.html";
-    const footerPath = isInPagesFolder ? "/RiseFitness-Yoga-main/include/footer.html" : "include/footer.html";
+    const currentPath = window.location.pathname;
+    const isInPagesFolder = currentPath.includes("/pages/");
+
+    // Nếu chạy trên GitHub Pages hoặc có thư mục gốc như "RiseFitness-Yoga"
+    const basePath = currentPath.includes("RiseFitness-Yoga") ? "/RiseFitness-Yoga/" : "/";
+
+    const headerPath = isInPagesFolder ? basePath + "include/header.html" : "include/header.html";
+    const footerPath = isInPagesFolder ? basePath + "include/footer.html" : "include/footer.html";
 
     fetch(headerPath)
-        .then(response => {
-            if (!response.ok) throw new Error('Không tải được header.html');
-            return response.text();
-        })
-        .then(data => document.getElementById('header').innerHTML = data)
-        .catch(error => console.error('Lỗi khi tải header:', error));
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML("afterbegin", data);
+        });
 
     fetch(footerPath)
-        .then(response => {
-            if (!response.ok) throw new Error('Không tải được footer.html');
-            return response.text();
-        })
-        .then(data => document.getElementById('footer').innerHTML = data)
-        .catch(error => console.error('Lỗi khi tải footer:', error));
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML("beforeend", data);
+        });
+});
 
     // === Modal Popup ===
     const modal = document.getElementById('consultModal');
