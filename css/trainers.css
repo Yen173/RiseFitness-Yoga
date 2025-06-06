@@ -736,14 +736,12 @@
 
 @keyframes glow {
   0%, 100% {
-    text-shadow: 0 0 4px #34A4E0, 0 0 10px #34A4E0;
+    text-shadow: 0 0 4px #34A4E0, 0 0 10px #ffffff22;
   }
   50% {
-    text-shadow: 0 0 2px #    text-shadow: 0 0 4px #34A4E0, 0 0 10px #ffffff22;
-, 0 0 20px #ffffff33;
+    text-shadow: 0 0 2px #34A4E0, 0 0 20px #ffffff33;
   }
 }
-
 
         .customer-section h2.display-5 {
   font-family: 'Montserrat', sans-serif; /* hoặc font khác bạn muốn */
