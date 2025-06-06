@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return response.text();
         })
         .then(data => document.getElementById('header').innerHTML = data)
+        
         .catch(error => console.error('Lỗi khi tải header:', error));
 
     // Chèn footer
@@ -30,10 +31,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const formContainer = document.querySelector('#form-container');
   const submitButton = document.querySelector('#submit-btn');
   const nameInput = document.querySelector('#name');
+  const emailInput = document.querySelector('#email');
   const phoneInput = document.querySelector('#phone');
   const sportSelect = document.querySelector('#sport');
   const timeSelect = document.querySelector('#time');
   const nameError = document.querySelector('#nameError');
+  const emailError = document.querySelector('#emailError');
   const phoneError = document.querySelector('#phoneError');
   const sportError = document.querySelector('#sportError');
   const timeError = document.querySelector('#timeError');
@@ -43,8 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
     return phoneRegex.test(phone);
   }
 
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
   submitButton.addEventListener('click', function () {
     nameError.textContent = '';
+    emailError.textContent = '';
     phoneError.textContent = '';
     sportError.textContent = '';
     timeError.textContent = '';
@@ -53,6 +62,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!nameInput.value.trim()) {
       nameError.textContent = 'Vui lòng nhập tên!';
+      valid = false;
+    }
+
+    if (!emailInput.value.trim()) {
+      emailError.textContent = 'Vui lòng nhập Email!';
+      valid = false;
+    } else if (!validateEmail(emailInput.value.trim())) {
+      emailError.textContent = 'Email không hợp lệ!';
       valid = false;
     }
 
