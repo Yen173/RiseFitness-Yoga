@@ -1,21 +1,76 @@
-:where([class^="ri-"])::before { 
-  content: "\f3c2"; 
-  color: #34A4E0; /* Màu xanh ngọc cho icon */
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #FFFFFF;
+  background-color: #121212;
   scroll-behavior: smooth;
-  background-color: #ffffff; /* Nền đen giống ảnh */
-  color: #FFFFFF; /* Chữ trắng giống ảnh */
 }
 
-a, h1, h2, h3, h4, h5, h6, .highlight {
-  color: #FFFFFF; /* Chữ trắng cho tiêu đề và link */
+/* Container for all sections */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, .highlight {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #34A4E0; /* Màu xanh ngọc khi hover link */
+  color: #34A4E0;
+}
+
+/* Icon Styling */
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+  color: #34A4E0;
+}
+
+/* Form Elements */
+input, select, button {
+  background-color: #121212;
+  color: #FFFFFF;
+  border: 1px solid #34A4E0;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -24,45 +79,27 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-input, select, button {
-  background-color: #121212; /* Nền tối cho input và select */
-  color: #FFFFFF; /* Chữ trắng trong input và select */
-  border: 1px solid #34A4E0; /* Viền xanh ngọc */
-  border-radius: 5px;
-  padding: 10px;
-}
-
 button {
-  background-color: #00c6c2; /* Nền xanh ngọc cho nút */
-  color: #FFFFFF; /* Chữ trắng trên nút */
+  background-color: #00c6c2;
+  color: #FFFFFF;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #2A8BBF; /* Tông xanh đậm hơn khi hover nút */
+  background-color: #2A8BBF;
 }
 
-.timeline-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: 24px;
-  top: 40px;
-  height: calc(100% - 20px);
-  width: 2px;
-  background-color: #00c6c2; /* Màu xanh ngọc cho timeline */
-}
-
-.counter-value {
-  transition: all 0.5s ease;
-}
-
+/* Custom Checkbox */
 .custom-checkbox {
   position: relative;
   padding-left: 35px;
   cursor: pointer;
   user-select: none;
+  margin-bottom: 15px;
 }
 
 .custom-checkbox input {
@@ -80,12 +117,12 @@ button:hover {
   height: 24px;
   width: 24px;
   background-color: #121212;
-  border: 2px solid #00c6c2; /* Viền xanh ngọc */
+  border: 2px solid #00c6c2;
   border-radius: 4px;
 }
 
 .custom-checkbox input:checked ~ .checkmark {
-  background-color: #00c6c2; /* Nền xanh ngọc khi checked */
+  background-color: #00c6c2;
 }
 
 .checkmark:after {
@@ -108,11 +145,260 @@ button:hover {
   transform: rotate(45deg);
 }
 
+/* Timeline Section (Lịch Sử Hình Thành) */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.timeline-item {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 40px;
+  height: calc(100% - 20px);
+  width: 2px;
+  background-color: #00c6c2;
+}
+
+.timeline-item h3 {
+  color: #34A4E0;
+}
+
+/* Achievements Section (Thành Tựu Nổi Bật) */
+.achievements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.achievement-card {
+  background: #00c6c2;
+  color: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.achievement-card h3 {
+  font-size: 2rem;
+}
+
+.achievement-card p {
+  font-size: 1rem;
+}
+
+.counter-value {
+  transition: all 0.5s ease;
+}
+
+/* Testimonials Section (Đánh Giá Từ Hội Viên) */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card p {
+  font-style: italic;
+}
+
+.testimonial-card cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #34A4E0;
+}
+
+/* Branch Locations Section (Vị Trí Các Chi Nhánh) */
+.branch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.branch-card, .contact-info {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Facilities Section (Cơ Sở Vật Chất) */
+.facilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.facility-card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.facility-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.facility-card li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.facility-card li:before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #00c6c2;
+}
+
+/* Values Section (Giá Trị & Cam Kết) */
+.values, .commitments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.value-card, .commitment-card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.value-card i, .commitment-card i {
+  font-size: 2rem;
+  color: #00c6c2;
+  margin-bottom: 10px;
+}
+
+/* Gallery Section (Về không gian Rise Fitness & Yoga) */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
 .gallery-item {
   transition: all 0.3s ease;
 }
 
 .gallery-item:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 10px #00c6c2; /* Bóng xanh ngọc khi hover */
+  box-shadow: 0 0 10px #00c6c2;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Registration Form Section (Đăng Ký Trải Nghiệm Miễn Phí) */
+.registration-form {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.registration-form .offer {
+  text-align: center;
+  color: #d9534f;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  .achievements, .facilities, .values, .commitments {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    left: 20px;
+    top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .timeline-item, .achievement-card, .testimonial-card, .branch-card, .contact-info, .facility-card, .value-card, .commitment-card {
+    padding: 15px;
+  }
+
+  .registration-form {
+    padding: 15px;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    left: 15px;
+    top: 25px;
+  }
+
+  button {
+    padding: 8px 15px;
+  }
 }
