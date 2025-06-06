@@ -721,3 +721,119 @@
         .success-message button:hover {
             background: #5AC1F0;
         }
+
+        /*customers*/
+
+                .customer-section {
+            padding: 50px 0;
+            background-color: #050A0E;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+.customer-section small {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 4px #34A4E0, 0 0 10px #34A4E0;
+  }
+  50% {
+    text-shadow: 0 0 2px #    text-shadow: 0 0 4px #34A4E0, 0 0 10px #ffffff22;
+, 0 0 20px #ffffff33;
+  }
+}
+
+
+        .customer-section h2.display-5 {
+  font-family: 'Montserrat', sans-serif; /* hoặc font khác bạn muốn */
+  font-size: 48px;      /* chỉnh kích thước chữ */
+  font-weight: 600;     /* độ đậm */
+  color: #F5F5F5;          /* màu chữ */
+  letter-spacing: 1px;  /* giãn cách giữa các chữ */
+  text-transform: uppercase; /* viết hoa nếu cần */
+  margin-top: 10px;
+}
+        .customer-card {
+            background-color: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            height: 400px; /* Cố định chiều cao cho Main và Secondary Article */
+            transition: all 0.3s ease;
+        }
+
+        .customer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 123, 255, 0.4); /* ánh sáng xanh dương phía dưới */
+}
+        .customer-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .customer-card .content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            z-index: 1;
+        }
+        .customer-card .content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #F5F5F5;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .customer-card .content .name {
+            font-size: 0.8rem;
+            color: #bbb;
+        }
+        .customer-card .content .name i {
+            margin-right: 5px;
+        }
+        .customer-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Các mục trải đều theo chiều cao */
+            height: 400px; /* Đảm bảo Article List có cùng chiều cao với Main và Secondary Article */
+        }
+        .customer-list .customer-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0; /* Loại bỏ margin-bottom để không ảnh hưởng đến justify-content */
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+        .customer-list .customer-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 123, 255, 0.4); /* ánh sáng xanh dương */
+}
+        .customer-list .customer-item img {
+            width: 80px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+        .customer-list .customer-item .content {
+            flex: 1;
+        }
+        .customer-list .customer-item .content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #F5F5F5;
+            
+        }
+        .customer-list .customer-item .content .name {
+            font-size: 0.85rem;
+            color: #bbb;
+        }
+        .customer-list .customer-item .content .name i {
+            margin-right: 5px;
+        }
