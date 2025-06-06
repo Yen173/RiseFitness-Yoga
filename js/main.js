@@ -1,125 +1,256 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Lấy đường dẫn hiện tại
-    const currentPath = window.location.pathname;
+    // === Header & Footer Loading ===
+    const isInPagesFolder = window.location.pathname.includes("/pages/");
+    const headerPath = isInPagesFolder ? "/RiseFitness-Yoga-main/include/header.html" : "include/header.html";
+    const footerPath = isInPagesFolder ? "/RiseFitness-Yoga-main/include/footer.html" : "include/footer.html";
 
-    // Kiểm tra xem trang hiện tại có nằm trong thư mục 'pages' không
-    const isInPagesFolder = currentPath.includes("/pages/");
-
-    // Xác định đường dẫn đến header và footer
-    const headerPath = isInPagesFolder ? "../include/header.html" : "include/header.html";
-    const footerPath = isInPagesFolder ? "../include/footer.html" : "include/footer.html";
-
-    // Chèn header
     fetch(headerPath)
         .then(response => {
             if (!response.ok) throw new Error('Không tải được header.html');
             return response.text();
         })
-        .then(data => {
-            const headerEl = document.getElementById('header');
-            if (headerEl) headerEl.innerHTML = data;
-        })
+        .then(data => document.getElementById('header').innerHTML = data)
         .catch(error => console.error('Lỗi khi tải header:', error));
 
-    // Chèn footer
     fetch(footerPath)
         .then(response => {
             if (!response.ok) throw new Error('Không tải được footer.html');
             return response.text();
         })
-        .then(data => {
-            const footerEl = document.getElementById('footer');
-            if (footerEl) footerEl.innerHTML = data;
-        })
+        .then(data => document.getElementById('footer').innerHTML = data)
         .catch(error => console.error('Lỗi khi tải footer:', error));
-});
-// Xử lý form đăng ký tập thử với Formspree
-document.getElementById('trial-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    const messageDiv = document.getElementById('form-message');
-    
-    messageDiv.textContent = 'Đang gửi...';
-    messageDiv.style.color = '#f0f0f0';
-    
-    fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
+
+    // === Modal Popup ===
+    const modal = document.getElementById('consultModal');
+    const consultButtons = document.querySelectorAll('.consult-btn');
+    const closeBtn = document.querySelector('.close-btn');
+
+    if (modal && closeBtn && consultButtons.length > 0) {
+        consultButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.style.display = 'flex';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
+   // === Popup Khuyến Mãi Mùa Hè (Summer Swimming Sale) ===
+    const promoModal = document.getElementById('summerPromoModal');
+    const promoCloseBtn = promoModal?.querySelector('.close-btn');
+    const promoMessage = document.getElementById('promo-message');
+    const showConsultFormBtn = document.getElementById('showConsultForm');
+
+    if (promoModal && promoCloseBtn && showConsultFormBtn) {
+        // Hiển thị popup lần đầu nếu chưa hiển thị
+        if (!localStorage.getItem('summerPromoShown')) {
+            promoModal.style.display = 'flex';
+            localStorage.setItem('summerPromoShown', 'true');
         }
-    })
-    .then(response => {
-        if (!response.ok) throw new Error('Lỗi khi gửi form');
-        return response.json();
-    })
-    .then(data => {
-        messageDiv.textContent = 'Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ trong 24 giờ.';
-        messageDiv.style.color = '#8B0000'; // Đỏ sẫm để đồng bộ nút
-        form.reset();
-    })
-    .catch(error => {
-        console.error('Lỗi:', error);
-        messageDiv.textContent = 'Lỗi khi gửi đăng ký. Vui lòng thử lại sau.';
-        messageDiv.style.color = '#ff4d4d';
-    });
-});
 
-// Tính BMI
-document.getElementById('bmi-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const height = parseFloat(document.getElementById('height').value) / 100;
-    const weight = parseFloat(document.getElementById('weight').value);
-    const bmi = (weight / (height * height)).toFixed(1);
-    let result = `Chỉ số BMI của bạn là <strong>${bmi}</strong>. `;
-    if (bmi < 18.5) {
-        result += 'Bạn hơi gầy, hãy tham gia gói tập tăng cân tại RiseFitness & Yoga!';
-    } else if (bmi < 25) {
-        result += 'Cơ thể bạn cân đối, tiếp tục duy trì với các lớp tập của chúng tôi!';
-    } else if (bmi < 30) {
-        result += 'Bạn hơi mũm mĩm, thử các lớp giảm mỡ với HLV cá nhân tại Rise Fitness & Yoga nhé!';
+        promoCloseBtn.addEventListener('click', () => {
+            promoModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === promoModal) {
+                promoModal.style.display = 'none';
+            }
+        });
+
+        // Mở popup form khi nhấn "Nhận Ưu Đãi Ngay!"
+        showConsultFormBtn.addEventListener('click', () => {
+            promoModal.style.display = 'none'; // Ẩn popup khuyến mãi
+            const consultModal = document.getElementById('consultModal');
+            if (consultModal) {
+                consultModal.style.display = 'flex'; // Hiển thị popup form
+            }
+        });
+    }
+
+    // === Form Tư Vấn ===
+    const consultForm = document.getElementById('consult-form');
+    const consultMessage = document.getElementById('consult-form-message');
+    if (consultForm) {
+        consultForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(consultForm);
+            consultMessage.textContent = 'Đang gửi...';
+            consultMessage.classList.add('visible');
+            consultMessage.style.color = '#000';
+
+            fetch(consultForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+                .then(response => {
+                    if (!response.ok) throw new Error('Lỗi khi gửi form');
+                    return response.json();
+                })
+                .then(data => {
+                    consultMessage.textContent = 'Cảm ơn bạn đã đăng ký!';
+                    consultMessage.style.color = '#2f855a';
+                    consultForm.reset();
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                        consultMessage.classList.remove('visible');
+                    }, 2000);
+                })
+                .catch(error => {
+                    consultMessage.textContent = 'Lỗi khi gửi đăng ký.';
+                    consultMessage.style.color = '#e53e3e';
+                });
+        });
+    }
+
+    // === Form Đăng Ký Tập Thử ===
+    const registrationForm = document.getElementById('registration-form');
+    const messageDiv = document.getElementById('form-message');
+    if (registrationForm && messageDiv) {
+        console.log('Registration form found. Action:', registrationForm.action);
+        registrationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!registrationForm.action || registrationForm.action.includes('your-trial-form-id')) {
+                console.error('Invalid form action:', registrationForm.action);
+                messageDiv.textContent = 'Lỗi: Vui lòng cấu hình Formspree hợp lệ.';
+                messageDiv.style.color = '#ff4d4d';
+                messageDiv.classList.add('visible');
+                return;
+            }
+
+            const formData = new FormData(registrationForm);
+            messageDiv.textContent = 'Đang gửi...';
+            messageDiv.style.color = '#f0f0f0';
+            messageDiv.classList.add('visible');
+
+            fetch(registrationForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Lỗi khi gửi form: ${response.status} ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Formspree response:', data);
+                    messageDiv.textContent = 'Cảm ơn bạn đã đăng ký!';
+                    messageDiv.style.color = '#8B0000';
+                    messageDiv.classList.add('visible');
+                    registrationForm.reset();
+                    setTimeout(() => {
+                        messageDiv.classList.remove('visible');
+                    }, 3000);
+                })
+                .catch(error => {
+                    console.error('Lỗi chi tiết:', error);
+                    messageDiv.textContent = `Lỗi khi gửi đăng ký: ${error.message}`;
+                    messageDiv.style.color = '#ff4d4d';
+                    messageDiv.classList.add('visible');
+                });
+        });
     } else {
-        result += 'Có vẻ bạn cần giảm cân, liên hệ Rise Fitness & Yoga để được tư vấn lộ trình phù hợp nhé!';
-    }
-    document.getElementById('bmi-result').innerHTML = result;
-});
-
-// Xử lý slider
-document.querySelectorAll('.slider-container').forEach(container => {
-    const slider = container.querySelector('.product-slider, .promotion-slider');
-    const prevBtn = container.querySelector('.slider-prev');
-    const nextBtn = container.querySelector('.slider-next');
-    let currentIndex = 0;
-    const cards = slider.children;
-    const totalCards = cards.length;
-
-    function getCardsPerView() {
-        return window.innerWidth > 1024 ? 4 : window.innerWidth > 768 ? 2 : 1;
+        console.error('Registration form or message div not found:', { registrationForm, messageDiv });
     }
 
-    function updateSlider() {
-        const cardsPerView = getCardsPerView();
-        currentIndex = Math.min(currentIndex, totalCards - cardsPerView);
-        currentIndex = Math.max(currentIndex, 0);
-        const offset = -currentIndex * (100 / cardsPerView);
-        slider.style.transform = `translateX(${offset}%)`;
+    // === Tính BMI ===
+    const bmiForm = document.getElementById('bmi-form');
+    if (bmiForm) {
+        bmiForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const height = parseFloat(document.getElementById('height').value) / 100;
+            const weight = parseFloat(document.getElementById('weight').value);
+            const bmiValue = document.getElementById('bmi-value');
+            const bmiMessage = document.getElementById('bmi-message');
+            const bmiResult = document.getElementById('bmi-result');
+
+            if (height > 0 && weight > 0) {
+                const bmi = weight / (height * height);
+                bmiValue.textContent = bmi.toFixed(1);
+
+                let message = '';
+                if (bmi < 18.5) {
+                    message = 'Bạn đang thiếu cân. Hãy đến với chúng tôi để có chế độ ăn uống và tập luyện hợp lý!';
+                } else if (bmi < 25) {
+                    message = 'Bạn đang có cân nặng bình thường. Tiếp tục duy trì lối sống lành mạnh!';
+                } else if (bmi < 30) {
+                    message = 'Bạn đang có dấu hiệu thừa cân. Hãy đến với chúng tôi để có kế hoạch tập luyện và dinh dưỡng phù hợp!';
+                } else {
+                    message = 'Bạn đang thừa cân. Hãy đến với chúng tôi để được tư vấn và hỗ trợ giảm cân hiệu quả!';
+                }
+
+                bmiMessage.textContent = message;
+                bmiResult.classList.remove('hidden');
+            } else {
+                alert('Vui lòng nhập chiều cao và cân nặng hợp lệ!');
+            }
+        });
     }
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = Math.max(currentIndex - 1, 0);
+    // === Slider ===
+    document.querySelectorAll('.slider-container').forEach(container => {
+        const slider = container.querySelector('.product-slider, .promotion-slider');
+        const prevBtn = container.querySelector('.slider-prev');
+        const nextBtn = container.querySelector('.slider-next');
+
+        if (!slider || !prevBtn || !nextBtn) {
+            console.error('Slider or buttons not found:', { slider, prevBtn, nextBtn });
+            return;
+        }
+
+        let currentIndex = 0;
+        const cards = slider.children;
+        const cardsPerView = 3;
+
+        function updateSlider() {
+            const cardWidth = cards[0]?.getBoundingClientRect().width || 0;
+            const gap = 20;
+            const totalCards = cards.length;
+            const maxIndex = Math.max(0, Math.ceil(totalCards / cardsPerView) - 1);
+            const slideWidth = (cardWidth + gap) * cardsPerView;
+
+            currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === maxIndex;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex--;
+            updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex++;
+            updateSlider();
+        });
+
+        window.addEventListener('resize', updateSlider);
         updateSlider();
     });
 
-    nextBtn.addEventListener('click', () => {
-        const cardsPerView = getCardsPerView();
-        currentIndex = Math.min(currentIndex + 1, totalCards - cardsPerView);
-        updateSlider();
-    });
-
-    window.addEventListener('resize', () => {
-        updateSlider();
-    });
-
-    updateSlider();
+    // === Slideshow ===
+    const slides = document.querySelectorAll('.about-image.slideshow .slide');
+    if (slides.length > 1) {
+        let slideIndex = 0;
+        function showNextSlide() {
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add('active');
+        }
+        setInterval(showNextSlide, 2000);
+    }
 });
