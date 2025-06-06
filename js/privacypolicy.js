@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Lỗi khi tải header:', error));
 
     // Tải footer
-    fetch('/RiseFitness-Yoga-main/assets/include/footer.html')
+    fetch('/RiseFitness-Yoga-main/include/footer.html')
         .then(response => {
             if (!response.ok) throw new Error('Không tải được footer.html');
             return response.text();
