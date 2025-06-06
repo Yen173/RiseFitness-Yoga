@@ -3,33 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/RiseFitness-Yoga-main/">
+    <meta name="description" content="Dịch vụ Gym chuyên nghiệp tại RiseFitness&Yoga với thiết bị hiện đại và huấn luyện viên chuyên nghiệp. Đăng ký tư vấn ngay hôm nay!" />
+    <meta name="keywords" content="Gym, RiseFitness&Yoga, tập luyện, huấn luyện viên, fitness, sức khỏe" />
+    <meta name="author" content="RiseFitness&Yoga" />
+    <meta name="robots" content="index, follow" />
+    <base href="/RiseFitness-Yoga-main/" />
     <title>Dịch Vụ Gym - RiseFitness&Yoga</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/gym.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/gym.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Gym",
+        "name": "RiseFitness&Yoga",
+        "description": "Dịch vụ Gym chuyên nghiệp với thiết bị hiện đại và huấn luyện viên chuyên nghiệp.",
+        "url": "https://risefitnessyoga.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Đường Fitness, Quận 1",
+          "addressLocality": "TP. Hồ Chí Minh",
+          "addressCountry": "VN"
+        },
+        "telephone": "+84 123 456 789"
+      }
+    </script>
   </head>
   <body>
     <div id="header"></div>
-    <div class="hero">
+    <div class="hero" role="banner">
       <div class="hero-bg"></div>
       <div class="container hero-content">
         <div class="hero-text">
           <h1 class="hero-title">Dịch Vụ Gym Chuyên Nghiệp</h1>
           <p class="hero-subtitle">
-            Nâng cao sức khỏe và thể chất với các thiết bị hiện đại và đội ngũ
-            huấn luyện viên chuyên nghiệp tại RiseFitness&Yoga.
+            Nâng cao sức khỏe và thể chất với các thiết bị hiện đại và đội ngũ huấn luyện viên chuyên nghiệp tại RiseFitness&Yoga.
           </p>
           <div class="hero-buttons">
             <a href="#dang-ky" class="btn-primary">Đăng ký tư vấn</a>
@@ -38,18 +52,12 @@
         </div>
       </div>
     </div>
-    <section class="section about">
+    <section class="section about" id="gioi-thieu">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Giới Thiệu Về Dịch Vụ Gym</h2>
           <p class="section-description">
-            RiseFitness&Yoga cung cấp dịch vụ Gym chất lượng cao với không gian
-            rộng rãi, thoáng mát và được trang bị đầy đủ các thiết bị hiện đại
-            nhất. Chúng tôi cam kết mang đến trải nghiệm tập luyện tốt nhất cho
-            mọi đối tượng, từ người mới bắt đầu đến những người đã có kinh
-            nghiệm tập luyện lâu năm. Đội ngũ huấn luyện viên chuyên nghiệp,
-            nhiệt tình sẽ luôn đồng hành cùng bạn trong suốt quá trình tập
-            luyện.
+            RiseFitness&Yoga cung cấp dịch vụ Gym chất lượng cao với không gian rộng rãi, thoáng mát và được trang bị đầy đủ các thiết bị hiện đại nhất. Chúng tôi cam kết mang đến trải nghiệm tập luyện tốt nhất cho mọi đối tượng, từ người mới bắt đầu đến những người đã có kinh nghiệm tập luyện lâu năm. Đội ngũ huấn luyện viên chuyên nghiệp, nhiệt tình sẽ luôn đồng hành cùng bạn trong suốt quá trình tập luyện.
           </p>
         </div>
         <div class="about-content">
@@ -57,30 +65,30 @@
             <img
               src="https://readdy.ai/api/search-image?query=Professional%20fitness%20trainer%20helping%20a%20client%20with%20proper%20form%20during%20weight%20training%2C%20modern%20gym%20environment%2C%20focused%20training%20session%2C%20personalized%20coaching%2C%20attentive%20instruction&width=600&height=400&seq=gym2&orientation=landscape"
               alt="Huấn luyện viên chuyên nghiệp"
+              loading="lazy"
             />
           </div>
           <div class="about-text">
             <h3 class="about-title">Tại Sao Chọn Dịch Vụ Gym Của Chúng Tôi?</h3>
             <ul class="about-list">
               <li class="about-item">
-                <span class="icon-check">✔</span>
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
                 Thiết bị hiện đại, đa dạng và được bảo trì thường xuyên
               </li>
               <li class="about-item">
-                <span class="icon-check">✔</span>
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
                 Đội ngũ huấn luyện viên chuyên nghiệp, có chứng chỉ quốc tế
               </li>
               <li class="about-item">
-                <span class="icon-check">✔</span>
-                Không gian rộng rãi, thoáng mát với hệ thống âm thanh và ánh sáng
-                hiện đại
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                Không gian rộng rãi, thoáng mát với hệ thống âm thanh và ánh sáng hiện đại
               </li>
               <li class="about-item">
-                <span class="icon-check">✔</span>
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
                 Lịch tập linh hoạt, phù hợp với mọi đối tượng
               </li>
               <li class="about-item">
-                <span class="icon-check">✔</span>
+                <span class="icon-check"><i class="fa-solid fa-check"></i></span>
                 Chương trình tập luyện được cá nhân hóa theo nhu cầu và mục tiêu
               </li>
             </ul>
@@ -88,115 +96,250 @@
         </div>
       </div>
     </section>
-    <section class="section benefits">
+    <section class="section benefits" id="loi-ich">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Lợi Ích Của Việc Tập Gym</h2>
           <p class="section-description">
-            Tập gym không chỉ giúp bạn có một cơ thể khỏe mạnh mà còn mang lại
-            nhiều lợi ích khác cho sức khỏe thể chất và tinh thần.
+            Tập gym không chỉ giúp bạn có một cơ thể khỏe mạnh mà còn mang lại nhiều lợi ích khác cho sức khỏe thể chất và tinh thần.
           </p>
         </div>
         <div class="benefits-grid">
           <div class="benefit-card">
             <div class="benefit-icon">
-              <i class="ri-heart-pulse-line"></i>
+              <i class="fa-solid fa-heart-pulse"></i>
             </div>
             <h3 class="benefit-title">Cải Thiện Sức Khỏe Tim Mạch</h3>
             <p class="benefit-description">
-              Tập gym thường xuyên giúp tăng cường sức khỏe tim mạch, giảm nguy cơ
-              mắc các bệnh tim mạch và huyết áp cao.
+              Tập gym thường xuyên giúp tăng cường sức khỏe tim mạch, giảm nguy cơ mắc các bệnh tim mạch và huyết áp cao.
             </p>
           </div>
           <div class="benefit-card">
             <div class="benefit-icon">
-              <i class="ri-mental-health-line"></i>
+              <i class="fa-solid fa-brain"></i>
             </div>
             <h3 class="benefit-title">Giảm Stress và Lo Âu</h3>
             <p class="benefit-description">
-              Tập luyện giúp giải phóng endorphin - hormone hạnh phúc, giúp giảm
-              stress, lo âu và cải thiện tâm trạng.
+              Tập luyện giúp giải phóng endorphin - hormone hạnh phúc, giúp giảm stress, lo âu và cải thiện tâm trạng.
             </p>
           </div>
           <div class="benefit-card">
             <div class="benefit-icon">
-              <i class="ri-muscle-line"></i>
+              <i class="fa-solid fa-dumbbell"></i>
             </div>
             <h3 class="benefit-title">Tăng Cường Sức Mạnh</h3>
             <p class="benefit-description">
-              Tập gym giúp tăng cường sức mạnh cơ bắp, cải thiện sức bền và khả
-              năng vận động trong cuộc sống hàng ngày.
+              Tập gym giúp tăng cường sức mạnh cơ bắp, cải thiện sức bền và khả năng vận động trong cuộc sống hàng ngày.
             </p>
           </div>
           <div class="benefit-card">
             <div class="benefit-icon">
-              <i class="ri-scales-3-line"></i>
+              <i class="fa-solid fa-weight-scale"></i>
             </div>
             <h3 class="benefit-title">Kiểm Soát Cân Nặng</h3>
             <p class="benefit-description">
-              Tập luyện kết hợp với chế độ ăn uống hợp lý giúp kiểm soát cân nặng,
-              giảm mỡ thừa và duy trì vóc dáng.
+              Tập luyện kết hợp với chế độ ăn uống hợp lý giúp kiểm soát cân nặng, giảm mỡ thừa và duy trì vóc dáng.
             </p>
           </div>
           <div class="benefit-card">
             <div class="benefit-icon">
-              <i class="ri-zzz-line"></i>
+              <i class="fa-solid fa-bed"></i>
             </div>
             <h3 class="benefit-title">Cải Thiện Chất Lượng Giấc Ngủ</h3>
             <p class="benefit-description">
-              Tập gym thường xuyên giúp cải thiện chất lượng giấc ngủ, giúp bạn
-              ngủ sâu và ngon giấc hơn.
+              Tập gym thường xuyên giúp cải thiện chất lượng giấc ngủ, giúp bạn ngủ sâu và ngon giấc hơn.
             </p>
           </div>
           <div class="benefit-card">
             <div class="benefit-icon">
-              <i class="ri-group-line"></i>
+              <i class="fa-solid fa-users"></i>
             </div>
             <h3 class="benefit-title">Tăng Cường Kết Nối Xã Hội</h3>
             <p class="benefit-description">
-              Tham gia các lớp tập nhóm tại phòng gym giúp bạn kết nối với những
-              người có cùng sở thích và mục tiêu.
+              Tham gia các lớp tập nhóm tại phòng gym giúp bạn kết nối với những người có cùng sở thích và mục tiêu.
             </p>
           </div>
         </div>
       </div>
     </section>
-    <section id="dich-vu" class="section services">
+    <section class="section schedule" id="lich-hoc">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Lịch Tập Luyện</h2>
+          <p class="section-description">
+            Lịch tập luyện hàng tuần tại RiseFitness&Yoga, phù hợp với mọi cấp độ và mục tiêu.
+          </p>
+        </div>
+        <table class="schedule-table" role="grid">
+          <thead>
+            <tr>
+              <th>Thời gian</th>
+              <th>Thứ Hai</th>
+              <th>Thứ Ba</th>
+              <th>Thứ Tư</th>
+              <th>Thứ Năm</th>
+              <th>Thứ Sáu</th>
+              <th>Thứ Bảy</th>
+              <th>Chủ Nhật</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>06:00 - 07:00</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+              <td>Strength (Minh)</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+              <td>Group Fitness (Tùng)</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>07:30 - 08:30</td>
+              <td>-</td>
+              <td>Strength (Minh)</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+              <td>Group Fitness (Tùng)</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+            </tr>
+            <tr>
+              <td>17:00 - 18:00</td>
+              <td>Group Fitness (Tùng)</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+              <td>Strength (Minh)</td>
+              <td>Cardio (Hà)</td>
+              <td>-</td>
+              <td>Group Fitness (Tùng)</td>
+            </tr>
+            <tr>
+              <td>18:30 - 19:30</td>
+              <td>Yoga (Lan)</td>
+              <td>Group Fitness (Tùng)</td>
+              <td>Cardio (Hà)</td>
+              <td>-</td>
+              <td>Strength (Minh)</td>
+              <td>Yoga (Lan)</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>20:00 - 21:00</td>
+              <td>Strength (Minh)</td>
+              <td>-</td>
+              <td>Group Fitness (Tùng)</td>
+              <td>Cardio (Hà)</td>
+              <td>Yoga (Lan)</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="section trainers" id="huan-luyen-vien">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Đội Ngũ Huấn Luyện Viên</h2>
+          <p class="section-description">
+            Gặp gỡ đội ngũ huấn luyện viên chuyên nghiệp của chúng tôi, luôn sẵn sàng hỗ trợ bạn đạt được mục tiêu tập luyện.
+          </p>
+        </div>
+        <div class="trainers-grid">
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20fitness%20trainer%2C%20Vietnamese%20male%2C%2030s%2C%20athletic%2C%20gym%20environment%2C%20confident%2C%20high%20quality%20portrait&width=400&height=200&seq=trainer1&orientation=landscape"
+                alt="Nguyễn Minh"
+                loading="lazy"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Nguyễn Minh</h3>
+              <p class="trainer-description">Huấn luyện viên với 10 năm kinh nghiệm, chuyên về tập sức mạnh và tăng cơ.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ ISSA</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia tập sức mạnh</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ giảm cân</li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20fitness%20trainer%2C%20Vietnamese%20female%2C%2020s%2C%20athletic%2C%20yoga%20studio%2C%20calm%2C%20high%20quality%20portrait&width=400&height=200&seq=trainer2&orientation=landscape"
+                alt="Trần Lan"
+                loading="lazy"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Trần Lan</h3>
+              <p class="trainer-description">Chuyên gia yoga với chứng chỉ Yoga Alliance, giúp cải thiện sự linh hoạt và tinh thần.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ Yoga Alliance</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia thiền và yoga</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ giảm stress</li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <div class="trainer-image">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20fitness%20trainer%2C%20Vietnamese%20male%2C%2040s%2C%20athletic%2C%20group%20fitness%2C%20energetic%2C%20high%20quality%20portrait&width=400&height=200&seq=trainer3&orientation=landscape"
+                alt="Lê Tùng"
+                loading="lazy"
+              />
+            </div>
+            <div class="trainer-content">
+              <h3 class="trainer-title">Lê Tùng</h3>
+              <p class="trainer-description">Chuyên gia tập nhóm với kinh nghiệm dẫn dắt các lớp năng động và sôi nổi.</p>
+              <ul class="trainer-specialties">
+                <li><i class="fa-solid fa-check"></i> Chứng chỉ ACE</li>
+                <li><i class="fa-solid fa-check"></i> Chuyên gia tập nhóm</li>
+                <li><i class="fa-solid fa-check"></i> Hỗ trợ tăng cường năng lượng</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="dich-vu" class="section services carousel">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Các Gói Dịch Vụ Gym</h2>
           <p class="section-description">
-            Chúng tôi cung cấp nhiều gói dịch vụ khác nhau để đáp ứng nhu cầu và
-            mục tiêu tập luyện của bạn.
+            Chúng tôi cung cấp nhiều gói dịch vụ khác nhau để đáp ứng nhu cầu và mục tiêu tập luyện của bạn.
           </p>
         </div>
-        <div class="services-grid">
-          <div class="service-card">
+        <div class="carousel-inner services-grid">
+          <div class="carousel-item service-card" data-modal="modal-basic">
             <div class="service-image">
               <img
                 src="https://readdy.ai/api/search-image?query=Beginner%20gym%20program%2C%20basic%20fitness%20equipment%2C%20welcoming%20environment%20for%20newcomers%2C%20simple%20exercise%20machines%2C%20friendly%20atmosphere%2C%20clean%20modern%20gym&width=400&height=300&seq=gym3&orientation=landscape"
                 alt="Gói Cơ Bản"
+                loading="lazy"
               />
             </div>
             <div class="service-content">
               <h3 class="service-title">Gói Cơ Bản</h3>
               <p class="service-description">
-                Dành cho người mới bắt đầu, bao gồm hướng dẫn cơ bản và sử dụng
-                thiết bị.
+                Dành cho người mới bắt đầu, bao gồm hướng dẫn cơ bản và sử dụng thiết bị.
               </p>
               <ul class="service-list">
-                <li><i class="ri-check-line"></i> Sử dụng tất cả thiết bị</li>
-                <li><i class="ri-check-line"></i> 1 buổi định hướng</li>
-                <li><i class="ri-check-line"></i> Tư vấn chương trình tập</li>
+                <li><i class="fa-solid fa-check"></i> Sử dụng tất cả thiết bị</li>
+                <li><i class="fa-solid fa-check"></i> 1 buổi định hướng</li>
+                <li><i class="fa-solid fa-check"></i> Tư vấn chương trình tập</li>
               </ul>
               <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
             </div>
           </div>
-          <div class="service-card">
+          <div class="carousel-item service-card" data-modal="modal-standard">
             <div class="service-image">
               <img
                 src="https://readdy.ai/api/search-image?query=Standard%20gym%20membership%2C%20diverse%20fitness%20equipment%2C%20moderate%20crowd%2C%20regular%20gym-goers%2C%20variety%20of%20machines%2C%20well-maintained%20facility%2C%20professional%20environment&width=400&height=300&seq=gym4&orientation=landscape"
                 alt="Gói Tiêu Chuẩn"
+                loading="lazy"
               />
             </div>
             <div class="service-content">
@@ -205,19 +348,20 @@
                 Bao gồm các dịch vụ cơ bản và thêm các buổi tập với HLV cá nhân.
               </p>
               <ul class="service-list">
-                <li><i class="ri-check-line"></i> Tất cả dịch vụ gói cơ bản</li>
-                <li><i class="ri-check-line"></i> 4 buổi PT mỗi tháng</li>
-                <li><i class="ri-check-line"></i> Đánh giá thể chất định kỳ</li>
+                <li><i class="fa-solid fa-check"></i> Tất cả dịch vụ gói cơ bản</li>
+                <li><i class="fa-solid fa-check"></i> 4 buổi PT mỗi tháng</li>
+                <li><i class="fa-solid fa-check"></i> Đánh giá thể chất định kỳ</li>
               </ul>
               <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
             </div>
           </div>
-          <div class="service-card popular">
+          <div class="carousel-item service-card popular" data-modal="modal-premium">
             <span class="popular-badge">Phổ biến</span>
             <div class="service-image">
               <img
                 src="https://readdy.ai/api/search-image?query=Premium%20gym%20service%2C%20exclusive%20equipment%2C%20personal%20training%20session%2C%20luxury%20fitness%20facility%2C%20one-on-one%20coaching%2C%20high-end%20gym%20environment%2C%20professional%20training&width=400&height=300&seq=gym5&orientation=landscape"
                 alt="Gói Premium"
+                loading="lazy"
               />
             </div>
             <div class="service-content">
@@ -226,18 +370,20 @@
                 Dịch vụ cao cấp với HLV riêng và chương trình tập cá nhân hóa.
               </p>
               <ul class="service-list">
-                <li><i class="ri-check-line"></i> Tất cả dịch vụ gói tiêu chuẩn</li>
-                <li><i class="ri-check-line"></i> 12 buổi PT mỗi tháng</li>
-                <li><i class="ri-check-line"></i> Tư vấn dinh dưỡng</li>
+                <li><i class="fa-solid fa-check"></i> Tất cả dịch vụ gói tiêu chuẩn</li>
+                <li><i class="fa-solid fa-check"></i> 12 buổi PT mỗi tháng</li>
+                <li><i class="fa-solid fa-check"></i> Tư vấn dinh dưỡng</li>
               </ul>
+              descriptors: [Gym, Fitness Center, Personal Training, Premium Membership, Luxury Fitness]
               <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
             </div>
           </div>
-          <div class="service-card">
+          <div class="carousel-item service-card" data-modal="modal-vip">
             <div class="service-image">
               <img
                 src="https://readdy.ai/api/search-image?query=VIP%20gym%20experience%2C%20exclusive%20training%20area%2C%20personalized%20coaching%2C%20luxury%20fitness%20equipment%2C%20private%20training%20session%2C%20high-end%20gym%20interior%2C%20premium%20service&width=400&height=300&seq=gym6&orientation=landscape"
                 alt="Gói VIP"
+                loading="lazy"
               />
             </div>
             <div class="service-content">
@@ -246,18 +392,19 @@
                 Trải nghiệm tập luyện đẳng cấp với đầy đủ dịch vụ cao cấp nhất.
               </p>
               <ul class="service-list">
-                <li><i class="ri-check-line"></i> Tất cả dịch vụ gói Premium</li>
-                <li><i class="ri-check-line"></i> PT không giới hạn</li>
-                <li><i class="ri-check-line"></i> Dịch vụ spa và massage</li>
+                <li><i class="fa-solid fa-check"></i> Tất cả dịch vụ gói Premium</li>
+                <li><i class="fa-solid fa-check"></i> PT không giới hạn</li>
+                <li><i class="fa-solid fa-check"></i> Dịch vụ spa và massage</li>
               </ul>
               <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
             </div>
           </div>
-          <div class="service-card">
+          <div class="carousel-item service-card" data-modal="modal-group">
             <div class="service-image">
               <img
                 src="https://readdy.ai/api/search-image?query=Group%20fitness%20class%2C%20energetic%20workout%20session%2C%20multiple%20participants%2C%20instructor%20leading%20class%2C%20team%20exercise%2C%20motivational%20group%20training%2C%20social%20fitness%20experience&width=400&height=300&seq=gym7&orientation=landscape"
                 alt="Gói Tập Nhóm"
+                loading="lazy"
               />
             </div>
             <div class="service-content">
@@ -266,18 +413,19 @@
                 Tham gia các lớp tập nhóm sôi động với nhiều bài tập đa dạng.
               </p>
               <ul class="service-list">
-                <li><i class="ri-check-line"></i> Tham gia tất cả lớp tập nhóm</li>
-                <li><i class="ri-check-line"></i> Lịch tập linh hoạt</li>
-                <li><i class="ri-check-line"></i> Hướng dẫn bởi HLV chuyên nghiệp</li>
+                <li><i class="fa-solid fa-check"></i> Tham gia tất cả lớp tập nhóm</li>
+                <li><i class="fa-solid fa-check"></i> Lịch tập linh hoạt</li>
+                <li><i class="fa-solid fa-check"></i> Hướng dẫn bởi HLV chuyên nghiệp</li>
               </ul>
               <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
             </div>
           </div>
-          <div class="service-card">
+          <div class="carousel-item service-card" data-modal="modal-assessment">
             <div class="service-image">
               <img
                 src="https://readdy.ai/api/search-image?query=Fitness%20assessment%2C%20body%20measurements%2C%20professional%20evaluation%2C%20health%20metrics%20testing%2C%20fitness%20level%20check%2C%20performance%20testing%2C%20body%20composition%20analysis&width=400&height=300&seq=gym8&orientation=landscape"
                 alt="Gói Đánh Giá Thể Chất"
+                loading="lazy"
               />
             </div>
             <div class="service-content">
@@ -286,18 +434,19 @@
                 Đánh giá toàn diện thể chất và xây dựng lộ trình tập luyện phù hợp.
               </p>
               <ul class="service-list">
-                <li><i class="ri-check-line"></i> Đo chỉ số cơ thể</li>
-                <li><i class="ri-check-line"></i> Đánh giá sức khỏe tim mạch</li>
-                <li><i class="ri-check-line"></i> Tư vấn lộ trình tập luyện</li>
+                <li><i class="fa-solid fa-check"></i> Đo chỉ số cơ thể</li>
+                <li><i class="fa-solid fa-check"></i> Đánh giá sức khỏe tim mạch</li>
+                <li><i class="fa-solid fa-check"></i> Tư vấn lộ trình tập luyện</li>
               </ul>
               <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
             </div>
           </div>
-          <div class="service-card">
+          <div class="carousel-item service-card" data-modal="modal-nutrition">
             <div class="service-image">
               <img
                 src="https://readdy.ai/api/search-image?query=Nutritional%20consultation%2C%20healthy%20meal%20planning%2C%20diet%20advice%2C%20professional%20nutrition%20guidance%2C%20food%20recommendations%2C%20dietary%20assessment%2C%20health-focused%20food%20planning&width=400&height=300&seq=gym9&orientation=landscape"
                 alt="Tư Vấn Dinh Dưỡng"
+                loading="lazy"
               />
             </div>
             <div class="service-content">
@@ -306,18 +455,19 @@
                 Chế độ dinh dưỡng cá nhân hóa phù hợp với mục tiêu tập luyện của bạn.
               </p>
               <ul class="service-list">
-                <li><i class="ri-check-line"></i> Đánh giá chế độ ăn hiện tại</li>
-                <li><i class="ri-check-line"></i> Lập kế hoạch dinh dưỡng</li>
-                <li><i class="ri-check-line"></i> Theo dõi và điều chỉnh</li>
+                <li><i class="fa-solid fa-check"></i> Đánh giá chế độ ăn hiện tại</li>
+                <li><i class="fa-solid fa-check"></i> Lập kế hoạch dinh dưỡng</li>
+                <li><i class="fa-solid fa-check"></i> Theo dõi và điều chỉnh</li>
               </ul>
               <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
             </div>
           </div>
-          <div class="service-card">
+          <div class="carousel-item service-card" data-modal="modal-online">
             <div class="service-image">
               <img
                 src="https://readdy.ai/api/search-image?query=Online%20fitness%20coaching%2C%20virtual%20personal%20training%2C%20remote%20workout%20guidance%2C%20digital%20fitness%20program%2C%20video%20training%20session%2C%20online%20exercise%20instruction%2C%20remote%20coaching&width=400&height=300&seq=gym10&orientation=landscape"
-                alt="Huãn Luyện Online"
+                alt="Huấn Luyện Online"
+                loading="lazy"
               />
             </div>
             <div class="service-content">
@@ -326,31 +476,35 @@
                 Tập luyện tại nhà với sự hướng dẫn trực tuyến từ HLV chuyên nghiệp.
               </p>
               <ul class="service-list">
-                <li><i class="ri-check-line"></i> Lịch tập cá nhân hóa</li>
-                <li><i class="ri-check-line"></i> Video hướng dẫn chi tiết</li>
-                <li><i class="ri-check-line"></i> Tư vấn trực tuyến 24/7</li>
+                <li><i class="fa-solid fa-check"></i> Lịch tập cá nhân hóa</li>
+                <li><i class="fa-solid fa-check"></i> Video hướng dẫn chi tiết</li>
+                <li><i class="fa-solid fa-check"></i> Tư vấn trực tuyến 24/7</li>
               </ul>
               <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
             </div>
           </div>
         </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn prev" aria-label="Dịch vụ trước đó"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="carousel-btn next" aria-label="Dịch vụ tiếp theo"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
       </div>
     </section>
-    <section class="section testimonials">
+    <section class="section testimonials carousel" id="danh-gia">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Đánh Giá Từ Khách Hàng</h2>
           <p class="section-description">
-            Hãy xem những gì khách hàng nói về trải nghiệm tập luyện tại RiseFitness&Yoga
-            Center.
+            Hãy xem những gì khách hàng nói về trải nghiệm tập luyện tại RiseFitness&Yoga Center.
           </p>
         </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
+        <div class="carousel-inner testimonials-grid">
+          <div class="carousel-item testimonial-card">
             <div class="testimonial-header">
               <img
                 src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20man%20in%20his%2030s%2C%20neutral%20background%2C%20business%20casual%20attire%2C%20friendly%20expression%2C%20high%20quality%20portrait&width=100&height=100&seq=person1&orientation=squarish"
                 alt="Nguyễn Văn Minh"
+                loading="lazy"
               />
               <div>
                 <h4 class="testimonial-name">Nguyễn Văn Minh</h4>
@@ -358,267 +512,155 @@
               </div>
             </div>
             <p class="testimonial-text">
-              "Tôi đã tập luyện tại RiseFitness&Yoga được 6 tháng và đã đạt được kết quả
-              ngoài mong đợi. Các huấn luyện viên rất chuyên nghiệp và luôn sẵn sàng
-              hỗ trợ. Thiết bị hiện đại và không gian tập luyện rộng rãi, thoáng
-              mát."
+              "Tôi đã tập luyện tại RiseFitness&Yoga được 6 tháng và đã đạt được kết quả ngoài mong đợi. Các huấn luyện viên rất chuyên nghiệp và luôn sẵn sàng hỗ trợ. Thiết bị hiện đại và không gian tập luyện rộng rãi, thoáng mát."
             </p>
           </div>
-          <div class="testimonial-card">
+          <div class="carousel-item testimonial-card">
             <div class="testimonial-header">
               <img
-                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20woman%20in%20her%2020s%2C%20neutral%20background%2C%20casual%20smart%20attire%2C%20friendly%20smile%2C%20high%20quality%20portrait&width=100&height=100&seq=person2&orientation=squarish"
-                alt="Trần Thị Hương"
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20woman%20in%20her%2020s%2C%20neutral%20background%2C%20casual%20attire%2C%20friendly%20smile%2C%20high%20quality%20portrait&width=100&height=100&seq=person2&orientation=squarish"
+                alt="Trần Thị Hồng"
+                loading="lazy"
               />
               <div>
-                <h4 class="testimonial-name">Trần Thị Hương</h4>
+                <h4 class="testimonial-name">Trần Thị Hồng</h4>
                 <div class="stars">★★★★☆</div>
               </div>
             </div>
             <p class="testimonial-text">
-              "Gói Premium thực sự đáng giá! Huấn luyện viên cá nhân của tôi đã giúp
-              tôi đạt được mục tiêu giảm cân trong vòng 3 tháng. Chương trình tập
-              luyện được thiết kế riêng cho tôi và luôn được điều chỉnh phù hợp với
-              tiến độ."
+              "Gói Premium thật sự đáng giá! Huấn luyện viên cá nhân rất tận tâm, giúp tôi cải thiện sức mạnh và vóc dáng đáng kể. Tôi rất hài lòng với dịch vụ tại đây."
             </p>
           </div>
-          <div class="testimonial-card">
+          <div class="carousel-item testimonial-card">
             <div class="testimonial-header">
               <img
                 src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20man%20in%20his%2040s%2C%20neutral%20background%2C%20business%20casual%20attire%2C%20confident%20expression%2C%20high%20quality%20portrait&width=100&height=100&seq=person3&orientation=squarish"
-                alt="Lê Thanh Tùng"
+                alt="Lê Quang Vinh"
+                loading="lazy"
               />
               <div>
-                <h4 class="testimonial-name">Lê Thanh Tùng</h4>
+                <h4 class="testimonial-name">Lê Quang Vinh</h4>
                 <div class="stars">★★★★★</div>
               </div>
             </div>
             <p class="testimonial-text">
-              "Tôi đã thử nhiều phòng gym khác nhau, nhưng RiseFitness&Yoga là nơi tốt nhất.
-              Không chỉ có thiết bị hiện đại mà còn có đội ngũ nhân viên thân thiện
-              và chuyên nghiệp. Dịch vụ tư vấn dinh dưỡng đã giúp tôi rất nhiều
-              trong việc cải thiện chế độ ăn uống."
+              "Các lớp tập nhóm rất thú vị và năng động. Tôi đã kết bạn được với nhiều người bạn mới và cảm thấy tràn đầy năng lượng sau mỗi buổi tập."
+            </p>
+          </div>
+          <div class="carousel-item testimonial-card">
+            <div class="testimonial-header">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20woman%20in%20her%2030s%2C%20neutral%20background%2C%20casual%20attire%2C%20friendly%20expression%2C%20high%20quality%20portrait&width=100&height=100&seq=person4&orientation=squarish"
+                alt="Phạm Thị Lan"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="testimonial-name">Phạm Thị Lan</h4>
+                <div class="stars">★★★★☆</div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Dịch vụ tư vấn dinh dưỡng đã giúp tôi xây dựng chế độ ăn uống khoa học, kết hợp với tập luyện để đạt được mục tiêu giảm cân của mình."
             </p>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="section related-services">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Dịch Vụ Liên Quan</h2>
-          <p class="section-description">
-            Khám phá thêm các dịch vụ khác tại RiseFitness&Yoga để có trải nghiệm tập
-            luyện toàn diện.
-          </p>
-        </div>
-        <div class="services-grid">
-          <a href="#" class="group">
-            <div class="service-card">
-              <div class="service-image">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Swimming%20pool%20in%20a%20modern%20fitness%20center%2C%20clear%20blue%20water%2C%20lane%20dividers%2C%20clean%20facility%2C%20bright%20lighting%2C%20professional%20swimming%20environment&width=400&height=300&seq=swim&orientation=landscape"
-                  alt="Dịch Vụ Bơi Lội"
-                />
-              </div>
-              <div class="service-content">
-                <h3 class="service-title">Dịch Vụ Bơi Lội</h3>
-                <p class="service-description">
-                  Bể bơi hiện đại với nhiều khóa học dành cho mọi lứa tuổi và trình
-                  độ.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="group">
-            <div class="service-card">
-              <div class="service-image">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Yoga%20class%20in%20a%20peaceful%20studio%2C%20people%20practicing%20yoga%20poses%20on%20mats%2C%20calm%20atmosphere%2C%20natural%20light%2C%20serene%20environment%2C%20mindful%20practice&width=400&height=300&seq=yoga&orientation=landscape"
-                  alt="Dịch Vụ Yoga"
-                />
-              </div>
-              <div class="service-content">
-                <h3 class="service-title">Dịch Vụ Yoga</h3>
-                <p class="service-description">
-                  Các lớp yoga đa dạng giúp cải thiện sức khỏe thể chất và tinh
-                  thần.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="group">
-            <div class="service-card">
-              <div class="service-image">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Kickboxing%20training%20session%2C%20people%20practicing%20kickboxing%20techniques%2C%20punching%20bags%2C%20energetic%20atmosphere%2C%20martial%20arts%20training%2C%20dynamic%20workout&width=400&height=300&seq=kickboxing&orientation=landscape"
-                  alt="Dịch Vụ Kick Boxing"
-                />
-              </div>
-              <div class="service-content">
-                <h3 class="service-title">Dịch Vụ Kick Boxing</h3>
-                <p class="service-description">
-                  Lớp học Kick Boxing sôi động giúp giải phóng năng lượng và rèn
-                  luyện sức mạnh.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://readdy.ai/home/26c682f0-4220-479a-8685-44a7b01c88fa/ec33a8b4-d0c1-4a0d-8313-455e367d974b"
-            data-readdy="true"
-            class="group"
-          >
-            <div class="service-card">
-              <div class="service-image">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Dance%20fitness%20class%2C%20group%20of%20people%20dancing%2C%20energetic%20dance%20workout%2C%20fun%20exercise%20session%2C%20rhythmic%20movement%2C%20joyful%20atmosphere&width=400&height=300&seq=dance&orientation=landscape"
-                  alt="Dịch Vụ Dance"
-                />
-              </div>
-              <div class="service-content">
-                <h3 class="service-title">Dịch Vụ Dance</h3>
-                <p class="service-description">
-                  Các lớp nhảy hiện đại giúp đốt cháy calo và nâng cao tinh thần
-                  một cách vui vẻ.
-                </p>
-              </div>
-            </div>
-          </a>
+        <div class="carousel-nav">
+          <button class="carousel-btn prev" aria-label="Đánh giá trước đó"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="carousel-btn next" aria-label="Đánh giá tiếp theo"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
       </div>
     </section>
-    <section class="section faq">
+    <section class="section faq" id="cau-hoi-thuong-gap">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
           <p class="section-description">
-            Những thắc mắc phổ biến về dịch vụ Gym tại RiseFitness&Yoga.
+            Tìm hiểu thêm về các dịch vụ và chương trình tập luyện tại RiseFitness&Yoga qua các câu hỏi phổ biến dưới đây.
           </p>
         </div>
         <div class="faq-list">
           <div class="faq-item">
             <div class="faq-question">
-              <h3>
-                Tôi chưa từng tập Gym trước đây, RiseFitness&Yoga có phù hợp với người mới
-                bắt đầu không?
-              </h3>
-              <i class="ri-arrow-down-s-line faq-icon"></i>
+              <h3>Tôi có thể tập thử trước khi đăng ký không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
             <div class="faq-answer">
               <p>
-                Hoàn toàn phù hợp! RiseFitness&Yoga có các gói dịch vụ dành riêng cho
-                người mới bắt đầu với buổi định hướng và hướng dẫn cơ bản về cách
-                sử dụng thiết bị. Đội ngũ huấn luyện viên của chúng tôi sẽ giúp bạn
-                xây dựng chương trình tập luyện phù hợp với trình độ và mục tiêu
-                của bạn.
+                Có, chúng tôi cung cấp buổi tập thử với giá 100.000đ/buổi. Số tiền này sẽ được trừ vào gói tập nếu bạn đăng ký gói tháng hoặc dài hạn.
               </p>
             </div>
           </div>
           <div class="faq-item">
             <div class="faq-question">
-              <h3>Tôi nên chọn gói dịch vụ nào phù hợp với mục tiêu giảm cân?</h3>
-              <i class="ri-arrow-down-s-line faq-icon"></i>
+              <h3>Tôi cần chuẩn bị gì khi đến phòng gym?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
             <div class="faq-answer">
               <p>
-                Để đạt được mục tiêu giảm cân hiệu quả, chúng tôi khuyên bạn nên
-                chọn Gói Premium hoặc Gói Tiêu Chuẩn kết hợp với dịch vụ Tư Vấn
-                Dinh Dưỡng. Các buổi tập với huấn luyện viên cá nhân sẽ giúp bạn tập
-                luyện đúng cách và hiệu quả, trong khi tư vấn dinh dưỡng sẽ giúp bạn
-                xây dựng chế độ ăn uống phù hợp để hỗ trợ quá trình giảm cân.
+                Bạn nên mặc quần áo thể thao thoải mái, giày thể thao phù hợp, mang theo khăn và chai nước. Chúng tôi cung cấp tủ khóa để bạn cất giữ đồ dùng cá nhân.
               </p>
             </div>
           </div>
           <div class="faq-item">
             <div class="faq-question">
-              <h3>RiseFitness&Yoga mở cửa vào những khung giờ nào?</h3>
-              <i class="ri-arrow-down-s-line faq-icon"></i>
+              <h3>Các lớp tập nhóm có phù hợp cho người mới bắt đầu không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
             <div class="faq-answer">
               <p>
-                RiseFitness&Yoga mở cửa từ 5:30 sáng đến 22:00 tối từ thứ Hai đến thứ
-                Sáu, và từ 7:00 sáng đến 20:00 tối vào thứ Bảy và Chủ nhật. Chúng
-                tôi cung cấp dịch vụ 24/7 cho các hội viên VIP.
+                Chắc chắn rồi! Các lớp tập nhóm của chúng tôi được thiết kế phù hợp cho mọi cấp độ, với sự hướng dẫn tận tình từ các huấn luyện viên chuyên nghiệp.
               </p>
             </div>
           </div>
           <div class="faq-item">
             <div class="faq-question">
-              <h3>
-                Tôi có thể hủy hoặc tạm dừng gói tập trong trường hợp không thể tập
-                luyện không?
-              </h3>
-              <i class="ri-arrow-down-s-line faq-icon"></i>
+              <h3>Gói VIP có gì khác biệt so với các gói khác?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
             </div>
             <div class="faq-answer">
               <p>
-                Có, bạn có thể tạm dừng gói tập tối đa 30 ngày trong một năm với lý
-                do chính đáng như đi công tác, bệnh tật hoặc thai sản. Để hủy gói
-                tập, bạn cần thông báo trước ít nhất 30 ngày và có thể phải chịu phí
-                hủy hợp đồng tùy theo điều khoản của gói tập bạn đã đăng ký.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>RiseFitness&Yoga có cung cấp dịch vụ giữ đồ và phòng tắm không?</h3>
-              <i class="ri-arrow-down-s-line faq-icon"></i>
-            </div>
-            <div class="faq-answer">
-              <p>
-                Có, RiseFitness&Yoga cung cấp tủ đựng đồ cá nhân, phòng tắm và phòng
-                thay đồ riêng biệt cho nam và nữ. Chúng tôi cũng cung cấp dịch vụ
-                khăn tắm miễn phí cho tất cả hội viên và có dịch vụ giặt đồ tập với
-                phí phụ thu.
+                Gói VIP bao gồm tất cả dịch vụ của gói Premium, cộng thêm các buổi tập cá nhân không giới hạn, dịch vụ spa, massage, và quyền ưu tiên tham gia các sự kiện đặc biệt.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="dang-ky" class="section register">
+    <section class="section cta-banner" id="khuyen-mai">
       <div class="container">
+        <h2 class="cta-title">Ưu Đãi Đặc Biệt Hôm Nay!</h2>
+        <p class="cta-description">Đăng ký gói Premium hoặc VIP ngay hôm nay để nhận giảm giá 20% cho tháng đầu tiên!</p>
+        <a href="#dang-ky" class="btn-primary">Đăng ký ngay</a>
+      </div>
+    </section>
+    <section class="section register" id="dang-ky">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Đăng Ký Tư Vấn</h2>
+          <p class="section-description">
+            Điền thông tin dưới đây để được tư vấn miễn phí về lộ trình tập luyện phù hợp với bạn.
+          </p>
+        </div>
         <div class="register-box">
           <div class="register-form">
-            <h2 class="section-title">Đăng Ký Tư Vấn</h2>
-            <p class="section-description">
-              Để lại thông tin của bạn, chúng tôi sẽ liên hệ lại trong thời gian
-              sớm nhất.
-            </p>
-            <form class="form">
+            <form class="form" novalidate>
               <div class="form-group">
-                <label for="name" class="form-label">Họ và tên</label>
-                <input
-                  type="text"
-                  id="name"
-                  class="form-input"
-                  placeholder="Nhập họ và tên của bạn"
-                />
+                <label for="name" class="form-label">Họ và Tên *</label>
+                <input type="text" id="name" class="form-input" required placeholder="Nhập họ và tên" />
               </div>
               <div class="form-group">
-                <label for="phone" class="form-label">Số điện thoại</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  class="form-input"
-                  placeholder="Nhập số điện thoại của bạn"
-                />
+                <label for="phone" class="form-label">Số Điện Thoại *</label>
+                <input type="tel" id="phone" class="form-input" required placeholder="Nhập số điện thoại" />
               </div>
               <div class="form-group">
                 <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  class="form-input"
-                  placeholder="Nhập địa chỉ email của bạn"
-                />
+                <input type="email" id="email" class="form-input" placeholder="Nhập email (tùy chọn)" />
               </div>
               <div class="form-group">
-                <label for="service" class="form-label">Dịch vụ quan tâm</label>
+                <label for="package" class="form-label">Gói Dịch Vụ Quan Tâm *</label>
                 <div class="select-wrapper">
-                  <select id="service" class="form-input">
-                    <option value="">Chọn dịch vụ</option>
+                  <select id="package" class="form-input" required>
+                    <option value="">Chọn gói dịch vụ</option>
                     <option value="basic">Gói Cơ Bản</option>
                     <option value="standard">Gói Tiêu Chuẩn</option>
                     <option value="premium">Gói Premium</option>
@@ -628,94 +670,406 @@
                     <option value="nutrition">Tư Vấn Dinh Dưỡng</option>
                     <option value="online">Huấn Luyện Online</option>
                   </select>
-                  <i class="ri-arrow-down-s-line select-icon"></i>
+                  <i class="fa-solid fa-chevron-down select-icon"></i>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="message" class="form-label">Ghi chú</label>
-                <textarea
-                  id="message"
-                  rows="4"
-                  class="form-input"
-                  placeholder="Nhập thông tin thêm về nhu cầu của bạn"
-                ></textarea>
-              </div>
-              <button type="submit" class="btn-primary">Gửi thông tin</button>
+              <button type="submit" class="btn-primary">Gửi Đăng Ký</button>
             </form>
           </div>
           <div class="register-image"></div>
         </div>
       </div>
     </section>
-    <div class="contact-button">
-      <button id="contactBtn" class="contact-btn">
-        <i class="ri-customer-service-2-line"></i>
+    <div id="footer"></div>
+    <div class="contact-button" id="contactBtn" role="button" aria-label="Mở cửa sổ liên hệ">
+      <button class="contact-btn">
+        <i class="fa-solid fa-headset"></i>
       </button>
     </div>
     <div id="contactModal" class="modal">
       <div class="modal-overlay"></div>
       <div class="modal-content">
         <div class="modal-header">
-          <h3>Liên hệ với chúng tôi</h3>
-          <button id="closeModal" class="modal-close">
-            <i class="ri-close-line"></i>
+          <h3>Liên Hệ Với Chúng Tôi</h3>
+          <button class="modal-close" id="closeModal" aria-label="Đóng cửa sổ liên hệ">
+            <i class="fa-solid fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
-          <a href="https://www.facebook.com/" class="contact-item">
-            <div class="contact-icon facebook">
-              <i class="ri-facebook-fill"></i>
-            </div>
+          <a href="https://facebook.com/risefitnessyoga" class="contact-item">
+            <span class="contact-icon facebook"><i class="fa-brands fa-facebook-f"></i></span>
             <div>
               <h4>Facebook</h4>
               <p>RiseFitness&Yoga</p>
             </div>
-            <span class="ripple"></span>
           </a>
-          <a href="https://www.instagram.com/" class="contact-item">
-            <div class="contact-icon instagram">
-              <i class="ri-instagram-fill"></i>
-            </div>
+          <a href="https://instagram.com/risefitnessyoga" class="contact-item">
+            <span class="contact-icon instagram"><i class="fa-brands fa-instagram"></i></span>
             <div>
               <h4>Instagram</h4>
-              <p>@RiseFitness&Yoga.center</p>
+              <p>@risefitnessyoga</p>
             </div>
-            <span class="ripple"></span>
           </a>
-          <a href="https://zalo.me/" class="contact-item">
-            <div class="contact-icon zalo">
-              <i class="ri-chat-1-fill"></i>
-            </div>
+          <a href="tel:+84123456789" class="contact-item">
+            <span class="contact-icon phone"><i class="fa-solid fa-phone"></i></span>
             <div>
-              <h4>Zalo</h4>
-              <p>0901234567</p>
+              <h4>Hotline</h4>
+              <p>+84 123 456 789</p>
             </div>
-            <span class="ripple"></span>
           </a>
-          <a href="tel:+84901234567" class="contact-item">
-            <div class="contact-icon phone">
-              <i class="ri-phone-fill"></i>
-            </div>
-            <div>
-              <h4>Điện thoại</h4>
-              <p>090 123 4567</p>
-            </div>
-            <span class="ripple"></span>
-          </a>
-          <a href="mailto:info@RiseFitness&Yogacenter.com" class="contact-item">
-            <div class="contact-icon email">
-              <i class="ri-mail-fill"></i>
-            </div>
+          <a href="mailto:info@risefitnessyoga.com" class="contact-item">
+            <span class="contact-icon email"><i class="fa-solid fa-envelope"></i></span>
             <div>
               <h4>Email</h4>
-              <p>info@RiseFitness&Yogacenter.com</p>
+              <p>info@risefitnessyoga.com</p>
             </div>
-            <span class="ripple"></span>
           </a>
         </div>
       </div>
     </div>
-    <div id="footer"></div>
-    <script src="js/gym.js"></script>
+    <div id="modal-basic" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Gói Cơ Bản</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói cơ bản">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://readdy.ai/api/search-image?query=Beginner%20gym%20equipment%2C%20treadmills%2C%20weight%20machines%2C%20simple%20setup%2C%20modern%20gym%2C%20welcoming%20environment&width=400&height=200&seq=modal1&orientation=landscape"
+              alt="Thiết bị tập luyện cơ bản"
+              loading="lazy"
+            />
+            <img
+              src="https://readdy.ai/api/search-image?query=Beginner%20gym%20orientation%2C%20trainer%20guiding%20new%20member%2C%20friendly%20instruction%2C%20modern%20gym%20setting&width=400&height=200&seq=modal2&orientation=landscape"
+              alt="Buổi định hướng tập luyện"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 500.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Gói Cơ Bản là lựa chọn hoàn hảo cho người mới bắt đầu, cung cấp quyền truy cập đầy đủ vào tất cả các thiết bị tập luyện hiện đại và một buổi định hướng với huấn luyện viên để làm quen với phòng gym.</p>
+            <p><strong>Thời gian:</strong> Không giới hạn giờ tập trong giờ mở cửa (6:00 - 22:00).</p>
+            <p><strong>Hỗ trợ:</strong> Tư vấn chương trình tập luyện cơ bản phù hợp với mục tiêu cá nhân.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Gói Cơ Bản rất phù hợp cho người mới như tôi. Thiết bị dễ sử dụng và nhân viên rất thân thiện!" - Trần Thị Mai</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Buổi định hướng giúp tôi tự tin hơn khi sử dụng máy móc. Rất đáng đồng tiền!" - Nguyễn Văn Hùng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-standard" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Gói Tiêu Chuẩn</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói tiêu chuẩn">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://readdy.ai/api/search-image?query=Personal%20training%20session%2C%20trainer%20guiding%20client%2C%20weight%20lifting%2C%20modern%20gym%2C%20focused%20coaching&width=400&height=200&seq=modal3&orientation=landscape"
+              alt="Buổi tập cá nhân"
+              loading="lazy"
+            />
+            <img
+              src="https://readdy.ai/api/search-image?query=Fitness%20assessment%2C%20body%20composition%20analysis%2C%20professional%20evaluation%2C%20modern%20gym%20equipment&width=400&height=200&seq=modal4&orientation=landscape"
+              alt="Đánh giá thể chất"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 1.200.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Gói Tiêu Chuẩn bao gồm tất cả các lợi ích của gói Cơ Bản, cộng thêm 4 buổi tập cá nhân mỗi tháng và đánh giá thể chất định kỳ để theo dõi tiến độ.</p>
+            <p><strong>Thời gian:</strong> Không giới hạn giờ tập, cộng thêm các buổi PT theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> Huấn luyện viên cá nhân thiết kế chương trình tập luyện chuyên sâu.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Các buổi PT giúp tôi cải thiện kỹ thuật và đạt mục tiêu nhanh chóng!" - Lê Thị Hồng</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Đánh giá thể chất định kỳ rất hữu ích để điều chỉnh kế hoạch tập luyện." - Phạm Văn Long</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-premium" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Gói Premium</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói premium">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://readdy.ai/api/search-image?query=Premium%20personal%20training%2C%20exclusive%20gym%20area%2C%20luxury%20fitness%20equipment%2C%20one-on-one%20coaching&width=400&height=200&seq=modal5&orientation=landscape"
+              alt="Tập luyện cao cấp"
+              loading="lazy"
+            />
+            <img
+              src="https://readdy.ai/api/search-image?query=Nutrition%20consultation%2C%20healthy%20meal%20planning%2C%20professional%20diet%20guidance%2C%20modern%20office%20setting&width=400&height=200&seq=modal6&orientation=landscape"
+              alt="Tư vấn dinh dưỡng"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 3.000.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Gói Premium cung cấp 12 buổi tập cá nhân mỗi tháng, tư vấn dinh dưỡng chuyên sâu, và tất cả lợi ích của gói Tiêu Chuẩn.</p>
+            <p><strong>Thời gian:</strong> Không giới hạn giờ tập, lịch PT linh hoạt.</p>
+            <p><strong>Hỗ trợ:</strong> Kế hoạch tập luyện và dinh dưỡng được cá nhân hóa hoàn toàn.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Gói Premium đáng giá từng đồng. HLV và kế hoạch dinh dưỡng giúp tôi thay đổi hoàn toàn!" - Nguyễn Thị Ngọc</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Tư vấn dinh dưỡng rất chi tiết và dễ áp dụng. Kết quả vượt mong đợi!" - Trần Văn Nam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-vip" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Gói VIP</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói VIP">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://readdy.ai/api/search-image?query=VIP%20gym%20training%2C%20luxury%20fitness%20area%2C%20exclusive%20equipment%2C%20private%20coaching%20session&width=400&height=200&seq=modal7&orientation=landscape"
+              alt="Khu vực tập luyện VIP"
+              loading="lazy"
+            />
+            <img
+              src="https://readdy.ai/api/search-image?query=Spa%20and%20massage%20room%2C%20luxury%20relaxation%20area%2C%20modern%20spa%2C%20calm%20environment&width=400&height=200&seq=modal8&orientation=landscape"
+              alt="Dịch vụ spa"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 5.000.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Gói VIP mang đến trải nghiệm tập luyện đỉnh cao với PT không giới hạn, dịch vụ spa, massage, và tất cả lợi ích của gói Premium.</p>
+            <p><strong>Thời gian:</strong> Không giới hạn giờ tập và PT, ưu tiên lịch đặt trước.</p>
+            <p><strong>Hỗ trợ:</strong> Hỗ trợ toàn diện từ tập luyện, dinh dưỡng đến thư giãn.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Gói VIP thực sự xa xỉ! Dịch vụ spa giúp tôi thư giãn sau mỗi buổi tập." - Lê Thị Hương</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"PT không giới hạn giúp tôi tiến bộ vượt bậc. Rất đáng đầu tư!" - Phạm Văn Dũng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-group" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Gói Tập Nhóm</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói tập nhóm">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://readdy.ai/api/search-image?query=Group%20fitness%20class%2C%20energetic%20group%20workout%2C%20team%20exercise%2C%20modern%20gym%20environment&width=400&height=200&seq=modal9&orientation=landscape"
+              alt="Lớp tập nhóm"
+              loading="lazy"
+            />
+            <img
+              src="https://readdy.ai/api/search-image?query=Group%20fitness%20instructor%2C%20leading%20energetic%20class%2C%20team%20workout%2C%20motivational%20session&width=400&height=200&seq=modal10&orientation=landscape"
+              alt="HLV tập nhóm"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 800.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Tham gia các lớp tập nhóm sôi động với lịch tập linh hoạt và hướng dẫn từ HLV chuyên nghiệp.</p>
+            <p><strong>Thời gian:</strong> Tham gia không giới hạn các lớp nhóm theo lịch.</p>
+            <p><strong>Hỗ trợ:</strong> Tạo động lực và kết nối xã hội qua các buổi tập nhóm.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Lớp tập nhóm rất vui và năng động. Tôi đã tìm thấy nhiều bạn tập tuyệt vời!" - Nguyễn Thị An</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"HLV rất nhiệt tình, khiến mỗi buổi tập đều thú vị và tràn đầy năng lượng." - Trần Văn Hào</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-assessment" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Đánh Giá Thể Chất</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói đánh giá thể chất">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://readdy.ai/api/search-image?query=Body%20composition%20analysis%2C%20fitness%20assessment%2C%20modern%20equipment%2C%20professional%20evaluation&width=400&height=200&seq=modal11&orientation=landscape"
+              alt="Đo lường cơ thể"
+              loading="lazy"
+            />
+            <img
+              src="https://readdy.ai/api/search-image?query=Fitness%20consultation%2C%20trainer%20discussing%20health%20metrics%2C%20professional%20assessment%2C%20modern%20gym&width=400&height=200&seq=modal12&orientation=landscape"
+              alt="Tư vấn lộ trình"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 300.000đ/lần</p>
+            <p><strong>Mô tả:</strong> Đánh giá toàn diện về thể chất, bao gồm đo lường cơ thể, sức khỏe tim mạch, và tư vấn lộ trình tập luyện.</p>
+            <p><strong>Thời gian:</strong> Buổi đánh giá kéo dài 60 phút.</p>
+            <p><strong>Hỗ trợ:</strong> Báo cáo chi tiết và lộ trình tập luyện cá nhân hóa.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Đánh giá thể chất giúp tôi hiểu rõ tình trạng cơ thể và có lộ trình phù hợp." - Lê Văn Tâm</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Rất chuyên nghiệp, báo cáo chi tiết và dễ hiểu!" - Phạm Thị Linh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-nutrition" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Tư Vấn Dinh Dưỡng</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói tư vấn dinh dưỡng">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://readdy.ai/api/search-image?query=Nutrition%20consultation%2C%20healthy%20meal%20planning%2C%20professional%20diet%20guidance%2C%20modern%20office%20setting&width=400&height=200&seq=modal13&orientation=landscape"
+              alt="Tư vấn dinh dưỡng"
+              loading="lazy"
+            />
+            <img
+              src="https://readdy.ai/api/search-image?query=Healthy%20food%20plan%2C%20balanced%20diet%2C%20nutritionist%20consulting%2C%20modern%20office%20environment&width=400&height=200&seq=modal14&orientation=landscape"
+              alt="Kế hoạch dinh dưỡng"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 1.000.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Tư vấn dinh dưỡng cá nhân hóa, đánh giá chế độ ăn hiện tại, lập kế hoạch dinh dưỡng và theo dõi điều chỉnh.</p>
+            <p><strong>Thời gian:</strong> 4 buổi tư vấn mỗi tháng, mỗi buổi 45 phút.</p>
+            <p><strong>Hỗ trợ:</strong> Hỗ trợ liên tục qua email hoặc hotline.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Kế hoạch dinh dưỡng giúp tôi ăn uống khoa học hơn và đạt mục tiêu nhanh chóng." - Nguyễn Văn Khánh</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Tư vấn rất chi tiết, dễ áp dụng vào cuộc sống hàng ngày." - Trần Thị Ngọc</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-online" class="modal service-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Huấn Luyện Online</h3>
+          <button class="modal-close" aria-label="Đóng cửa sổ chi tiết gói huấn luyện online">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <div class="service-modal-body">
+          <div class="service-modal-images">
+            <img
+              src="https://readdy.ai/api/search-image?query=Online%20fitness%20coaching%2C%20virtual%20training%2C%20video%20workout%2C%20remote%20coaching%2C%20home%20exercise&width=400&height=200&seq=modal15&orientation=landscape"
+              alt="Tập luyện online"
+              loading="lazy"
+            />
+            <img
+              src="https://readdy.ai/api/search-image?query=Virtual%20personal%20training%2C%20online%20coaching%2C%20home%20workout%2C%20video%20instruction%2C%20digital%20fitness&width=400&height=200&seq=modal16&orientation=landscape"
+              alt="Hướng dẫn video"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-modal-details">
+            <h4>Chi Tiết Gói Dịch Vụ</h4>
+            <p><strong>Giá:</strong> 900.000đ/tháng</p>
+            <p><strong>Mô tả:</strong> Tập luyện tại nhà với lịch tập cá nhân hóa, video hướng dẫn chi tiết, và tư vấn trực tuyến 24/7.</p>
+            <p><strong>Thời gian:</strong> Không giới hạn truy cập video, 4 buổi tư vấn trực tuyến mỗi tháng.</p>
+            <p><strong>Hỗ trợ:</strong> Hỗ trợ qua video call, email, và ứng dụng di động.</p>
+          </div>
+          <div class="service-modal-reviews">
+            <h4>Đánh Giá Khách Hàng</h4>
+            <div class="service-modal-review">
+              <div class="stars">★★★★☆</div>
+              <p>"Tập luyện tại nhà tiện lợi, video hướng dẫn rất rõ ràng và dễ theo dõi." - Lê Thị Mai</p>
+            </div>
+            <div class="service-modal-review">
+              <div class="stars">★★★★★</div>
+              <p>"Tư vấn trực tuyến rất hữu ích, giúp tôi duy trì thói quen tập luyện." - Phạm Văn Hùng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
