@@ -255,4 +255,47 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         setInterval(showNextSlide, 2000);
     }
-});
+    //Contact Modal
+    const contactBtn = document.getElementById("contactBtn");
+  const contactModal = document.getElementById("contactModal");
+  const closeModal = document.getElementById("closeModal");
+  const modalContent = document.querySelector(".modal-content");
+
+  function openModal(modal) {
+    modal.classList.add("active");
+    setTimeout(() => {
+      modal.querySelector(".modal-content").style.transform = "scale(1)";
+      modal.querySelector(".modal-content").style.opacity = "1";
+    }, 10);
+  }
+
+  function closeModalFunc(modal) {
+    modal.querySelector(".modal-content").style.transform = "scale(0.95)";
+    modal.querySelector(".modal-content").style.opacity = "0";
+    setTimeout(() => modal.classList.remove("active"), 300);
+  }
+
+  contactBtn.addEventListener("click", () => openModal(contactModal));
+  closeModal.addEventListener("click", () => closeModalFunc(contactModal));
+  contactModal.addEventListener("click", function (e) {
+    if (e.target === contactModal) closeModalFunc(contactModal);
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".modal.active").forEach((modal) => closeModalFunc(modal));
+    }
+  }); const contactItems = document.querySelectorAll(".contact-item");
+  contactItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      const rect = item.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const ripple = document.createElement("span");
+      ripple.classList.add("ripple");
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+      item.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
+    });
+  });
