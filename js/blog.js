@@ -459,3 +459,30 @@ window.addEventListener('popstate', (e) => {
         renderPosts(currentPage, currentCategory, currentSearchQuery);
     }
 });
+ //JavaScript for form submission handling
+document.getElementById('applicationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form values
+    const formData = {
+        fullName: document.getElementById('fullName').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        position: document.getElementById('position').value,
+        cvFile: document.getElementById('cvFile').files[0]
+    };
+    
+    // Here you would typically send the formData to a server
+    console.log('Form submitted:', formData);
+    
+    // Close modal after submission
+    const modal = bootstrap.Modal.getInstance(document.getElementById('applyModal'));
+    modal.hide();
+    
+    // Reset form
+    this.reset();
+    
+    // Show success message
+    alert('Đơn ứng tuyển của bạn đã được gửi thành công!');
+});
+
