@@ -67,6 +67,10 @@ body {
   font-weight: 500;
   white-space: nowrap;
   transition: background-color 0.3s;
+  margin-top: auto;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .btn-primary:hover {
@@ -113,7 +117,7 @@ body {
 }
 
 .hero-bg {
-  background-image: url('https://readdy.ai/api/search-image?query=A%20modern%20gym%20interior%20with%20professional%20equipment%2C%20people%20exercising%2C%20bright%20lighting%2C%20motivational%20atmosphere%2C%20high-quality%20fitness%20machines%20arranged%20neatly%2C%20spacious%20environment%2C%20clean%20and%20professional%20setting%2C%20energetic%20ambiance&width=1600&height=800&seq=gym1&orientation=landscape');
+  background-image: url('https://i.pinimg.com/736x/d6/e3/fb/d6e3fb65e931b3476a01ffe8243c724f.jpg');
   background-size: cover;
   background-position: center top;
   position: absolute;
@@ -259,6 +263,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  text-align: justify;
 }
 
 .benefit-card:hover {
@@ -280,6 +285,7 @@ body {
 .benefit-icon i {
   color: #3498db;
   font-size: 24px;
+  align-items: center;
 }
 
 .benefit-title {
@@ -322,8 +328,10 @@ body {
 }
 
 .service-image {
-  height: 192px;
-  overflow: hidden;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .service-image img {
@@ -331,26 +339,31 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: top;
+  loading: lazy;
 }
 
 .service-content {
-  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .service-title {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .service-description {
   color: #4a5568;
   margin-bottom: 16px;
+  text-align: justify;
+  padding: 5px;
 }
 
 .service-list {
   list-style: none;
-  padding: 0;
   margin: 0 0 16px;
 }
 
@@ -404,6 +417,7 @@ body {
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
 }
 
 .testimonial-header {
@@ -418,6 +432,7 @@ body {
   border-radius: 50%;
   margin-right: 16px;
   object-fit: cover;
+  loading: lazy;
 }
 
 .testimonial-name {
@@ -430,6 +445,7 @@ body {
 
 .testimonial-text {
   color: #4a5568;
+  text-align: justify;
 }
 
 @media (min-width: 768px) {
@@ -455,7 +471,7 @@ body {
 }
 
 .faq.section {
-  background-color: #ffffff;
+  background-color: #f7fafc;
 }
 
 .faq-list {
@@ -551,6 +567,10 @@ body {
 .form-input:focus {
   outline: none;
   border-color: #3498db;
+}
+
+.form-input:invalid[required]:focus {
+  border-color: #e53e3e;
 }
 
 .select-wrapper {
@@ -906,4 +926,292 @@ body {
     transform: scale(2.5);
     opacity: 0;
   }
+}
+
+/* New Styles for Schedule Section */
+.schedule.section {
+  background-color: #ffffff;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  text-align: center;
+}
+
+.schedule-table th {
+  background-color: #3498db;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.schedule-table td {
+  background-color: #f7fafc;
+}
+
+.schedule-table tr:nth-child(even) td {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .schedule-table {
+    font-size: 14px;
+  }
+  .schedule-table th,
+  .schedule-table td {
+    padding: 8px;
+  }
+}
+
+/* New Styles for Trainers Section */
+.trainers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.trainer-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.trainer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.trainer-content {
+  padding: 24px;
+  text-align: justify;
+}
+
+.trainer-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.trainer-description {
+  color: #4a5568;
+  margin-bottom: 16px;
+}
+
+.trainer-specialties {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trainer-specialties li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.trainer-specialties i {
+  color: #3498db;
+  margin-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .trainers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* New Styles for Service Modal */
+.service-modal .modal-content {
+  max-width: 800px;
+}
+
+.service-modal-body {
+  padding: 24px;
+}
+
+.service-modal-images {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.service-modal-images img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  loading: lazy;
+}
+
+.service-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.service-modal-details {
+  margin-bottom: 24px;
+}
+
+.service-modal-details h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-modal-details p {
+  color: #4a5568;
+}
+
+.service-modal-reviews {
+  margin-top: 24px;
+}
+
+.service-modal-reviews h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-modal-review {
+  margin-bottom: 16px;
+}
+
+.service-modal-review p {
+  color: #4a5568;
+}
+
+.service-modal-review .stars {
+  margin-bottom: 8px;
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  flex-wrap: nowrap;
+}
+
+.carousel-item {
+  flex: 0 0 25%; 
+  box-sizing: border-box;
+  padding: 0 12px;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: #2a7cb3;
+}
+
+.carousel-btn i {
+  font-size: 20px;
+}
+
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.carousel-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.carousel-pagination-bullet.active {
+  background-color: #3498db;
+}
+/* Đảm bảo chiều cao đồng đều */
+.carousel-item {
+  min-height: 200px; /* Chiều cao tối thiểu cho mỗi item */
+  
+}
+
+
+@media (min-width: 768px) {
+  .services-grid.carousel .carousel-item {
+    flex: 0 0 25%;
+  }
+  .services-grid.carousel .carousel-inner {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-item {
+    flex: 0 0 50%; /* 2 item/slide trên mobile */
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid.carousel .carousel-item {
+    flex: 0 0 25%;
+  }
+}
+
+/* CTA Banner */
+.cta-banner {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.cta-description {
+  font-size: 16px;
+  margin-bottom: 24px;
 }
