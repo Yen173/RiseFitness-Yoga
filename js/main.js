@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(showNextSlide, 2000);
     }
     //Contact Modal
-    const contactBtn = document.getElementById("contactBtn");
+    /*const contactBtn = document.getElementById("contactBtn");
   const contactModal = document.getElementById("contactModal");
   const closeModal = document.getElementById("closeModal");
   const modalContent = document.querySelector(".modal-content");
@@ -307,4 +307,4 @@ document.addEventListener("DOMContentLoaded", () => {
       item.appendChild(ripple);
       setTimeout(() => ripple.remove(), 600);
     });
-  });
+  });*/
