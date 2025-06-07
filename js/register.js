@@ -31,15 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
   ]).catch((err) => console.error("Lỗi khi tải header hoặc footer:", err));
 });
 
-    // Chèn footer
-    fetch(footerPath)
-        .then(response => {
-            if (!response.ok) throw new Error('Không tải được footer.html');
-            return response.text();
-        })
-        .then(data => document.getElementById('footer').innerHTML = data)
-        .catch(error => console.error('Lỗi khi tải footer:', error));
-});
 
 //xử lý form đăng ký tập thử
 document.addEventListener('DOMContentLoaded', function () {
