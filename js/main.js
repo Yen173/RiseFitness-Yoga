@@ -1,20 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Tự động xác định base path tính từ gốc (Live Server)
-  const basePath = location.pathname.includes("/pages/")
-    ? location.pathname.split("/pages/")[0] + "/"
-    : "/";
+  // Base path cho GitHub Pages
+  const repoName = "RiseFitness-Yoga"; // Thay bằng tên repository của bạn
+  const basePath = `/${repoName}/`;
 
-  fetch(basePath + "include/header.html")
-    .then((res) => res.text())
-    .then((html) => document.body.insertAdjacentHTML("afterbegin", html))
-    .catch((err) => console.error("Lỗi tải header:", err));
+  // Hàm fetch và chèn HTML
+  const fetchAndInsert = async (url, position, target = document.body) => {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
+      let html = await res.text();
+      // Thay đường dẫn tương đối bằng tuyệt đối
+      html = html.replace(/(href|src)="([^"]+)"/g, (match, attr, path) => {
+        if (!path.startsWith("http") && !path.startsWith("/")) {
+          return `${attr}="${basePath}${path}"`;
+        }
+        return match;
+      });
+      target.insertAdjacentHTML(position, html);
+    } catch (err) {
+      console.error(`Lỗi tải ${url}:`, err);
+    }
+  };
 
-  fetch(basePath + "include/footer.html")
-    .then((res) => res.text())
-    .then((html) => document.body.insertAdjacentHTML("beforeend", html))
-    .catch((err) => console.error("Lỗi tải footer:", err));
+  // Tải header và footer đồng thời
+  Promise.all([
+    fetchAndInsert(`${basePath}include/header.html`, "beforeend", document.head),
+    fetchAndInsert(`${basePath}include/footer.html`, "beforeend", document.body),
+  ]).catch((err) => console.error("Lỗi khi tải header hoặc footer:", err));
 });
-
 
     // === Modal Popup ===
     const modal = document.getElementById('consultModal');
