@@ -1,3 +1,30 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Kiểm tra nếu đang ở trong thư mục /pages/
+    const isInPagesFolder = window.location.pathname.includes("/pages/");
+
+    // Đường dẫn tương ứng
+    const headerPath = isInPagesFolder ? "../include/header.html" : "include/header.html";
+    const footerPath = isInPagesFolder ? "../include/footer.html" : "include/footer.html";
+
+    // Chèn header
+    fetch(headerPath)
+        .then(response => {
+            if (!response.ok) throw new Error('Không tải được header.html');
+            return response.text();
+        })
+        .then(data => document.getElementById('header').innerHTML = data)
+        
+        .catch(error => console.error('Lỗi khi tải header:', error));
+
+    // Chèn footer
+    fetch(footerPath)
+        .then(response => {
+            if (!response.ok) throw new Error('Không tải được footer.html');
+            return response.text();
+        })
+        .then(data => document.getElementById('footer').innerHTML = data)
+        .catch(error => console.error('Lỗi khi tải footer:', error));
+});
 // Banner Slideshow
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide');
@@ -92,6 +119,32 @@ function openModal(plan) {
     modalTerms.innerText = plans[plan].terms;
     modal.classList.remove('hidden');
     setTimeout(() => modal.classList.add('show'), 10);
+    // Xử lý form đăng ký
+    const form = document.getElementById('register-form');
+    form.onsubmit = function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+        const terms = document.getElementById('terms').checked;
+
+        // Kiểm tra số điện thoại có đúng 10 chữ số
+        if (!/^\d{10}$/.test(phone)) {
+            alert('Số điện thoại phải có đúng 10 chữ số!');
+            return;
+        }
+
+        // Kiểm tra checkbox điều khoản
+        if (!terms) {
+            alert('Vui lòng đồng ý với điều khoản dịch vụ!');
+            return;
+        }
+
+        alert('Đăng ký thành công! Chúng tôi sẽ sớm liên lạc lại với bạn.');
+        form.reset();
+        closeModal();
+    };
 }
 
 function closeModal() {
