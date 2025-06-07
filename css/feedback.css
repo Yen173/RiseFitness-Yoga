@@ -19,7 +19,7 @@ body {
 
 .hero {
     text-align: center;
-    padding: 70px;
+    padding: 90px;
     background-image: linear-gradient(rgba(0, 30, 77, 0.85), rgba(0, 30, 77, 0.85)), url('https://readdy.ai/api/search-image?query=modern%20gym%20interior%20with%20blue%20lighting%2C%20professional%20fitness%20equipment%2C%20clean%20and%20spacious%20environment%2C%20high-quality%20fitness%20center%20with%20blue%20accent%20lighting%2C%20minimalist%20design&width=1920&height=600&seq=gym-hero&orientation=landscape');
     background-size: cover;
     color: white;
