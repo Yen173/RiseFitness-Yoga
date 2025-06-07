@@ -1,707 +1,968 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/RiseFitness-Yoga-main/">
-    <title>RISE FITNESS & YOGA - KICK BOXING</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link rel="stylesheet" href="css/swimming.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dịch vụ Gym chuyên nghiệp tại RiseFitness&Yoga với thiết bị hiện đại và huấn luyện viên chuyên nghiệp. Đăng ký tư vấn ngay hôm nay!" />
+    <meta name="keywords" content="Gym, RiseFitness&Yoga, tập luyện, huấn luyện viên, fitness, sức khỏe" />
+    <meta name="author" content="RiseFitness&Yoga" />
+    <meta name="robots" content="index, follow" />
+    <base href="/RiseFitness-Yoga-main/" />
+    <title>Dịch Vụ Gym - RiseFitness&Yoga</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/kickboxing.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Thêm Slick Slider CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<!-- Thêm Slick Slider JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/kickboxing.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Gym",
+        "name": "RiseFitness&Yoga",
+        "description": "Dịch vụ Gym chuyên nghiệp với thiết bị hiện đại và huấn luyện viên chuyên nghiệp.",
+        "url": "https://risefitnessyoga.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Đường Fitness, Quận 1",
+          "addressLocality": "TP. Hồ Chí Minh",
+          "addressCountry": "VN"
+        },
+        "telephone": "+84 123 456 789"
+      }
+    </script>
+    <style>
+    /* Override for white-on-black scheme */
+    .benefits.section, .cta-banner {
+      background-color: #000000;
+      color: #ffffff;
+    }
+    .hero-subtitle,.benefit-description, .cta-description {
+      color: #d1d5db; /* Light gray for better readability */
+    }
+    .hero-title, .section-title, .benefit-title, .cta-title {
+      color: #ffffff;
+    }
+    .hero-bg::before {
+      background-color: rgba(255, 255, 255, 0.1); /* Lighter overlay for contrast */
+    }
+    .benefit-card, .faq-item {
+      background-color: #1f2937; /* Darker shade for cards */
+      color: #ffffff;
+    }
+    .benefit-card:hover {
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    }
+    .faq-answer, .benefit-description {
+      color: #d1d5db;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
+  <!-- Header (fetched dynamically) -->
     <div id="header"></div>
-    <!-- Hero Banner -->
-    <section class="hero">
-        <div style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20kickboxing%20gym%20with%20modern%20equipment%2C%20energetic%20atmosphere%2C%20people%20training%20with%20punching%20bags%20and%20in%20the%20ring%2C%20dynamic%20lighting%2C%20high-quality%20sports%20facility%2C%20fitness%20center%20specialized%20in%20martial%20arts&width=1920&height=1080&seq=1&orientation=landscape');" class="hero-bg"></div>
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">KICK BOXING</h1>
-            <h2 class="hero-subtitle">RISE FITNESS & YOGA</h2>
-            <p class="hero-text">Khám phá sức mạnh và sự dẻo dai trong từng động tác</p>
-            <a href="#register" class="hero-cta">Đăng ký ngay</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Dịch Vụ Kickboxing Chuyên Nghiệp</h1>
+        <p class="hero-subtitle">
+          Tăng cường sức mạnh, sự tự tin và kỹ năng tự vệ với các lớp kickboxing năng động tại RiseFitness&Yoga.
+        </p>
+        <div class="hero-buttons">
+          <a href="#register" class="btn-primary">Đăng ký tư vấn</a>
+          <a href="#services" class="btn-secondary">Xem dịch vụ</a>
         </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Lợi Ích Khi Tham Gia</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-fist-line"></i>
-                    </div>
-                    <h3>Tăng cường sức mạnh và sự dẻo dai</h3>
-                    <p>Rèn luyện cơ bắp toàn thân, tăng sức bền và độ dẻo dai cho cơ thể.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-timer-line"></i>
-                    </div>
-                    <h3>Giảm cân hiệu quả và đốt cháy mỡ thừa</h3>
-                    <p>Đốt cháy đến 700 calories mỗi buổi tập, giúp giảm cân nhanh chóng và hiệu quả.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-flashlight-line"></i>
-                    </div>
-                    <h3>Cải thiện phản xạ và sự nhanh nhẹn</h3>
-                    <p>Tăng cường khả năng phản xạ, sự nhanh nhẹn và điều phối cơ thể.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-mental-health-line"></i>
-                    </div>
-                    <h3>Giảm stress và tăng sự tự tin</h3>
-                    <p>Giải phóng endorphin, giảm căng thẳng và tăng cường sự tự tin trong cuộc sống.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-shield-line"></i>
-                    </div>
-                    <h3>Kỹ thuật tự vệ thực tế</h3>
-                    <p>Học các kỹ năng tự vệ thực tế, bảo vệ bản thân trong mọi tình huống.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-heart-pulse-line"></i>
-                    </div>
-                    <h3>Tăng cường sức khỏe tim mạch</h3>
-                    <p>Cải thiện sức khỏe tim mạch, tăng cường hệ tuần hoàn và hô hấp.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-calendar-check-line"></i>
-                    </div>
-                    <h3>Rèn luyện tính kỷ luật</h3>
-                    <p>Phát triển tính kỷ luật, sự kiên trì và ý chí vượt qua giới hạn bản thân.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="ri-building-line"></i>
-                    </div>
-                    <h3>Không gian tập luyện chuyên nghiệp</h3>
-                    <p>Trang thiết bị hiện đại, không gian rộng rãi, thoáng mát và chuyên nghiệp.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Classes -->
-    <section id="classes" class="classes">
-        <div class="container">
-            <h2 class="section-title">Các Lớp Học</h2>
-            <div class="classes-grid">
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Kickboxing%20basics%20class%20with%20diverse%20group%20of%20beginners%20learning%20proper%20stance%20and%20basic%20punches%2C%20instructor%20demonstrating%20techniques%2C%20modern%20gym%20environment%20with%20punching%20bags%20and%20training%20equipment&width=600&height=400&seq=2&orientation=landscape" alt="Kick Boxing Cơ Bản">
-                    </div>
-                    <div class="class-content">
-                        <h3>Kick Boxing Cơ Bản</h3>
-                        <div class="class-info">
-                            <span>45 phút</span>
-                            <span>500 calories</span>
-                        </div>
-                        <div class="class-level">Người mới</div>
-                        <div class="class-actions">
-                            <a href="#" class="btn-secondary">Xem video</a>
-                            <a href="#register" class="btn-primary">Đăng ký</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Advanced%20kickboxing%20class%20with%20athletic%20participants%20performing%20complex%20combinations%2C%20high-intensity%20training%20session%2C%20experienced%20martial%20artists%20practicing%20powerful%20kicks%20and%20strikes%2C%20professional%20gym%20setting&width=600&height=400&seq=3&orientation=landscape" alt="Kick Boxing Nâng Cao">
-                    </div>
-                    <div class="class-content">
-                        <h3>Kick Boxing Nâng Cao</h3>
-                        <div class="class-info">
-                            <span>60 phút</span>
-                            <span>700 calories</span>
-                        </div>
-                        <div class="class-level">Trung cấp - Nâng cao</div>
-                        <div class="class-actions">
-                            <a href="#" class="btn-secondary">Xem video</a>
-                            <a href="#register" class="btn-primary">Đăng ký</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Combo%20boxing%20class%20with%20participants%20practicing%20mixed%20martial%20arts%20techniques%2C%20combining%20kickboxing%20with%20traditional%20boxing%2C%20intense%20workout%20session%20with%20focus%20on%20both%20punches%20and%20kicks%2C%20modern%20training%20facility&width=600&height=400&seq=4&orientation=landscape" alt="Combo Boxing">
-                    </div>
-                    <div class="class-content">
-                        <h3>Combo Boxing</h3>
-                        <div class="class-info">
-                            <span>75 phút</span>
-                            <span>800 calories</span>
-                        </div>
-                        <div class="class-level">Tất cả cấp độ</div>
-                        <div class="class-actions">
-                            <a href="#" class="btn-secondary">Xem video</a>
-                            <a href="#register" class="btn-primary">Đăng ký</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Self-defense%20class%20focused%20on%20practical%20techniques%2C%20instructor%20demonstrating%20defensive%20moves%20against%20common%20attacks%2C%20participants%20practicing%20in%20pairs%2C%20emphasis%20on%20real-world%20application%20in%20a%20clean%20modern%20training%20studio&width=600&height=400&seq=5&orientation=landscape" alt="Kỹ Thuật Tự Vệ">
-                    </div>
-                    <div class="class-content">
-                        <h3>Kỹ Thuật Tự Vệ</h3>
-                        <div class="class-info">
-                            <span>60 phút</span>
-                            <span>600 calories</span>
-                        </div>
-                        <div class="class-level">Tất cả cấp độ</div>
-                        <div class="class-actions">
-                            <a href="#" class="btn-secondary">Xem video</a>
-                            <a href="#register" class="btn-primary">Đăng ký</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Womens%20boxing%20class%20with%20female%20participants%20of%20different%20ages%20practicing%20punches%20and%20combinations%2C%20supportive%20environment%2C%20female%20instructor%20providing%20guidance%2C%20modern%20gym%20setting%20with%20boxing%20equipment&width=600&height=400&seq=6&orientation=landscape" alt="Boxing Nữ">
-                    </div>
-                    <div class="class-content">
-                        <h3>Boxing Nữ</h3>
-                        <div class="class-info">
-                            <span>45 phút</span>
-                            <span>450 calories</span>
-                        </div>
-                        <div class="class-level">Tất cả cấp độ</div>
-                        <div class="class-actions">
-                            <a href="#" class="btn-secondary">Xem video</a>
-                            <a href="#register" class="btn-primary">Đăng ký</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Childrens%20boxing%20class%20with%20kids%20aged%208-12%20learning%20basic%20techniques%20in%20a%20safe%20environment%2C%20child-friendly%20equipment%2C%20attentive%20instructor%20teaching%20proper%20form%2C%20colorful%20and%20engaging%20gym%20space%20designed%20for%20young%20learners&width=600&height=400&seq=7&orientation=landscape" alt="Boxing Trẻ Em">
-                    </div>
-                    <div class="class-content">
-                        <h3>Boxing Trẻ Em</h3>
-                        <div class="class-info">
-                            <span>30 phút</span>
-                            <span>300 calories</span>
-                        </div>
-                        <div class="class-level">8-14 tuổi</div>
-                        <div class="class-actions">
-                            <a href="#" class="btn-secondary">Xem video</a>
-                            <a href="#register" class="btn-primary">Đăng ký</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=One-on-one%20boxing%20training%20session%20with%20professional%20coach%20and%20student%2C%20personalized%20instruction%2C%20focus%20mitts%20training%2C%20detailed%20technique%20correction%2C%20premium%20gym%20environment%20with%20private%20training%20area&width=600&height=400&seq=8&orientation=landscape" alt="Boxing 1-1">
-                    </div>
-                    <div class="class-content">
-                        <h3>Boxing 1-1</h3>
-                        <div class="class-info">
-                            <span>60 phút</span>
-                            <span>Theo yêu cầu</span>
-                        </div>
-                        <div class="class-level">Cá nhân hóa</div>
-                        <div class="class-actions">
-                            <a href="#" class="btn-secondary">Xem video</a>
-                            <a href="#register" class="btn-primary">Đăng ký</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="class-card">
-                    <div class="class-image">
-                        <img src="https://readdy.ai/api/search-image?query=Corporate%20boxing%20class%20with%20business%20professionals%20in%20workout%20attire%2C%20team-building%20exercise%2C%20group%20training%20session%2C%20instructor%20leading%20energetic%20workout%2C%20spacious%20gym%20facility%20designed%20for%20large%20groups&width=600&height=400&seq=9&orientation=landscape" alt="Boxing Doanh Nghiệp">
-                    </div>
-                    <div class="class-content">
-                        <h3>Boxing Doanh Nghiệp</h3>
-                        <div class="class-info">
-                            <span>90 phút</span>
-                            <span>Theo nhóm</span>
-                        </div>
-                        <div class="class-level">Team building</div>
-                        <div class="class-actions">
-                            <a href="#" class="btn-secondary">Xem video</a>
-                            <a href="#register" class="btn-primary">Đăng ký</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Schedule -->
-    <section id="schedule" class="schedule">
-        <div class="container">
-            <h2 class="section-title">Lịch Học</h2>
-            <div class="schedule-container">
-                <div class="day-tabs">
-                    <button class="day-tab active">Thứ Hai</button>
-                    <button class="day-tab">Thứ Ba</button>
-                    <button class="day-tab">Thứ Tư</button>
-                    <button class="day-tab">Thứ Năm</button>
-                    <button class="day-tab">Thứ Sáu</button>
-                    <button class="day-tab">Thứ Bảy</button>
-                    <button class="day-tab">Chủ Nhật</button>
-                </div>
-                <div class="schedule-content">
-                    <div class="schedule-grid">
-                        <div class="schedule-slot">
-                            <div class="slot-header">
-                                <span class="slot-time">06:00 - 07:00</span>
-                                <span class="slot-status available">Còn 5 chỗ</span>
-                            </div>
-                            <h3>Kick Boxing Cơ Bản</h3>
-                            <p>HLV Nguyễn Minh Tuấn</p>
-                            <a href="#register" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                        <div class="schedule-slot">
-                            <div class="slot-header">
-                                <span class="slot-time">07:00 - 08:00</span>
-                                <span class="slot-status available">Còn 3 chỗ</span>
-                            </div>
-                            <h3>Lớp Sáng Sớm</h3>
-                            <p>HLV Trần Thị Hương</p>
-                            <a href="#register" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                        <div class="schedule-slot">
-                            <div class="slot-header">
-                                <span class="slot-time">08:00 - 09:00</span>
-                                <span class="slot-status warning">Còn 1 chỗ</span>
-                            </div>
-                            <h3>Boxing Nữ</h3>
-                            <p>HLV Lê Thị Ngọc Mai</p>
-                            <a href="#register" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                        <div class="schedule-slot">
-                            <div class="slot-header">
-                                <span class="slot-time">09:00 - 10:00</span>
-                                <span class="slot-status available">Còn 8 chỗ</span>
-                            </div>
-                            <h3>Lớp Văn Phòng</h3>
-                            <p>HLV Đỗ Văn Hùng</p>
-                            <a href="#register" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                        <div class="schedule-slot">
-                            <div class="slot-header">
-                                <span class="slot-time">12:00 - 13:00</span>
-                                <span class="slot-status available">Còn 6 chỗ</span>
-                            </div>
-                            <h3>Lớp Giờ Trưa</h3>
-                            <p>HLV Phạm Quang Minh</p>
-                            <a href="#register" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                        <div class="schedule-slot">
-                            <div class="slot-header">
-                                <span class="slot-time">17:30 - 18:30</span>
-                                <span class="slot-status full">Hết chỗ</span>
-                            </div>
-                            <h3>Lớp Sau Giờ Làm</h3>
-                            <p>HLV Nguyễn Minh Tuấn</p>
-                            <a href="#register" class="btn-disabled">Đã đầy</a>
-                        </div>
-                        <div class="schedule-slot">
-                            <div class="slot-header">
-                                <span class="slot-time">19:00 - 20:00</span>
-                                <span class="slot-status warning">Còn 2 chỗ</span>
-                            </div>
-                            <h3>Lớp Tối</h3>
-                            <p>HLV Trần Văn Đức</p>
-                            <a href="#register" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                        <div class="schedule-slot">
-                            <div class="slot-header">
-                                <span class="slot-time">20:15 - 21:15</span>
-                                <span class="slot-status available">Còn 7 chỗ</span>
-                            </div>
-                            <h3>Lớp Đêm</h3>
-                            <p>HLV Lê Thị Ngọc Mai</p>
-                            <a href="#register" class="btn-primary">Đăng ký ngay</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trainers -->
-    <section id="trainers" class="trainers">
-        <div class="container">
-            <h2 class="section-title">Huấn Luyện Viên</h2>
-            <div class="trainers-grid">
-                <div class="trainer-card">
-                    <div class="trainer-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%20male%20kickboxing%20coach%20in%20his%2030s%20with%20athletic%20build%2C%20confident%20stance%2C%20wearing%20training%20gear%2C%20serious%20expression%2C%20modern%20gym%20background%2C%20portrait%20shot&width=600&height=800&seq=10&orientation=portrait" alt="Nguyễn Minh Tuấn">
-                    </div>
-                    <div class="trainer-content">
-                        <h3>Nguyễn Minh Tuấn</h3>
-                        <p>Chứng chỉ Kickboxing Quốc tế</p>
-                        <div class="trainer-info">
-                            <div><i class="ri-medal-line"></i> 10 năm kinh nghiệm</div>
-                            <div><i class="ri-award-line"></i> Vô địch Kickboxing Quốc gia 2019</div>
-                            <div><i class="ri-focus-2-line"></i> Chuyên môn: Kỹ thuật tấn công</div>
-                        </div>
-                        <a href="#" class="btn-secondary">Xem profile</a>
-                    </div>
-                </div>
-                <!-- Repeat for other trainers -->
-                <div class="trainer-card">
-                    <div class="trainer-image">
-                        <img src="https://readdy.ai/api/search-image?query=Professional%20female%20kickboxing%20instructor%20in%20her%20late%2020s%2C%20athletic%20build%2C%20confident%20pose%2C%20wearing%20sports%20attire%2C%20determined%20expression%2C%20modern%20gym%20background%2C%20portrait%20shot&width=600&height=800&seq=11&orientation=portrait" alt="Lê Thị Ngọc Mai">
-                    </div>
-                    <div class="trainer-content">
-                        <h3>Lê Thị Ngọc Mai</h3>
-                        <p>Chứng chỉ Boxing & Fitness</p>
-                        <div class="trainer-info">
-                            <div><i class="ri-medal-line"></i> 8 năm kinh nghiệm</div>
-                            <div><i class="ri-award-line"></i> Vô địch Boxing Nữ 2020</div>
-                            <div><i class="ri-focus-2-line"></i> Chuyên môn: Boxing nữ, Fitness</div>
-                        </div>
-                        <a href="#" class="btn-secondary">Xem profile</a>
-                    </div>
-                </div>
-                <!-- Add remaining trainers similarly -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2 class="section-title">Bảng Giá</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Gói Trải Nghiệm</h3>
-                        <div class="price">200.000 đ</div>
-                        <p>1 buổi tập</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul>
-                            <li><i class="ri-check-line"></i> 1 buổi tập với HLV chuyên nghiệp</li>
-                            <li><i class="ri-check-line"></i> Tư vấn kỹ thuật cơ bản</li>
-                            <li><i class="ri-check-line"></i> Sử dụng đầy đủ trang thiết bị</li>
-                            <li><i class="ri-check-line"></i> Nước uống miễn phí</li>
-                        </ul>
-                        <div class="pricing-actions">
-                            <a href="#" class="btn-secondary">Tư vấn</a>
-                            <a href="#register" class="btn-primary">Đăng ký</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Repeat for other pricing plans -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title">Hình Ảnh & Video</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://readdy.ai/api/search-image?query=Modern%20kickboxing%20gym%20interior%20with%20boxing%20rings%2C%20punching%20bags%20and%20training%20equipment%2C%20spacious%20and%20well-lit%20facility%2C%20professional%20training%20environment&width=600&height=400&seq=18&orientation=landscape" alt="Không gian tập">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Không gian tập luyện</h3>
-                            <p>Cơ sở vật chất hiện đại, rộng rãi và chuyên nghiệp</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Repeat for other gallery items -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Đánh Giá Học Viên</h2>
-            <div class="testimonial-slider-container">
-                <div class="testimonial-slider">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20Vietnamese%20male%20in%20his%2030s%2C%20business%20attire%2C%20confident%20expression%2C%20neutral%20background%2C%20portrait&width=100&height=100&seq=22&orientation=squarish" alt="Nguyễn Văn An">
-                            <div>
-                                <h3>Nguyễn Văn An</h3>
-                                <p>Kỹ sư phần mềm</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                        </div>
-                        <p>"Tôi đã tập luyện tại RISE FITNESS & YOGA được 6 tháng và thấy sức khỏe cải thiện rõ rệt..."</p>
-                        <div class="testimonial-info">
-                            <span>Thời gian: 6 tháng</span>
-                            <span>Giảm: 8kg</span>
-                        </div>
-                        <div class="testimonial-tags">
-                            <span>Kick Boxing Cơ Bản</span>
-                            <span>Combo Boxing</span>
-                        </div>
-                    </div>
-                    <!-- Repeat for other testimonials -->
-                </div>
-                <button class="testimonial-prev"><i class="ri-arrow-left-s-line"></i></button>
-                <button class="testimonial-next"><i class="ri-arrow-right-s-line"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Register Form -->
-    <section id="register" class="register">
-        <div class="container">
-            <h2 class="section-title">Đăng Ký Ngay</h2>
-            <div class="register-container">
-                <div class="register-form">
-                    <h3>Thông Tin Đăng Ký</h3>
-                    <form id="registration-form">
-                        <div class="form-group">
-                            <label for="name">Họ và tên</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Số điện thoại</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="package">Gói tập</label>
-                            <div class="select-wrapper">
-                                <select id="package" name="package" required>
-                                    <option value="">Chọn gói tập</option>
-                                    <option value="trial">Gói Trải Nghiệm (1 buổi)</option>
-                                    <option value="1month">Gói 1 Tháng</option>
-                                    <option value="3months">Gói 3 Tháng</option>
-                                    <option value="6months">Gói 6 Tháng</option>
-                                    <option value="1year">Gói 1 Năm VIP</option>
-                                    <option value="personal">Gói Tập Cá Nhân 1-1</option>
-                                    <option value="group">Gói Tập Nhóm Riêng</option>
-                                    <option value="corporate">Gói Doanh Nghiệp</option>
-                                </select>
-                                <i class="ri-arrow-down-s-line"></i>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="class">Lớp học quan tâm</label>
-                            <div class="select-wrapper">
-                                <select id="class" name="class" required>
-                                    <option value="">Chọn lớp học</option>
-                                    <option value="basic">Kick Boxing Cơ Bản</option>
-                                    <option value="advanced">Kick Boxing Nâng Cao</option>
-                                    <option value="combo">Combo Boxing</option>
-                                    <option value="selfdefense">Kỹ Thuật Tự Vệ</option>
-                                    <option value="women">Boxing Nữ</option>
-                                    <option value="kids">Boxing Trẻ Em</option>
-                                    <option value="personal">Boxing 1-1</option>
-                                    <option value="corporate">Boxing Doanh Nghiệp</option>
-                                </select>
-                                <i class="ri-arrow-down-s-line"></i>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="trainer">Huấn luyện viên mong muốn</label>
-                            <div class="select-wrapper">
-                                <select id="trainer" name="trainer">
-                                    <option value="">Chọn huấn luyện viên</option>
-                                    <option value="tuan">Nguyễn Minh Tuấn</option>
-                                    <option value="mai">Lê Thị Ngọc Mai</option>
-                                    <option value="duc">Trần Văn Đức</option>
-                                    <option value="huong">Trần Thị Hương</option>
-                                    <option value="minh">Phạm Quang Minh</option>
-                                    <option value="hung">Đỗ Văn Hùng</option>
-                                    <option value="ha">Nguyễn Thị Thanh Hà</option>
-                                    <option value="thanh">Lê Văn Thành</option>
-                                </select>
-                                <i class="ri-arrow-down-s-line"></i>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="schedule">Lịch tập dự kiến</label>
-                            <div class="select-wrapper">
-                                <select id="schedule" name="schedule" required>
-                                    <option value="">Chọn lịch tập</option>
-                                    <option value="morning">Buổi sáng (6:00 - 9:00)</option>
-                                    <option value="noon">Buổi trưa (12:00 - 13:00)</option>
-                                    <option value="evening">Buổi tối (17:30 - 20:00)</option>
-                                    <option value="night">Buổi đêm (20:15 - 21:15)</option>
-                                    <option value="weekend">Cuối tuần</option>
-                                    <option value="flexible">Linh hoạt</option>
-                                </select>
-                                <i class="ri-arrow-down-s-line"></i>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="note">Ghi chú thêm</label>
-                            <textarea id="note" name="note" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label class="custom-checkbox">
-                                <input type="checkbox" required>
-                                <span class="checkmark"></span>
-                                <span>Tôi đồng ý với <a href="#" class="text-link">điều khoản và điều kiện</a> của RISE FITNESS & YOGA</span>
-                            </label>
-                        </div>
-                        <button type="submit" class="btn-primary">Đăng ký ngay</button>
-                    </form>
-                </div>
-                <div class="register-contact">
-                    <h3>Liên Hệ Với Chúng Tôi</h3>
-                    <div class="contact-info">
-                        <div>
-                            <div class="contact-icon"><i class="ri-map-pin-line"></i></div>
-                            <div>
-                                <h4>Địa chỉ</h4>
-                                <p>123 Nguyễn Văn Linh, Quận 7, TP. Hồ Chí Minh</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="contact-icon"><i class="ri-phone-line"></i></div>
-                            <div>
-                                <h4>Hotline</h4>
-                                <p>0987 654 321</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="contact-icon"><i class="ri-mail-line"></i></div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>info@risefitness&yogacenter.vn</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="contact-icon"><i class="ri-time-line"></i></div>
-                            <div>
-                                <h4>Giờ mở cửa</h4>
-                                <p>Thứ Hai - Chủ Nhật: 6:00 - 22:00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h4>Theo dõi chúng tôi</h4>
-                        <div class="social-links">
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-fill"></i></a>
-                            <a href="#"><i class="ri-youtube-fill"></i></a>
-                            <a href="#"><i class="ri-tiktok-fill"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Related Services -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Dịch Vụ Liên Quan</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://readdy.ai/api/search-image?query=Modern%20gym%20facility%20with%20high-end%20equipment%2C%20spacious%20layout%2C%20clean%20environment%2C%20professional%20fitness%20center%20with%20weight%20training%20and%20cardio%20areas&width=600&height=400&seq=30&orientation=landscape" alt="Phòng Gym">
-                    </div>
-                    <div class="service-content">
-                        <h3>Phòng Gym</h3>
-                        <ul>
-                            <li><i class="ri-check-line"></i> Thiết bị hiện đại</li>
-                            <li><i class="ri-check-line"></i> HLV chuyên nghiệp</li>
-                            <li><i class="ri-check-line"></i> Chương trình tập cá nhân</li>
-                        </ul>
-                        <a href="https://readdy.ai/home/820dfc6e-a09d-4d14-84dd-07e172b0cc0e/01e20eab-dd47-4f8c-9abe-eaafb5c7116d" class="btn-primary">Tìm hiểu thêm</a>
-                    </div>
-                </div>
-                <!-- Repeat for other services -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3 class="footer-logo">Logo</h3>
-                    <p>RISE FITNESS & YOGA - Trung tâm Kick Boxing chuyên nghiệp hàng đầu tại TP. Hồ Chí Minh...</p>
-                    <div class="social-links">
-                        <a href="#"><i class="ri-facebook-fill"></i></a>
-                        <a href="#"><i class="ri-instagram-fill"></i></a>
-                        <a href="#"><i class="ri-youtube-fill"></i></a>
-                        <a href="#"><i class="ri-tiktok-fill"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4>Liên kết nhanh</h4>
-                    <ul>
-                        <li><a href="#features">Lợi ích</a></li>
-                        <li><a href="#classes">Lớp học</a></li>
-                        <li><a href="#schedule">Lịch học</a></li>
-                        <li><a href="#trainers">Huấn luyện viên</a></li>
-                        <li><a href="#pricing">Bảng giá</a></li>
-                        <li><a href="#gallery">Hình ảnh & Video</a></li>
-                        <li><a href="#testimonials">Đánh giá học viên</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Thông tin liên hệ</h4>
-                    <ul>
-                        <li><i class="ri-map-pin-line"></i> 123 Nguyễn Văn Linh, Quận 7, TP. Hồ Chí Minh</li>
-                        <li><i class="ri-phone-line"></i> 0987 654 321</li>
-                        <li><i class="ri-mail-line"></i> info@risefitness&yogacenter.vn</li>
-                        <li><i class="ri-time-line"></i> Thứ Hai - Chủ Nhật: 6:00 - 22:00</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Đăng ký nhận tin</h4>
-                    <p>Đăng ký để nhận thông tin về các chương trình ưu đãi và sự kiện đặc biệt.</p>
-                    <form>
-                        <div class="newsletter-form">
-                            <input type="email" placeholder="Email của bạn">
-                            <button type="submit">Đăng ký</button>
-                        </div>
-                    </form>
-                    <div class="payment-methods">
-                        <i class="ri-visa-fill"></i>
-                        <i class="ri-mastercard-fill"></i>
-                        <i class="ri-paypal-fill"></i>
-                        <i class="ri-bank-card-fill"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 RISE FITNESS & YOGA. Tất cả quyền được bảo lưu.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll Top Button -->
-    <button id="scroll-top" class="scroll-top"><i class="ri-arrow-up-line"></i></button>
-
-    <!-- Success Modal -->
-    <div id="success-modal" class="modal">
-        <div class="modal-content">
-            <div>
-                <div class="modal-icon"><i class="ri-check-line"></i></div>
-                <h3>Đăng ký thành công!</h3>
-                <p>Cảm ơn bạn đã đăng ký. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
-                <button id="close-modal" class="btn-primary">Đóng</button>
-            </div>
-        </div>
+      </div>
     </div>
-    <div id="footer"></div>
-    <script src="js/kickboxing.js"></script>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Giới Thiệu Về Dịch Vụ Kickboxing</h2>
+        <p class="section-description">
+          RiseFitness&Yoga mang đến các lớp kickboxing chất lượng cao với huấn luyện viên chuyên nghiệp và không gian tập luyện hiện đại. Dù bạn là người mới hay đã có kinh nghiệm, chúng tôi thiết kế các buổi tập phù hợp để cải thiện thể chất, kỹ năng và tinh thần.
+        </p>
+      </div>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="https://i.pinimg.com/736x/41/1b/a0/411ba04984a061b8da90e2b285677898.jpg" alt="Kickboxing class" loading="lazy" />
+        </div>
+        <div>
+          <h3 class="about-title">Tại Sao Chọn Dịch Vụ Kickboxing Của Chúng Tôi?</h3>
+          <ul class="about-list">
+            <li class="about-item">
+              <span class="icon-check"><i class="fas fa-check"></i></span>
+              Huấn luyện viên chuyên môn cao với chứng chỉ quốc tế
+            </li>
+            <li class="about-item">
+              <span class="icon-check"><i class="fas fa-check"></i></span>
+              Không gian tập luyện hiện đại, an toàn
+            </li>
+            <li class="about-item">
+              <span class="icon-check"><i class="fas fa-check"></i></span>
+              Lớp học đa dạng, phù hợp mọi cấp độ
+            </li>
+            <li class="about-item">
+              <span class="icon-check"><i class="fas fa-check"></i></span>
+              Chương trình tập luyện cá nhân hóa
+            </li>
+            <li class="about-item">
+              <span class="icon-check"><i class="fas fa-check"></i></span>
+              Cộng đồng tập luyện năng động, hỗ trợ lẫn nhau
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section benefits" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Lợi Ích Của Việc Tập Kickboxing</h2>
+        <p class="section-description">
+          Kickboxing không chỉ giúp cải thiện sức mạnh và kỹ năng tự vệ mà còn mang lại nhiều lợi ích cho sức khỏe và tinh thần.
+        </p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-heartbeat"></i></div>
+          <h3 class="benefit-title">Cải Thiện Sức Khỏe Tim Mạch</h3>
+          <p class="benefit-description">
+            Các bài tập kickboxing cường độ cao giúp tăng cường tuần hoàn máu và giảm nguy cơ bệnh tim.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-brain"></i></div>
+          <h3 class="benefit-title">Giảm Stress</h3>
+          <p class="benefit-description">
+            Đấm và đá giúp giải phóng căng thẳng, cải thiện tâm trạng thông qua việc sản sinh endorphin.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3 class="benefit-title">Tăng Cường Sức Mạnh</h3>
+          <p class="benefit-description">
+            Kickboxing xây dựng cơ bắp, cải thiện sức bền và tăng cường khả năng phối hợp.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-fire"></i></div>
+          <h3 class="benefit-title">Đốt Cháy Calo</h3>
+          <p class="benefit-description">
+            Một buổi kickboxing có thể đốt cháy đến 600-800 calo, hỗ trợ kiểm soát cân nặng hiệu quả.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="benefit-title">Kỹ Năng Tự Vệ</h3>
+          <p class="benefit-description">
+            Học các kỹ thuật đấm, đá và phòng thủ giúp bạn tự tin hơn trong các tình huống thực tế.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-users"></i></div>
+          <h3 class="benefit-title">Kết Nối Xã Hội</h3>
+          <p class="benefit-description">
+            Tham gia lớp kickboxing giúp bạn gặp gỡ những người có chung đam mê và xây dựng cộng đồng.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section class="section schedule" id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Lịch Tập Luyện Kickboxing</h2>
+        <p class="section-description">
+          Lịch tập kickboxing hàng tuần tại RiseFitness&Yoga, phù hợp với mọi cấp độ.
+        </p>
+      </div>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Thời gian</th>
+            <th>Thứ Hai</th>
+            <th>Thứ Ba</th>
+            <th>Thứ Tư</th>
+            <th>Thứ Năm</th>
+            <th>Thứ Sáu</th>
+            <th>Thứ Bảy</th>
+            <th>Chủ Nhật</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>06:00 - 07:00</td>
+            <td>Kickboxing (Hùng)</td>
+            <td>-</td>
+            <td>Kickboxing (Mai)</td>
+            <td>-</td>
+            <td>Kickboxing (Hùng)</td>
+            <td>Beginner Class (Mai)</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>07:30 - 08:30</td>
+            <td>-</td>
+            <td>Kickboxing (Mai)</td>
+            <td>-</td>
+            <td>Kickboxing (Hùng)</td>
+            <td>-</td>
+            <td>Kickboxing (Hùng)</td>
+            <td>Beginner Class (Mai)</td>
+          </tr>
+          <tr>
+            <td>17:00 - 18:00</td>
+            <td>Advanced Class (Hùng)</td>
+            <td>Kickboxing (Mai)</td>
+            <td>-</td>
+            <td>Kickboxing (Hùng)</td>
+            <td>Beginner Class (Mai)</td>
+            <td>-</td>
+            <td>Advanced Class (Hùng)</td>
+          </tr>
+          <tr>
+            <td>18:30 - 19:30</td>
+            <td>Kickboxing (Mai)</td>
+            <td>-</td>
+            <td>Kickboxing (Hùng)</td>
+            <td>-</td>
+            <td>Advanced Class (Hùng)</td>
+            <td>Kickboxing (Mai)</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>20:00 - 21:00</td>
+            <td>-</td>
+            <td>Kickboxing (Hùng)</td>
+            <td>Beginner Class (Mai)</td>
+            <td>-</td>
+            <td>Kickboxing (Mai)</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Trainers Section -->
+  <section class="section trainers" id="trainers">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Đội Ngũ Huấn Luyện Viên Kickboxing</h2>
+        <p class="section-description">
+          Gặp gỡ đội ngũ huấn luyện viên chuyên nghiệp, luôn sẵn sàng giúp bạn chinh phục mục tiêu.
+        </p>
+      </div>
+      <div class="trainers-grid">
+        <div class="trainer-card">
+          <div class="trainer-image">
+            <img src="https://i.pinimg.com/736x/e2/fd/7d/e2fd7d6591322a23333e34fbecb56349.jpg" alt="Nguyễn Hùng" loading="lazy" />
+          </div>
+          <div class="trainer-content">
+            <h3 class="trainer-title">Nguyễn Hùng</h3>
+            <p class="trainer-description">Huấn luyện viên với 8 năm kinh nghiệm, chuyên về kickboxing và tự vệ.</p>
+            <ul class="trainer-specialties">
+              <li><i class="fas fa-check"></i> Chứng chỉ quốc tế Kickboxing</li>
+              <li><i class="fas fa-check"></i> Chuyên gia tự vệ</li>
+              <li><i class="fas fa-check"></i> Hỗ trợ tăng cường sức mạnh</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trainer-card">
+          <div class="trainer-image">
+            <img src="https://i.pinimg.com/736x/2e/3d/9c/2e3d9c8f6dfe3dfbbfa802043536d805.jpg" alt="Trần Mai" loading="lazy" />
+          </div>
+          <div class="trainer-content">
+            <h3 class="trainer-title">Trần Mai</h3>
+            <p class="trainer-description">Chuyên gia kickboxing với phong cách giảng dạy năng động, phù hợp người mới.</p>
+            <ul class="trainer-specialties">
+              <li><i class="fas fa-check"></i> Chứng chỉ WAKO</li>
+              <li><i class="fas fa-check"></i> Chuyên gia lớp nhóm</li>
+              <li><i class="fas fa-check"></i> Hỗ trợ cải thiện kỹ thuật</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trainer-card">
+          <div class="trainer-image">
+            <img src="https://i.pinimg.com/736x/6a/a4/b7/6aa4b70ea0d9ac52a441afdf0555efe0.jpg" alt="Lê Phong" loading="lazy" />
+          </div>
+          <div class="trainer-content">
+            <h3 class="trainer-title">Lê Phong</h3>
+            <p class="trainer-description">Chuyên gia kickboxing với kinh nghiệm thi đấu, giúp bạn đạt hiệu quả tối đa.</p>
+            <ul class="trainer-specialties">
+              <li><i class="fas fa-check"></i> Cựu vận động viên Kickboxing</li>
+              <li><i class="fas fa-check"></i> Chuyên gia tập cường độ cao</li>
+              <li><i class="fas fa-check"></i> Hỗ trợ nâng cao kỹ năng</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Các Gói Dịch Vụ Kickboxing</h2>
+      <p class="section-description">
+        Chúng tôi cung cấp nhiều gói dịch vụ để đáp ứng nhu cầu và mục tiêu tập luyện của bạn.
+      </p>
+    </div>
+    <div class="services-grid carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <div class="service-card" data-modal="basicModal">
+            <div class="service-image">
+              <img src="https://i.pinimg.com/736x/44/f2/ee/44f2ee2aeaae19c321a3c857540e710c.jpg" alt="Gói Cơ Bản" loading="lazy" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Cơ Bản</h3>
+              <p class="service-description">Dành cho người mới, bao gồm hướng dẫn cơ bản và tham gia lớp nhóm.</p>
+              <ul class="service-list">
+                <li><i class="fas fa-check"></i> Tham gia lớp nhóm</li>
+                <li><i class="fas fa-check"></i> 1 buổi định hướng</li>
+                <li><i class="fas fa-check"></i> Tư vấn kỹ thuật cơ bản</li>
+              </ul>
+              <a href="#register" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="service-card" data-modal="standardModal">
+            <div class="service-image">
+              <img src="https://i.pinimg.com/736x/36/29/9f/36299fc824edc6dc0cb93f182b80cb75.jpg" alt="Gói Tiêu Chuẩn" loading="lazy" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Tiêu Chuẩn</h3>
+              <p class="service-description">Bao gồm lớp nhóm và 4 buổi PT mỗi tháng.</p>
+              <ul class="service-list">
+                <li><i class="fas fa-check"></i> Tất cả dịch vụ gói Cơ Bản</li>
+                <li><i class="fas fa-check"></i> 4 buổi PT mỗi tháng</li>
+                <li><i class="fas fa-check"></i> Đánh giá kỹ thuật định kỳ</li>
+              </ul>
+              <a href="#register" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item popular">
+          <div class="service-card" data-modal="premiumModal">
+            <div class="popular-badge">Phổ biến</div>
+            <div class="service-image">
+              <img src="https://i.pinimg.com/736x/59/73/b3/5973b3d552bd2f14c80a075f3f522aa2.jpg" alt="Gói Premium" loading="lazy" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Premium</h3>
+              <p class="service-description">Dịch vụ cao cấp với 12 buổi PT và tư vấn dinh dưỡng.</p>
+              <ul class="service-list">
+                <li><i class="fas fa-check"></i> Tất cả dịch vụ gói Tiêu Chuẩn</li>
+                <li><i class="fas fa-check"></i> 12 buổi PT mỗi tháng</li>
+                <li><i class="fas fa-check"></i> Tư vấn dinh dưỡng</li>
+              </ul>
+              <a href="#register" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="service-card" data-modal="vipModal">
+            <div class="service-image">
+              <img src="https://i.pinimg.com/736x/16/13/8b/16138b3078bf6ba4b099271143a5e141.jpg" alt="Gói VIP" loading="lazy" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói VIP</h3>
+              <p class="service-description">Trải nghiệm đỉnh cao với PT không giới hạn và dịch vụ spa.</p>
+              <ul class="service-list">
+                <li><i class="fas fa-check"></i> Tất cả dịch vụ gói Premium</li>
+                <li><i class="fas fa-check"></i> PT không giới hạn</li>
+                <li><i class="fas fa-check"></i> Dịch vụ spa và massage</li>
+              </ul>
+              <a href="#register" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Dịch vụ mới: Gói Gia Đình -->
+        <div class="carousel-item">
+          <div class="service-card" data-modal="familyModal">
+            <div class="service-image">
+              <img src="https://i.pinimg.com/736x/0a/3a/17/0a3a1769254f25129fc59a899e99c0b0.jpg" alt="Gói Gia Đình" loading="lazy" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Gia Đình</h3>
+              <p class="service-description">Dành cho gia đình, bao gồm lớp nhóm cho cả người lớn và trẻ em.</p>
+              <ul class="service-list">
+                <li><i class="fas fa-check"></i> Lớp nhóm cho tối đa 4 thành viên</li>
+                <li><i class="fas fa-check"></i> 2 buổi PT gia đình mỗi tháng</li>
+                <li><i class="fas fa-check"></i> Tư vấn tập luyện gia đình</li>
+              </ul>
+              <a href="#register" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Dịch vụ mới: Gói Trẻ Em -->
+        <div class="carousel-item">
+          <div class="service-card" data-modal="kidsModal">
+            <div class="service-image">
+              <img src="https://i.pinimg.com/736x/1d/8b/b7/1d8bb7a4f8a93dfffc87e30571e0c130.jpg" alt="Gói Trẻ Em" loading="lazy" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Gói Trẻ Em</h3>
+              <p class="service-description">Phát triển thể chất và kỹ năng tự vệ cho trẻ từ 6-12 tuổi.</p>
+              <ul class="service-list">
+                <li><i class="fas fa-check"></i> Lớp nhóm dành riêng cho trẻ</li>
+                <li><i class="fas fa-check"></i> 1 buổi định hướng an toàn</li>
+                <li><i class="fas fa-check"></i> Hướng dẫn kỹ năng tự vệ cơ bản</li>
+              </ul>
+              <a href="#register" class="btn-primary">Đăng ký ngay</a>
+            </div>
+          </div>
+          <div class="carousel-nav">
+      <button class="carousel-btn prev" aria-label="Lớp học trước"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="carousel-btn next" aria-label="Lớp học tiếp theo"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Testimonials Section (Carousel) -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Đánh Giá Từ Khách Hàng</h2>
+        <p class="section-description">
+          Hãy xem những gì khách hàng nói về trải nghiệm tập kickboxing tại RiseFitness&Yoga.
+        </p>
+      </div>
+      <div class="testimonials-grid infinite-carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="https://i.pinimg.com/736x/12/57/f6/1257f620e5f31d72a3006ada429b95c4.jpg" alt="Nguyễn Văn An" loading="lazy" />
+                <div>
+                  <h4 class="testimonial-name">Nguyễn Văn An</h4>
+                  <div class="stars">★★★★★</div>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Kickboxing tại RiseFitness&Yoga rất thú vị! Các HLV hướng dẫn tận tình, giúp tôi cải thiện kỹ thuật và tự tin hơn."
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="https://i.pinimg.com/736x/28/41/f5/2841f598b6f7b6beae057cfc244a1f32.jpg" alt="Trần Thị Bích" loading="lazy" />
+                <div>
+                  <h4 class="testimonial-name">Trần Thị Bích</h4>
+                  <div class="stars">★★★★☆</div>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Gói Premium thật sự đáng giá! Tôi đã học được nhiều kỹ thuật mới và cảm thấy khỏe hơn mỗi ngày."
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="https://i.pinimg.com/736x/19/4f/0b/194f0b1da38349d9cc98716466b81bea.jpg" alt="Lê Quang Huy" loading="lazy" />
+                <div>
+                  <h4 class="testimonial-name">Lê Quang Huy</h4>
+                  <div class="stars">★★★★★</div>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Lớp kickboxing nhóm rất năng động, tôi đã tìm thấy nhiều bạn tập tuyệt vời và luôn hào hứng mỗi buổi."
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="https://i.pinimg.com/736x/7c/e2/5d/7ce25d37ced64caa3de33ac144089dc0.jpg" alt="Phạm Thị Lan" loading="lazy" />
+                <div>
+                  <h4 class="testimonial-name">Phạm Thị Lan</h4>
+                  <div class="stars">★★★★☆</div>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Tư vấn dinh dưỡng kết hợp với kickboxing giúp tôi giảm cân hiệu quả và cải thiện sức khỏe rõ rệt."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" id="cau-hoi-thuong-gap">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+          <p class="section-description">
+            Những thắc mắc phổ biến về dịch vụ Kickboxing tại RiseFitness&Yoga.
+          </p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Tôi chưa từng học Kickboxing trước đây, tôi có thể tham gia không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Hoàn toàn có thể! Chúng tôi có các lớp dành cho người mới bắt đầu với các bước hướng dẫn cơ bản. Các giáo viên của chúng tôi rất kiên nhẫn và sẽ giúp bạn từng bước một. Bạn có thể bắt đầu với các lớp có độ khó "Dễ" hoặc đăng ký buổi học thử để tìm hiểu phong cách phù hợp với mình.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Tôi nên mặc gì khi đến lớp học?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Bạn nên mặc trang phục thoải mái, dễ vận động như quần thể thao, áo thun, áo ba lỗ. Đối với giày, tùy thuộc vào phong cách của bạn nên mang giày thể thao. Nên mang theo khăn và nước uống.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Tôi có thể đăng ký học thử trước khi cam kết gói dài hạn không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Có, chúng tôi cung cấp dịch vụ học thử với giá 100.000đ/buổi. Bạn có thể tham gia bất kỳ lớp học nào để trải nghiệm trước khi quyết định đăng ký gói dài hạn. Nếu sau đó bạn quyết định đăng ký gói tháng, phí học thử sẽ được trừ vào học phí của gói bạn chọn.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Nếu tôi bỏ lỡ một buổi học, tôi có thể học bù không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Có, bạn có thể học bù trong vòng 30 ngày kể từ ngày bỏ lỡ, với điều kiện bạn thông báo trước ít nhất 24 giờ. Để học bù, bạn cần liên hệ với quầy lễ tân để đăng ký lịch học bù phù hợp.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Có giới hạn độ tuổi cho các lớp học Kickboxing không?</h3>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Các lớp học nhảy tại RiseFitness&Yoga chủ yếu dành cho người từ 16 tuổi trở lên. Tuy nhiên, chúng tôi cũng có các lớp dành riêng cho trẻ em và thanh thiếu niên (8-15 tuổi) vào các buổi chiều cuối tuần. Vui lòng liên hệ để biết thêm chi tiết.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-title">Ưu Đãi Đặc Biệt Hôm Nay!</h2>
+      <p class="cta-description">Đăng ký gói Premium hoặc VIP ngay hôm nay để nhận giảm giá 20% cho tháng đầu tiên!</p>
+      <a href="#register" class="btn-primary">Đăng ký ngay</a>
+    </div>
+  </section>
+
+  <!-- Register Section -->
+  <section class="section register" id="register">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Đăng Ký Tư Vấn</h2>
+        <p class="section-description">
+          Điền thông tin dưới đây để được tư vấn miễn phí về lộ trình tập kickboxing phù hợp với bạn.
+        </p>
+      </div>
+      <div class="register-box">
+        <div class="register-form">
+          <form id="registerForm" class="form">
+            <div class="form-group">
+              <label class="form-label" for="name">Họ và Tên *</label>
+              <input type="text" class="form-input" id="name" required />
+            </div>
+            <div class="form-group">
+              <label class kickboxing="form-label" for="phone">Số Điện Thoại *</label>
+              <input type="tel" class="form-input" id="phone" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" class="form-input" id="email" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="service">Gói Dịch Vụ Quan Tâm *</label>
+              <div class="select-wrapper">
+                <select class="form-input" id="service" required>
+                  <option value="">Chọn gói dịch vụ</option>
+                  <option value="basic">Gói Cơ Bản</option>
+                  <option value="standard">Gói Tiêu Chuẩn</option>
+                  <option value="premium">Gói Premium</option>
+                  <option value="vip">Gói VIP</option>
+                </select>
+                <span class="select-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary">Gửi Đăng Ký</button>
+          </form>
+        </div>
+        <div class="register-image"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services Section -->
+  <section class="section related-services">
+    <div class="container">
+      <h2 class="section-title">Dịch Vụ Liên Quan</h2>
+      <p class="section-description">
+        Khám phá các dịch vụ khác tại RiseFitness&Yoga để nâng cao hành trình sức khỏe và thể chất của bạn.
+      </p>
+      <div class="services-grid carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <div class="service-card group">
+              <div class="service-image">
+                <img src="https://i.pinimg.com/736x/e6/06/8b/e6068b321ef67b2a76897764421dff4d.jpg" alt="Yoga" loading="lazy" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Yoga</h3>
+                <p class="service-description">Tìm lại sự cân bằng thể chất và tinh thần với các lớp yoga đa dạng.</p>
+                <ul class="service-list">
+                  <li><i class="fas fa-check"></i> Phù hợp mọi cấp độ</li>
+                  <li><i class="fas fa-check"></i> Huấn luyện viên Yoga Alliance</li>
+                  <li><i class="fas fa-check"></i> Không gian thiền định yên tĩnh</li>
+                </ul>
+                <a href="yoga.html" class="btn-primary">Khám phá Yoga</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="service-card group">
+              <div class="service-image">
+                <img src="https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/56545/article_full%402x.jpg" alt="Dance" loading="lazy" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Dance</h3>
+                <p class="service-description">Thỏa sức vận động với các lớp nhảy như Zumba, Hip-hop, và Dance Fitness.</p>
+                <ul class="service-list">
+                  <li><i class="fas fa-check"></i> Năng động và vui nhộn</li>
+                  <li><i class="fas fa-check"></i> Phù hợp mọi lứa tuổi</li>
+                  <li><i class="fas fa-check"></i> Đốt cháy calo hiệu quả</li>
+                </ul>
+                <a href="dance.html" class="btn-primary">Khám phá Dance</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="service-card group">
+              <div class="service-image">
+                <img src="https://i.pinimg.com/736x/f9/17/49/f91749b0c81b0b91db7e20417064fad1.jpg" alt="Swimming" loading="lazy" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Swimming</h3>
+                <p class="service-description">Học bơi và rèn luyện thể chất với các lớp bơi lội chuyên nghiệp.</p>
+                <ul class="service-list">
+                  <li><i class="fas fa-check"></i> Hồ bơi tiêu chuẩn</li>
+                  <li><i class="fas fa-check"></i> Huấn luyện viên tận tâm</li>
+                  <li><i class="fas fa-check"></i> Phù hợp cho mọi cấp độ</li>
+                </ul>
+                <a href="swimming.html" class="btn-primary">Khám phá Swimming</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="service-card group">
+              <div class="service-image">
+                <img src="https://i.pinimg.com/736x/d6/e3/fb/d6e3fb65e931b3476a01ffe8243c724f.jpg" alt="Gym" loading="lazy" />
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Gym</h3>
+                <p class="service-description">Nâng cao sức khỏe với thiết bị hiện đại và HLV chuyên nghiệp.</p>
+                <ul class="service-list">
+                  <li><i class="fas fa-check"></i> Thiết bị hiện đại</li>
+                  <li><i class="fas fa-check"></i> HLV chuyên nghiệp</li>
+                  <li><i class="fas fa-check"></i> Chương trình cá nhân hóa</li>
+                </ul>
+                <a href="gym.html" class="btn-primary">Khám phá Gym</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (fetched dynamically) -->
+  <footer id="footer"></footer>
+
+  <!-- Contact Button and Modal -->
+  <div class="contact-button">
+    <button class="contact-btn" id="contactBtn"><i class="fas fa-comment"></i></button>
+  </div>
+  <div class="modal" id="contactModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Liên Hệ Với Chúng Tôi</h3>
+        <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <a href="https://facebook.com/risefitnessyoga" class="contact-item">
+          <span class="contact-icon facebook"><i class="fab fa-facebook-f"></i></span>
+          <div>
+            <h4>Facebook</h4>
+            <p>RiseFitness&Yoga</p>
+          </div>
+        </a>
+        <a href="https://instagram.com/risefitnessyoga" class="contact-item">
+          <span class="contact-icon instagram"><i class="fab fa-instagram"></i></span>
+          <div>
+            <h4>Instagram</h4>
+            <p>@risefitnessyoga</p>
+          </div>
+        </a>
+        <a href="tel:+84123456789" class="contact-item">
+          <span class="contact-icon phone"><i class="fas fa-phone"></i></span>
+          <div>
+            <h4>Hotline</h4>
+            <p>+84 123 456 789</p>
+          </div>
+        </a>
+        <a href="mailto:contact@risefitnessyoga.com" class="contact-item">
+          <span class="contact-icon email"><i class="fas fa-envelope"></i></span>
+          <div>
+            <h4>Email</h4>
+            <p>contact@risefitnessyoga.com</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Modals -->
+  <div class="modal service-modal" id="basicModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Gói Cơ Bản</h3>
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="service-modal-body">
+        <div class="service-modal-images">
+          <img src="https://i.pinimg.com/736x/fe/3d/6d/fe3d6dc3df4e1ab699161aed93f68de5.jpg" alt="Gói Cơ Bản" loading="lazy" />
+        </div>
+        <div class="service-modal-details">
+          <h4>Chi Tiết Gói Dịch Vụ</h4>
+          <p><strong>Giá:</strong> 600.000đ/tháng</p>
+          <p><strong>Mô tả:</strong> Gói Cơ Bản là lựa chọn lý tưởng cho người mới, cung cấp quyền tham gia các lớp kickboxing nhóm và một buổi định hướng với HLV.</p>
+          <p><strong>Thời gian:</strong> Không giới hạn giờ tập trong giờ mở cửa (6:00 - 22:00).</p>
+          <p><strong>Hỗ trợ:</strong> Tư vấn kỹ thuật cơ bản và hướng dẫn sử dụng dụng cụ.</p>
+        </div>
+        <div class="service-modal-reviews">
+          <h4>Đánh Giá Khách Hàng</h4>
+          <div class="service-modal-review">
+            <div class="stars">★★★★☆</div>
+            <p>"Gói Cơ Bản rất phù hợp cho người mới như tôi. HLV rất nhiệt tình!" - Trần Thị Lan</p>
+          </div>
+          <div class="service-modal-review">
+            <div class="stars">★★★★★</div>
+            <p>"Buổi định hướng giúp tôi làm quen nhanh với kickboxing. Rất đáng thử!" - Nguyễn Văn Hùng</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal service-modal" id="standardModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Gói Tiêu Chuẩn</h3>
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="service-modal-body">
+        <div class="service-modal-images">
+          <img src="https://i.pinimg.com/736x/46/a6/b3/46a6b300bfccd17c0b64e91bf59ef86e.jpg" alt="Gói Tiêu Chuẩn" loading="lazy" />
+        </div>
+        <div class="service-modal-details">
+          <h4>Chi Tiết Gói Dịch Vụ</h4>
+          <p><strong>Giá:</strong> 1.500.000đ/tháng</p>
+          <p><strong>Mô tả:</strong> Gói Tiêu Chuẩn bao gồm các lớp nhóm và 4 buổi PT mỗi tháng, cùng với đánh giá kỹ thuật định kỳ.</p>
+          <p><strong>Thời gian:</strong> Không giới hạn giờ tập, cộng thêm các buổi PT theo lịch.</p>
+          <p><strong>Hỗ trợ:</strong> HLV cá nhân thiết kế chương trình tập luyện chuyên sâu.</p>
+        </div>
+        <div class="service-modal-reviews">
+          <h4>Đánh Giá Khách Hàng</h4>
+          <div class="service-modal-review">
+            <div class="stars">★★★★★</div>
+            <p>"Các buổi PT giúp tôi cải thiện kỹ thuật đáng kể!" - Lê Thị Hồng</p>
+          </div>
+          <div class="service-modal-review">
+            <div class="stars">★★★★☆</div>
+            <p>"Đánh giá định kỳ rất hữu ích để điều chỉnh bài tập." - Phạm Văn Long</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal service-modal" id="premiumModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Gói Premium</h3>
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="service-modal-body">
+        <div class="service-modal-images">
+          <img src="https://i.pinimg.com/736x/17/8b/1d/178b1d1f8e90e35d422a6155fc1fc874.jpg" alt="Gói Premium" loading="lazy" />
+        </div>
+        <div class="service-modal-details">
+          <h4>Chi Tiết Gói Dịch Vụ</h4>
+          <p><strong>Giá:</strong> 3.500.000đ/tháng</p>
+          <p><strong>Mô tả:</strong> Gói Premium cung cấp 12 buổi PT mỗi tháng, tư vấn dinh dưỡng chuyên sâu, và tất cả lợi ích của gói Tiêu Chuẩn.</p>
+          <p><strong>Thời gian:</strong> Không giới hạn giờ tập, lịch PT linh hoạt.</p>
+          <p><strong>Hỗ trợ:</strong> Kế hoạch tập luyện và dinh dưỡng được cá nhân hóa.</p>
+        </div>
+        <div class="service-modal-reviews">
+          <h4>Đánh Giá Khách Hàng</h4>
+          <div class="service-modal-review">
+            <div class="stars">★★★★★</div>
+            <p>"Gói Premium giúp tôi thay đổi hoàn toàn! HLV và dinh dưỡng tuyệt vời!" - Nguyễn Thị Ngọc</p>
+          </div>
+          <div class="service-modal-review">
+            <div class="stars">★★★★★</div>
+            <p>"Tư vấn dinh dưỡng rất chi tiết và dễ áp dụng." - Trần Văn Nam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal cho Gói Gia Đình -->
+<div class="modal service-modal" id="familyModal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Gói Gia Đình</h3>
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="service-modal-body">
+      <div class="service-modal-images">
+        <img src="https://i.pinimg.com/736x/4a/2e/1c/4a2e1c8b1f8e8f7b6f8c7e9b9d8e7f6b.jpg" alt="Gói Gia Đình" loading="lazy" />
+      </div>
+      <div class="service-modal-details">
+        <h4>Chi Tiết Gói Dịch Vụ</h4>
+        <p><strong>Giá:</strong> 1.500.000đ/tháng (cho tối đa 4 thành viên)</p>
+        <p><strong>Mô tả:</strong> Gói Gia Đình được thiết kế để cả gia đình cùng tập luyện, bao gồm quyền tham gia các lớp kickboxing nhóm cho người lớn và trẻ em, cùng 2 buổi PT gia đình mỗi tháng.</p>
+        <p><strong>Thời gian:</strong> Không giới hạn giờ tập trong giờ mở cửa (6:00 - 22:00).</p>
+        <p><strong>Hỗ trợ:</strong> Tư vấn tập luyện gia đình, hướng dẫn kỹ thuật phù hợp với mọi lứa tuổi.</p>
+      </div>
+      <div class="service-modal-reviews">
+        <h4>Đánh Giá Khách Hàng</h4>
+        <div class="service-modal-review">
+          <div class="stars">★★★★☆</div>
+          <p>"Cả nhà mình đều thích gói này! Các lớp nhóm rất vui, phù hợp cho cả bố mẹ và con cái." - Lê Thị Hồng</p>
+        </div>
+        <div class="service-modal-review">
+          <div class="stars">★★★★★</div>
+          <p>"Buổi PT gia đình rất thú vị, giúp cả nhà gắn kết hơn." - Phạm Văn Tâm</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal cho Gói Trẻ Em -->
+<div class="modal service-modal" id="kidsModal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Gói Trẻ Em</h3>
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="service-modal-body">
+      <div class="service-modal-images">
+        <img src="https://i.pinimg.com/736x/8f/3e/2d/8f3e2d6b7e9c8a7b6f8c7e9b9d8e7f6b.jpg" alt="Gói Trẻ Em" loading="lazy" />
+      </div>
+      <div class="service-modal-details">
+        <h4>Chi Tiết Gói Dịch Vụ</h4>
+        <p><strong>Giá:</strong> 450.000đ/tháng</p>
+        <p><strong>Mô tả:</strong> Gói Trẻ Em dành cho trẻ từ 6-12 tuổi, giúp phát triển thể chất, tăng cường sự tự tin và học kỹ năng tự vệ cơ bản thông qua các lớp nhóm vui nhộn.</p>
+        <p><strong>Thời gian:</strong> Lớp nhóm dành riêng cho trẻ, 2 buổi/tuần (tùy lịch).</p>
+        <p><strong>Hỗ trợ:</strong> Hướng dẫn an toàn, kỹ năng tự vệ cơ bản, và tư vấn phát triển thể chất cho trẻ.</p>
+      </div>
+      <div class="service-modal-reviews">
+        <h4>Đánh Giá Khách Hàng</h4>
+        <div class="service-modal-review">
+          <div class="stars">★★★★☆</div>
+          <p>"Con tôi rất thích lớp học, HLV biết cách làm trẻ hứng thú." - Nguyễn Thị Mai</p>
+        </div>
+        <div class="service-modal-review">
+          <div class="stars">★★★★★</div>
+          <p>"Gói này giúp con tôi năng động hơn và tự tin hơn rất nhiều!" - Trần Văn Long</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal service-modal" id="vipModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Gói VIP</h3>
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="service-modal-body">
+        <div class="service-modal-images">
+          <img src="https://i.pinimg.com/736x/70/98/4a/70984abffa659a84214d4075f142985d.jpg" alt="Gói VIP" loading="lazy" />
+        </div>
+        <div class="service-modal-details">
+          <h4>Chi Tiết Gói Dịch Vụ</h4>
+          <p><strong>Giá:</strong> 6.000.000đ/tháng</p>
+          <p><strong>Mô tả:</strong> Gói VIP mang đến trải nghiệm đỉnh cao với PT không giới hạn, dịch vụ spa, massage, và tất cả lợi ích của gói Premium.</p>
+          <p><strong>Thời gian:</strong> Không giới hạn giờ tập và PT, ưu tiên lịch đặt trước.</p>
+          <p><strong>Hỗ trợ:</strong> Hỗ trợ toàn diện từ tập luyện, dinh dưỡng đến thư giãn.</p>
+        </div>
+        <div class="service-modal-reviews">
+          <h4>Đánh Giá Khách Hàng</h4>
+          <div class="service-modal-review">
+            <div class="stars">★★★★★</div>
+            <p>"Gói VIP thực sự xa xỉ! Spa và massage giúp tôi thư giãn tuyệt đối." - Lê Thị Hương</p>
+          </div>
+          <div class="service-modal-review">
+            <div class="stars">★★★★★</div>
+            <p>"PT không giới hạn giúp tôi tiến bộ nhanh chóng!" - Phạm Văn Dũng</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
