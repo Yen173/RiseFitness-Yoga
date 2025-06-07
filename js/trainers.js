@@ -108,7 +108,7 @@ const trainers = {
                 name: "Phan Văn Tâm",
                 shortDesc: "Tâm bắt đầu tập luyện Kick Boxing từ khi còn là sinh viên và nhanh chóng phát hiện niềm đam mê mạnh mẽ với môn thể thao này.",
                 details: "Phan Văn Tâm là huấn luyện viên Kick Boxing với <span class='highlight-blue'>hơn 6 năm</span> kinh nghiệm. Anh chuyên huấn luyện các học viên muốn cải thiện <span class='highlight-blue'>kỹ thuật chiến đấu</span>, sức mạnh và sự linh hoạt. Tâm không chỉ chú trọng đến việc rèn luyện thể lực mà còn giúp học viên phát triển <span class='highlight-blue'>chiến thuật</span> và chiến đấu hiệu quả trong các trận đấu thực tế. Anh luôn <span class='highlight-blue'>truyền cảm hứng</span> và tạo động lực cho học viên vượt qua giới hạn của bản thân và đạt được kết quả tốt nhất.",
-                image: "../images/trainers6.jpg",
+                image: "../images/trainers8.jpg",
                 field: "Kick Boxing",
                 level: "Bằng cấp - Thành tích",
                 achievements: [
@@ -134,7 +134,7 @@ const trainers = {
                 name: "Lê Minh Chí",
                 shortDesc: "Chí là huấn luyện viên Kick Boxing chuyên nghiệp với hơn 8 năm thi đấu và huấn luyện trong lĩnh vực này.",
                 details: "Lê Minh Chí là huấn luyện viên Kick Boxing có <span class='highlight-blue'>bề dày kinh nghiệm</span> thi đấu và huấn luyện. Anh đã tham gia nhiều giải đấu quốc tế và đạt được nhiều thành tích đáng chú ý. Chí chuyên huấn luyện cho các học viên ở mọi cấp độ, từ người mới bắt đầu đến các võ sĩ chuyên nghiệp. Anh không chỉ chú trọng đến <span class='highlight-blue'>kỹ thuật</span> mà còn đào tạo các học viên về <span class='highlight-blue'>chiến thuật thi đấu</span> và sự kiên trì trong luyện tập. Chí luôn hướng tới việc phát triển những <span class='highlight-blue'>võ sĩ mạnh mẽ</span>, có thể tự tin thi đấu trên mọi đấu trường.",
-                image: "../images/trainers8.jpg",
+                image: "../images/trainers6.jpg",
                 field: "Kick Boxing",
                 level: "Bằng cấp - Thành tích",
                 achievements: [
