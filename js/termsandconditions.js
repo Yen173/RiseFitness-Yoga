@@ -1,35 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('termsandconditions.js loaded');
+document.addEventListener("DOMContentLoaded", () => {
+  // Base path cho GitHub Pages
+  const repoName = "RiseFitness-Yoga"; // Thay bằng tên repository của bạn
+  const basePath = `/${repoName}/`;
 
-    // Kiểm tra DOM
-    console.log('Header element:', document.getElementById('header'));
-    console.log('Footer element:', document.getElementById('footer'));
+  // Hàm fetch và chèn HTML
+  const fetchAndInsert = async (url, position, target = document.body) => {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
+      let html = await res.text();
+      // Thay đường dẫn tương đối bằng tuyệt đối
+      html = html.replace(/(href|src)="([^"]+)"/g, (match, attr, path) => {
+        if (!path.startsWith("http") && !path.startsWith("/")) {
+          return `${attr}="${basePath}${path}"`;
+        }
+        return match;
+      });
+      target.insertAdjacentHTML(position, html);
+    } catch (err) {
+      console.error(`Lỗi tải ${url}:`, err);
+    }
+  };
 
-    // Chèn header
-    fetch('/RiseFitness-Yoga-main/include/header.html')
-        .then(response => {
-            console.log('Header fetch status:', response.status, response.url);
-            if (!response.ok) throw new Error('Không tải được header.html');
-            return response.text();
-        })
-        .then(data => {
-            console.log('Header content loaded');
-            document.getElementById('header').innerHTML = data;
-        })
-        .catch(error => console.error('Lỗi khi tải header:', error));
-
-    // Chèn footer
-    fetch('/RiseFitness-Yoga-main/include/footer.html')
-        .then(response => {
-            console.log('Footer fetch status:', response.status, response.url);
-            if (!response.ok) throw new Error('Không tải được footer.html');
-            return response.text();
-        })
-        .then(data => {
-            console.log('Footer content loaded');
-            document.getElementById('footer').innerHTML = data;
-        })
-        .catch(error => console.error('Lỗi khi tải footer:', error));
+  // Tải header và footer đồng thời
+  Promise.all([
+    fetchAndInsert(`${basePath}include/header.html`, "beforeend", document.body),
+    fetchAndInsert(`${basePath}include/footer.html`, "beforeend", document.body),
+  ]).catch((err) => console.error("Lỗi khi tải header hoặc footer:", err));
+});
 
     // Xử lý smooth scrolling cho tất cả anchor links
     document.querySelectorAll('a[href^="#"]').forEach(link => {
