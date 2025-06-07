@@ -484,6 +484,10 @@ tbody tr:nth-child(even) {
     font-family: 'Verdana', sans-serif;
     font-size: 16px;
 }
+.submit-button {
+    display: block;
+    margin: 24px auto 0 auto; /* auto trái phải sẽ căn giữa */
+}
 
 .submit-button:hover {
     background-color: #1e40af;
