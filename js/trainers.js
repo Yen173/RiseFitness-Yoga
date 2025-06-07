@@ -113,7 +113,7 @@ const trainers = {
                 level: "Bằng cấp - Thành tích",
                 achievements: [
                     "Cử nhân tại Đại học Thể dục thể thao TP.HCM",
-                    "Hạng 2 Kick Boxing 2019 Vietnam Championship",
+                    "Hạng 1 Kick Boxing 2019 Vietnam Championship",
                     "Certified Kick Boxing Coach by World Kickboxing Association (WKA)"
                 ]
             },
