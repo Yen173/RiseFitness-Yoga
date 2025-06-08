@@ -7,11 +7,10 @@
     <meta name="keywords" content="Gym, RiseFitness&Yoga, tập luyện, huấn luyện viên, fitness, sức khỏe" />
     <meta name="author" content="RiseFitness&Yoga" />
     <meta name="robots" content="index, follow" />
-    <base href="/RiseFitness-Yoga-main/" />
     <title>Dịch Vụ Gym - RiseFitness&Yoga</title>
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/kickboxing.css" />
+    <link rel="stylesheet" href="../css/kickboxing.css" />
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
@@ -22,7 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <!-- Thêm Slick Slider JS -->
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/kickboxing.js" defer></script>
+    <script src="../js/kickboxing.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -74,7 +73,7 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <h1 class="hero-title">Dịch Vụ Kickboxing Chuyên Nghiệp</h1>
+        <h1 class="hero-title">Dịch Vụ Kickboxing</h1>
         <p class="hero-subtitle">
           Tăng cường sức mạnh, sự tự tin và kỹ năng tự vệ với các lớp kickboxing năng động tại RiseFitness&Yoga.
         </p>
@@ -208,7 +207,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>06:00 - 07:00</td>
+            <td>08:00 - 09:00</td>
             <td>Kickboxing (Hùng)</td>
             <td>-</td>
             <td>Kickboxing (Mai)</td>
@@ -218,7 +217,7 @@
             <td>-</td>
           </tr>
           <tr>
-            <td>07:30 - 08:30</td>
+            <td>09:30 - 10:30</td>
             <td>-</td>
             <td>Kickboxing (Mai)</td>
             <td>-</td>
@@ -326,7 +325,7 @@
         Chúng tôi cung cấp nhiều gói dịch vụ để đáp ứng nhu cầu và mục tiêu tập luyện của bạn.
       </p>
     </div>
-    <div class="services-grid carousel">
+    <div class="services-grid carousel infinite-carousel">
       <div class="carousel-inner">
         <div class="carousel-item">
           <div class="service-card" data-modal="basicModal">
@@ -552,7 +551,7 @@
             </div>
             <div class="faq-answer">
               <p>
-                Có, chúng tôi cung cấp dịch vụ học thử với giá 100.000đ/buổi. Bạn có thể tham gia bất kỳ lớp học nào để trải nghiệm trước khi quyết định đăng ký gói dài hạn. Nếu sau đó bạn quyết định đăng ký gói tháng, phí học thử sẽ được trừ vào học phí của gói bạn chọn.
+                Có, chúng tôi cung cấp những buổi học thử miễn phí. Bạn sẽ được trải nghiệm các dịch vụ free khi đăng ký. Hãy đăng ký ngay thôi nào.
               </p>
             </div>
           </div>
@@ -582,59 +581,44 @@
       </div>
     </section>
 
-  <!-- CTA Banner -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2 class="cta-title">Ưu Đãi Đặc Biệt Hôm Nay!</h2>
-      <p class="cta-description">Đăng ký gói Premium hoặc VIP ngay hôm nay để nhận giảm giá 20% cho tháng đầu tiên!</p>
-      <a href="#register" class="btn-primary">Đăng ký ngay</a>
-    </div>
-  </section>
-
-  <!-- Register Section -->
-  <section class="section register" id="register">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Đăng Ký Tư Vấn</h2>
-        <p class="section-description">
-          Điền thông tin dưới đây để được tư vấn miễn phí về lộ trình tập kickboxing phù hợp với bạn.
-        </p>
-      </div>
-      <div class="register-box">
-        <div class="register-form">
-          <form id="registerForm" class="form">
-            <div class="form-group">
-              <label class="form-label" for="name">Họ và Tên *</label>
-              <input type="text" class="form-input" id="name" required />
-            </div>
-            <div class="form-group">
-              <label class kickboxing="form-label" for="phone">Số Điện Thoại *</label>
-              <input type="tel" class="form-input" id="phone" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Email</label>
-              <input type="email" class="form-input" id="email" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="service">Gói Dịch Vụ Quan Tâm *</label>
-              <div class="select-wrapper">
-                <select class="form-input" id="service" required>
-                  <option value="">Chọn gói dịch vụ</option>
-                  <option value="basic">Gói Cơ Bản</option>
-                  <option value="standard">Gói Tiêu Chuẩn</option>
-                  <option value="premium">Gói Premium</option>
-                  <option value="vip">Gói VIP</option>
-                </select>
-                <span class="select-icon"><i class="fas fa-chevron-down"></i></span>
-              </div>
-            </div>
-            <button type="submit" class="btn-primary">Gửi Đăng Ký</button>
-          </form>
+<!-- Other sections remain unchanged -->
+<section class="consultation-section">
+  <div class="container">
+    <h2 class="section-title">Đăng Ký Tư Vấn</h2>
+    <p class="section-subtitle">Điền thông tin dưới đây để được tư vấn miễn phí về lộ trình tập kickboxing phù hợp với bạn.</p>
+    <div class="form-container">
+      <form id="consultationForm" class="form">
+        <div class="form-group">
+          <label for="fullName">Họ và Tên *</label>
+          <input type="text" id="fullName" class="form-input" required placeholder="Nhập họ và tên">
         </div>
-        <div class="register-image"></div>
-      </div>
+        <div class="form-group">
+          <label for="phone">Số Điện Thoại *</label>
+          <input type="tel" id="phone" class="form-input" required placeholder="Nhập số điện thoại">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="Nhập email">
+        </div>
+        <div class="form-group">
+          <label for="package">Gói Dịch Vụ Quan Tâm *</label>
+          <select id="package" class="form-input" required>
+            <option value="">Chọn gói dịch vụ</option>
+            <option value="Gói Cơ Bản">Gói Cơ Bản</option>
+            <option value="Gói Tiêu Chuẩn">Gói Tiêu Chuẩn</option>
+            <option value="Gói Premium">Gói Premium</option>
+            <option value="Gói VIP">Gói VIP</option>
+            <option value="Gói Gia Đình">Gói Gia Đình</option>
+            <option value="Gói Trẻ Em">Gói Trẻ Em</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">Gửi Đăng Ký</button>
+        <div id="formMessage" class="form-message"></div>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Related Services Section -->
   <section class="section related-services">
@@ -643,7 +627,7 @@
       <p class="section-description">
         Khám phá các dịch vụ khác tại RiseFitness&Yoga để nâng cao hành trình sức khỏe và thể chất của bạn.
       </p>
-      <div class="services-grid carousel">
+      <div class="services-grid carousel infinite-carousel">
         <div class="carousel-inner">
           <div class="carousel-item">
             <div class="service-card group">
@@ -723,7 +707,7 @@
 
   <!-- Contact Button and Modal -->
   <div class="contact-button">
-    <button class="contact-btn" id="contactBtn"><i class="fas fa-comment"></i></button>
+    <button class="contact-btn" id="contactBtn"><i class="fa-solid fa-headset"></i></button>
   </div>
   <div class="modal" id="contactModal">
     <div class="modal-overlay"></div>
@@ -733,14 +717,14 @@
         <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
       </div>
       <div class="modal-body">
-        <a href="https://facebook.com/risefitnessyoga" class="contact-item">
+        <a href="https://www.facebook.com/people/RiseFitness-Yoga/61577151691012/" class="contact-item">
           <span class="contact-icon facebook"><i class="fab fa-facebook-f"></i></span>
           <div>
             <h4>Facebook</h4>
             <p>RiseFitness&Yoga</p>
           </div>
         </a>
-        <a href="https://instagram.com/risefitnessyoga" class="contact-item">
+        <a href="https://www.instagram.com/risefitness_yoga/" class="contact-item">
           <span class="contact-icon instagram"><i class="fab fa-instagram"></i></span>
           <div>
             <h4>Instagram</h4>
@@ -754,11 +738,11 @@
             <p>+84 123 456 789</p>
           </div>
         </a>
-        <a href="mailto:contact@risefitnessyoga.com" class="contact-item">
+        <a href="mailto:risefitness&yoga@gmail.com" class="contact-item">
           <span class="contact-icon email"><i class="fas fa-envelope"></i></span>
           <div>
             <h4>Email</h4>
-            <p>contact@risefitnessyoga.com</p>
+            <p>risefitness&yoga@gmail.com</p>
           </div>
         </a>
       </div>
@@ -874,7 +858,7 @@
     </div>
     <div class="service-modal-body">
       <div class="service-modal-images">
-        <img src="https://i.pinimg.com/736x/4a/2e/1c/4a2e1c8b1f8e8f7b6f8c7e9b9d8e7f6b.jpg" alt="Gói Gia Đình" loading="lazy" />
+        <img src="https://i.pinimg.com/736x/fd/18/d3/fd18d3fb9d295ae3dfbaffc6f6801433.jpg" alt="Gói Gia Đình" loading="lazy" />
       </div>
       <div class="service-modal-details">
         <h4>Chi Tiết Gói Dịch Vụ</h4>
