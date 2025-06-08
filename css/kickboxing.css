@@ -82,12 +82,15 @@ body {
   background-color: #ffffff;
   color: #000000;
   padding: 8px 24px;
-  border: 2px solid #ffffff;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
   white-space: nowrap;
   transition: background-color 0.3s;
+  margin-top: auto;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .btn-secondary:hover {
@@ -125,7 +128,7 @@ body {
 }
 
 .hero-bg {
-  background-image: url('https://i.pinimg.com/736x/26/3b/7d/263b7dda3e42210c24b41dd879406ef5.jpg');
+  background-image: url('https://i.pinimg.com/736x/b4/d1/a3/b4d1a31f5ec879f2e102a96b1e6a2ea5.jpg');
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -165,6 +168,15 @@ body {
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 16px;
+  display: inline-block; /* Quan trọng để animation width hoạt động đúng với text-align center của parent */
+  overflow: hidden; /* Ẩn phần chữ chưa được "gõ" */
+  white-space: nowrap; /* Giữ chữ trên một dòng khi animation chạy */
+  border-right: .1em solid white; /* Tạo con trỏ nhấp nháy */
+  /* Áp dụng animation: tên, thời gian, số bước (điều chỉnh cho phù hợp với độ dài chữ), giữ lại trạng thái cuối, lặp lại */
+  animation:
+    typingEffect 3s steps(18, end) forwards, /* Thời gian và số bước cho tiêu đề */
+    blinkCaretEffect 1s step-end infinite;
+  width: 0; 
 }
 
 .hero-subtitle {
@@ -172,15 +184,19 @@ body {
   color: #d1d5db;
   margin-bottom: 32px;
   line-height: 1.6;
+  animation: 
+  blinkTextEffect 1s ease-in-out infinite 0.1s;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 10px;
 }
 
+/* Button style chung */
 .hero-buttons a {
   display: inline-block;
   padding: 14px 28px;
@@ -190,9 +206,53 @@ body {
   text-decoration: none;
   border-radius: 8px;
   min-width: 160px;
+  margin:0;
   transition: 0.3s ease;
 }
 
+
+
+  @keyframes sectionGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px 0px rgba(52, 152, 219, 0.2), 0 0 20px 0px rgba(52, 152, 219, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px rgba(52, 152, 219, 0.4), 0 0 35px 15px rgba(52, 152, 219, 0.3);
+  }
+}@keyframes sectionGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px 0px rgba(52, 152, 219, 0.2), 0 0 20px 0px rgba(52, 152, 219, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px rgba(52, 152, 219, 0.4), 0 0 35px 15px rgba(52, 152, 219, 0.3);
+  }
+}
+
+  @keyframes iconCheckPulseAnimation {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.2);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 8px 4px rgba(52, 152, 219, 0.1);
+  }
+}
+
+@keyframes typingEffect {
+  from { width: 0; }
+  to { width: 80%; }
+}
+
+@keyframes blinkCaretEffect {
+  from, to { border-color: transparent; }
+  50% { border-color: white; } /* Màu của con trỏ */
+}
+
+@keyframes blinkTextEffect {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; } /* Chữ sẽ mờ đi ở giữa hiệu ứng */
+}
 @media (min-width: 768px) {
   .hero-title {
     font-size: 48px;
@@ -201,7 +261,7 @@ body {
 
 .section {
   padding: 64px 0;
-  background-color: #000000;
+  background-color: #adb7c2;
 }
 
 .section-header {
@@ -216,10 +276,11 @@ body {
   font-weight: 700;
   color: #0b0b0b;
   margin-bottom: 16px;
+  animation: sectionGlowPulse 2.5s infinite alternate ease-in-out;
 }
 
 .section-description {
-  color: #d1d5db;
+  color: #edf0f4;
   line-height: 1.75;
   text-align: center;
 }
@@ -268,6 +329,7 @@ body {
   border-radius: 50%;
   margin-right: 8px;
   margin-top: 4px;
+  animation: iconCheckPulseAnimation 2s ease-in-out infinite 1s;
 }
 
 @media (min-width: 768px) {
@@ -278,7 +340,7 @@ body {
 }
 
 .benefits.section {
-  background-color: #000000; /* Nền đen cho toàn section */
+  background-color: #070707; /* Nền đen cho toàn section */
   color: #ffffff; /* Chữ trắng làm mặc định */
 }
  
@@ -348,7 +410,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
-color: #000;
+color: #6f6d6d !important;
 }
 
 .benefit-description {
@@ -366,20 +428,29 @@ color: #000;
 }
 
 /* Căn giữa section dịch vụ và chia cột đều */
-.services-grid.carousel {
+.services.carousel .carousel-inner {
   display: flex;
-  justify-content: center;
   align-items: center;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 20px;
   padding: 20px 0;
 }
 
 .carousel-inner {
   display: flex;
+  transition: transform 0.5s ease;
+  flex-wrap: nowrap;
   gap: 20px;
   align-items: center;
+}
+
+.services.carousel .carousel-item.service-card {
+  box-sizing: border-box;
+  width: 280px; /* Chiều rộng cố định cho mỗi item */
+  height: 500px; /* Chiều cao cố định để các thẻ dịch vụ đều nhau */
+  padding: 0 8px; /* Khoảng cách giữa các thẻ */
+  display: flex; /* Giúp thẻ con .service-card có thể dùng height: 100% */
+  flex-direction: column;
 }
 
 .carousel-item {
@@ -403,8 +474,8 @@ color: #000;
 
 .service-title {
   font-size: 1.4rem;
-  color: #fff; /* Tiêu đề màu trắng */
-  background-color: #000; /* Nền đen */
+  color: #131313; /* Tiêu đề màu trắng */
+  background-color: #eee; /* Nền đen */
   margin: 0;
   padding: 10px 0;
   text-align: center;
@@ -412,17 +483,19 @@ color: #000;
 
 .service-description,
 .service-list li {
-  color: #eee;
+  color: #e0e0e0;
 }
 
 .service-list {
-  padding-left: 20px;
   list-style: none;
+  margin: 0 16px 12px 16px;
 }
 
 .service-list li i {
   color: #1960a7;
   margin-right: 5px;
+  color: #3498db; /* Màu icon nhất quán */
+  margin-right: 8px;
 }
 
 .btn-primary {
@@ -432,7 +505,22 @@ color: #000;
   padding: 8px 16px;
   border-radius: 20px;
   text-decoration: none;
-  margin-top: 10px;
+ margin: 16px auto; /* Căn giữa nút và thêm khoảng cách */
+  align-self: center;
+  width: fit-content;
+}
+
+.service-image {
+  width: 100%;
+  height: 180px; /* Chiều cao cố định cho ảnh */
+  object-fit: cover;
+  flex-shrink: 0; /* Không cho ảnh co lại */
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh phủ kín vùng chứa */
 }
 
 .popular-badge {
@@ -441,6 +529,10 @@ color: #000;
   text-align: center;
   padding: 5px 0;
   font-weight: bold;
+}
+
+.services.section {
+  animation: sectionGlowPulse 2.5s infinite alternate ease-in-out;
 }
 
 /* Carousel scroll bar ẩn */
@@ -462,6 +554,7 @@ color: #000;
 .section-title {
   text-align: center;
 }
+
 
 .service-card:nth-child(odd) {
   background-color: #000000;
@@ -486,25 +579,23 @@ color: #000;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
 }
 
-.service-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-}
 
 .service-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   loading: lazy;
 }
+
 
 .service-content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  text-align: center;
+  padding: 16px 16px 0 16px; /* Thêm padding trên và ngang */
+  flex-shrink: 0; 
 }
 
 .service-title {
@@ -518,6 +609,9 @@ color: #000;
 .service-content p,
 .service-list {
   text-align: center;
+  margin: 0 0 16px;
+  padding-left: 16px; /* Căn lề cho danh sách */
+  flex-shrink: 0; 
 }
 
 .service-description {
@@ -634,6 +728,20 @@ color: #000;
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* Điều chỉnh khoảng cách cho phần Testimonials trên trang Kickboxing */
+    .section.testimonials {
+      padding-top: 40px; /* Giảm padding trên từ 64px xuống 40px */
+      padding-bottom: 40px; /* Giảm padding dưới từ 64px xuống 40px */
+    }
+
+    .testimonial-card {
+      padding: 16px; /* Giảm padding bên trong card từ 24px xuống 16px */
+    }
+
+    .testimonial-header {
+      margin-bottom: 12px; /* Giảm margin dưới header của testimonial từ 16px xuống 12px */
+    }
+
 
 .faq-list {
   max-width: 768px;
@@ -683,19 +791,6 @@ color: #000;
   padding: 16px;
 }
 
-.register-box {
-  max-width: 1280px;
-  margin: 0 auto;
-  background-color: #000000;
-  color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-}
-
-.register-form {
-  padding: 48px;
-}
 
 .form {
   display: flex;
@@ -752,11 +847,6 @@ color: #000;
   color: #ffffff;
 }
 
-.register-image {
-  background-image: url('https://i.pinimg.com/736x/d8/ec/6a/d8ec6acf492fcdf7e1847dbfbd3d5e9e.jpg');
-  background-size: cover;
-  background-position: center top;
-}
 
 @media (min-width: 768px) {
   .register-box {
@@ -1215,9 +1305,14 @@ color: #000;
 }
 
 .service-modal .modal-content {
-  max-width: 800px;
   background-color: #000000;
   color: #ffffff;
+  max-width: 90%; /* Chiếm 90% chiều rộng màn hình */
+  width: 600px; /* Giới hạn chiều rộng tối đa trên màn hình lớn */
+  margin: 20px; /* Thêm khoảng cách với viền màn hình */
+  max-height: 90vh; /* Giới hạn chiều cao tối đa */
+  overflow-y: auto;
+  
 }
 
 .service-modal-body {
@@ -1228,6 +1323,7 @@ color: #000;
   display: flex;
   gap: 16px;
   margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 
 .service-modal-images img {
@@ -1236,6 +1332,7 @@ color: #000;
   object-fit: cover;
   border-radius: 8px;
   loading: lazy;
+  flex: 1 1 200px;
 }
 
 .service-modal-details {
@@ -1274,6 +1371,16 @@ color: #000;
 
 .service-modal-review .stars {
   margin-bottom: 8px;
+}
+
+@media (max-width: 767px) {
+  .service-modal .modal-content {
+    width: auto; /* Để chiều rộng tự động theo max-width: 90% */
+    margin: 10px; /* Giảm margin trên điện thoại */
+  }
+  .service-modal-images img {
+    height: 150px; /* Giảm chiều cao ảnh trên điện thoại */
+  }
 }
 
 .carousel {
@@ -1327,62 +1434,28 @@ color: #000;
   font-size: 20px;
 }
 
-.carousel-pagination {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 16px;
-}
-
-.carousel-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: #d1d5db;
-  border-radius: 50%;
-  cursor: pointer;
-}
 
 .carousel-pagination-bullet.active {
   background-color: #3498db;
 }
 
 @media (min-width: 768px) {
-  .services-grid.carousel .carousel-item {
-    flex: 0 0 25%;
+  .services.carousel .carousel-item.service-card {
+    flex-basis: calc(100% / 3);
   }
   .services-grid.carousel .carousel-inner {
-    gap: 24px;
+  
   }
 }
 
 @media (max-width: 767px) {
-  .carousel-item {
-    flex: 0 0 50%;
+  .services.carousel .carousel-item.service-card {
+    flex-basis: 100%;
   }
 }
 
 @media (min-width: 1024px) {
-  .services-grid.carousel .carousel-item {
-    flex: 0 0 25%;
+  .services.carousel .carousel-item.service-card {
+    flex-basis: 20%;
   }
-}
-
-.cta-banner {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 32px 0;
-  text-align: center;
-}
-
-.cta-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 16px;
-}
-
-.cta-description {
-  font-size: 16px;
-  color: #d1d5db;
-  margin-bottom: 24px;
 }
