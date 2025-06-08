@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", () => {
+const isInPagesFolder = window.location.pathname.includes("/pages/");
+
+    // Đường dẫn tương ứng
+    const headerPath = isInPagesFolder ? "../include/header.html" : "include/header.html";
+    const footerPath = isInPagesFolder ? "../include/footer.html" : "include/footer.html";
+
+    // Chèn header
+    fetch(headerPath)
+        .then(response => {
+            if (!response.ok) throw new Error('Không tải được header.html');
+            return response.text();
+        })
+        .then(data => document.getElementById('header').innerHTML = data)
+        .catch(error => console.error('Lỗi khi tải header:', error));
+
+    // Chèn footer
+    fetch(footerPath)
+        .then(response => {
+            if (!response.ok) throw new Error('Không tải được footer.html');
+            return response.text();
+        })
+        .then(data => document.getElementById('footer').innerHTML = data)
+        .catch(error => console.error('Lỗi khi tải footer:', error));
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // FAQ Toggle
   const faqItems = document.querySelectorAll(".faq-item");
@@ -96,39 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Carousel Functionality
-  function initCarousel(carousel) {
-    const inner = carousel.querySelector(".carousel-inner");
-    const items = carousel.querySelectorAll(".carousel-item");
-    const prevBtn = carousel.querySelector(".carousel-btn.prev");
-    const nextBtn = carousel.querySelector(".carousel-btn.next");
-    let currentIndex = 0;
-    const totalItems = items.length;
-    const visibleItems = window.innerWidth >= 1024 ? 4 : window.innerWidth >= 768 ? 2 : 1;
-
-    function updateCarousel() {
-      const offset = -(currentIndex * (100 / visibleItems));
-      inner.style.transform = `translateX(${offset}%)`;
-    }
-
-    prevBtn.addEventListener("click", () => {
-      currentIndex = Math.max(currentIndex - 1, 0);
-      updateCarousel();
-    });
-
-    nextBtn.addEventListener("click", () => {
-      currentIndex = Math.min(currentIndex + 1, totalItems - visibleItems);
-      updateCarousel();
-    });
-
-    window.addEventListener("resize", () => {
-      const newVisibleItems = window.innerWidth >= 1024 ? 4 : window.innerWidth >= 768 ? 2 : 1;
-      if (currentIndex > totalItems - newVisibleItems) {
-        currentIndex = Math.max(totalItems - newVisibleItems, 0);
-      }
-      updateCarousel();
-    });
-  }
 
   document.querySelectorAll(".carousel").forEach(initCarousel);
 
@@ -167,54 +160,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   images.forEach((img) => observer.observe(img));
   
-function initCarousel(carousel) {
+
+  function initCarousel(carousel) {
   const inner = carousel.querySelector(".carousel-inner");
-  let items = carousel.querySelectorAll(".carousel-item");
+  const items = carousel.querySelectorAll(".carousel-item");
   const prevBtn = carousel.querySelector(".carousel-btn.prev");
   const nextBtn = carousel.querySelector(".carousel-btn.next");
   const pagination = carousel.querySelector(".carousel-pagination");
   let currentIndex = 0;
+  const totalItems = items.length;
+  const visibleItems = carousel.classList.contains("testimonials")
+    ? window.innerWidth >= 768
+      ? 3
+      : 1
+    : window.innerWidth >= 1024
+    ? 4
+    : window.innerWidth >= 768
+    ? 2
+    : 1;
+  let autoSlide;
+
+  // Nhân bản các phần tử để tạo vòng lặp vô hạn
+  const isInfinite = carousel.classList.contains("infinite-carousel");
   let clonedItems = [];
-
-  // Hàm tính số lượng item hiển thị
-  function getVisibleItems() {
-    return carousel.classList.contains("testimonials")
-      ? window.innerWidth >= 768 ? 3 : 1
-      : window.innerWidth >= 1024 ? 4 : window.innerWidth >= 768 ? 2 : 1;
-  }
-
-  let visibleItems = getVisibleItems();
-  let totalItems = items.length;
-
-  // Hàm nhân bản nội dung
-  function cloneItems() {
-    // Xóa các phần tử nhân bản cũ
-    clonedItems.forEach(item => item.remove());
-    clonedItems = [];
-    inner.style.transition = "none";
-
-    // Nhân bản toàn bộ danh sách item gốc
-    if (carousel.classList.contains("infinite-carousel")) {
-      for (let i = 0; i < totalItems; i++) {
-        const cloneFirst = items[i].cloneNode(true);
-        cloneFirst.classList.add("clone");
-        inner.appendChild(cloneFirst);
-        const cloneLast = items[totalItems - 1 - i].cloneNode(true);
-        cloneLast.classList.add("clone");
-        inner.insertBefore(cloneLast, inner.firstChild);
-        clonedItems.push(cloneFirst, cloneLast);
-      }
+  if (isInfinite) {
+    // Nhân bản số lượng phần tử bằng visibleItems cho đầu và cuối
+    for (let i = 0; i < visibleItems; i++) {
+      const cloneFirst = items[i % totalItems].cloneNode(true);
+      cloneFirst.classList.add("clone");
+      inner.appendChild(cloneFirst);
+      const cloneLast = items[totalItems - 1 - (i % totalItems)].cloneNode(true);
+      cloneLast.classList.add("clone");
+      inner.insertBefore(cloneLast, inner.firstChild);
     }
-
-    // Cập nhật danh sách item sau khi nhân bản
-    items = inner.querySelectorAll(".carousel-item");
+    clonedItems = inner.querySelectorAll(".carousel-item.clone");
   }
+
+  const totalSlides = Math.ceil(totalItems / visibleItems);
 
   // Tạo bullet phân trang
-  function updatePagination() {
-    if (!pagination) return;
+  if (pagination) {
     pagination.innerHTML = "";
-    const totalSlides = Math.ceil(totalItems / visibleItems);
     for (let i = 0; i < totalSlides; i++) {
       const bullet = document.createElement("div");
       bullet.classList.add("carousel-pagination-bullet");
@@ -222,36 +208,31 @@ function initCarousel(carousel) {
       bullet.addEventListener("click", () => {
         currentIndex = i;
         updateCarousel(false);
-        resetAutoSlide();
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 5000);
       });
       pagination.appendChild(bullet);
     }
   }
 
-  // Cập nhật vị trí carousel
   function updateCarousel(animate = true) {
-    if (totalItems <= visibleItems) {
-      inner.style.transform = "translateX(0%)";
-      return;
-    }
-
-    const offset = -(currentIndex + (carousel.classList.contains("infinite-carousel") ? totalItems : 0)) * (100 / visibleItems);
+    const offset = -(currentIndex + (isInfinite ? visibleItems : 0)) * (100 / visibleItems);
     inner.style.transition = animate ? "transform 0.5s ease" : "none";
     inner.style.transform = `translateX(${offset}%)`;
 
     // Xử lý vòng lặp vô hạn
-    if (carousel.classList.contains("infinite-carousel")) {
-      if (currentIndex >= Math.ceil(totalItems / visibleItems)) {
+    if (isInfinite) {
+      if (currentIndex >= totalSlides) {
         setTimeout(() => {
           inner.style.transition = "none";
           currentIndex = 0;
-          inner.style.transform = `translateX(-${totalItems * (100 / visibleItems)}%)`;
+          inner.style.transform = `translateX(-${visibleItems * (100 / visibleItems)}%)`;
         }, 500);
       } else if (currentIndex < 0) {
         setTimeout(() => {
           inner.style.transition = "none";
-          currentIndex = Math.ceil(totalItems / visibleItems) - 1;
-          inner.style.transform = `translateX(-${(currentIndex + totalItems) * (100 / visibleItems)}%)`;
+          currentIndex = totalSlides - 1;
+          inner.style.transform = `translateX(-${(totalSlides - 1 + visibleItems) * (100 / visibleItems)}%)`;
         }, 500);
       }
     }
@@ -259,98 +240,64 @@ function initCarousel(carousel) {
     // Cập nhật bullet active
     if (pagination) {
       pagination.querySelectorAll(".carousel-pagination-bullet").forEach((bullet, index) => {
-        bullet.classList.toggle("active", index === (currentIndex % Math.ceil(totalItems / visibleItems)));
+        bullet.classList.toggle("active", index === (currentIndex % totalSlides));
       });
     }
   }
 
-  // Chuyển slide tiếp theo
   function nextSlide() {
-    if (totalItems <= visibleItems) return;
     currentIndex++;
     updateCarousel();
   }
 
-  // Chuyển slide trước đó
   function prevSlide() {
-    if (totalItems <= visibleItems) return;
     currentIndex--;
     updateCarousel();
   }
 
-  // Reset tự động trượt
-  let autoSlide;
-  function resetAutoSlide() {
-    clearInterval(autoSlide);
-    autoSlide = setInterval(nextSlide, 5000);
-  }
+  // Tự động chuyển slide
+  autoSlide = setInterval(nextSlide, 5000);
 
-  // Khởi tạo carousel
-  function init() {
-    totalItems = items.length;
-    visibleItems = getVisibleItems();
-    cloneItems();
-    updatePagination();
-    updateCarousel(false);
-    resetAutoSlide();
-  }
-
-  // Tự động trượt và tạm dừng khi hover
+  // Tạm dừng khi hover
   carousel.addEventListener("mouseenter", () => clearInterval(autoSlide));
-  carousel.addEventListener("mouseleave", resetAutoSlide);
+  carousel.addEventListener("mouseleave", () => {
+    autoSlide = setInterval(nextSlide, 5000);
+  });
 
   // Sự kiện nút prev/next
   prevBtn.addEventListener("click", () => {
     prevSlide();
-    resetAutoSlide();
+    clearInterval(autoSlide);
+    autoSlide = setInterval(nextSlide, 5000);
   });
 
   nextBtn.addEventListener("click", () => {
     nextSlide();
-    resetAutoSlide();
+    clearInterval(autoSlide);
+    autoSlide = setInterval(nextSlide, 5000);
   });
 
   // Xử lý thay đổi kích thước màn hình
   window.addEventListener("resize", () => {
-    const newVisibleItems = getVisibleItems();
-    if (newVisibleItems !== visibleItems) {
-      visibleItems = newVisibleItems;
-      if (currentIndex >= Math.ceil(totalItems / visibleItems)) {
-        currentIndex = Math.max(Math.ceil(totalItems / visibleItems) - 1, 0);
-      }
-      init(); // Tái tạo nhân bản và cập nhật carousel
+    const newVisibleItems = carousel.classList.contains("testimonials")
+      ? window.innerWidth >= 768
+        ? 3
+        : 1
+      : window.innerWidth >= 1024
+      ? 4
+      : window.innerWidth >= 768
+      ? 2
+      : 1;
+    if (currentIndex >= Math.ceil(totalItems / newVisibleItems)) {
+      currentIndex = Math.max(Math.ceil(totalItems / newVisibleItems) - 1, 0);
     }
+    updateCarousel(false);
   });
 
-  init();
+  updateCarousel(false);
 }
 
-document.querySelectorAll(".carousel").forEach(initCarousel);
+
   // Header and Footer Fetch
-  const currentPath = window.location.pathname;
-  const isInPagesFolder = currentPath.includes("/pages/");
-  const headerPath = isInPagesFolder ? "/RiseFitness-Yoga-main/include/header.html" : "include/header.html";
-  const footerPath = isInPagesFolder ? "/RiseFitness-Yoga-main/include/footer.html" : "include/footer.html";
-
-  fetch(headerPath)
-    .then((response) => {
-      if (!response.ok) throw new Error("Không tải được header.html");
-      return response.text();
-    })
-    .then((data) => {
-      const headerEl = document.getElementById("header");
-      if (headerEl) headerEl.innerHTML = data;
-    })
-    .catch((error) => console.error("Lỗi khi tải header:", error));
-
-  fetch(footerPath)
-    .then((response) => {
-      if (!response.ok) throw new Error("Không tải được footer.html");
-      return response.text();
-    })
-    .then((data) => {
-      const footerEl = document.getElementById("footer");
-      if (footerEl) footerEl.innerHTML = data;
-    })
-    .catch((error) => console.error("Lỗi khi tải footer:", error));
+ 
 });
