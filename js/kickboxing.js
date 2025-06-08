@@ -1,29 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-const isInPagesFolder = window.location.pathname.includes("/pages/");
+  // Base path cho GitHub Pages
+  const repoName = "RiseFitness-Yoga"; // Thay bằng tên repository của bạn
+  const basePath = `/${repoName}/`;
 
-    // Đường dẫn tương ứng
-    const headerPath = isInPagesFolder ? "../include/header.html" : "include/header.html";
-    const footerPath = isInPagesFolder ? "../include/footer.html" : "include/footer.html";
+  // Hàm fetch và chèn HTML
+  const fetchAndInsert = async (url, position, target = document.body) => {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
+      let html = await res.text();
+      // Thay đường dẫn tương đối bằng tuyệt đối
+      html = html.replace(/(href|src)="([^"]+)"/g, (match, attr, path) => {
+        if (!path.startsWith("http") && !path.startsWith("/")) {
+          return `${attr}="${basePath}${path}"`;
+        }
+        return match;
+      });
+      target.insertAdjacentHTML(position, html);
+    } catch (err) {
+      console.error(`Lỗi tải ${url}:`, err);
+    }
+  };
 
-    // Chèn header
-    fetch(headerPath)
-        .then(response => {
-            if (!response.ok) throw new Error('Không tải được header.html');
-            return response.text();
-        })
-        .then(data => document.getElementById('header').innerHTML = data)
-        .catch(error => console.error('Lỗi khi tải header:', error));
-
-    // Chèn footer
-    fetch(footerPath)
-        .then(response => {
-            if (!response.ok) throw new Error('Không tải được footer.html');
-            return response.text();
-        })
-        .then(data => document.getElementById('footer').innerHTML = data)
-        .catch(error => console.error('Lỗi khi tải footer:', error));
+  // Tải header và footer đồng thời
+  Promise.all([
+    fetchAndInsert(`${basePath}include/header.html`, "beforeend", document.body),
+    fetchAndInsert(`${basePath}include/footer.html`, "beforeend", document.body),
+  ]).catch((err) => console.error("Lỗi khi tải header hoặc footer:", err));
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   // FAQ Toggle
   const faqItems = document.querySelectorAll(".faq-item");
