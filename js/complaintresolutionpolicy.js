@@ -26,15 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchAndInsert(`${basePath}include/footer.html`, "beforeend", document.body),
   ]).catch((err) => console.error("Lỗi khi tải header/footer:", err));
 
-
-
-  // Tải header và footer đồng thời
-  Promise.all([
-    fetchAndInsert(`${basePath}include/header.html`, "beforeend", document.body),
-    fetchAndInsert(`${basePath}include/footer.html`, "beforeend", document.body),
-  ]).catch((err) => console.error("Lỗi khi tải header hoặc footer:", err));
-});
-
     // Xử lý smooth scrolling cho anchor links
     document.querySelectorAll('.sidebar-link').forEach(link => {
         link.addEventListener('click', (e) => {
