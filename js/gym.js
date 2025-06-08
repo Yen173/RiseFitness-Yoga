@@ -1,13 +1,42 @@
+document.addEventListener("DOMContentLoaded", () => {
+const isInPagesFolder = window.location.pathname.includes("/pages/");
+
+    // Đường dẫn tương ứng
+    const headerPath = isInPagesFolder ? "../include/header.html" : "include/header.html";
+    const footerPath = isInPagesFolder ? "../include/footer.html" : "include/footer.html";
+
+    // Chèn header
+    fetch(headerPath)
+        .then(response => {
+            if (!response.ok) throw new Error('Không tải được header.html');
+            return response.text();
+        })
+        .then(data => document.getElementById('header').innerHTML = data)
+        .catch(error => console.error('Lỗi khi tải header:', error));
+
+    // Chèn footer
+    fetch(footerPath)
+        .then(response => {
+            if (!response.ok) throw new Error('Không tải được footer.html');
+            return response.text();
+        })
+        .then(data => document.getElementById('footer').innerHTML = data)
+        .catch(error => console.error('Lỗi khi tải footer:', error));
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // FAQ Toggle
   const faqItems = document.querySelectorAll(".faq-item");
-  faqItems.forEach((item) => {
+
+    faqItems.forEach((item) => {
     const question = item.querySelector(".faq-question");
-    question.addEventListener("click", () => {
-      const isActive = item.classList.contains("active");
-      faqItems.forEach((faq) => faq.classList.remove("active"));
-      if (!isActive) item.classList.add("active");
-    });
+    if (question) { // Thêm kiểm tra nếu question tồn tại
+      question.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+        faqItems.forEach((faq) => faq.classList.remove("active"));
+        if (!isActive) item.classList.add("active");
+      });
+    }
   });
 
   // Contact Modal
@@ -96,63 +125,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Carousel Functionality
-  function initCarousel(carousel) {
-    const inner = carousel.querySelector(".carousel-inner");
-    const items = carousel.querySelectorAll(".carousel-item");
-    const prevBtn = carousel.querySelector(".carousel-btn.prev");
-    const nextBtn = carousel.querySelector(".carousel-btn.next");
-    let currentIndex = 0;
-    const totalItems = items.length;
-    const visibleItems = window.innerWidth >= 1024 ? 4 : window.innerWidth >= 768 ? 2 : 1;
-
-    function updateCarousel() {
-      const offset = -(currentIndex * (100 / visibleItems));
-      inner.style.transform = `translateX(${offset}%)`;
-    }
-
-    prevBtn.addEventListener("click", () => {
-      currentIndex = Math.max(currentIndex - 1, 0);
-      updateCarousel();
-    });
-
-    nextBtn.addEventListener("click", () => {
-      currentIndex = Math.min(currentIndex + 1, totalItems - visibleItems);
-      updateCarousel();
-    });
-
-    window.addEventListener("resize", () => {
-      const newVisibleItems = window.innerWidth >= 1024 ? 4 : window.innerWidth >= 768 ? 2 : 1;
-      if (currentIndex > totalItems - newVisibleItems) {
-        currentIndex = Math.max(totalItems - newVisibleItems, 0);
-      }
-      updateCarousel();
-    });
-  }
-
-  document.querySelectorAll(".carousel").forEach(initCarousel);
 
   // Form Validation
-  const form = document.querySelector(".form");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const inputs = form.querySelectorAll(".form-input[required]");
-    let isValid = true;
-    inputs.forEach((input) => {
-      if (!input.value.trim()) {
-        input.classList.add("error");
-        isValid = false;
+  const consultationForm = document.getElementById("consultationForm"); // Sử dụng ID mới
+  if (consultationForm) {
+    consultationForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const inputs = consultationForm.querySelectorAll(".form-input[required]");
+      let isValid = true;
+      let firstErrorInput = null;
+
+      inputs.forEach((input) => {
+        if (!input.value.trim() || (input.type === "email" && !input.checkValidity())) {
+          // Thêm class error cho input không hợp lệ
+          // Bạn có thể thêm style cho class .error trong gym.css, ví dụ: border-color: red;
+          input.style.borderColor = "red"; // Hoặc thêm class error
+          isValid = false;
+          if (!firstErrorInput) {
+            firstErrorInput = input;
+          }
+        } else {
+          input.style.borderColor = ""; // Xóa border đỏ nếu hợp lệ
+        }
+      });
+    
+
+      if (isValid) {
+        alert("Đăng ký tư vấn thành công! Chúng tôi sẽ liên hệ với bạn sớm.");
+        consultationForm.reset();
       } else {
-        input.classList.remove("error");
+        alert("Vui lòng điền đầy đủ và chính xác các thông tin bắt buộc (đánh dấu *).");
+        if (firstErrorInput) {
+          firstErrorInput.focus(); // Focus vào trường lỗi đầu tiên
+        }
       }
     });
-    if (isValid) {
-      alert("Form submitted successfully!");
-      form.reset();
-    } else {
-      alert("Please fill in all required fields.");
-    }
-  });
+  }
+  
 
   // Lazy Loading Images
   const images = document.querySelectorAll("img[loading='lazy']");
@@ -306,31 +315,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.querySelectorAll(".carousel").forEach(initCarousel);
 
-  // Header and Footer Fetch
-  const currentPath = window.location.pathname;
-  const isInPagesFolder = currentPath.includes("/pages/");
-  const headerPath = isInPagesFolder ? "/RiseFitness-Yoga-main/include/header.html" : "include/header.html";
-  const footerPath = isInPagesFolder ? "/RiseFitness-Yoga-main/include/footer.html" : "include/footer.html";
-
-  fetch(headerPath)
-    .then((response) => {
-      if (!response.ok) throw new Error("Không tải được header.html");
-      return response.text();
-    })
-    .then((data) => {
-      const headerEl = document.getElementById("header");
-      if (headerEl) headerEl.innerHTML = data;
-    })
-    .catch((error) => console.error("Lỗi khi tải header:", error));
-
-  fetch(footerPath)
-    .then((response) => {
-      if (!response.ok) throw new Error("Không tải được footer.html");
-      return response.text();
-    })
-    .then((data) => {
-      const footerEl = document.getElementById("footer");
-      if (footerEl) footerEl.innerHTML = data;
-    })
-    .catch((error) => console.error("Lỗi khi tải footer:", error));
 });
