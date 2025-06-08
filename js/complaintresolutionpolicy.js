@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
       let html = await res.text();
 
-      // Chỉnh các href/src bên trong header/footer thành tuyệt đối dựa trên basePath
+      // Chuyển link tương đối thành tuyệt đối
       html = html.replace(/(href|src)="(?!https?:|\/|#|mailto:|tel:)([^"]+)"/g, (match, attr, path) => {
         return `${attr}="${basePath}${path}"`;
       });
@@ -20,11 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  // Tải header & footer
   Promise.all([
     fetchAndInsert(`${basePath}include/header.html`, "afterbegin", document.body),
     fetchAndInsert(`${basePath}include/footer.html`, "beforeend", document.body),
   ]).catch((err) => console.error("Lỗi khi tải header/footer:", err));
-});
+
 
 
   // Tải header và footer đồng thời
