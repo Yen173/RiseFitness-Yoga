@@ -81,6 +81,7 @@ body {
   background-color: #ffffff;
   color: #333333;
   padding: 8px 24px;
+  border: 2px solid;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
@@ -112,19 +113,20 @@ body {
 }
 
 .hero {
-  height: 500px;
+  height: 100vh; /* chiếm toàn bộ chiều cao màn hình */
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
 }
 
 .hero-bg {
   background-image: url('https://i.pinimg.com/736x/d6/e3/fb/d6e3fb65e931b3476a01ffe8243c724f.jpg');
   background-size: cover;
-  background-position: center top;
+  background-position: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
 }
 
 .hero-bg::before {
@@ -137,38 +139,112 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+
+
 .hero-content {
   position: relative;
   z-index: 10;
-  height: 100%;
+  max-width: 1200px;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-text {
-  max-width: 672px;
+  max-width: 700px;
+  text-align: center;
 }
 
 .hero-title {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 16px;
+  display: inline-block; /* Quan trọng để animation width hoạt động đúng với text-align center của parent */
+  overflow: hidden; /* Ẩn phần chữ chưa được "gõ" */
+  white-space: nowrap; /* Giữ chữ trên một dòng khi animation chạy */
+  border-right: .1em solid white; /* Tạo con trỏ nhấp nháy */
+  /* Áp dụng animation: tên, thời gian, số bước (điều chỉnh cho phù hợp với độ dài chữ), giữ lại trạng thái cuối, lặp lại */
+  animation:
+    typingEffect 5s steps(27, end) forwards, /* Thời gian và số bước cho tiêu đề */
+    blinkCaretEffect 1s step-end infinite 1s;
+  width: 0; /* Bắt đầu với chiều rộng 0 để hiệu ứng gõ chữ hoạt động */
 }
 
 .hero-subtitle {
   font-size: 20px;
-  color: #ffffff;
   margin-bottom: 32px;
+  line-height: 1.6;
+  color: #ffffff; /* Đảm bảo màu chữ là trắng */
+  overflow: hidden;
+  animation: blinkTextEffect 1.5s ease-in-out infinite 0.3s;
 }
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 16px;
 }
 
+/* Button style chung */
+.hero-buttons a {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  min-width: 160px;
+  flex: 1;
+  max-width: 220px;
+  transition: 0.3s ease;
+}
+
+@keyframes sectionGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px 0px rgba(52, 152, 219, 0.2), 0 0 20px 0px rgba(52, 152, 219, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px rgba(52, 152, 219, 0.4), 0 0 35px 15px rgba(52, 152, 219, 0.3);
+  }
+}
+
+@keyframes iconCheckPulseAnimation {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.05);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 8px 4px rgba(52, 152, 219, 0.015);
+  }
+}
+
+@keyframes typingEffect {
+  from { width: 0; }
+  to { width: 105%; }
+}
+
+@keyframes blinkCaretEffect {
+  from, to { border-color: transparent; }
+  50% { border-color: white; } /* Màu của con trỏ */
+}
+
+@keyframes blinkTextEffect {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; } /* Chữ sẽ mờ đi ở giữa hiệu ứng */
+}
+
 @media (min-width: 768px) {
+  .hero-title {
+    font-size: 48px;
+  }
+}
+@media (min-width: 767px) {
   .hero-title {
     font-size: 48px;
   }
@@ -192,6 +268,8 @@ body {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 16px;
+  animation: sectionGlowPulse 2.5s infinite alternate ease-in-out;
+  color: #718096;
 }
 
 .section-description {
@@ -225,6 +303,17 @@ body {
   margin: 0;
 }
 
+@keyframes iconCheckPulseAnimation {
+  0%, 100% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.2);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 8px 4px rgba(52, 152, 219, 0.15);
+  }
+}
+
 .about-item {
   display: flex;
   align-items: flex-start;
@@ -241,7 +330,8 @@ body {
   color: #ffffff;
   border-radius: 50%;
   margin-right: 8px;
-  margin-top: 4px;
+  margin-top: 1px;
+  animation: iconCheckPulseAnimation 2.5s ease-in-out infinite;
 }
 
 @media (min-width: 768px) {
@@ -257,8 +347,9 @@ body {
   gap: 32px;
 }
 
+
 .benefit-card {
-  background-color: #ffffff;
+  border-radius: 8px;
   padding: 24px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -277,15 +368,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(52, 152, 219, 0.1);
+  background-color: rgba(121, 179, 218, 0.1);
   border-radius: 50%;
   margin-bottom: 16px;
 }
 
 .benefit-icon i {
-  color: #3498db;
+  color: #179af2;
   font-size: 24px;
   align-items: center;
+}
+
+.benefit-card:nth-child(odd) {
+  background-color: #000000; /* Nền đen cho thẻ lẻ */
+  color: #ffffff; /* Chữ trắng cho thẻ lẻ */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Đổ bóng sáng cho thẻ nền đen */
+}
+
+.benefit-card:nth-child(even) {
+  background-color: #ffffff; /* Nền trắng cho thẻ chẵn */
+  color: #333333; /* Chữ tối màu cho thẻ chẵn */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng tối cho thẻ nền trắng */
+}
+
+.benefit-card:nth-child(odd):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Đổ bóng sáng hơn khi hover thẻ lẻ */
+}
+
+.benefit-card:nth-child(even):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .benefit-title {
@@ -305,7 +418,7 @@ body {
 }
 
 .services.section {
-  background-color: #f7fafc;
+  background-color: #101010;
 }
 
 .services-grid {
@@ -354,6 +467,11 @@ body {
   margin-bottom: 8px;
   text-align: center;
 }
+.service-content h3,
+.service-content p,
+.service-list {
+  text-align: center; /* căn giữa chữ */
+}
 
 .service-description {
   color: #4a5568;
@@ -376,6 +494,28 @@ body {
 .service-list i {
   color: #3498db;
   margin-right: 8px;
+}
+
+.service-card:nth-child(odd) {
+  background-color: #000000; /* Nền đen cho thẻ lẻ */
+  color: #ffffff; /* Chữ trắng cho thẻ lẻ */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Đổ bóng sáng cho thẻ nền đen */
+}
+
+.service-card:nth-child(odd):hover {
+  /* Đổ bóng khi hover cho thẻ nền đen (lẻ) */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.service-card:nth-child(odd) .service-description {
+  color: #f0f0f0; /* Màu chữ mô tả sáng hơn cho thẻ nền đen */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Đổ bóng khi hover cho thẻ nền trắng (chẵn) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
 }
 
 .popular {
@@ -591,7 +731,7 @@ body {
 }
 
 .register-image {
-  background-image: url('https://readdy.ai/api/search-image?query=Fitness%20trainer%20consulting%20with%20client%2C%20professional%20discussion%20about%20training%20plan%2C%20gym%20environment%2C%20personal%20coaching%20session%2C%20clipboard%20with%20workout%20plan%2C%20friendly%20consultation&width=600&height=800&seq=gym11&orientation=portrait');
+  background-image: url('https://i.pinimg.com/736x/e6/06/8b/e6068b321ef67b2a76897764421dff4d.jpg');
   background-size: cover;
   background-position: center top;
 }
@@ -731,15 +871,15 @@ body {
 
 .contact-button {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px; /* Reduced from 30px for better mobile spacing */
+  right: 20px; /* Reduced from 30px for better mobile spacing */
   z-index: 999;
   animation: pulse 2s infinite;
 }
 
 .contact-btn {
-  width: 56px;
-  height: 56px;
+  width: 48px; /* Slightly smaller for mobile (was 56px) */
+  height: 48px;
   background-color: #3498db;
   border-radius: 50%;
   border: none;
@@ -757,15 +897,16 @@ body {
 
 .contact-btn i {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 20px; /* Slightly smaller icon for mobile (was 24px) */
 }
 
+/* Pulse Animation */
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+    box-shadow: 0 0 0 8px rgba(52, 152, 219, 0); /* Reduced spread for mobile */
   }
   100% {
     box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
@@ -806,11 +947,14 @@ body {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 448px;
+  width: 90%; /* Changed to percentage for flexibility */
+  max-width: 448px; /* Kept max-width for larger screens */
+  min-width: 280px; /* Added min-width for very small screens */
   transform: scale(0.95);
   opacity: 0;
   transition: transform 0.3s, opacity 0.3s;
+  max-height: 80vh; /* Limit height to avoid excessive scrolling */
+  overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
 .modal.active .modal-content {
@@ -822,22 +966,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
+  padding: 16px; /* Reduced padding for mobile */
   border-bottom: 1px solid #e2e8f0;
 }
 
 .modal-header h3 {
-  font-size: 20px;
+  font-size: 18px; /* Slightly smaller for mobile (was 20px) */
   font-weight: 700;
 }
 
 .modal-close {
-  width: 32px;
-  height: 32px;
+  width: 40px; /* Increased for better touch target */
+  height: 40px;
   background: none;
   border: none;
   color: #718096;
-  font-size: 20px;
+  font-size: 18px; /* Slightly smaller for mobile (was 20px) */
   cursor: pointer;
 }
 
@@ -846,16 +990,16 @@ body {
 }
 
 .modal-body {
-  padding: 24px;
+  padding: 16px; /* Reduced padding for mobile (was 24px) */
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px; /* Reduced gap for mobile (was 16px) */
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  padding: 12px;
+  padding: 10px; /* Reduced padding for mobile (was 12px) */
   background-color: #f7fafc;
   border-radius: 8px;
   text-decoration: none;
@@ -870,13 +1014,13 @@ body {
 }
 
 .contact-icon {
-  width: 40px;
-  height: 40px;
+  width: 36px; /* Slightly smaller for mobile (was 40px) */
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin-right: 16px;
+  margin-right: 12px; /* Reduced margin for mobile (was 16px) */
 }
 
 .contact-icon.facebook {
@@ -901,16 +1045,17 @@ body {
 
 .contact-icon i {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px; /* Slightly smaller for mobile (was 20px) */
 }
 
 .contact-item h4 {
   font-weight: 500;
+  font-size: 14px; /* Added for better mobile readability */
 }
 
 .contact-item p {
   color: #718096;
-  font-size: 14px;
+  font-size: 12px; /* Reduced for mobile (was 14px) */
 }
 
 .ripple {
@@ -928,9 +1073,74 @@ body {
   }
 }
 
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+  .contact-button {
+    bottom: 15px; /* Closer to edge for smaller screens */
+    right: 15px;
+  }
+
+  .contact-btn {
+    width: 44px; /* Further reduced for very small screens */
+    height: 44px;
+  }
+
+  .contact-btn i {
+    font-size: 18px; /* Adjusted for smaller button */
+  }
+
+  .modal-content {
+    width: 95%; /* Use more screen width on mobile */
+    margin: 10px; /* Reduced margin (from 100px in service-modal) */
+    max-height: 85vh; /* Slightly more height for mobile */
+  }
+
+  .modal-header {
+    padding: 12px; /* Further reduced padding */
+  }
+
+  .modal-header h3 {
+    font-size: 16px; /* Smaller for mobile */
+  }
+
+  .modal-close {
+    width: 36px; /* Still large enough for touch */
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .modal-body {
+    padding: 12px; /* Further reduced padding */
+    gap: 10px; /* Smaller gap */
+  }
+
+  .contact-item {
+    padding: 8px; /* Reduced padding */
+    flex-direction: row; /* Keep row layout, but adjust spacing */
+    align-items: center;
+  }
+
+  .contact-icon {
+    width: 32px; /* Smaller icon for mobile */
+    height: 32px;
+    margin-right: 10px;
+  }
+
+  .contact-icon i {
+    font-size: 16px; /* Smaller icon font size */
+  }
+
+  .contact-item h4 {
+    font-size: 13px; /* Adjusted for mobile */
+  }
+
+  .contact-item p {
+    font-size: 11px; /* Further reduced for mobile */
+  }
+}
 /* New Styles for Schedule Section */
 .schedule.section {
-  background-color: #ffffff;
+  background-color: #101010;
 }
 
 .schedule-table {
@@ -968,6 +1178,89 @@ body {
   .schedule-table td {
     padding: 8px;
   }
+}
+.course {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px; /* Tạo khoảng cách giữa các thẻ */
+  padding: 16px;
+}
+/* Khung tổng thể mỗi thẻ khóa học */
+.course-card {
+  width: calc(25% - 24px);
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  gap: 24px;
+  text-align: center;
+  height: 100%; /* Đảm bảo tất cả ô cao bằng nhau */
+}
+
+/* Ảnh trong khóa học */
+.course-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cắt cho đều, không méo hình */
+  display: block;
+}
+
+/* Phần nội dung chính */
+.course-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Danh sách mô tả */
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.course-list li {
+  margin-bottom: 6px;
+}
+
+.course-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  flex: 1 1 300px; /* các thẻ co giãn theo không gian */
+  max-width: 320px;
+}
+
+/* Nút Đăng ký nằm đều nhau */
+.btn-primary {
+  margin-top: auto; /* Đẩy nút xuống cuối khối */
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  display: inline-block;
+  align-self: center ;
+}
+
+.btn-primary:hover {
+  background-color: #2c80b4;
 }
 
 /* New Styles for Trainers Section */
@@ -1039,7 +1332,13 @@ body {
 
 /* New Styles for Service Modal */
 .service-modal .modal-content {
-  max-width: 800px;
+  max-width: 80%; /* Chiếm 90% chiều rộng màn hình */
+  width: 550px; /* Giới hạn chiều rộng tối đa trên màn hình lớn */
+  margin: 100px; /* Thêm khoảng cách với viền màn hình */
+  max-height: 70vh; /* Giới hạn chiều cao tối đa */
+  overflow-y: auto; /* Cho phép cuộn nếu nội dung dài */
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .service-modal-body {
@@ -1050,6 +1349,7 @@ body {
   display: flex;
   gap: 16px;
   margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 
 .service-modal-images img {
@@ -1058,6 +1358,7 @@ body {
   object-fit: cover;
   border-radius: 8px;
   loading: lazy;
+  flex: 1 1 200px;
 }
 
 .service-image img {
@@ -1099,6 +1400,16 @@ body {
 
 .service-modal-review .stars {
   margin-bottom: 8px;
+}
+
+@media (max-width: 767px) {
+  .service-modal .modal-content {
+    width: auto; /* Để chiều rộng tự động theo max-width: 90% */
+    margin: 10px; /* Giảm margin trên điện thoại */
+  }
+  .service-modal-images img {
+    height: 150px; /* Giảm chiều cao ảnh trên điện thoại */
+  }
 }
 
 /* Carousel Styles */
