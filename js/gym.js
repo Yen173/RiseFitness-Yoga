@@ -1,29 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-const isInPagesFolder = window.location.pathname.includes("/pages/");
+  const repoName = "RiseFitness-Yoga";
+  const isLocal = location.hostname === "localhost";
+  const basePath = isLocal ? "/" : `/${repoName}/`;
 
-    // Đường dẫn tương ứng
-    const headerPath = isInPagesFolder ? "../include/header.html" : "include/header.html";
-    const footerPath = isInPagesFolder ? "../include/footer.html" : "include/footer.html";
+  const fetchAndInsert = async (url, position, target = document.body) => {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+      let html = await res.text();
 
-    // Chèn header
-    fetch(headerPath)
-        .then(response => {
-            if (!response.ok) throw new Error('Không tải được header.html');
-            return response.text();
-        })
-        .then(data => document.getElementById('header').innerHTML = data)
-        .catch(error => console.error('Lỗi khi tải header:', error));
+      // Chuyển link tương đối thành tuyệt đối
+      html = html.replace(/(href|src)="(?!https?:|\/|#|mailto:|tel:)([^"]+)"/g, (match, attr, path) => {
+        return `${attr}="${basePath}${path}"`;
+      });
 
-    // Chèn footer
-    fetch(footerPath)
-        .then(response => {
-            if (!response.ok) throw new Error('Không tải được footer.html');
-            return response.text();
-        })
-        .then(data => document.getElementById('footer').innerHTML = data)
-        .catch(error => console.error('Lỗi khi tải footer:', error));
-});
+      target.insertAdjacentHTML(position, html);
+    } catch (err) {
+      console.error(`Lỗi tải ${url}:`, err);
+    }
+  };
 
+  // Tải header & footer
+  Promise.all([
+    fetchAndInsert(`${basePath}include/header.html`, "afterbegin", document.body),
+    fetchAndInsert(`${basePath}include/footer.html`, "beforeend", document.body),
+  ]).catch((err) => console.error("Lỗi khi tải header/footer:", err));
+    
 document.addEventListener("DOMContentLoaded", function () {
   // FAQ Toggle
   const faqItems = document.querySelectorAll(".faq-item");
