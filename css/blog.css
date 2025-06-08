@@ -1,10 +1,11 @@
-body, html {
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Ngăn cuộn ngang */
     font-family: 'Arial', sans-serif;
     color: #333;
     background-color: #080707;
-    padding-top: 50px;
-    overflow-y: auto !important; /* Đảm bảo cuộn trang */
-    height: auto;
 }
 
 body.modal-open {
