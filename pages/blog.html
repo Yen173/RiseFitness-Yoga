@@ -224,38 +224,42 @@
         <!-- Header -->
         <div id="header"></div>
 
-        <div id="carouselHeader" class="carousel slide header-carousel" data-bs-ride="carousel" data-bs-interval="3000">
+        
+        <div id="carouselHeader" class="carousel slide header-carousel" 
+     data-bs-ride="carousel" data-bs-interval="3000" 
+     style="margin-top: 100px;">
+</div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://picsum.photos/1200/400?random=1" class="d-block w-100 img-fluid" style="object-fit: cover; height: 250px;" alt="Slide 1">
+                    <img src="https://picsum.photos/1200/400?random=1" class="d-block w-100 img-fluid" style="object-fit: cover; height: 400px;" alt="Slide 1">
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                         <h1>Welcome to Blog Home!</h1>
                         <p>Your go-to source for gym tips, workouts, and fitness inspiration.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100 img-fluid" style="object-fit: cover; height: 250px;" alt="Slide 2">
+                    <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100 img-fluid" style="object-fit: cover; height: 400px;" alt="Slide 2">
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                         <h1>Welcome to Blog Home!</h1>
                         <p>Your go-to source for gym tips, workouts, and fitness inspiration.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1200/400?random=3" class="d-block w-100 img-fluid" style="object-fit: cover; height: 250px;" alt="Slide 3">
+                    <img src="https://picsum.photos/1200/400?random=3" class="d-block w-100 img-fluid" style="object-fit: cover; height: 400px;" alt="Slide 3">
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                         <h1>Welcome to Blog Home!</h1>
                         <p>Your go-to source for gym tips, workouts, and fitness inspiration.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1200/400?random=4" class="d-block w-100 img-fluid" style="object-fit: cover; height: 250px;" alt="Slide 4">
+                    <img src="https://picsum.photos/1200/400?random=4" class="d-block w-100 img-fluid" style="object-fit: cover; height: 400px;" alt="Slide 4">
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                         <h1>Welcome to Blog Home!</h1>
                         <p>Your go-to source for gym tips, workouts, and fitness inspiration.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1200/400?random=5" class="d-block w-100 img-fluid" style="object-fit: cover; height: 250px;" alt="Slide 5">
+                    <img src="https://picsum.photos/1200/400?random=5" class="d-block w-100 img-fluid" style="object-fit: cover; height: 400px;" alt="Slide 5">
                     <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                         <h1>Welcome to Blog Home!</h1>
                         <p>Your go-to source for gym tips, workouts, and fitness inspiration.</p>
@@ -369,7 +373,7 @@
         </div>
 
         <!-- Modal for Post Details -->
-        <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true" style="z-index: 3000;">
+<div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true" style="z-index: 3000;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -377,9 +381,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <img id="postModalImage" class="img-fluid mb-3" alt="Post Image" style="display: none;">
-                <div id="postModalMeta" class="small text-muted mb-2"></div>
-                <div id="postModalAuthor" class="small text-muted mb-2"></div>
+                <img id="postModalImage" class="block mx-auto mb-3 max-w-full" alt="Post Image" style="display: none;">
+                <div id="postModalMeta" class="text-sm text-gray-500 mb-2"></div>
+                <div id="postModalAuthor" class="text-sm text-gray-500 mb-2"></div>
                 <p id="postModalContent"></p>
             </div>
             <div class="modal-footer">
