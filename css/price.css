@@ -71,9 +71,6 @@ body {
     width: 100%;
     height: 100%; /* Ensure overlay covers the entire slide */
 }
-#banner {
-    margin-top: 80px; /* hoặc đúng chiều cao của header */
-}
 #modal.show {
     display: flex;
 }
