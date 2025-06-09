@@ -7,6 +7,70 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.hover-effect {
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(5, 92, 146, 0.6),
+                 0 0 30px rgba(4, 48, 123, 0.6);
+}
+#banner {
+    margin-top: 80px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    height: 800px;
+}
+
+#slideshow {
+    width: 100vw;
+    height: 100%;
+}
+
+.slide {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide .absolute.inset-0 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media (max-width: 640px) {
+    .slide .absolute.inset-0 {
+        padding: 1rem;
+    }
+    .slide .absolute.inset-0 h2 {
+        font-size: 1.5rem;
+    }
+    .slide .absolute.inset-0 p {
+        font-size: 0.9rem;
+    }
+}
+
+.absolute.inset-0 {
+    width: 100%;
+    height: 100%; /* Ensure overlay covers the entire slide */
+}
 #banner {
     margin-top: 80px; /* hoặc đúng chiều cao của header */
 }
