@@ -19,29 +19,28 @@ body {
 }
 #banner {
     margin-top: 80px;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    width: 100%;
+    max-width: 1500px; /* hoặc container cố định nếu bạn dùng Bootstrap */
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
-    height: 800px;
+    height: 800px; /* tùy ý chiều cao mong muốn */
+    position: relative;
 }
 
 #slideshow {
-    width: 100vw;
+    width: 100%;
     height: 100%;
 }
 
 .slide {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     position: relative;
 }
 
 .slide img {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -55,6 +54,7 @@ body {
     align-items: center;
     text-align: center;
 }
+
 @media (max-width: 640px) {
     .slide .absolute.inset-0 {
         padding: 1rem;
