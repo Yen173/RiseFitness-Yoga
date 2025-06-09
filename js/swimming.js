@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Service Modal
-  const serviceCards = document.querySelectorAll(".service-card");
+  const serviceCards = document.querySelectorAll(".course-card, .service-card");
   serviceCards.forEach((card) => {
     card.addEventListener("click", function (e) {
       if (e.target.closest(".btn-primary")) return;
